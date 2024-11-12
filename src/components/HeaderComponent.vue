@@ -1,3 +1,9 @@
-<script></script>
+<script>
+export default {
+  name: "HeaderComponent",
+};
+</script>
 
-<template></template>
+<template>
+  <h1>CIAO</h1>
+</template>

@@ -1,6 +1,22 @@
-<script></script>
+<script>
+import HeaderComponent from "./components/HeaderComponent.vue";
+import FooterComponent from "./components/FooterComponent.vue";
+
+export default {
+  name: "App",
+  data() {
+    return {};
+  },
+  components: {
+    HeaderComponent,
+    FooterComponent,
+  },
+  methods: {},
+};
+</script>
 
 <template>
+  <HeaderComponent></HeaderComponent>
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -9,6 +25,7 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <FooterComponent></FooterComponent>
 </template>
 
 <style scoped>
