@@ -11,7 +11,7 @@ export default {
         <!-- Logo -->
         <div class="col-30">
           <div class="logo">
-            <a href="https://www.gazzetta.it/">
+            <a>
               <router-link :to="{ name: 'Home' }">
                 <img src="../assets/img/logo/logo-doppio-cerchio.png" alt="" />
               </router-link>
@@ -20,17 +20,23 @@ export default {
         </div>
         <!-- END Logo -->
 
-        <div class="col-70">
+        <div class="col-70 d-flex">
           <nav>
             <ul class="d-flex">
               <li>
-                <button>esfewf</button>
+                <a>
+                  <router-link :to="{ name: 'Insubria' }">
+                    Cos'è Insubria
+                  </router-link>
+                </a>
               </li>
               <li>
-                <button>esfewf</button>
+                <a>
+                  <router-link :to="{ name: 'Team' }">Team</router-link>
+                </a>
               </li>
               <li>
-                <button>esfewf</button>
+                <a>esfewf</a>
               </li>
             </ul>
           </nav>
@@ -51,15 +57,18 @@ export default {
 }
 
 .logo img {
-  width: 30%;
+  width: 70%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .col-70 {
   width: 70%;
   background-color: aqua;
-}
 
-li {
-  background-color: black;
+  li a {
+    padding: 20px;
+  }
 }
 </style>
