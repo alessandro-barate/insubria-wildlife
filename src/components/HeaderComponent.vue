@@ -21,25 +21,35 @@ export default {
         <!-- END Logo -->
 
         <div class="col-70 d-flex">
-          <nav>
-            <ul class="d-flex">
-              <li>
-                <a>
-                  <router-link :to="{ name: 'Insubria' }">
-                    Cos'è Insubria
-                  </router-link>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <router-link :to="{ name: 'Team' }">Team</router-link>
-                </a>
-              </li>
-              <li>
-                <a>esfewf</a>
-              </li>
-            </ul>
+          <nav class="navbar">
+            <div>
+              <ul class="nav-menu d-flex">
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <router-link :to="{ name: 'Insubria' }">
+                      Cos'è Insubria
+                    </router-link>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <router-link :to="{ name: 'Team' }">Team</router-link>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">esfewf</a>
+                </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
           </nav>
+          <div>
+            <button>Language</button>
+          </div>
         </div>
       </div>
     </div>
@@ -66,9 +76,10 @@ export default {
 .col-70 {
   width: 70%;
   background-color: aqua;
+}
 
-  li a {
-    padding: 20px;
-  }
+.nav-menu {
+  align-items: center;
+  gap: 60px;
 }
 </style>
