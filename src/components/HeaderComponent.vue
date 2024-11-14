@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" id="header-fixed">
     <div class="row">
       <div class="col">
         <nav class="navbar d-flex">
@@ -42,7 +42,7 @@ export default {
             </a>
           </div>
           <!-- END Logo -->
-          <ul class="nav-menu">
+          <ul class="nav-menu d-flex">
             <li class="nav-item">
               <a @click="listDisappearance()" class="nav-link">
                 <router-link :to="{ name: 'Insubria' }" class="link">
@@ -58,7 +58,11 @@ export default {
               </a>
             </li>
             <li class="nav-item">
-              <a @click="listDisappearance()" class="nav-link">esfewf</a>
+              <a @click="listDisappearance()" class="nav-link">
+                <router-link :to="{ name: 'Supportaci' }" class="link"
+                  >Supportaci</router-link
+                ></a
+              >
             </li>
           </ul>
           <div class="right-container d-flex">
@@ -78,11 +82,35 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.container {
+  z-index: 100;
+  top: 0;
+  position: sticky;
+  background-color: white;
+}
+
+.navbar {
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-menu {
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .logo {
-  width: 40%;
+  width: 35%;
   margin-left: 0;
   text-align: center;
-  background-color: yellow;
 
   img {
     width: 35%;
@@ -91,21 +119,12 @@ export default {
   }
 }
 
-.navbar {
-  align-items: center;
-
-  .nav-item {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .link {
-    text-decoration: none;
-  }
-}
-
 .nav-link {
   transition: 0.7s ease;
+
+  .link {
+    color: black;
+  }
 }
 
 .hamburger {
@@ -122,9 +141,13 @@ export default {
   -webkit-transition: all 0.3s ease-in-out;
 }
 
+.lang-container {
+  line-height: 26px;
+}
+
 // Media queries
 @media (max-width: 768px) {
-  .container {
+  .row {
     position: relative;
   }
 
@@ -159,6 +182,12 @@ export default {
 
   .nav-menu.active {
     left: 0;
+  }
+
+  .lang-container {
+    padding-left: 20px;
+    margin-right: -40px;
+    line-height: 26px;
   }
 }
 </style>

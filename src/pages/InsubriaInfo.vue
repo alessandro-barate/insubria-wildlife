@@ -1,3 +1,5 @@
 <script></script>
 
-<template></template>
+<template>
+  <h1>INSUBRIA</h1>
+</template>

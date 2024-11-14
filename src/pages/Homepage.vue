@@ -1,5 +1,48 @@
-<script></script>
+<script>
+export default {
+  name: "Homepage",
 
-<template></template>
+  data() {
+    return {};
+  },
+};
+</script>
+
+<template>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+  <h1>HOME</h1>
+</template>
 
 <style scoped></style>

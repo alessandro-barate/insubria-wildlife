@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Homepage from "./pages/Homepage.vue";
 import Team from "./pages/Team.vue";
 import InsubriaInfo from "./pages/InsubriaInfo.vue";
+import SupportUs from "./pages/SupportUs.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -21,6 +22,11 @@ const router = createRouter({
       path: "/insubria",
       name: "Insubria",
       component: InsubriaInfo,
+    },
+    {
+      path: "/support",
+      name: "Supportaci",
+      component: SupportUs,
     },
   ],
 });

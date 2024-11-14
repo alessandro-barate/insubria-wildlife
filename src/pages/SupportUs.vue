@@ -1,5 +1,5 @@
 <script></script>
 
 <template>
-  <h1>TEAM</h1>
+  <h1>SUPPORT US</h1>
 </template>
