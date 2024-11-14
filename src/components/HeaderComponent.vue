@@ -31,9 +31,9 @@ export default {
 <template>
   <div class="container">
     <div class="row">
-      <div class="col d-flex">
-        <!-- Logo -->
-        <div class="col-30">
+      <div class="col">
+        <nav class="navbar d-flex">
+          <!-- Logo -->
           <div class="logo">
             <a>
               <router-link :to="{ name: 'Home' }">
@@ -41,61 +41,54 @@ export default {
               </router-link>
             </a>
           </div>
-        </div>
-        <!-- END Logo -->
-
-        <div class="col-70 d-flex">
-          <nav class="navbar d-flex">
-            <ul class="nav-menu d-flex">
-              <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
-                  <router-link :to="{ name: 'Insubria' }" class="link">
-                    Insubria
-                  </router-link>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
-                  <router-link :to="{ name: 'Team' }" class="link"
-                    >Team</router-link
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">esfewf</a>
-              </li>
-            </ul>
+          <!-- END Logo -->
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a @click="listDisappearance()" class="nav-link">
+                <router-link :to="{ name: 'Insubria' }" class="link">
+                  Insubria
+                </router-link>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a @click="listDisappearance()" class="nav-link">
+                <router-link :to="{ name: 'Team' }" class="link"
+                  >Team</router-link
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a @click="listDisappearance()" class="nav-link">esfewf</a>
+            </li>
+          </ul>
+          <div class="right-container d-flex">
             <div @click="toggleNavbarHamburger()" class="hamburger">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
             </div>
-            <div>
+            <div class="lang-container">
               <button>Language</button>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.col-30 {
-  width: 30%;
+.logo {
+  width: 40%;
+  margin-left: 0;
   text-align: center;
   background-color: yellow;
-}
 
-.logo img {
-  width: 45%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.col-70 {
-  width: 70%;
-  background-color: aqua;
+  img {
+    width: 35%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .navbar {
@@ -126,28 +119,30 @@ export default {
   height: 3px;
   margin: 5px auto;
   background-color: black;
-  -webkit-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 // Media queries
 @media (max-width: 768px) {
-  .navbar {
+  .container {
     position: relative;
   }
 
   .nav-menu {
-    position: fixed;
+    position: absolute;
     left: -100%;
-    top: 146px;
+    top: 100%;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    transition: 1.3s;
+    transition: 1s;
     background-color: red;
   }
 
   .hamburger {
     display: block;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .hamburger.active .bar:nth-child(2) {
