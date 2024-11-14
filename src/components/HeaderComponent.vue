@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div class="container" id="header-fixed">
+  <div class="container">
     <div class="row">
       <div class="col">
         <nav class="navbar d-flex">
@@ -86,7 +86,7 @@ export default {
   z-index: 100;
   top: 0;
   position: sticky;
-  background-color: white;
+  background-color: #ff9f46;
 }
 
 .navbar {
@@ -135,10 +135,11 @@ export default {
 .bar {
   display: block;
   width: 25px;
-  height: 3px;
+  height: 2px;
   margin: 5px auto;
+  border-radius: 30%;
   background-color: black;
-  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .lang-container {
@@ -160,6 +161,7 @@ export default {
     text-align: center;
     transition: 1s;
     background-color: red;
+    opacity: 0.9;
   }
 
   .hamburger {
@@ -173,7 +175,7 @@ export default {
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
