@@ -26,6 +26,7 @@ export default {
             loop
             muted
             type="video/mp4"
+            poster="../assets/video/snapshot.PNG"
             class="back-video"
           ></video>
           <div class="mission">
@@ -80,7 +81,7 @@ export default {
 <style scoped>
 h1 {
   padding-top: 100px;
-  font-size: 80px;
+  font-size: 95px;
 
   span {
     color: #ff6a3a;
@@ -94,13 +95,19 @@ h1 {
   padding-bottom: 200px;
 
   p {
+    font-size: 19px;
     padding-top: 15px;
-    color: white;
+    color: black;
   }
 }
 
+video {
+  display: block;
+}
+
 .back-video {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
   position: absolute;
   z-index: -1;
 }
@@ -114,7 +121,8 @@ h1 {
 /* Media queries */
 @media (max-width: 768px) {
   h1 {
-    padding-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
   }
 
@@ -122,6 +130,31 @@ h1 {
     width: 70%;
     padding-left: 0;
     text-align: center;
+  }
+
+  video {
+    display: none;
+  }
+
+  .mission {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.753);
+    background-color: #0d0907;
+    background-image: url(../assets/img/red-deer.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    p,
+    h2 {
+      width: 60%;
+    }
+
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      padding-bottom: 15px;
+    }
   }
 }
 </style>
