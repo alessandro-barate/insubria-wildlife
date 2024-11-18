@@ -119,8 +119,8 @@ video {
 
 .overlay {
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 25px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.5);
 
