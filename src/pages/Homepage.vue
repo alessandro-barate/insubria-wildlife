@@ -31,7 +31,7 @@ export default {
           ></video>
           <div class="mission">
             <div class="overlay">
-              <h2>La nostra Mission</h2>
+              <h2>Perchè Insubria?</h2>
               <p>
                 Insubria Wildlife APS è la voce giovane e dinamica della
                 divulgazione scientifica sulla fauna selvatica e gli ambienti
@@ -129,6 +129,14 @@ video {
     font-size: 35px;
     padding-bottom: 15px;
   }
+}
+
+.mission {
+  margin-left: 60px;
+}
+
+.vision {
+  margin-right: 60px;
 }
 
 /* Media queries */
