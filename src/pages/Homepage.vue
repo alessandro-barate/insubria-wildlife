@@ -21,7 +21,7 @@ export default {
         </div>
         <div class="video-container">
           <video
-            src="../assets/video/background-video.mp4"
+            src="../assets/video/background-video-2.mp4"
             autoplay
             loop
             muted
@@ -123,7 +123,12 @@ video {
 .vision {
   width: 60%;
   padding-top: 50px;
-  padding-bottom: 70px;
+
+  h2 {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 15px;
+  }
 }
 
 /* Media queries */
@@ -191,6 +196,12 @@ video {
     h2 {
       width: 80%;
     }
+  }
+
+  .mission,
+  .vision {
+    padding-top: 50px;
+    padding-bottom: 70px;
   }
 }
 </style>
