@@ -18,7 +18,9 @@ export default {
               />
               <div class="address">
                 <h4>Insubria</h4>
-                <span>ddf</span>
+                <span>
+                  <i>dffd</i>
+                </span>
               </div>
               <div class="contacts">
                 <h4>fdf</h4>
