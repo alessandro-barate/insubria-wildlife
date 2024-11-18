@@ -6,8 +6,23 @@ export default {
     return {};
   },
 
+  created() {
+    window.addEventListener("scroll", this.headerFixed);
+  },
+
   methods: {
-    // To make the list appear when the hamburger menu is clicked
+    // To make the header fixed to the top
+    headerFixed() {
+      const container = document.querySelector(".container");
+
+      if (window.scrollY > 100) {
+        container.classList.add("sticky-header");
+      } else {
+        container.classList.remove("sticky-header");
+      }
+    },
+
+    // To make the nav list appear when the hamburger menu is clicked
     toggleNavbarHamburger() {
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
@@ -16,7 +31,7 @@ export default {
       navMenu.classList.toggle("active");
     },
 
-    // To make the list disappear when a link is clicked
+    // To make the nav list disappear when a link is clicked
     listDisappearance() {
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
@@ -82,11 +97,12 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.container {
+.sticky-header {
   z-index: 100;
   top: 0;
   position: sticky;
   background-color: #ff9f46;
+  transition: all 0.5s ease;
 }
 
 .navbar {
@@ -113,7 +129,7 @@ export default {
   text-align: center;
 
   img {
-    width: 35%;
+    width: 25%;
     padding-top: 10px;
     padding-bottom: 10px;
   }
