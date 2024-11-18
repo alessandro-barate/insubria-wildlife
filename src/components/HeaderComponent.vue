@@ -13,7 +13,7 @@ export default {
   methods: {
     // To make the header fixed to the top
     headerFixed() {
-      const container = document.querySelector(".container");
+      const container = document.querySelector("header");
 
       if (window.scrollY > 100) {
         container.classList.add("sticky-header");
@@ -44,65 +44,74 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar d-flex">
-          <!-- Logo -->
-          <div class="logo">
-            <a>
-              <router-link :to="{ name: 'Home' }">
-                <img src="../assets/img/logo/logo-doppio-cerchio.png" alt="" />
-              </router-link>
-            </a>
-          </div>
-          <!-- END Logo -->
-          <ul class="nav-menu d-flex">
-            <li class="nav-item">
-              <a @click="listDisappearance()" class="nav-link">
-                <router-link :to="{ name: 'Insubria' }" class="link">
-                  Insubria
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar d-flex">
+            <!-- Logo -->
+            <div class="logo">
+              <a>
+                <router-link :to="{ name: 'Home' }">
+                  <img
+                    src="../assets/img/logo/logo-doppio-cerchio.png"
+                    alt=""
+                  />
                 </router-link>
               </a>
-            </li>
-            <li class="nav-item">
-              <a @click="listDisappearance()" class="nav-link">
-                <router-link :to="{ name: 'Team' }" class="link"
-                  >Team</router-link
+            </div>
+            <!-- END Logo -->
+            <ul class="nav-menu d-flex">
+              <li class="nav-item">
+                <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'Insubria' }" class="link">
+                    Insubria
+                  </router-link>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'Team' }" class="link"
+                    >Team</router-link
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'Supportaci' }" class="link"
+                    >Supportaci</router-link
+                  ></a
                 >
-              </a>
-            </li>
-            <li class="nav-item">
-              <a @click="listDisappearance()" class="nav-link">
-                <router-link :to="{ name: 'Supportaci' }" class="link"
-                  >Supportaci</router-link
-                ></a
-              >
-            </li>
-          </ul>
-          <div class="right-container d-flex">
-            <div @click="toggleNavbarHamburger()" class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+              </li>
+            </ul>
+            <div class="right-container d-flex">
+              <div @click="toggleNavbarHamburger()" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+              <div class="lang-container">
+                <button>Language</button>
+              </div>
             </div>
-            <div class="lang-container">
-              <button>Language</button>
-            </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <style scoped lang="scss">
+header {
+  background-color: black;
+}
+
 .sticky-header {
   z-index: 100;
   top: 0;
   position: sticky;
-  background-color: #ff9f46;
-  transition: all 0.5s ease;
+  background-color: black;
+  transition: all 1s ease-in;
 }
 
 .navbar {
@@ -139,7 +148,7 @@ export default {
   transition: 0.7s ease;
 
   .link {
-    color: black;
+    color: white;
   }
 }
 
@@ -154,8 +163,7 @@ export default {
   height: 2px;
   margin: 5px auto;
   border-radius: 30%;
-  background-color: black;
-  -webkit-transition: all 0.5s ease-in-out;
+  background-color: white;
 }
 
 .lang-container {
@@ -176,8 +184,7 @@ export default {
     width: 100%;
     text-align: center;
     transition: 1s;
-    background-color: red;
-    opacity: 0.9;
+    background-color: black;
   }
 
   .hamburger {

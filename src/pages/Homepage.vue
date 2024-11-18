@@ -13,8 +13,8 @@ export default {
     <div class="row">
       <div class="col">
         <div class="jumbo">
-          <h1>Insubria <span>Wild</span>Life</h1>
-          <p>
+          <h1 class="padding-l-60">Insubria <span>Wild</span>Life</h1>
+          <p class="padding-l-60">
             Il mondo selvatico è più vicino di quanto pensi: unisciti a noi
             nella sua scoperta!
           </p>
@@ -67,13 +67,8 @@ export default {
 </template>
 
 <style scoped>
-.container {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
 h1 {
-  padding-top: 80px;
+  padding-top: 100px;
   font-size: 80px;
 
   span {
@@ -82,10 +77,34 @@ h1 {
 }
 
 .jumbo {
-  background-image: url();
+  background-image: url(../assets/img/bird-jumbo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 200px;
 
   p {
     padding-top: 15px;
+    color: white;
+  }
+}
+
+.mission {
+  width: 60%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  h1 {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .jumbo p {
+    width: 70%;
+    padding-left: 0;
+    text-align: center;
   }
 }
 </style>

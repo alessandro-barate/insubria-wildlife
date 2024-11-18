@@ -2,4 +2,9 @@
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+[v-cloak] {
+  display: none;
 }
