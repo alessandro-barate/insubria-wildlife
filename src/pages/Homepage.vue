@@ -54,9 +54,7 @@ export default {
           </div>
           <div class="vision">
             <div class="overlay">
-              <h2>
-                VISION: Un futuro dove natura e comunità prosperano insieme
-              </h2>
+              <h2>Insubria nel futuro</h2>
               <p>
                 Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
                 coesistono in sinergia con la comunità locale, dove ognuno può
@@ -119,15 +117,35 @@ video {
   z-index: -1;
 }
 
+.overlay {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.01);
+  }
+}
+
 .mission,
 .vision {
   width: 60%;
   padding-top: 50px;
+  color: rgba(255, 255, 255, 0.753);
 
   h2 {
+    width: 80%;
     text-align: center;
     font-size: 35px;
     padding-bottom: 15px;
+  }
+
+  p {
+    width: 80%;
   }
 }
 
@@ -163,23 +181,9 @@ video {
     display: none;
   }
 
-  .overlay {
-    width: 70%;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-      transform: scale(1.01);
-    }
-  }
-
   .mission {
     width: 100%;
-    color: rgba(255, 255, 255, 0.753);
+    margin-left: 0;
     background-color: #0d0907;
     background-image: url(../assets/img/red-deer.jpg);
     background-size: contain;
@@ -194,7 +198,7 @@ video {
 
   .vision {
     width: 100%;
-    color: rgba(255, 255, 255, 0.753);
+    margin-right: 0;
     background-color: #0d0907;
     background-image: url(../assets/img/fox.jpg);
     background-size: cover;
