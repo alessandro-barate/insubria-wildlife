@@ -49,7 +49,29 @@ export default {
               <a href=""> fewfew@fewf.com </a>
             </div>
           </div>
-          <div class="socials d-flex">4</div>
+          <div class="socials">
+            <h3>Seguici sui nostri social</h3>
+            <div class="buttons-container d-flex">
+              <div class="fb-container">
+                <a href="">
+                  <img
+                    src="../assets/img/footer-img/facebook-icon.svg"
+                    alt="Facebook logo"
+                    id="fb-logo"
+                  />
+                </a>
+              </div>
+              <div class="ig-container">
+                <a href="">
+                  <img
+                    src="../assets/img/footer-img/instagram-icon.svg"
+                    alt="Instagram logo"
+                    id="ig-logo"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -82,15 +104,18 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.753);
 }
 
-.logo-footer-container,
 .address,
-.contacts,
+.contacts {
+  width: 30%;
+}
+
+.logo-footer-container,
 .socials {
-  width: 25%;
+  width: 20%;
 }
 
 .logo-footer-container img {
-  width: 30%;
+  width: 45%;
   margin-left: 60px;
 }
 
@@ -132,26 +157,40 @@ a {
   }
 }
 
-.button-container {
+.socials {
+  align-items: center;
   text-align: center;
 
-  p {
-    width: 80%;
-    font-size: 14px;
-    padding-bottom: 10px;
+  h3 {
+    padding-bottom: 15px;
+  }
+}
+
+.buttons-container {
+  width: 100%;
+
+  .fb-container {
+    width: 50%;
+    text-align: center;
+
+    img {
+      width: 40%;
+
+      &:hover {
+        transform: scale(1.07);
+      }
+    }
   }
 
-  button {
-    width: 70%;
-    border: none;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border-radius: 20px;
-    background-color: #ff6a3a;
+  .ig-container {
+    width: 50%;
 
-    &:hover {
-      transform: scale(1.1);
-      background-color: #f8460a;
+    img {
+      width: 40%;
+
+      &:hover {
+        transform: scale(1.07);
+      }
     }
   }
 }
@@ -169,6 +208,11 @@ a {
 
   .footer-logo {
     display: none;
+  }
+
+  #fb-logo,
+  #ig-logo {
+    width: 60%;
   }
 }
 </style>
