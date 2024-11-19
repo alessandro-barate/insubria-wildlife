@@ -27,7 +27,7 @@ export default {
               <h3>Insubria</h3>
               <a href=""> Via Roma 20, 20004, Arluno </a>
               <div>
-                <h3>Codice Fiscale</h3>
+                <h3 id="cf">Codice Fiscale</h3>
                 <span>01234567890</span>
               </div>
             </div>
@@ -127,6 +127,10 @@ a {
 
 .address-container {
   margin-left: 20px;
+
+  #cf {
+    padding-top: 10px;
+  }
 }
 
 .location-container {

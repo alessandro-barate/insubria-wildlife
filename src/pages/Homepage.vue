@@ -1,9 +1,25 @@
 <script>
+import { store } from "../store.js";
 export default {
   name: "Homepage",
 
   data() {
-    return {};
+    return {
+      store,
+      currentIndex: 0,
+    };
+  },
+
+  methods: {
+    nextCard() {
+      this.currentIndex = (this.currentIndex + 1) % this.store.visions.length;
+    },
+
+    prevCard() {
+      this.currentIndex =
+        (this.currentIndex - 1 + this.store.visions.length) %
+        this.store.visions.length;
+    },
   },
 };
 </script>
@@ -69,21 +85,28 @@ export default {
               Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
               coesistono in sinergia con la comunità locale, dove ognuno può
               avere un ruolo attivo. La nostra visione si estende oltre
-              l'orizzonte, mirando a: 1 - Diventare un faro nella promozione
-              sociale, creando una comunità vibrante di cittadini consapevoli e
-              attivi nella conservazione di ambiente e fauna. 2 - Realizzare un
-              centro di recupero per la fauna all'avanguardia, dove gli animali
-              selvatici in difficoltà trovano cura e vengono reimmessi nel
-              territorio di appartenenza, mantenendone le caratteristiche
-              selvatiche. 3 - Creare un luogo nel quale il volontariato può
-              prendere parte in diverse forme, ed è un'attività sempre
-              stimolante e formativa. 4 - Stabilire collaborazioni con
-              università, enti di ricerca e istituzioni, per contribuire
-              attivamente alla conoscenza e alla ricerca scientifica. 5 - Creare
-              una rete tra i professionisti del settore, per rendere le nostre
-              azioni trasparenti e omogenee sul territorio, per arricchirci con
-              stimoli provenienti da altre aree italiane e da oltre confine.
+              l'orizzonte, mirando a:
             </p>
+
+            <div class="carousel-wrapper">
+              <div
+                v-for="(vision, index) in store.visions"
+                :key="index"
+                v-show="index === currentIndex"
+                class="card"
+              >
+                <div class="card-box">
+                  <div class="card-body">
+                    <img src="" alt="" />
+                    <p>{{ vision.description }}</p>
+                    <span>{{ vision.image }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <button @click="prevCard">Previous</button>
+              <button @click="nextCard">Next</button>
+            </div>
           </div>
         </div>
         <!-- END vision section -->
