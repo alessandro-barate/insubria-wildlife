@@ -141,6 +141,8 @@ h1 {
 
   p {
     width: 80%;
+    font-size: 18px;
+    line-height: 23px;
   }
 }
 
