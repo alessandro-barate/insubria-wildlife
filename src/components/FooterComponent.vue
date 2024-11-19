@@ -9,7 +9,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col d-flex">
-          <div class="col-60 col-left">
+          <div class="col-70 col-left">
             <div class="logo-footer-container d-flex">
               <img
                 class="footer-logo"
@@ -47,8 +47,14 @@ export default {
               </div>
             </div>
           </div>
-          <div class="col-40 col-right">
-            <h2>CIAO</h2>
+          <div class="col-30 col-right d-flex">
+            <!--<div class="col-50">
+              <div class="button-container">
+                <p>Hai trovato un esemplare di animale e non sai cosa fare?</p>
+                <button>Ti aiutiamo noi!</button>
+              </div>
+            </div> -->
+            <div class="">CIAO</div>
           </div>
         </div>
       </div>
@@ -82,12 +88,16 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.753);
 }
 
-.col-40 {
-  width: 40%;
+.col-30 {
+  width: 30%;
 }
 
-.col-60 {
-  width: 60%;
+.col-50 {
+  width: 50%;
+}
+
+.col-70 {
+  width: 70%;
 }
 
 .logo-footer-container img {
@@ -105,8 +115,7 @@ a {
 }
 
 .contacts {
-  width: 30%;
-  margin-left: 20px;
+  margin-right: 0;
 
   h3 {
     margin-left: -10px;
@@ -127,7 +136,38 @@ a {
   }
 }
 
-.col-right {
-  background-color: blue;
+.button-container {
+  text-align: center;
+
+  p {
+    width: 80%;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  button {
+    width: 70%;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 20px;
+    background-color: #ff6a3a;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #f8460a;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .logo-footer-container {
+    margin-left: -20px;
+  }
+
+  .footer-logo {
+    display: none;
+  }
 }
 </style>

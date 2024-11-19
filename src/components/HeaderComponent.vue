@@ -65,21 +65,21 @@ export default {
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Insubria' }" class="link">
-                    Insubria
+                    INSUBRIA
                   </router-link>
                 </a>
               </li>
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Team' }" class="link"
-                    >Team</router-link
+                    >TEAM</router-link
                   >
                 </a>
               </li>
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Supportaci' }" class="link"
-                    >Supportaci</router-link
+                    >SUPPORTACI</router-link
                   ></a
                 >
               </li>
@@ -153,6 +153,7 @@ header {
 
   .link {
     color: white;
+    font-size: 20px;
 
     &:hover {
       color: #ff6a3a;
