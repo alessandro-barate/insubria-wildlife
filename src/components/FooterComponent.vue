@@ -25,7 +25,7 @@ export default {
                 </div>
                 <div class="address-container">
                   <h3>Insubria</h3>
-                  <span> Via Roma 20, 20004, Arluno </span>
+                  <a href=""> Via Roma 20, 20004, Arluno </a>
                 </div>
               </div>
               <div class="contacts">
@@ -35,14 +35,14 @@ export default {
                     src="../assets/img/footer-img/phone-icon.png"
                     alt="Icona del telefono"
                   />
-                  <span>0230256512</span>
+                  <a href="">0230256512</a>
                 </div>
                 <div class="mail-container d-flex">
                   <img
                     src="../assets/img/footer-img/mail-icon.png"
                     alt="Immagine email"
                   />
-                  <span>fewfew@fewf.com</span>
+                  <a href="">fewfew@fewf.com</a>
                 </div>
               </div>
             </div>
@@ -63,6 +63,15 @@ footer {
   background-color: black;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: #ff6a3a;
+  }
 }
 
 .col {
@@ -93,10 +102,6 @@ footer {
     width: 30px;
     margin-right: 10px;
   }
-
-  .address-container {
-    line-height: 30px;
-  }
 }
 
 .contacts {
@@ -114,7 +119,7 @@ footer {
     margin-right: 0;
   }
 
-  span {
+  a {
     padding-top: 10px;
     padding-left: 10px;
     margin-left: 0;

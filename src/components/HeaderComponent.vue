@@ -141,6 +141,10 @@ header {
     width: 25%;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 }
 
@@ -149,6 +153,10 @@ header {
 
   .link {
     color: white;
+
+    &:hover {
+      color: #ff6a3a;
+    }
   }
 }
 
