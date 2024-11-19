@@ -38,8 +38,8 @@ export default {
 
 <style scoped lang="scss">
 footer {
+  width: 100%;
   background-color: black;
-  margin-top: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
 }

@@ -19,63 +19,52 @@ export default {
             nella sua scoperta!
           </p>
         </div>
-        <div class="video-container">
-          <video
-            src="../assets/video/background-video-2.mp4"
-            autoplay
-            loop
-            muted
-            type="video/mp4"
-            poster="../assets/video/snapshot.PNG"
-            class="back-video"
-          ></video>
-          <div class="mission">
-            <div class="overlay">
-              <h2>Perchè Insubria?</h2>
-              <p>
-                Insubria Wildlife APS è la voce giovane e dinamica della
-                divulgazione scientifica sulla fauna selvatica e gli ambienti
-                insubrici. Attraverso i nostri social portiamo la biodiversità
-                insubrica sotto i riflettori, rendendola accessibile e
-                interessante per tutti. Il nostro obiettivo è ispirare curiosità
-                e consapevolezza, mostrando come la tutela delle risorse
-                naturali possa arricchire la vita di ciascuno e come il nostro
-                territorio ne sia ricchissimo. Con eventi in programma e
-                collaborazioni con esperti del settore, ci impegniamo a
-                diventare un punto di riferimento per chi desidera scoprire,
-                proteggere e vivere appieno il patrimonio naturale che ci
-                circonda. Vogliamo creare un luogo di incontro per appassionati,
-                addetti ai lavori e curiosi, stimolando dibattiti e scambi tra
-                persone con diverso background, offrendo opportunità di crescita
-                e formazione in un ambiente giovane, innovativo, internazionale.
-                Unisciti a noi in questa avventura di scoperta e azione!
-              </p>
-            </div>
+
+        <div class="mission">
+          <div class="overlay">
+            <h2>Perchè Insubria?</h2>
+            <p>
+              Insubria Wildlife APS è la voce giovane e dinamica della
+              divulgazione scientifica sulla fauna selvatica e gli ambienti
+              insubrici. Attraverso i nostri social portiamo la biodiversità
+              insubrica sotto i riflettori, rendendola accessibile e
+              interessante per tutti. Il nostro obiettivo è ispirare curiosità e
+              consapevolezza, mostrando come la tutela delle risorse naturali
+              possa arricchire la vita di ciascuno e come il nostro territorio
+              ne sia ricchissimo. Con eventi in programma e collaborazioni con
+              esperti del settore, ci impegniamo a diventare un punto di
+              riferimento per chi desidera scoprire, proteggere e vivere appieno
+              il patrimonio naturale che ci circonda. Vogliamo creare un luogo
+              di incontro per appassionati, addetti ai lavori e curiosi,
+              stimolando dibattiti e scambi tra persone con diverso background,
+              offrendo opportunità di crescita e formazione in un ambiente
+              giovane, innovativo, internazionale. Unisciti a noi in questa
+              avventura di scoperta e azione!
+            </p>
           </div>
-          <div class="vision">
-            <div class="overlay">
-              <h2>Insubria nel futuro</h2>
-              <p>
-                Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
-                coesistono in sinergia con la comunità locale, dove ognuno può
-                avere un ruolo attivo. La nostra visione si estende oltre
-                l'orizzonte, mirando a: 1 - Diventare un faro nella promozione
-                sociale, creando una comunità vibrante di cittadini consapevoli
-                e attivi nella conservazione di ambiente e fauna. 2 - Realizzare
-                un centro di recupero per la fauna all'avanguardia, dove gli
-                animali selvatici in difficoltà trovano cura e vengono reimmessi
-                nel territorio di appartenenza, mantenendone le caratteristiche
-                selvatiche. 3 - Creare un luogo nel quale il volontariato può
-                prendere parte in diverse forme, ed è un'attività sempre
-                stimolante e formativa. 4 - Stabilire collaborazioni con
-                università, enti di ricerca e istituzioni, per contribuire
-                attivamente alla conoscenza e alla ricerca scientifica. 5 -
-                Creare una rete tra i professionisti del settore, per rendere le
-                nostre azioni trasparenti e omogenee sul territorio, per
-                arricchirci con stimoli provenienti da altre aree italiane e da
-                oltre confine.
-              </p>
-            </div>
+        </div>
+        <div class="vision">
+          <div class="overlay">
+            <h2>Insubria nel futuro</h2>
+            <p>
+              Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
+              coesistono in sinergia con la comunità locale, dove ognuno può
+              avere un ruolo attivo. La nostra visione si estende oltre
+              l'orizzonte, mirando a: 1 - Diventare un faro nella promozione
+              sociale, creando una comunità vibrante di cittadini consapevoli e
+              attivi nella conservazione di ambiente e fauna. 2 - Realizzare un
+              centro di recupero per la fauna all'avanguardia, dove gli animali
+              selvatici in difficoltà trovano cura e vengono reimmessi nel
+              territorio di appartenenza, mantenendone le caratteristiche
+              selvatiche. 3 - Creare un luogo nel quale il volontariato può
+              prendere parte in diverse forme, ed è un'attività sempre
+              stimolante e formativa. 4 - Stabilire collaborazioni con
+              università, enti di ricerca e istituzioni, per contribuire
+              attivamente alla conoscenza e alla ricerca scientifica. 5 - Creare
+              una rete tra i professionisti del settore, per rendere le nostre
+              azioni trasparenti e omogenee sul territorio, per arricchirci con
+              stimoli provenienti da altre aree italiane e da oltre confine.
+            </p>
           </div>
         </div>
       </div>
@@ -106,19 +95,8 @@ h1 {
   }
 }
 
-video {
-  display: block;
-}
-
-.back-video {
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  z-index: -1;
-}
-
 .overlay {
-  width: 100%;
+  width: 80%;
   padding-top: 20px;
   padding-bottom: 25px;
   border-radius: 20px;
@@ -133,7 +111,6 @@ video {
 
 .mission,
 .vision {
-  width: 60%;
   padding-top: 50px;
   color: rgba(255, 255, 255, 0.753);
 
@@ -151,10 +128,12 @@ video {
 
 .mission {
   margin-left: 60px;
+  padding-top: 30px;
 }
 
 .vision {
   margin-right: 60px;
+  padding-bottom: 30px;
 }
 
 /* Media queries */
@@ -177,12 +156,9 @@ video {
     text-align: center;
   }
 
-  video {
-    display: none;
-  }
-
   .mission {
     width: 100%;
+    position: static;
     margin-left: 0;
     background-color: #0d0907;
     background-image: url(../assets/img/red-deer.jpg);
@@ -198,6 +174,7 @@ video {
 
   .vision {
     width: 100%;
+    position: static;
     margin-right: 0;
     background-color: #0d0907;
     background-image: url(../assets/img/fox.jpg);
