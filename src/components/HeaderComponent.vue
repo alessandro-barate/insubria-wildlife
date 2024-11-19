@@ -103,14 +103,14 @@ export default {
 
 <style scoped lang="scss">
 header {
-  background-color: black;
+  background-color: #4f674f;
 }
 
 .sticky-header {
   z-index: 100;
   top: 0;
   position: sticky;
-  background-color: black;
+  background-color: rgb(22, 90, 20);
   transition: all 1s ease-in;
 }
 
