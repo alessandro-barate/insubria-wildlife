@@ -140,7 +140,7 @@ a {
 }
 
 .contacts {
-  margin-left: 60px;
+  margin-left: 90px;
 
   h3 {
     margin-left: -10px;

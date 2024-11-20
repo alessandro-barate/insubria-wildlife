@@ -7,8 +7,13 @@ export default {
     return {
       store,
       currentIndex: 0,
+      intervalTimer: false,
     };
   },
+
+  // created() {
+  //   this.carouselAutoplay();
+  // },
 
   methods: {
     nextCard() {
@@ -19,6 +24,10 @@ export default {
       this.currentIndex =
         (this.currentIndex - 1 + this.store.visions.length) %
         this.store.visions.length;
+    },
+
+    carouselAutoplay() {
+      setInterval(this.nextCard, 5000);
     },
   },
 };
@@ -108,8 +117,9 @@ export default {
 
               <!-- Carousel buttons -->
               <div class="carousel-buttons">
-                <button @click="prevCard">Previous</button>
-                <button @click="nextCard">Next</button>
+                <button @click="prevCard" id="prev-btn"><</button>
+                <!-- <button @click="">Stop/Play</button> -->
+                <button @click="nextCard" id="next-btn">></button>
               </div>
               <!-- END carousel buttons -->
             </div>
@@ -220,12 +230,34 @@ h1 {
 
   .card-body p {
     width: 50%;
+    height: 130px;
     text-align: center;
   }
 
   .carousel-buttons {
-    padding-top: 5px;
     text-align: center;
+
+    #prev-btn {
+      margin-right: 5px;
+    }
+
+    #prev-btn,
+    #next-btn {
+      color: white;
+      transition-property: background-color, box-shadow;
+      transition-duration: 0.5s;
+      background-color: rgb(0, 0, 0);
+      width: 20px;
+      height: 20px;
+      border: none;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: rgba(100, 56, 56, 0.425);
+        box-shadow: 2px 2px 2px rgba(100, 56, 56, 0.2);
+        transform: scale(1.2);
+      }
+    }
   }
 }
 
