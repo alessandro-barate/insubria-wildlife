@@ -88,6 +88,7 @@ export default {
               l'orizzonte, mirando a:
             </p>
 
+            <!-- Carousel -->
             <div class="carousel-wrapper">
               <div
                 v-for="(vision, index) in store.visions"
@@ -97,16 +98,22 @@ export default {
               >
                 <div class="card-box">
                   <div class="card-body">
-                    <img src="" alt="" />
+                    <div class="carousel-img-container">
+                      <img src="../assets/img/fox-2.jpg" alt="" />
+                    </div>
                     <p>{{ vision.description }}</p>
-                    <span>{{ vision.image }}</span>
                   </div>
                 </div>
               </div>
 
-              <button @click="prevCard">Previous</button>
-              <button @click="nextCard">Next</button>
+              <!-- Carousel buttons -->
+              <div class="carousel-buttons">
+                <button @click="prevCard">Previous</button>
+                <button @click="nextCard">Next</button>
+              </div>
+              <!-- END carousel buttons -->
             </div>
+            <!-- END Carousel -->
           </div>
         </div>
         <!-- END vision section -->
@@ -133,6 +140,7 @@ h1 {
 
   p {
     font-size: 19px;
+    font-weight: bold;
     padding-top: 15px;
     color: black;
   }
@@ -196,6 +204,19 @@ h1 {
 
 .vision {
   padding-bottom: 30px;
+
+  .carousel-img-container {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    img {
+      width: 20vh;
+      height: 20vh;
+      border-radius: 100px;
+      object-fit: cover;
+    }
+  }
 }
 
 /* Media queries */
@@ -241,6 +262,7 @@ h1 {
   .vision {
     width: 100%;
     position: static;
+    margin-top: 10px;
     margin-right: 0;
     background-color: #0d0907;
     background-image: url(../assets/img/fox.jpg);
@@ -258,6 +280,10 @@ h1 {
     display: block;
     padding-top: 50px;
     padding-bottom: 70px;
+  }
+
+  .video-container {
+    padding-top: 13px;
   }
 }
 </style>
