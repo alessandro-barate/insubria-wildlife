@@ -140,7 +140,7 @@ a {
 }
 
 .contacts {
-  margin-right: 0;
+  margin-left: 60px;
 
   h3 {
     margin-left: -10px;
@@ -164,6 +164,7 @@ a {
 .socials {
   align-items: center;
   text-align: center;
+  margin-right: 60px;
 
   h3 {
     padding-bottom: 15px;
@@ -212,6 +213,14 @@ a {
 
   .footer-logo {
     display: none;
+  }
+
+  .contacts {
+    margin-left: 20px;
+  }
+
+  .socials {
+    margin-right: 10px;
   }
 
   #fb-logo,

@@ -217,6 +217,16 @@ h1 {
       object-fit: cover;
     }
   }
+
+  .card-body p {
+    width: 50%;
+    text-align: center;
+  }
+
+  .carousel-buttons {
+    padding-top: 5px;
+    text-align: center;
+  }
 }
 
 /* Media queries */
