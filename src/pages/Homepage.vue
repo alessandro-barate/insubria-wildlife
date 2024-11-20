@@ -69,6 +69,15 @@ export default {
               giovane, innovativo, internazionale. Unisciti a noi in questa
               avventura di scoperta e azione!
             </p>
+
+            <!-- Help animal section -->
+            <div class="animal-help">
+              <div class="animal-help-container">
+                <p>Hai trovato un esemplare di animale ma non sai cosa fare?</p>
+                <button class="help-btn">Ti aiutiamo noi!</button>
+              </div>
+            </div>
+            <!-- END help animal section -->
           </div>
         </div>
         <!-- END mission section -->
@@ -108,7 +117,7 @@ export default {
                 <div class="card-box">
                   <div class="card-body">
                     <div class="carousel-img-container">
-                      <img src="../assets/img/fox-2.jpg" alt="" />
+                      <img :src="vision.image" />
                     </div>
                     <p>{{ vision.description }}</p>
                   </div>
@@ -177,6 +186,31 @@ h1 {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.5);
 
+  .animal-help {
+    width: 30%;
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+
+    p {
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+
+    button {
+      border: none;
+      font-weight: bold;
+      padding: 5px 15px 5px 15px;
+      border-radius: 20px;
+      background-color: #ff6b3ad8;
+
+      &:hover {
+        background-color: #ff6b3a;
+        transform: scale(1.03);
+      }
+    }
+  }
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
@@ -205,6 +239,7 @@ h1 {
 
 .mission {
   margin-top: 10px;
+  margin-right: 0;
   padding-top: 30px;
   padding-bottom: 30px;
   background-image: url(../assets/img/swan.jpg);
@@ -230,7 +265,7 @@ h1 {
 
   .card-body p {
     width: 50%;
-    height: 130px;
+    padding-bottom: 10px;
     text-align: center;
   }
 
@@ -283,10 +318,15 @@ h1 {
 
   .overlay {
     width: 80%;
+
+    .animal-help {
+      width: 50%;
+    }
   }
 
   .mission {
     width: 100%;
+    display: block;
     position: static;
     margin-left: 0;
     background-color: #0d0907;
