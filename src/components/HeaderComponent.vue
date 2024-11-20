@@ -78,6 +78,20 @@ export default {
               </li>
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'Eventi' }" class="link"
+                    >EVENTI</router-link
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'SosAnimali' }" class="link"
+                    >SOS ANIMALI</router-link
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Supportaci' }" class="link"
                     >SUPPORTACI</router-link
                   ></a
@@ -111,7 +125,6 @@ header {
   top: 0;
   position: sticky;
 
-  //rgb(22, 90, 20);
   transition: all 1s ease-in;
 }
 
@@ -120,6 +133,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
+    width: 70%;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
@@ -128,13 +142,12 @@ header {
   }
 
   .nav-item {
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 70%;
   }
 }
 
 .logo {
-  width: 35%;
+  width: 40%;
   margin-left: 0;
   text-align: center;
 

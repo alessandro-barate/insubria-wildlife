@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <h1>SUPPORT US</h1>
+  <h1>CADABRA</h1>
 </template>
 
 <style scoped lang="scss">
