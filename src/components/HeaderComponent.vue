@@ -193,7 +193,7 @@ header {
     width: 100%;
     text-align: center;
     transition: 1s;
-    background-color: black;
+    background-color: rgb(22, 90, 20);
   }
 
   .hamburger {

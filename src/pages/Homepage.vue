@@ -27,6 +27,8 @@ export default {
     },
 
     carouselAutoplay() {
+      // const card = document.getElementById("card-box");
+      // card.classList.add("transition");
       setInterval(this.nextCard, 5000);
     },
   },
@@ -52,29 +54,41 @@ export default {
           <div class="overlay margin-l-60">
             <h2>Mission</h2>
             <p>
-              Insubria Wildlife APS è la voce giovane e dinamica della
-              divulgazione scientifica sulla fauna selvatica e gli ambienti
-              insubrici. Attraverso i nostri social portiamo la biodiversità
+              <span>Insubria Wildlife APS è la voce giovane e dinamica della
+              divulgazione scientifica</span> sulla fauna selvatica e gli ambienti
+              insubrici; attraverso i nostri social portiamo la biodiversità
               insubrica sotto i riflettori, rendendola accessibile e
-              interessante per tutti. Il nostro obiettivo è ispirare curiosità e
-              consapevolezza, mostrando come la tutela delle risorse naturali
-              possa arricchire la vita di ciascuno e come il nostro territorio
-              ne sia ricchissimo. Con eventi in programma e collaborazioni con
-              esperti del settore, ci impegniamo a diventare un punto di
-              riferimento per chi desidera scoprire, proteggere e vivere appieno
-              il patrimonio naturale che ci circonda. Vogliamo creare un luogo
-              di incontro per appassionati, addetti ai lavori e curiosi,
-              stimolando dibattiti e scambi tra persone con diverso background,
-              offrendo opportunità di crescita e formazione in un ambiente
-              giovane, innovativo, internazionale. Unisciti a noi in questa
-              avventura di scoperta e azione!
+              interessante per tutti.
+              <br />
+              <br />
+              <span>Il nostro obiettivo è ispirare curiosità e consapevolezza</span>,
+              mostrando come la tutela delle risorse naturali possa arricchire
+              la vita di ciascuno e come il nostro territorio ne sia
+              ricchissimo. <span>Con eventi in programma e collaborazioni con esperti
+              del settore</span>, ci impegniamo a diventare un punto di riferimento per
+              chi desidera scoprire, proteggere e vivere appieno il patrimonio
+              naturale che ci circonda.
+              <br />
+              <br />
+              <span>Vogliamo creare un luogo di incontro</span> per appassionati, addetti ai
+              lavori e curiosi, stimolando dibattiti e scambi tra persone con
+              diverso background, <span>offrendo opportunità di crescita e formazione</span>
+              in un ambiente giovane, innovativo, internazionale.
+              <br />
+              <br />
+              <br>
+              <p
+                id="join">Unisciti a noi in questa avventura di scoperta e azione!</p
+              >
             </p>
 
             <!-- Help animal section -->
             <div class="animal-help">
               <div class="animal-help-container">
                 <p>Hai trovato un esemplare di animale ma non sai cosa fare?</p>
-                <button class="help-btn">Ti aiutiamo noi!</button>
+                <a href="">
+                  <button class="help-btn">Ti aiutiamo noi!</button>
+                </a>
               </div>
             </div>
             <!-- END help animal section -->
@@ -96,7 +110,15 @@ export default {
         <!-- END video section -->
 
         <!-- Vision section -->
-        <div class="vision">
+        <div class="vision d-flex">
+          <div class="events-container">
+            <div class="events">
+              <h2>Vuoi restare sempre aggiornato sui nostri eventi in programma?</h2>
+              <a href="">
+                <button>Clicca qui e scopri anche quelli passati</button>
+              </a>
+            </div>
+          </div>
           <div class="overlay margin-right-60">
             <h2>Vision</h2>
             <p>
@@ -186,6 +208,15 @@ h1 {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.5);
 
+  span {
+    font-weight: bold;
+  }
+
+  #join {
+    text-align: center;
+    font-weight: bold;
+  }
+
   .animal-help {
     width: 30%;
     margin-top: 40px;
@@ -206,6 +237,7 @@ h1 {
 
       &:hover {
         background-color: #ff6b3a;
+        box-shadow: 0 -1px 10px #ff6b3ad8;
         transform: scale(1.03);
       }
     }
@@ -250,6 +282,35 @@ h1 {
 .vision {
   padding-bottom: 30px;
 
+  .events {
+      width: 60%;
+      padding-top: 100px;
+      text-align: center;
+
+      p {
+        font-size: 30px;
+        line-height: 33px;
+        font-weight: bold;
+        padding-bottom: 30px;
+      }
+
+      button {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px 25px 10px 25px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ff6b3ad8;
+
+      &:hover {
+        background-color: #ff6b3a;
+        box-shadow: 0 -1px 10px #ff6b3ab2;
+        transform: scale(1.02);
+      }
+      }
+    }
+
   .carousel-img-container {
     text-align: center;
     padding-top: 60px;
@@ -265,6 +326,7 @@ h1 {
 
   .card-body p {
     width: 50%;
+    /* font-weight: bold; */
     padding-bottom: 10px;
     text-align: center;
   }
@@ -354,6 +416,14 @@ h1 {
     p,
     h2 {
       width: 80%;
+    }
+
+    .events {
+      color: black;
+    }
+
+    button {
+      margin-bottom: 100px;
     }
   }
 
