@@ -141,16 +141,18 @@ export default {
                     <div class="carousel-img-container">
                       <img :src="vision.image" />
                     </div>
-                    <p>{{ vision.description }}</p>
+                    <!-- Carousel buttons -->
+                    <div class="buttons-container d-flex">
+                      <div class="carousel-button-left d-flex">
+                        <button @click="prevCard" id="prev-btn"><</button>
+                      </div>
+                      <p>{{ vision.description }}</p>
+                      <div class="carousel-button-right d-flex">
+                        <button @click="nextCard" id="next-btn">></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- Carousel buttons -->
-              <div class="carousel-buttons">
-                <button @click="prevCard" id="prev-btn"><</button>
-                <!-- <button @click="">Stop/Play</button> -->
-                <button @click="nextCard" id="next-btn">></button>
               </div>
               <!-- END carousel buttons -->
             </div>
@@ -351,12 +353,27 @@ h1 {
     text-align: center;
   }
 
-  .carousel-buttons {
-    text-align: center;
+  .buttons-container p {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 
-    #prev-btn {
-      margin-right: 5px;
-    }
+  .carousel-button-left,
+  .carousel-button-right {
+    text-align: center;
+  }
+
+  .carousel-button-left {
+    text-align: end;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .carousel-button-right {
+    text-align: start;
+    margin-left: 0;
+    align-items: center;
+  }
 
     #prev-btn,
     #next-btn {
@@ -375,7 +392,6 @@ h1 {
         transform: scale(1.2);
       }
     }
-  }
 }
 
 /* Media queries */
@@ -462,6 +478,16 @@ h1 {
   .video-container {
     padding-top: 13px;
     padding-bottom: 0;
+  }
+
+  .carousel-button-left {
+    display: block;
+    line-height: 150px;
+  }
+
+  .carousel-button-right {
+    display: block;
+    line-height: 150px;
   }
 }
 </style>
