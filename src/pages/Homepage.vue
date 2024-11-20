@@ -78,16 +78,16 @@ export default {
               <br />
               <br>
               <p
-                id="join">Unisciti a noi in questa avventura di scoperta e azione!</p
+                id="join"><a href="" id="join-2">Unisciti</a> a noi in questa avventura!</p
               >
             </p>
 
             <!-- Help animal section -->
             <div class="animal-help">
               <div class="animal-help-container">
-                <p>Hai trovato un esemplare di animale ma non sai cosa fare?</p>
+                <p>Vuoi restare sempre aggiornato sui nostri eventi?</p>
                 <a href="">
-                  <button class="help-btn">Ti aiutiamo noi!</button>
+                  <button class="help-btn">Clicca qui!</button>
                 </a>
               </div>
             </div>
@@ -113,9 +113,9 @@ export default {
         <div class="vision d-flex">
           <div class="events-container">
             <div class="events">
-              <h2>Vuoi restare sempre aggiornato sui nostri eventi in programma?</h2>
+              <h2>Hai trovato un esemplare di animale ma non sai cosa fare?</h2>
               <a href="">
-                <button>Clicca qui e scopri anche quelli passati</button>
+                <button>Ti aiutiamo noi!</button>
               </a>
             </div>
           </div>
@@ -190,6 +190,7 @@ h1 {
 .video-container {
   width: 100%;
   padding-top: 40px;
+  padding-bottom: 40px;
 
   .video-background {
     width: 80%;
@@ -206,7 +207,7 @@ h1 {
   padding-top: 20px;
   padding-bottom: 25px;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 
   span {
     font-weight: bold;
@@ -217,21 +218,32 @@ h1 {
     font-weight: bold;
   }
 
+  #join-2 {
+    color: #ff6a3a;;
+    
+    &:hover {
+      color: #ff4101;
+    }
+  }
+
   .animal-help {
-    width: 30%;
-    margin-top: 40px;
+    width: 55%;
+    margin-top: 70px;
     font-weight: bold;
     text-align: center;
 
     p {
-      font-size: 15px;
-      padding-bottom: 10px;
+      font-size: 25px;
+      line-height: 35px;
+      padding-bottom: 20px;
     }
 
     button {
       border: none;
+      font-size: 18px;
       font-weight: bold;
-      padding: 5px 15px 5px 15px;
+      margin-bottom: 30px;
+      padding: 10px 30px 10px 30px;
       border-radius: 20px;
       background-color: #ff6b3ad8;
 
@@ -244,7 +256,7 @@ h1 {
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.01);
   }
@@ -274,17 +286,25 @@ h1 {
   margin-right: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-image: url(../assets/img/swan.jpg);
+  background-image: url(../assets/img/deer-night.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .vision {
   padding-bottom: 30px;
+  background-image: url(../assets/img/eagle.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .overlay {
+    width: 150%;
+  }
 
   .events {
-      width: 60%;
-      padding-top: 100px;
+      width: 100%;
+      color: rgb(0, 0, 0);
+      padding-top: 40px;
       text-align: center;
 
       p {
@@ -296,7 +316,7 @@ h1 {
 
       button {
       margin-top: 10px;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: bold;
       padding: 10px 25px 10px 25px;
       border: none;
@@ -413,12 +433,17 @@ h1 {
     background-size: cover;
     background-position: center;
 
+    .overlay {
+      width: 80%;
+    }
+
     p,
     h2 {
       width: 80%;
     }
 
     .events {
+      width: 65%;
       color: black;
     }
 
@@ -436,6 +461,7 @@ h1 {
 
   .video-container {
     padding-top: 13px;
+    padding-bottom: 0;
   }
 }
 </style>

@@ -103,14 +103,15 @@ export default {
 
 <style scoped lang="scss">
 header {
-  background-color: #4f674f;
+  background-color: #000000;
 }
 
 .sticky-header {
   z-index: 100;
   top: 0;
   position: sticky;
-  background-color: rgb(22, 90, 20);
+
+  //rgb(22, 90, 20);
   transition: all 1s ease-in;
 }
 
@@ -193,7 +194,7 @@ header {
     width: 100%;
     text-align: center;
     transition: 1s;
-    background-color: rgb(22, 90, 20);
+    background-color: rgb(0, 0, 0);
   }
 
   .hamburger {
