@@ -5,6 +5,24 @@
   -webkit-transition: all 0.5s ease-in-out;
 }
 
+html::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar {
+  width: 20px;
+}
+
+.overlay-single-card::-webkit-scrollbar {
+  width: 20px;
+}
+
+.overlay-single-card::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
 [v-cloak] {
   display: none;
 }

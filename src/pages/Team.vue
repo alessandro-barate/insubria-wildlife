@@ -56,6 +56,9 @@ export default {
                 <div class="details-btn d-flex">
                   <button @click="hideMemberDetails(index)">X</button>
                 </div>
+                <div class="details-img">
+                  <img :src="store.members[currentIndex].image" alt="" />
+                </div>
                 <div class="details-description">
                   <p>{{ store.members[currentIndex].description }}</p>
                 </div>
@@ -68,7 +71,7 @@ export default {
   </div>
 </template>
 
-<style scoped lang="css">
+<style scoped lang="scss">
 .no-interaction {
   pointer-events: none;
 }
@@ -89,6 +92,7 @@ export default {
 
 .overlay {
   width: 90%;
+  border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.8);
 
   h1 {
@@ -102,10 +106,11 @@ export default {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -42%);
   width: 80%;
   max-width: 1000px;
-  height: auto;
+  max-height: 600px;
+  overflow: auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -130,11 +135,28 @@ export default {
   }
 }
 
+.details-img {
+  width: 100%;
+
+  img {
+    width: 30%;
+    padding-bottom: 20px;
+    border-radius: 145px;
+  }
+}
+
+.details-description p {
+  width: 70%;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
 .col-33 {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 50px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.6);
   width: calc(100% / 3 - 50px);
 
@@ -190,6 +212,38 @@ export default {
     border: 3px solid #ff6b3a;
     object-fit: cover;
     border-radius: 110px;
+  }
+}
+
+/* Media queries */
+/* Tablet layout */
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+  .col-33 {
+    width: calc(100% / 2.2 - 10px);
+  }
+
+  .overlay-single-card {
+    max-height: 670px;
+    transform: translate(-50%, -41%);
+    overflow: auto;
+  }
+}
+/* END Tablet layout */
+
+/* Mobile layout */
+@media (max-width: 559px) {
+  .col-33 {
+    width: 85%;
+  }
+
+  .cards-container {
+    display: block;
+  }
+
+  .overlay-single-card {
+    max-height: 700px;
+    transform: translate(-50%, -42%);
+    overflow: scroll;
   }
 }
 </style>

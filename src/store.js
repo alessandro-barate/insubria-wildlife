@@ -42,7 +42,7 @@ export const store = reactive({
       title: "Vice Presidentessa",
       image: "team/grid/alessia.png",
       description:
-        "Non potrei immaginare la mia vita lontano dal mondo naturale: per questo ho scelto questo percorso ancora prima di esserne consapevole. Profondamente appassionata e curiosa, appena ho potuto ho viaggiato: per svago e per lavoro, in Italia e all’estero, e facendo parte di progetti di volontariato. Ad ogni  ritorno a casa mi trovavo arricchita da un bagaglio professionale e personale più ampio. Amo da sempre imparare e condividere con le persone che mi stanno intorno e nel tempo libero viaggio, dormo in tenda, leggo e disegno (per lo più pennuti!)",
+        "Non potrei immaginare la mia vita lontana dal mondo naturale: per questo ho scelto questo percorso ancora prima di esserne consapevole. Profondamente appassionata e curiosa, appena ho potuto ho viaggiato: per svago e per lavoro, in Italia e all’estero, e facendo parte di progetti di volontariato. Ad ogni  ritorno a casa mi trovavo arricchita da un bagaglio professionale e personale più ampio. Amo da sempre imparare e condividere con le persone che mi stanno intorno e nel tempo libero viaggio, dormo in tenda, leggo e disegno (per lo più pennuti!)",
     },
     {
       name: "Elena",

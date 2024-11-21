@@ -196,7 +196,7 @@ header {
 }
 
 // Media queries
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .row {
     position: relative;
   }

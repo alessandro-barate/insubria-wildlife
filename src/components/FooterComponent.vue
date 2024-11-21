@@ -201,7 +201,7 @@ a {
 }
 
 // Media queries
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .logo-footer-container {
     width: 0%;
     margin: 0;
