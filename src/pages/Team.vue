@@ -7,8 +7,19 @@ export default {
     return {
       store,
       currentIndex: 0,
+      showDetails: false,
       intervalTimer: false,
     };
+  },
+
+  methods: {
+    showMemberDetails(index) {
+      this.showDetails = true;
+    },
+
+    hideMemberDetails(index) {
+      this.showDetails = false;
+    },
   },
 };
 </script>
@@ -32,11 +43,16 @@ export default {
                 <h2>{{ member.name }}</h2>
                 <h3>{{ member.title }}</h3>
                 <div class="info-btn">
-                  <button>Scopri di più</button>
+                  <button @click="this.showMemberDetails(index)">
+                    Scopri di più
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div v-if="this.showDetails" class="overlay-single-card">
+          <button @click="hideMemberDetails(index)">X</button>
         </div>
       </div>
     </div>
@@ -48,6 +64,7 @@ export default {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
   text-align: center;
   background-image: url(/team/background/team-group.jpg);
   background-size: 100%;
@@ -64,6 +81,18 @@ export default {
   }
 }
 
+.overlay-single-card {
+  width: 86%;
+  height: 70%;
+  top: 52%;
+  left: 52%;
+  border-radius: 30px;
+  margin-top: -20%;
+  margin-left: -45%;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.342);
+}
+
 .col-33 {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -71,6 +100,12 @@ export default {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.6);
   width: calc(100% / 3 - 50px);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.01);
+  }
 
   .info-btn {
     width: 100%;
@@ -85,6 +120,7 @@ export default {
 
       &:hover {
         color: white;
+        transform: scale(1.05);
         background-color: rgb(94, 94, 94);
       }
     }

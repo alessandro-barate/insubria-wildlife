@@ -250,7 +250,7 @@ h1 {
       &:hover {
         background-color: #ff6b3a;
         box-shadow: 0 -1px 10px #ff6b3ad8;
-        transform: scale(1.03);
+        transform: scale(1.05);
       }
     }
   }
@@ -325,7 +325,7 @@ h1 {
       &:hover {
         background-color: #ff6b3a;
         box-shadow: 0 -1px 10px #ff6b3ab2;
-        transform: scale(1.02);
+        transform: scale(1.05);
       }
       }
     }
