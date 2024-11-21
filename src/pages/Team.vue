@@ -53,6 +53,7 @@ export default {
         </div>
         <div v-if="this.showDetails" class="overlay-single-card">
           <button @click="hideMemberDetails(index)">X</button>
+          <!-- <p>{{ member.description }}</p> -->
         </div>
       </div>
     </div>
@@ -91,6 +92,10 @@ export default {
   margin-left: -45%;
   position: absolute;
   background-color: rgba(255, 0, 0, 0.342);
+
+  p {
+    width: 50%;
+  }
 }
 
 .col-33 {

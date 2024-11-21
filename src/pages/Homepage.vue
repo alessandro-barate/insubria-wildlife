@@ -54,32 +54,27 @@ export default {
           <div class="overlay margin-l-60">
             <h2>MISSION</h2>
             <p>
-              <span>Insubria Wildlife APS è la voce giovane e dinamica della
-              divulgazione scientifica</span> sulla fauna selvatica e gli ambienti
-              insubrici; attraverso i nostri social portiamo la biodiversità
-              insubrica sotto i riflettori, rendendola accessibile e
-              interessante per tutti.
-              <br />
-              <br />
-              <span>Il nostro obiettivo è ispirare curiosità e consapevolezza</span>,
-              mostrando come la tutela delle risorse naturali possa arricchire
-              la vita di ciascuno e come il nostro territorio ne sia
-              ricchissimo. <span>Con eventi in programma e collaborazioni con esperti
-              del settore</span>, ci impegniamo a diventare un punto di riferimento per
-              chi desidera scoprire, proteggere e vivere appieno il patrimonio
-              naturale che ci circonda.
-              <br />
-              <br />
-              <span>Vogliamo creare un luogo di incontro</span> per appassionati, addetti ai
-              lavori e curiosi, stimolando dibattiti e scambi tra persone con
-              diverso background, <span>offrendo opportunità di crescita e formazione</span>
-              in un ambiente giovane, innovativo, internazionale.
-              <br />
-              <br />
-              <br>
-              <p
-                id="join"><a href="" id="join-2">Unisciti</a> a noi in questa avventura!</p
-              >
+              <span>Insubria Wildlife APS</span> è la voce giovane, dinamica e
+              internazionale della divulgazione scientifica sulla
+              <span>fauna selvatica</span> e gli
+              <span>ambienti insubrici</span>.Vogliamo portare il valore della
+              biodiversità sotto i riflettori, rendendolo accessibile e
+              interessante per tutti, ispirando curiosità e consapevolezza.
+              <span>La tutela</span> delle risorse naturali può arricchire la
+              vita di ciascuno e il nostro territorio ne è ricchissimo: sta a
+              noi proteggerlo. <br /><br />
+              Tramite i social, gli eventi e collaborazioni con esperti,
+              vogliamo creare un luogo di incontro per appassionati, “addetti ai
+              lavori” e curiosi, stimolando dibattiti e scambi tra persone con
+              diverso background.
+            </p>
+            <br />
+            <br />
+
+            <p id="join">
+              <a href="" id="join-2"><span>Unendoti a noi</span></a> potrai
+              conoscere realtà diverse e far parte di una comunità con cui
+              condividere gli stessi obiettivi.
             </p>
 
             <!-- Help animal section -->
@@ -136,7 +131,7 @@ export default {
                   :key="index"
                   v-show="index === currentIndex"
                   class="card"
-                > 
+                >
                   <div class="card-box">
                     <div class="card-body">
                       <div class="carousel-img-container">
@@ -208,21 +203,24 @@ h1 {
 
 .overlay {
   width: 65%;
-  
+
   span {
     font-weight: bold;
   }
 
   #join {
     text-align: center;
-    font-weight: bold;
   }
 
   #join-2 {
-    color: #ff6a3a;;
-    
+    color: #ff6a3a;
+
+    span {
+      font-weight: bold;
+    }
+
     &:hover {
-      color: #ff4101;
+      color: #ff2701;
     }
   }
 
@@ -302,18 +300,18 @@ h1 {
   }
 
   .events {
-      width: 100%;
-      color: rgb(0, 0, 0);
-      text-align: center;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    text-align: center;
 
-      p {
-        font-size: 30px;
-        line-height: 33px;
-        font-weight: bold;
-        padding-bottom: 30px;
-      }
+    p {
+      font-size: 30px;
+      line-height: 33px;
+      font-weight: bold;
+      padding-bottom: 30px;
+    }
 
-      button {
+    button {
       margin-top: 10px;
       font-size: 18px;
       font-weight: bold;
@@ -327,8 +325,8 @@ h1 {
         box-shadow: 0 -1px 10px #ff6b3ab2;
         transform: scale(1.05);
       }
-      }
     }
+  }
 
   .carousel-img-container {
     text-align: center;
@@ -372,23 +370,23 @@ h1 {
     align-items: center;
   }
 
-    #prev-btn,
-    #next-btn {
-      color: white;
-      transition-property: background-color, box-shadow;
-      transition-duration: 0.5s;
-      background-color: rgb(0, 0, 0);
-      width: 20px;
-      height: 20px;
-      border: none;
-      border-radius: 50%;
+  #prev-btn,
+  #next-btn {
+    color: white;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.5s;
+    background-color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
 
-      &:hover {
-        background-color: rgba(100, 56, 56, 0.425);
-        box-shadow: 2px 2px 2px rgba(100, 56, 56, 0.2);
-        transform: scale(1.2);
-      }
+    &:hover {
+      background-color: rgba(100, 56, 56, 0.425);
+      box-shadow: 2px 2px 2px rgba(100, 56, 56, 0.2);
+      transform: scale(1.2);
     }
+  }
 }
 
 /* Media queries */
@@ -409,9 +407,9 @@ h1 {
     background-image: url(/homepage/background/bird-jumbo-reverse.jpg);
 
     p {
-    width: 70%;
-    padding-left: 0;
-    text-align: center;
+      width: 70%;
+      padding-left: 0;
+      text-align: center;
     }
   }
 

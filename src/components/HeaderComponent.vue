@@ -125,7 +125,9 @@ header {
   top: 0;
   position: sticky;
 
-  transition: all 1s ease-in;
+  .logo {
+    width: 20%;
+  }
 }
 
 .navbar {
