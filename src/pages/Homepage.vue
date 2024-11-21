@@ -119,44 +119,46 @@ export default {
               </a>
             </div>
           </div>
-          <div class="overlay margin-right-60">
-            <h2>Vision</h2>
-            <p>
-              Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
-              coesistono in sinergia con la comunità locale, dove ognuno può
-              avere un ruolo attivo. La nostra visione si estende oltre
-              l'orizzonte, mirando a:
-            </p>
+          <div class="vision-card d-flex">
+            <div class="overlay margin-right-60">
+              <h2>Vision</h2>
+              <p>
+                Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
+                coesistono in sinergia con la comunità locale, dove ognuno può
+                avere un ruolo attivo. La nostra visione si estende oltre
+                l'orizzonte, mirando a:
+              </p>
 
-            <!-- Carousel -->
-            <div class="carousel-wrapper">
-              <div
-                v-for="(vision, index) in store.visions"
-                :key="index"
-                v-show="index === currentIndex"
-                class="card"
-              >
-                <div class="card-box">
-                  <div class="card-body">
-                    <div class="carousel-img-container">
-                      <img :src="vision.image" />
-                    </div>
-                    <!-- Carousel buttons -->
-                    <div class="buttons-container d-flex">
-                      <div class="carousel-button-left d-flex">
-                        <button @click="prevCard" id="prev-btn"><</button>
+              <!-- Carousel -->
+              <div class="carousel-wrapper">
+                <div
+                  v-for="(vision, index) in store.visions"
+                  :key="index"
+                  v-show="index === currentIndex"
+                  class="card"
+                > 
+                  <div class="card-box">
+                    <div class="card-body">
+                      <div class="carousel-img-container">
+                        <img :src="vision.image" />
                       </div>
-                      <p>{{ vision.description }}</p>
-                      <div class="carousel-button-right d-flex">
-                        <button @click="nextCard" id="next-btn">></button>
+                      <!-- Carousel buttons -->
+                      <div class="buttons-container d-flex">
+                        <div class="carousel-button-left d-flex">
+                          <button @click="prevCard" id="prev-btn"><</button>
+                        </div>
+                        <p>{{ vision.description }}</p>
+                        <div class="carousel-button-right d-flex">
+                          <button @click="nextCard" id="next-btn">></button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- END carousel buttons -->
               </div>
-              <!-- END carousel buttons -->
+              <!-- END Carousel -->
             </div>
-            <!-- END Carousel -->
           </div>
         </div>
         <!-- END vision section -->
@@ -176,7 +178,7 @@ h1 {
 }
 
 .jumbo {
-  background-image: url(../assets/img/bird-jumbo.jpg);
+  background-image: url(../assets/img/bird-jumbo.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 200px;
@@ -266,7 +268,7 @@ h1 {
 
 .mission,
 .vision {
-  padding-top: 50px;
+  padding-top: 30px;
   color: rgba(255, 255, 255, 0.753);
 
   h2 {
@@ -306,7 +308,6 @@ h1 {
   .events {
       width: 100%;
       color: rgb(0, 0, 0);
-      padding-top: 40px;
       text-align: center;
 
       p {
@@ -408,14 +409,20 @@ h1 {
     padding-bottom: 15px;
   }
 
-  .jumbo p {
+  .jumbo {
+    background-image: url(../assets/img/bird-jumbo-reverse.jpg);
+
+    p {
     width: 70%;
     padding-left: 0;
     text-align: center;
+    }
   }
 
   .overlay {
     width: 80%;
+    margin-left: 0;
+    margin-right: 0;
 
     .animal-help {
       width: 50%;
@@ -424,12 +431,12 @@ h1 {
 
   .mission {
     width: 100%;
-    display: block;
+    display: flex;
     position: static;
-    margin-left: 0;
+    justify-content: center;
     background-color: #0d0907;
-    background-image: url(../assets/img/red-deer.jpg);
-    background-size: contain;
+    background-image: url(../assets/img/bird-coloured.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -441,13 +448,19 @@ h1 {
 
   .vision {
     width: 100%;
+    display: block;
     position: static;
     margin-top: 10px;
     margin-right: 0;
+    padding-top: 50px;
     background-color: #0d0907;
     background-image: url(../assets/img/fox.jpg);
     background-size: cover;
     background-position: center;
+
+    .vision-card {
+      justify-content: center;
+    }
 
     .overlay {
       width: 80%;
@@ -466,13 +479,6 @@ h1 {
     button {
       margin-bottom: 100px;
     }
-  }
-
-  .mission,
-  .vision {
-    display: block;
-    padding-top: 50px;
-    padding-bottom: 70px;
   }
 
   .video-container {

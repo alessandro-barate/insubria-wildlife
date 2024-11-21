@@ -230,6 +230,7 @@ header {
 
   .nav-menu.active {
     left: 0;
+    width: 100%;
   }
 
   .lang-container {
