@@ -14,6 +14,8 @@ export default {
 
   methods: {
     showMemberDetails(index) {
+      if (this.showDetails) return;
+      this.currentIndex = index;
       this.showDetails = true;
     },
 
@@ -25,35 +27,41 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="team-container">
-          <div class="overlay">
-            <h1>IL NOSTRO TEAM</h1>
-            <div class="cards-container d-flex">
-              <div
-                v-for="(member, index) in store.members"
-                :key="index"
-                class="col-33"
-              >
-                <div class="member-img">
-                  <img :src="member.image" alt="" />
+  <div :class="{ 'no-interaction': showDetails }">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="team-container">
+            <div class="overlay">
+              <h1>IL NOSTRO TEAM</h1>
+              <div class="cards-container d-flex">
+                <div
+                  v-for="(member, index) in store.members"
+                  :key="index"
+                  class="col-33"
+                >
+                  <div class="member-img">
+                    <img :src="member.image" alt="" />
+                  </div>
+                  <h2>{{ member.name }}</h2>
+                  <h3>{{ member.title }}</h3>
+                  <div class="info-btn">
+                    <button @click="this.showMemberDetails(index)">
+                      Scopri di più
+                    </button>
+                  </div>
                 </div>
-                <h2>{{ member.name }}</h2>
-                <h3>{{ member.title }}</h3>
-                <div class="info-btn">
-                  <button @click="this.showMemberDetails(index)">
-                    Scopri di più
-                  </button>
+              </div>
+              <div v-if="this.showDetails" class="overlay-single-card">
+                <div class="details-btn d-flex">
+                  <button @click="hideMemberDetails(index)">X</button>
+                </div>
+                <div class="details-description">
+                  <p>{{ store.members[currentIndex].description }}</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div v-if="this.showDetails" class="overlay-single-card">
-          <button @click="hideMemberDetails(index)">X</button>
-          <!-- <p>{{ member.description }}</p> -->
         </div>
       </div>
     </div>
@@ -61,6 +69,14 @@ export default {
 </template>
 
 <style scoped lang="css">
+.no-interaction {
+  pointer-events: none;
+}
+
+.no-interaction .overlay-single-card {
+  pointer-events: auto;
+}
+
 .team-container {
   width: 100%;
   padding-top: 50px;
@@ -83,18 +99,34 @@ export default {
 }
 
 .overlay-single-card {
-  width: 86%;
-  height: 70%;
-  top: 52%;
-  left: 52%;
-  border-radius: 30px;
-  margin-top: -20%;
-  margin-left: -45%;
-  position: absolute;
-  background-color: rgba(255, 0, 0, 0.342);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 1);
 
-  p {
-    width: 50%;
+  .details-btn {
+    text-align: start;
+
+    button {
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 20px;
+      color: rgba(255, 255, 255, 0.753);
+      background-color: transparent;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
 }
 
