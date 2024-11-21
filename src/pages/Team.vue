@@ -27,7 +27,7 @@ export default {
                 class="col-25"
               >
                 <div class="member-img">
-                  <img src="" alt="" />
+                  <img :src="member.image" alt="" />
                 </div>
                 <h2>{{ member.name }}</h2>
                 <h3>{{ member.title }}</h3>
@@ -62,5 +62,16 @@ export default {
 
 .cards-container {
   flex-wrap: wrap;
+}
+
+.member-img {
+  width: 100%;
+
+  img {
+    width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 110px;
+  }
 }
 </style>

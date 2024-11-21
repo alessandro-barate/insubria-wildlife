@@ -33,21 +33,21 @@ export const store = reactive({
     {
       name: "Ilaria",
       title: "Presidentessa",
-      image: "team/grid/ilaria.jpg",
+      image: "team/grid/ilaria.png",
       description:
         "Naturalista da quando ho memoria. Ho guardato le foto delle piante, degli animali, dei minerali e delle stelle e ho capito qual era la mia strada. La passione per gli animali, però, è nata molto prima, quando un tartufo umido mi ha svegliato nella culla, e non mi ha mai più abbandonata; quando con la nonna passavo il tempo in giardino a imparare nomi di fiori che avrei poi dimenticato, perché impegnata a guardare una lucertola, un’ape o rincorrere un uccellino di passaggio. Oggi parte del mio lavoro è cercare di trasmettere la meraviglia che provo ad ogni piccola scoperta...se non mi ci perdo dentro!",
     },
     {
       name: "Alessia",
       title: "Vice Presidentessa",
-      image: "team/grid/alessia.jpeg",
+      image: "team/grid/alessia.png",
       description:
         "Non potrei immaginare la mia vita lontano dal mondo naturale: per questo ho scelto questo percorso ancora prima di esserne consapevole. Profondamente appassionata e curiosa, appena ho potuto ho viaggiato: per svago e per lavoro, in Italia e all’estero, e facendo parte di progetti di volontariato. Ad ogni  ritorno a casa mi trovavo arricchita da un bagaglio professionale e personale più ampio. Amo da sempre imparare e condividere con le persone che mi stanno intorno e nel tempo libero viaggio, dormo in tenda, leggo e disegno (per lo più pennuti!)",
     },
     {
       name: "Elena",
       title: "Segretaria",
-      image: "team/grid/elena.jpg",
+      image: "team/grid/elena.png",
       description:
         "Da sempre appassionata di animali e natura, entro in questo mondo (quasi 20 anni fa) tramite un'associazione operante nel monitoraggio ambientale. Da allora ho collaborato con molte associazioni come divulgatrice scientifica, guida in oasi protette e parchi faunistici, e per didattica nelle scuole. Il volontariato mi ha dato la possibilità di entrare in contatto con la fauna selvatica, e tutt'oggi lavoro in questo ambito. Sono entusiasta del mio percorso e delle innumerevoli possibilità che mi ha donato, ma lo sono ancora di più pensando al supporto che potrò dare a Insubria Wildlife e a tutto ciò che questa nuova avventura riuscirà a darmi!",
     },
@@ -61,7 +61,7 @@ export const store = reactive({
     {
       name: "Maura",
       title: "Consigliera",
-      image: "team/grid/maura.heic",
+      image: "team/grid/maura.jpg",
       description:
         "Se la prima parola che pronunci quando sei piccola è “cane”, vuol dire che da qualche parte il tuo percorso è già tracciato. Diventare veterinaria è stato un sogno che è realizzato, ma l'incontro con la fauna selvatica si è preso una grossa parte del mio cuore. Durante il progetto Erasmus in una clinica universitaria ebbi come paziente una piccola lontra, seguita poi da rapaci e pipistrelli: queste esperienze non fecero altro che rafforzare il mio amore per gli animali selvatici, culminato con un tirocinio presso un CRAS, dove ho scoperto il mondo della fauna locale e il valore del volontariato.",
     },
@@ -74,7 +74,7 @@ export const store = reactive({
     {
       name: "Roberto",
       title: "Consigliere",
-      image: "team/grid/roberto.jpg",
+      image: "team/grid/roberto.png",
       description:
         "La natura ha sempre avuto un lato attrattivo su di me: un sentimento profondo, difficilmente spiegabile a parole. È la mia passione, la mia valvola di sfogo, il mio porto sicuro. Dove imparare cose nuove e passare il tempo con le persone che amo: ne ho fatto anche un lavoro, diventando guida safari in Africa. Con Insubria Wildlife voglio portare le persone ad esplorare anche la meravigliosa natura locale, spesso poco conosciuta.",
     },
