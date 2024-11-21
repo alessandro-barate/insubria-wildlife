@@ -52,7 +52,7 @@ export default {
         <!-- Mission section -->
         <div class="mission">
           <div class="overlay margin-l-60">
-            <h2>Mission</h2>
+            <h2>MISSION</h2>
             <p>
               <span>Insubria Wildlife APS è la voce giovane e dinamica della
               divulgazione scientifica</span> sulla fauna selvatica e gli ambienti
@@ -121,7 +121,7 @@ export default {
           </div>
           <div class="vision-card d-flex">
             <div class="overlay margin-right-60">
-              <h2>Vision</h2>
+              <h2>VISION</h2>
               <p>
                 Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
                 coesistono in sinergia con la comunità locale, dove ognuno può
@@ -208,11 +208,7 @@ h1 {
 
 .overlay {
   width: 65%;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-
+  
   span {
     font-weight: bold;
   }
