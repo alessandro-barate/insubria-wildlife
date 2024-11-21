@@ -5,7 +5,7 @@ export const store = reactive({
     {
       description:
         "Diventare un faro nella promozione sociale, creando una comunità vibrante di cittadini consapevoli e attivi nella conservazione di ambiente e fauna.",
-      image: "../swan.jpg",
+      image: "/homepage/background/swan.jpg",
     },
     {
       description:

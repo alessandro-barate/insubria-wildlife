@@ -178,7 +178,7 @@ h1 {
 }
 
 .jumbo {
-  background-image: url(../assets/img/bird-jumbo.png);
+  background-image: url(/homepage/background/bird-jumbo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 200px;
@@ -290,14 +290,14 @@ h1 {
   margin-right: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-image: url(../assets/img/deer-night.png);
+  background-image: url(/homepage/background/deer-night.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .vision {
   padding-bottom: 30px;
-  background-image: url(../assets/img/eagle.png);
+  background-image: url(/homepage/background/eagle.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -410,7 +410,7 @@ h1 {
   }
 
   .jumbo {
-    background-image: url(../assets/img/bird-jumbo-reverse.jpg);
+    background-image: url(/homepage/background/bird-jumbo-reverse.jpg);
 
     p {
     width: 70%;
@@ -435,7 +435,7 @@ h1 {
     position: static;
     justify-content: center;
     background-color: #0d0907;
-    background-image: url(../assets/img/bird-coloured.jpg);
+    background-image: url(/homepage/background/bird-coloured.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -454,7 +454,7 @@ h1 {
     margin-right: 0;
     padding-top: 50px;
     background-color: #0d0907;
-    background-image: url(../assets/img/fox.jpg);
+    background-image: url(/homepage/background/fox.png);
     background-size: cover;
     background-position: center;
 
