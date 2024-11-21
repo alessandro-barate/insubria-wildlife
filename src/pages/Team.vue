@@ -1,4 +1,17 @@
-<script></script>
+<script>
+import { store } from "../store.js";
+export default {
+  name: "Team",
+
+  data() {
+    return {
+      store,
+      currentIndex: 0,
+      intervalTimer: false,
+    };
+  },
+};
+</script>
 
 <template>
   <div class="container">
@@ -8,13 +21,18 @@
           <div class="overlay">
             <h1>IL NOSTRO TEAM</h1>
             <div class="cards-container d-flex">
-              <div class="col-25">Alessia</div>
-              <div class="col-25">Giulia</div>
-              <div class="col-25">Elena</div>
-              <div class="col-25">Maura</div>
-              <div class="col-25">Oriana</div>
-              <div class="col-25">Ilaria</div>
-              <div class="col-25">Roberto</div>
+              <div
+                v-for="(member, index) in store.members"
+                :key="index"
+                class="col-25"
+              >
+                <div class="member-img">
+                  <img src="" alt="" />
+                </div>
+                <h2>{{ member.name }}</h2>
+                <h3>{{ member.title }}</h3>
+                <p>{{ member.description }}</p>
+              </div>
             </div>
           </div>
         </div>

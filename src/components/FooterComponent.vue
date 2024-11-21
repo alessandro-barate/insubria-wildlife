@@ -28,7 +28,7 @@ export default {
               <a href=""> Via Roma 20, 20004, Arluno </a>
               <div>
                 <h3 id="cf">Codice Fiscale</h3>
-                <span>01234567890</span>
+                <span>93054540153</span>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default {
                 src="../assets/img/footer-img/mail-icon.png"
                 alt="Immagine email"
               />
-              <a href=""> fewfew@fewf.com </a>
+              <a href=""> insubria.wildlife@gmail.com </a>
             </div>
           </div>
           <div class="socials">
