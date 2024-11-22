@@ -1,3 +1,6 @@
+/**************
+GENERAL RESET
+**************/
 * {
   padding: 0;
   margin: 0 auto;
@@ -5,24 +8,25 @@
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-html::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 10px;
+/**********************************
+SCROLLBAR RESET FOR WEBKIT ENGINE
+**********************************/
+*::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #ff6b3ade;
 }
 
-html::-webkit-scrollbar {
-  width: 20px;
+*::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.808);
 }
 
-.overlay-single-card::-webkit-scrollbar {
-  width: 20px;
+*::-webkit-scrollbar {
+  width: 7px;
 }
 
-.overlay-single-card::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 10px;
-}
-
+/********
+V_CLOAK
+********/
 [v-cloak] {
   display: none;
 }

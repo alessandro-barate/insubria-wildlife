@@ -66,12 +66,6 @@ export const store = reactive({
         "Se la prima parola che pronunci quando sei piccola è “cane”, vuol dire che da qualche parte il tuo percorso è già tracciato. Diventare veterinaria è stato un sogno che è realizzato, ma l'incontro con la fauna selvatica si è preso una grossa parte del mio cuore. Durante il progetto Erasmus in una clinica universitaria ebbi come paziente una piccola lontra, seguita poi da rapaci e pipistrelli: queste esperienze non fecero altro che rafforzare il mio amore per gli animali selvatici, culminato con un tirocinio presso un CRAS, dove ho scoperto il mondo della fauna locale e il valore del volontariato.",
     },
     {
-      name: "Oriana",
-      title: "Consigliera",
-      image: "team/grid/oriana.jpg",
-      description: "Si",
-    },
-    {
       name: "Roberto",
       title: "Consigliere",
       image: "team/grid/roberto.png",

@@ -140,8 +140,9 @@ export default {
 
   img {
     width: 30%;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     border-radius: 145px;
+    object-fit: cover;
   }
 }
 
@@ -207,8 +208,7 @@ export default {
   padding-bottom: 15px;
 
   img {
-    width: 35%;
-    height: 35%;
+    width: 45%;
     border: 3px solid #ff6b3a;
     object-fit: cover;
     border-radius: 110px;
@@ -220,12 +220,20 @@ export default {
 @media only screen and (min-width: 560px) and (max-width: 800px) {
   .col-33 {
     width: calc(100% / 2.2 - 10px);
+
+    .member-img img {
+      width: 50%;
+    }
   }
 
   .overlay-single-card {
     max-height: 670px;
     transform: translate(-50%, -41%);
     overflow: auto;
+
+    .details-img img {
+      width: 50%;
+    }
   }
 }
 /* END Tablet layout */
@@ -244,6 +252,10 @@ export default {
     max-height: 700px;
     transform: translate(-50%, -42%);
     overflow: scroll;
+
+    .details-img img {
+      width: 60%;
+    }
   }
 }
 </style>
