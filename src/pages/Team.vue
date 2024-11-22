@@ -117,14 +117,13 @@ export default {
 .team-container,
 .grid-section {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   position: relative;
   text-align: center;
-  background-color: red;
 }
 
 .team-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-bottom: 10px;
   background-image: url(/team/background/swan.jpg);
   background-size: cover;
@@ -177,9 +176,10 @@ export default {
 }
 
 .grid-section .overlay {
-  width: 90%;
-  padding-top: 40px;
-  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 50px 40px 0px 40px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .overlay {
@@ -233,7 +233,7 @@ export default {
 }
 
 .details-description p {
-  width: 70%;
+  width: 85%;
   font-size: 18px;
   line-height: 25px;
   padding-bottom: 20px;
@@ -328,6 +328,13 @@ export default {
     padding-bottom: 20px;
   }
 
+  .grid-section {
+    background-image: url(/team/background/reindeer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .grid-section .overlay {
     padding-top: 30px;
   }
@@ -367,6 +374,7 @@ export default {
 
   .cards-container {
     display: block;
+    padding-bottom: 20px;
   }
 
   .overlay-single-card {
@@ -377,6 +385,12 @@ export default {
     .details-img img {
       width: 60%;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .overlay-single-card {
+    top: 46%;
   }
 }
 </style>

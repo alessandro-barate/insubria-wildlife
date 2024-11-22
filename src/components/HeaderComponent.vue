@@ -126,7 +126,7 @@ header {
   position: sticky;
 
   .logo {
-    width: 20%;
+    width: 30%;
   }
 }
 
