@@ -389,6 +389,13 @@ export default {
 }
 
 @media (max-width: 800px) {
+  .grid-section {
+    background-image: url(/team/background/red-deer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .overlay-single-card {
     top: 46%;
   }
