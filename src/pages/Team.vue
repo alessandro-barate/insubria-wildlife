@@ -32,8 +32,36 @@ export default {
       <div class="row">
         <div class="col">
           <div class="team-container">
-            <div class="overlay">
+            <div class="overlay description-section">
               <h1>IL NOSTRO TEAM</h1>
+              <h2>Ecco le fondatrici di Insubria Wildlife!</h2>
+              <p class="team-description">
+                <br />
+                <br />
+                Siamo Elena, Giulia, Maura, Alessia e Ilaria (da sinistra a
+                destra) e ci siamo conosciute anni fa in un centro di cura e
+                riabilitazione per animali selvatici, dove abbiamo lavorato,
+                fatto tirocini e volontariato per molti anni.
+                <br />
+                <br />La vita ci ha portate su strade diverse - cambiando
+                lavori, città o nazioni - ma siamo rimaste sempre unite. Ogni
+                volta che possiamo, ci ritroviamo per fare attività in natura:
+                birdwatching, passeggiate nei boschi, ascoltare i bramiti dei
+                cervi, viaggiare e scoprire nuovi luoghi.
+                <br />
+                <br />Il sogno di vedere valorizzato il nostro territorio dal
+                punto di vista naturalistico, e quello di vedere la comunità più
+                coinvolta ci ha portate a fare questo grande passo: aprire la
+                nostra associazione.
+                <br />
+                <br />
+                Speriamo di portarti con noi in quest'avventura e di poter
+                avverare tanti piccoli sogni assieme!
+              </p>
+            </div>
+          </div>
+          <div class="grid-section">
+            <div class="overlay">
               <div class="cards-container d-flex">
                 <div
                   v-for="(member, index) in store.members"
@@ -80,26 +108,56 @@ export default {
   pointer-events: auto;
 }
 
-.team-container {
+.team-container,
+.grid-section {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
   text-align: center;
-  background-image: url(/team/background/team-group.jpg);
-  background-size: 100%;
+  background-color: red;
+}
+
+.team-container .overlay {
+  width: 80%;
+}
+
+.description-section:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+  transform: scale(1.01);
+}
+
+.description-section h1 {
+  font-size: 50px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.description-section h2 {
+  width: 90%;
+  font-size: 24px;
+}
+
+.description-section p {
+  width: 85%;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+.grid-section {
+  background-color: aqua;
+}
+
+.grid-section .overlay {
+  padding-top: 40px;
 }
 
 .overlay {
   width: 90%;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.8);
-
-  h1 {
-    font-size: 45px;
-    padding-top: 30px;
-    padding-bottom: 60px;
-  }
 }
 
 .overlay-single-card {
@@ -226,6 +284,26 @@ export default {
     }
   }
 
+  .description-section h1 {
+    font-size: 40px;
+  }
+
+  .description-section h2 {
+    width: 90%;
+    font-size: 25px;
+  }
+
+  .description-section p {
+    width: 85%;
+    font-size: 18px;
+    line-height: 23px;
+    padding-bottom: 20px;
+  }
+
+  .grid-section .overlay {
+    padding-top: 30px;
+  }
+
   .overlay-single-card {
     max-height: 670px;
     transform: translate(-50%, -41%);
@@ -242,6 +320,21 @@ export default {
 @media (max-width: 559px) {
   .col-33 {
     width: 85%;
+  }
+
+  .description-section h1 {
+    font-size: 35px;
+  }
+
+  .description-section h2 {
+    width: 75%;
+    font-size: 25px;
+  }
+
+  .description-section p {
+    width: 83%;
+    font-size: 18px;
+    line-height: 23px;
   }
 
   .cards-container {
