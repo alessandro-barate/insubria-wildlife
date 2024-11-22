@@ -35,6 +35,12 @@ export default {
             <div class="overlay description-section">
               <h1>IL NOSTRO TEAM</h1>
               <h2>Ecco le fondatrici di Insubria Wildlife!</h2>
+              <div class="team-group-img">
+                <img
+                  src="/team/background/team-group.jpg"
+                  alt="Foto di gruppo del team"
+                />
+              </div>
               <p class="team-description">
                 <br />
                 <br />
@@ -118,12 +124,19 @@ export default {
   background-color: red;
 }
 
+.team-container {
+  margin-bottom: 10px;
+  background-image: url(/team/background/swan.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .team-container .overlay {
   width: 80%;
 }
 
 .description-section:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
   transform: scale(1.01);
 }
@@ -146,12 +159,27 @@ export default {
   padding-bottom: 20px;
 }
 
+.team-group-img {
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: -20px;
+
+  img {
+    width: 50%;
+  }
+}
+
 .grid-section {
-  background-color: aqua;
+  background-image: url(/team/background/reindeer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .grid-section .overlay {
+  width: 90%;
   padding-top: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .overlay {
@@ -216,11 +244,11 @@ export default {
   padding-bottom: 30px;
   margin-bottom: 50px;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: calc(100% / 3 - 50px);
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.95);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
     transform: scale(1.01);
   }
