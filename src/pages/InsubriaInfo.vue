@@ -31,13 +31,15 @@
                 </ul> 
               </p>
             </div>
-            <div class="img-container">
-              <img src="/insubria/maps/insubria-immagini.png" alt="">
+            <div class="img-container d-flex">
+              <div class="img-container-2">
+                <img src="/insubria/maps/insubria-immagini.png" alt="">
+              </div>
             </div>
           </div>
           <div class="history-nowaday">
           <div class="insubria-description">
-            <h2>L'insubria oggi</h2>
+            <h2>L'Insubria oggi</h2>
             <p>La regione insubrica, pur non essendo ben definita, ricalca le orme della presenza degli antichi Insubri, e le popolazioni odierne ne condividono alcuni aspetti culturali e dialettali.
             <br>
             <br>
@@ -57,7 +59,9 @@
         <div class="why-insubria overlay">
           <h2>Perchè l'Insubria?</h2>
           <div class="why-description">
-            <p>Abbiamo scelto di focalizzarci su questo territorio proprio perché ne riconosciamo il valore naturale e anche le criticità dell'incontro tra i due mondi - quello naturale e quello urbanizzato/industrializzato.
+            <p>Abbiamo scelto di focalizzarci su questo territorio proprio perché ne riconosciamo il valore naturale e anche le criticità dell'incontro tra i due mondi, ovvero quello naturale e quello urbanizzato e industrializzato.
+              <br>
+              <br>
             Crediamo profondamente che una corretta valorizzazione e gestione del territorio possa dare vita ad una proficua coesistenza tra uomo e natura, e portare di conseguenza anche la comunità ad apprezzare le bellezze del proprio territorio.</p>
           </div>
         </div>
@@ -101,13 +105,17 @@ h2 {
   }
 
   img:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
 }
 
 .insubria-description {
   width: 90%;
   padding-top: 30px;
+
+  .description {
+    width: 200%;
+  }
 
   #insubria-list li {
     width: 80%;
@@ -124,8 +132,16 @@ h2 {
   }
 }
 
-.img-container img {
-    width: 100%;
+.img-container {
+  align-items: center;
+
+  .img-container-2 {
+  text-align: center;
+}
+
+  img {
+    width: 65%;
+}
 }
 
 .history-nowaday {
@@ -134,6 +150,7 @@ h2 {
 
 .why-insubria {
   width: 60%;
+  text-align: center;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -160,5 +177,24 @@ h2 {
   background-image: url(/insubria/background/orange-bird.jpg);
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 980px) {
+  .insubria-description {
+    display: block;
+
+    .description {
+      width: 100%;
+      padding-bottom: 50px;
+    }
+  }
+
+  .img-container-2 img {
+    width: 50%;
+
+    &:hover {
+    transform: scale(1.2);
+  }
+  }
 }
 </style>
