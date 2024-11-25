@@ -31,6 +31,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col">
+          <!-- Team container -->
           <div class="team-container">
             <div class="overlay description-section">
               <h1>IL NOSTRO TEAM</h1>
@@ -66,9 +67,13 @@ export default {
               </p>
             </div>
           </div>
+          <!-- END team container -->
+
+          <!-- Grid Container -->
           <div class="grid-section">
             <div class="overlay">
               <div class="cards-container d-flex">
+                <!-- Single team member card -->
                 <div
                   v-for="(member, index) in store.members"
                   :key="index"
@@ -85,7 +90,10 @@ export default {
                     </button>
                   </div>
                 </div>
+                <!-- END single team member card -->
               </div>
+
+              <!-- Single team member overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
                 <div class="details-btn d-flex">
                   <button @click="hideMemberDetails(index)">X</button>
@@ -97,8 +105,10 @@ export default {
                   <p>{{ store.members[currentIndex].description }}</p>
                 </div>
               </div>
+              <!-- END single team member overview -->
             </div>
           </div>
+          <!-- END grid Container -->
         </div>
       </div>
     </div>
@@ -153,7 +163,7 @@ export default {
 
 .description-section p {
   width: 85%;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 25px;
   padding-bottom: 20px;
 }

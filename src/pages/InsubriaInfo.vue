@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
 
-      <!-- History old description -->
+      <!-- History description -->
       <div class="col upper-bg">
         <div class="history-old overlay">
           <h1>INSUBRIA</h1>
@@ -21,7 +21,7 @@
                 svizzeri Ticino e Grigioni, e a sud del Po. Successivamente si sono
                 poi distinte tre diverse culture:
                 <ul id="insubria-list">
-                  <li><h4>dell'Isolino (5060 a.C.)</h4>
+                  <li><h4>dell'Isolino<span>, attorno al 5060 a.C.</span></h4>
                   <p>chiamata così perché gli abitanti costruirono un villaggio di
                   palafitte sull'Isolino Virginia del lago di Varese, lago ritenuto essere
                   il più antico dell'arco alpino</p></li>
@@ -53,9 +53,10 @@
         </div>
         
       </div>
-      <!-- END history old description -->
+      <!-- END history description -->
 
-      <div class="col lower-bg">
+      <!-- Why Insubria description -->
+      <div class="col middle-bg">
         <div class="why-insubria overlay">
           <h2>Perchè l'Insubria?</h2>
           <div class="why-description">
@@ -66,6 +67,24 @@
           </div>
         </div>
       </div>
+      <!-- END why Insubria description -->
+
+      <!-- Logo explanation -->
+      <div class="col lower-bg">
+        <div class="logo-container overlay">
+          <h2>Il nostro Logo</h2>
+          <div class="images-container d-flex">
+            <div class="logo-img">
+              <img src="/logo/double-circle.png" alt="">
+            </div>
+            <div class="real-image">
+              <img src="/insubria/fiorrancino.png" alt="">
+            </div>
+          </div>
+          <p>Il nostro logo è un Fiorrancino - <span>Regulus Ignicapilla</span> - e qui vi spieghiamo perchè ci rappresenta:</p>
+        </div>
+      </div>
+      <!-- END logo explanation -->
     </div>
   </div>
 </template>
@@ -74,6 +93,10 @@
 
 .container {
   color: rgba(255, 255, 255, 0.753);
+
+  p, span {
+    font-size: 20px;
+  }
 }
 
 .col {
@@ -89,7 +112,12 @@ h1 {
 }
 
 h2 {
+  font-size: 28px;
   padding-bottom: 10px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 .history-old {
@@ -137,11 +165,11 @@ h2 {
 
   .img-container-2 {
   text-align: center;
-}
+  }
 
   img {
     width: 65%;
-}
+  }
 }
 
 .history-nowaday {
@@ -159,24 +187,63 @@ h2 {
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.01);
   }
+
+  .why-description {
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+.logo-container {
+  width: 70%;
+  text-align: center;
+
+  span {
+    font-style: italic;
+  }
+
+  .images-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .logo-img {
+    width: 50%;
+    text-align: end;
+    padding-right: 30px;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .real-image {
+    width: 50%;
+    text-align: start;
+    padding-left: 30px;
+
+    img {
+      width: 48%;
+      border-radius: 50%;
+    }
+  }
 }
 
 .upper-bg {
-  background-image: url(/homepage/carousel/fox-2.jpg);
   background-size: cover;
   background-position: center;
+  background-image: url(/homepage/carousel/fox-2.jpg);
 }
 
 .middle-bg {
-  background-image: url(/insubria/background/deer.png);
   background-size: cover;
   background-position: center;
+  background-image: url(/insubria/background/orange-bird.jpg);
 }
 
 .lower-bg {
-  background-image: url(/insubria/background/orange-bird.jpg);
   background-size: cover;
   background-position: center;
+  background-image: url(/insubria/background/deer.png);
 }
 
 @media (max-width: 980px) {

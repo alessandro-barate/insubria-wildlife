@@ -12,7 +12,7 @@ export default {
           <div class="logo-footer-container d-flex">
             <img
               class="footer-logo"
-              src="../assets/img/logo/bird-only.png"
+              src="/logo/bird-only.png"
               alt="Insubria logo"
             />
           </div>

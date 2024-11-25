@@ -53,10 +53,7 @@ export default {
             <div class="logo">
               <a>
                 <router-link :to="{ name: 'Home' }">
-                  <img
-                    src="../assets/img/logo/logo-doppio-cerchio.png"
-                    alt=""
-                  />
+                  <img src="/logo/double-circle.png" alt="" />
                 </router-link>
               </a>
             </div>
