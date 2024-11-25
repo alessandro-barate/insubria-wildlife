@@ -6,8 +6,8 @@
 
       <!-- History old description -->
       <div class="col upper-bg">
-        <h1>INSUBRIA</h1>
         <div class="history-old overlay">
+          <h1>INSUBRIA</h1>
           <div class="insubria-description d-flex">
             <div class="description">
               <h2>Un pò di Storia</h2>
@@ -78,10 +78,10 @@
 }
 
 h1 {
-  color: white;
   font-size: 50px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 h2 {
@@ -92,16 +92,21 @@ h2 {
   width: 80%;
   padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.9);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.01);
   }
+
+  img:hover {
+    transform: scale(1.2);
+  }
 }
 
 .insubria-description {
+  width: 90%;
   padding-top: 30px;
 
   #insubria-list li {
@@ -120,7 +125,7 @@ h2 {
 }
 
 .img-container img {
-    width: 90%;
+    width: 100%;
 }
 
 .history-nowaday {
