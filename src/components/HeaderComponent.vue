@@ -135,10 +135,10 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    width: 70%;
+    text-align: center;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
