@@ -115,7 +115,7 @@ export default {
             </div>
           </div>
           <div class="vision-card d-flex">
-            <div class="overlay margin-right-60">
+            <div class="overlay margin-r-60">
               <h2>VISION</h2>
               <p>
                 Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti

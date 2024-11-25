@@ -73,7 +73,7 @@ export default {
                     src="../assets/img/footer-img/mail-icon.png"
                     alt="Immagine email"
                   />
-                  <a href=""> insubria.wildlife@gmail.com </a>
+                  <a href=""> insubriawildlifeaps@pec.insubriawildlife.com </a>
                 </div>
               </div>
             </div>
