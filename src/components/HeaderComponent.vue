@@ -123,7 +123,7 @@ header {
   position: sticky;
 
   .logo {
-    width: 30%;
+    width: 20%;
   }
 }
 
@@ -146,12 +146,12 @@ header {
 }
 
 .logo {
-  width: 40%;
+  width: 25%;
   margin-left: 0;
   text-align: center;
 
   img {
-    width: 25%;
+    width: 30%;
     padding-top: 10px;
     padding-bottom: 10px;
 
