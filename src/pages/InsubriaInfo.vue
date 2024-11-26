@@ -246,6 +246,41 @@ h4 {
   background-image: url(/insubria/background/deer.png);
 }
 
+/* Media queries */
+/* Mobile layout */
+@media (max-width: 559px) {
+  .history-old {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .why-insubria {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/* END mobile layout */
+
+
+/* Tablet layout */
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+  .history-old {
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .why-insubria {
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* END tablet layout */
+
+
 @media (max-width: 980px) {
   .insubria-description {
     display: block;

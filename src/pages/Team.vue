@@ -312,6 +312,40 @@ export default {
 }
 
 /* Media queries */
+/* Mobile layout */
+@media (max-width: 559px) {
+  .col-33 {
+    width: 85%;
+  }
+
+  .description-section h2 {
+    width: 75%;
+    font-size: 25px;
+  }
+
+  .description-section p {
+    width: 83%;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .cards-container {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .overlay-single-card {
+    max-height: 700px;
+    transform: translate(-50%, -42%);
+    overflow: scroll;
+
+    .details-img img {
+      width: 60%;
+    }
+  }
+}
+/* END mobile layout */
+
 /* Tablet layout */
 @media only screen and (min-width: 560px) and (max-width: 800px) {
   .col-33 {
@@ -320,10 +354,6 @@ export default {
     .member-img img {
       width: 50%;
     }
-  }
-
-  .description-section h1 {
-    font-size: 40px;
   }
 
   .description-section h2 {
@@ -361,43 +391,6 @@ export default {
 }
 /* END Tablet layout */
 
-/* Mobile layout */
-@media (max-width: 559px) {
-  .col-33 {
-    width: 85%;
-  }
-
-  .description-section h1 {
-    font-size: 35px;
-  }
-
-  .description-section h2 {
-    width: 75%;
-    font-size: 25px;
-  }
-
-  .description-section p {
-    width: 83%;
-    font-size: 18px;
-    line-height: 23px;
-  }
-
-  .cards-container {
-    display: block;
-    padding-bottom: 20px;
-  }
-
-  .overlay-single-card {
-    max-height: 700px;
-    transform: translate(-50%, -42%);
-    overflow: scroll;
-
-    .details-img img {
-      width: 60%;
-    }
-  }
-}
-
 @media (max-width: 800px) {
   .grid-section {
     background-image: url(/team/background/red-deer.jpg);
@@ -410,4 +403,5 @@ export default {
     top: 46%;
   }
 }
+/* END media queries */
 </style>
