@@ -27,7 +27,7 @@ export default {
     },
 
     checkIfMobile() {
-      this.isMobile = window.innerWidth < 559;
+      this.isMobile = window.innerWidth < 730;
     },
   },
 
@@ -182,12 +182,17 @@ export default {
                 :key="index"
                 class="paragraph-container"
               >
-                <p
+                <div
                   v-show="this.currentIndex === index"
-                  class="paragraph-description overlay"
+                  class="paragraph-card overlay"
                 >
-                  {{ characteristic.description }}
-                </p>
+                  <div class="close-button">
+                    <button @click="toggleParagraph(index)">X</button>
+                  </div>
+                  <p class="paragraph-description">
+                    {{ characteristic.description }}
+                  </p>
+                </div>
               </div>
             </div>
             <!-- END description section -->
@@ -368,6 +373,10 @@ h4 {
   .right-section {
     width: 50%;
   }
+
+  .right-section {
+    position: relative;
+  }
 }
 
 .characteristics-list {
@@ -452,6 +461,10 @@ h4 {
 .characteristic:hover::after {
   transform: translateX(5%);
 }
+
+.close-button {
+  display: none;
+}
 // END bottom list styles
 
 /* Media queries */
@@ -483,7 +496,7 @@ h4 {
 /* END various media queries */
 
 /* Mobile layout */
-@media (max-width: 559px) {
+@media (max-width: 729px) {
   .history-old,
   .why-insubria,
   .logo-container {
@@ -492,16 +505,17 @@ h4 {
     padding-right: 0px;
   }
 
+  .logo-container .logo-img img,
+  .logo-container .real-image img {
+    width: 80%;
+  }
+
   .list-container {
     display: block;
     width: 100%;
 
     .left-section {
       width: 100%;
-    }
-
-    .right-section {
-      width: 0%;
     }
   }
 
@@ -535,11 +549,45 @@ h4 {
   .description-title {
     display: none;
   }
+
+  .paragrapgh-container {
+    width: 90%;
+  }
+
+  .paragraph-card {
+    width: 160%;
+    z-index: 10;
+    height: 730px;
+    position: absolute;
+    transform: translate(-22%, -100%);
+    background-color: rgba(0, 0, 0, 0.95);
+
+    .close-button {
+      display: block;
+      padding-top: 15px;
+    }
+
+    button {
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.753);
+      background-color: transparent;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    p {
+      margin-top: -15px;
+    }
+  }
 }
 /* END mobile layout */
 
 /* Tablet layout */
-@media only screen and (min-width: 560px) and (max-width: 800px) {
+@media only screen and (min-width: 730px) and (max-width: 800px) {
   .history-old,
   .why-insubria,
   .logo-container {
