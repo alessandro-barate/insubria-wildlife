@@ -76,22 +76,22 @@ export const store = reactive({
 
   characteristics: [
     {
-      intro: "Piccolo ma determinato.",
+      intro: "Piccolo ma determinato",
       description:
         "Con i suoi 9-10 cm, il fiorrancino è uno degli uccelli più piccoli d'Europa. Nonostante le dimensioni, però, riesce ad affrontare delle migrazioni, adattandosi a diversi habitat. Proprio come noi, che ci siamo spostate e adattate in diversi contesti professionali, sempre guidate dalla passione per la natura.",
     },
     {
-      intro: "Nascosto ma diffuso.",
+      intro: "Nascosto ma diffuso",
       description:
         "Il fiorrancino, volatile veloce e agile, spesso passa inosservato ai non esperti: analogamente le ricchezze naturalistiche dell'Insubria sono presenti ma talvolta nascoste e poco note.",
     },
     {
-      intro: "Adattabile ma sensibile.",
+      intro: "Adattabile ma sensibile",
       description:
         "Pur adattandosi a vari ambienti, dal livello del mare fino a 2400 metri di altitudine, il fiorrancino è sensibile ai cambiamenti ambientali. Questa caratteristica riflette la nostra missione di promuovere la consapevolezza ecologica in un territorio fortemente antropizzato.",
     },
     {
-      intro: "Sociale e curioso.",
+      intro: "Sociale e curioso",
       description:
         "I fiorrancini spesso si uniscono a volatili di altre specie formando così stormi misti, mostrando una natura sociale e curiosa. Allo stesso modo, noi di Insubria Wildlife puntiamo a creare connessioni, stimolare la curiosità e promuovere lo scambio di conoscenze tra persone con diversi background.",
     },

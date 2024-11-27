@@ -1,4 +1,26 @@
-<script></script>
+<script>
+import { store } from "../store.js";
+export default {
+  name: "Insubria",
+
+  data() {
+    return {
+      store,
+      currentIndex: null,
+    };
+  },
+
+  methods: {
+    showParagraph(index) {
+      this.currentIndex = index;
+    },
+
+    hideParagraph() {
+      this.currentIndex = null;
+    }
+  }
+};
+</script>
 
 <template>
   <div class="container">
@@ -81,7 +103,15 @@
               <img src="/insubria/fiorrancino.png" alt="">
             </div>
           </div>
-          <p>Il nostro logo è un Fiorrancino - <span>Regulus Ignicapilla</span> - e qui vi spieghiamo perchè ci rappresenta:</p>
+          <p class="bird-description">Il nostro logo è un Fiorrancino - <span>Regulus Ignicapilla</span> - e qui vi spieghiamo perchè l'abbiamo scelto:</p>
+          <div class="list-container">
+            <ul class="characteristics-list">
+              <li v-for="(characteristic, index) in store.characteristics" :key="index" @mouseenter= "showParagraph(index)" @mouseleave="hideParagraph" class="characteristic">
+                <h4>{{ characteristic.intro }}</h4>
+                <p v-show="this.currentIndex === index" class="paragraph-description">{{ characteristic.description }}</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- END logo explanation -->
@@ -226,6 +256,10 @@ h4 {
       border-radius: 50%;
     }
   }
+
+  .bird-description {
+    margin-bottom: 30px;
+  }
 }
 
 .upper-bg {
@@ -299,4 +333,75 @@ h4 {
   }
   }
 }
+
+// List styles
+.list-container {
+  width: 100%;
+  margin-left: -200px;
+}
+
+.characteristics-list {
+  width: 100%;
+}
+
+.characteristic {
+    width: 40%;
+    display: flex;
+    cursor: pointer;
+    padding-top: 2px;
+    margin-bottom: 30px;
+    align-items: center;
+    padding-bottom: 2px;
+    position: relative;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+
+    h4 {
+      z-index: 3;
+      width: 80%;
+      margin-left: 15px;
+      text-align: start;
+      border-radius: 5px;
+      padding: 7px 0 7px 25px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    p {
+      z-index: 6;
+    }
+  }
+
+  .characteristic::before,
+  .characteristic::after {
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    width: 95%;
+    transition: all 0.8s;
+  }
+  
+  .characteristic::before {
+    left: 0%;
+    z-index: 1;
+    height: 130%;
+    background: linear-gradient(to right, #ff6b3a, #242424);
+  }
+
+  .characteristic::after {
+    left: -3%;
+    z-index: 2;
+    height: 120%;
+    background: #ffffff27;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.164);
+  }
+
+  .characteristic:hover::before {
+    transform: translateX(-2.5%);
+  }
+
+  .characteristic:hover::after {
+    transform: translateX(4%);
+  }
 </style>
