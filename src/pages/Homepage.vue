@@ -343,7 +343,6 @@ h1 {
 
   .card-body p {
     width: 50%;
-    /* font-weight: bold; */
     padding-bottom: 10px;
     text-align: center;
   }

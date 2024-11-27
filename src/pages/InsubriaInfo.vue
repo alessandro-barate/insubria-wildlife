@@ -6,18 +6,38 @@ export default {
   data() {
     return {
       store,
+      isMobile: false,
       currentIndex: null,
     };
   },
 
   methods: {
     showParagraph(index) {
-      this.currentIndex = index;
+      if (!this.isMobile) this.currentIndex = index;
     },
 
     hideParagraph() {
-      this.currentIndex = null;
+      if (!this.isMobile) this.currentIndex = null;
     },
+
+    // Click on mobile layout
+    toggleParagraph(index) {
+      if (!this.isMobile) return;
+      this.currentIndex = this.currentIndex === index ? null : index;
+    },
+
+    checkIfMobile() {
+      this.isMobile = window.innerWidth < 559;
+    },
+  },
+
+  mounted() {
+    this.checkIfMobile();
+    window.addEventListener("resize", this.checkIfMobile);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("resize", this.checkIfMobile);
   },
 };
 </script>
@@ -145,9 +165,11 @@ export default {
                   :key="index"
                   @mouseenter="showParagraph(index)"
                   @mouseleave="hideParagraph"
+                  @click="isMobile && toggleParagraph(index)"
                   class="characteristic"
                 >
-                  <h4>{{ characteristic.intro }}</h4>
+                  <h4 class="description-index">{{ index + 1 }}</h4>
+                  <h4 class="description-title">{{ characteristic.intro }}</h4>
                 </li>
               </ul>
             </div>
@@ -378,6 +400,10 @@ h4 {
   }
 }
 
+.description-index {
+  display: none;
+}
+
 .paragraph-container {
   z-index: 6;
   width: 90%;
@@ -429,35 +455,6 @@ h4 {
 // END bottom list styles
 
 /* Media queries */
-/* Mobile layout */
-@media (max-width: 559px) {
-  .history-old,
-  .why-insubria,
-  .logo-container {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-/* END mobile layout */
-
-/* Tablet layout */
-@media only screen and (min-width: 560px) and (max-width: 800px) {
-  .history-old,
-  .why-insubria,
-  .logo-container {
-    width: 90%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .bird-description {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-/* END tablet layout */
-
 /* Various media queries */
 @media (max-width: 980px) {
   .insubria-description {
@@ -484,4 +481,77 @@ h4 {
   }
 }
 /* END various media queries */
+
+/* Mobile layout */
+@media (max-width: 559px) {
+  .history-old,
+  .why-insubria,
+  .logo-container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .list-container {
+    display: block;
+    width: 100%;
+
+    .left-section {
+      width: 100%;
+    }
+
+    .right-section {
+      width: 0%;
+    }
+  }
+
+  .characteristics-list {
+    width: 20%;
+  }
+
+  .characteristic {
+    width: 100%;
+    margin-left: 0;
+
+    .description-index {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .characteristic::before,
+  .characteristic::after {
+    width: 120%;
+  }
+
+  .characteristic::before {
+    left: 4%;
+  }
+
+  .characteristic:hover::after {
+    transform: translateX(10%);
+  }
+
+  .description-title {
+    display: none;
+  }
+}
+/* END mobile layout */
+
+/* Tablet layout */
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+  .history-old,
+  .why-insubria,
+  .logo-container {
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .bird-description {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* END tablet layout */
 </style>
