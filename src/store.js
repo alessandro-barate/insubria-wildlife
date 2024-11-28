@@ -115,6 +115,3 @@ export const store = reactive({
     },
   ],
 });
-
-
-insubria.wildlife@gmail.com

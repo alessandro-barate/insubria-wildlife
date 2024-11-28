@@ -73,6 +73,13 @@ export default {
                     src="../assets/img/footer-img/mail-icon.png"
                     alt="Immagine email"
                   />
+                  <a href=""> insubria.wildlife@gmail.com </a>
+                </div>
+                <div class="mail-container d-flex">
+                  <img
+                    src="../assets/img/footer-img/mail-icon.png"
+                    alt="Immagine email"
+                  />
                   <a href=""> insubriawildlifeaps@pec.insubriawildlife.com </a>
                 </div>
               </div>
@@ -227,6 +234,7 @@ a {
   .phone-container,
   .mail-container {
     justify-content: center;
+    align-items: center;
   }
 }
 

@@ -85,7 +85,7 @@ export default {
             </div>
             <div class="img-container d-flex">
               <div class="img-container-2">
-                <img src="/insubria/maps/insubria-immagini2.png" alt="" />
+                <img src="/insubria/maps/insubria-immagini.png" alt="" />
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default {
             <div class="logo-img">
               <img src="/logo/double-circle.png" alt="" />
             </div>
-            <div class="real-image">
+            <div class="real-image d-flex">
               <img src="/insubria/fiorrancino.png" alt="" />
             </div>
           </div>
@@ -255,7 +255,7 @@ h4 {
   }
 
   img:hover {
-    transform: scale(1.4);
+    transform: scale(1.05);
   }
 }
 
@@ -290,7 +290,7 @@ h4 {
   }
 
   img {
-    width: 65%;
+    width: 150%;
   }
 }
 
@@ -340,11 +340,12 @@ h4 {
 
   .real-image {
     width: 50%;
+    align-items: center;
     text-align: start;
-    padding-left: 30px;
 
     img {
-      width: 48%;
+      width: 45%;
+      margin-left: 20px;
       border-radius: 50%;
     }
   }
@@ -516,9 +517,12 @@ h4 {
     padding-right: 0px;
   }
 
-  .logo-container .logo-img img,
-  .logo-container .real-image img {
+  .logo-container .logo-img img {
     width: 80%;
+  }
+
+  .logo-container .real-image img {
+    width: 70%;
   }
 
   .list-container {

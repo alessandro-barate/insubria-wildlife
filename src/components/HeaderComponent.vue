@@ -89,6 +89,13 @@ export default {
               </li>
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'News' }" class="link"
+                    >NEWS</router-link
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Supportaci' }" class="link"
                     >SUPPORTACI</router-link
                   ></a
@@ -103,10 +110,10 @@ export default {
               </div>
               <div class="lang-container">
                 <button id="italian">
-                  <img src="" alt="" />
+                  <!-- <img src="/header/flags/italy-flag-round.png" alt="" /> -->
                 </button>
                 <button id="english">
-                  <img src="" alt="" />
+                  <!-- <img src="/header/flags/uk-flag-round.png" alt="" /> -->
                 </button>
               </div>
             </div>
