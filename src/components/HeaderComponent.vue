@@ -102,7 +102,12 @@ export default {
                 <span class="bar"></span>
               </div>
               <div class="lang-container">
-                <button>Language</button>
+                <button id="italian">
+                  <img src="" alt="" />
+                </button>
+                <button id="english">
+                  <img src="" alt="" />
+                </button>
               </div>
             </div>
           </nav>

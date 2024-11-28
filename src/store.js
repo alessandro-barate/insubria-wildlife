@@ -101,4 +101,20 @@ export const store = reactive({
         "Infine la sua cresta arancione brillante rappresenta quel guizzo di estro e creatività che contraddistingue il nostro entusiasmo, le nostre idee e i numerosi progetti che abbiamo in mente per Insubria Wildlife.",
     },
   ],
+
+  events: [
+    {
+      title: "notizie da geed deeble",
+      date: "27/11/2024",
+      poster: "27-11-2024.png",
+    },
+    {
+      title: "bird gardening",
+      date: "30/11/2024",
+      poster: "30-11-2024.png",
+    },
+  ],
 });
+
+
+insubria.wildlife@gmail.com

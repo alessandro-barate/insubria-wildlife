@@ -85,7 +85,7 @@ export default {
             </div>
             <div class="img-container d-flex">
               <div class="img-container-2">
-                <img src="/insubria/maps/insubria-immagini.png" alt="" />
+                <img src="/insubria/maps/insubria-immagini2.png" alt="" />
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default {
           </div>
           <p class="bird-description">
             Il nostro logo è un <strong>Fiorrancino</strong> -
-            <span>Regulus Ignicapilla</span> - e qui vi spieghiamo perchè
+            <span>Regulus ignicapilla</span> - e qui vi spieghiamo perchè
             l'abbiamo scelto:
           </p>
           <div class="list-container d-flex">
