@@ -110,10 +110,10 @@ export default {
               </div>
               <div class="lang-container">
                 <button id="italian">
-                  <!-- <img src="/header/flags/italy-flag-round.png" alt="" /> -->
+                  <img src="/header/flags/italy-flag-round.png" alt="" />
                 </button>
                 <button id="english">
-                  <!-- <img src="/header/flags/uk-flag-round.png" alt="" /> -->
+                  <img src="/header/flags/uk-flag-round.png" alt="" />
                 </button>
               </div>
             </div>
@@ -144,12 +144,13 @@ header {
   justify-content: space-between;
 
   .nav-menu {
+    gap: 30px;
     text-align: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    margin-right: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+    justify-content: space-between;
   }
 
   .nav-item {
@@ -200,8 +201,31 @@ header {
   background-color: white;
 }
 
+.right-container {
+  width: 10%;
+  margin-left: 0;
+  justify-content: end;
+}
+
 .lang-container {
+  width: 100%;
+  text-align: end;
+  margin-left: 0px;
+  margin-right: 0px;
   line-height: 26px;
+
+  #italian,
+  #english {
+    width: 40%;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  #italian img,
+  #english img {
+    width: 60%;
+  }
 }
 
 // Media queries
