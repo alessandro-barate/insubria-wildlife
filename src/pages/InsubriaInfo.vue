@@ -197,6 +197,13 @@ export default {
             </div>
             <!-- END description section -->
           </div>
+          <div class="bottom-paragraph">
+            <p>
+              Come questo piccolo uccello che esplora instancabilmente il suo
+              ambiente, noi ci impegniamo a scoprire e condividere i tesori
+              nascosti del nostro territorio.
+            </p>
+          </div>
         </div>
       </div>
       <!-- END logo explanation -->
@@ -464,6 +471,10 @@ h4 {
 
 .close-button {
   display: none;
+}
+
+.bottom-paragraph {
+  padding: 20px 20px 10px 20px;
 }
 // END bottom list styles
 
