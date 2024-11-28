@@ -268,6 +268,11 @@ header {
     width: 100%;
   }
 
+  .right-container {
+    width: 17%;
+    margin-right: 80px;
+  }
+
   .lang-container {
     padding-left: 20px;
     margin-right: -40px;
