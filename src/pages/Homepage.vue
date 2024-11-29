@@ -82,7 +82,9 @@ export default {
               <div class="events">
                 <p>Vuoi restare sempre aggiornato sui nostri eventi?</p>
                 <a href="">
-                  <button class="help-btn">Clicca qui!</button>
+                  <router-link :to="{ name: 'Eventi' }" class="link">
+                    <button class="help-btn">Clicca qui!</button></router-link
+                  >
                 </a>
               </div>
             </aside>
@@ -111,7 +113,9 @@ export default {
             <div class="animal-help">
               <h2>Hai trovato un esemplare di animale ma non sai cosa fare?</h2>
               <a href="">
-                <button>Ti aiutiamo noi!</button>
+                <router-link :to="{ name: 'SosAnimali' }" class="link">
+                  <button>Ti aiutiamo noi!</button></router-link
+                >
               </a>
             </div>
             <!-- END animal help section -->
