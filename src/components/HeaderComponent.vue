@@ -45,7 +45,7 @@ export default {
 
 <template>
   <header>
-    <navbar class="container">
+    <div class="container">
       <div class="row">
         <div class="col">
           <nav class="navbar d-flex">
@@ -120,7 +120,7 @@ export default {
           </nav>
         </div>
       </div>
-    </navbar>
+    </div>
   </header>
 </template>
 

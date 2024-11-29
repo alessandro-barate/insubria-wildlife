@@ -565,7 +565,7 @@ h4 {
   .paragraph-card {
     width: 160%;
     z-index: 10;
-    height: 730px;
+    height: 400px;
     position: absolute;
     transform: translate(-22%, -100%);
     background-color: rgba(0, 0, 0, 0.95);
