@@ -135,7 +135,7 @@ header {
   position: sticky;
 
   .logo {
-    width: 20%;
+    width: 6%;
   }
 }
 
@@ -159,12 +159,11 @@ header {
 }
 
 .logo {
-  width: 25%;
-  margin-left: 0;
-  text-align: center;
+  width: 8%;
+  margin-left: 50px;
 
   img {
-    width: 30%;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -229,7 +228,19 @@ header {
 }
 
 // Media queries
+
 @media (max-width: 800px) {
+  .lang-container {
+    width: 120%;
+
+    #italian,
+    #english {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 999px) {
   .row {
     position: relative;
   }
@@ -270,13 +281,23 @@ header {
 
   .right-container {
     width: 17%;
-    margin-right: 80px;
+    align-items: center;
+    margin-right: 70px;
   }
 
   .lang-container {
+    display: flex;
     padding-left: 20px;
+    align-items: center;
     margin-right: -40px;
-    line-height: 26px;
+
+    #italian {
+      margin-right: 0;
+    }
+
+    #english {
+      margin-left: 0;
+    }
   }
 }
 </style>

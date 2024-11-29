@@ -169,7 +169,9 @@ export default {
                   class="characteristic"
                 >
                   <h4 class="description-index">{{ index + 1 }}</h4>
-                  <h4 class="description-title">{{ characteristic.intro }}</h4>
+                  <h4 class="description-title">
+                    {{ characteristic.intro }}
+                  </h4>
                 </li>
               </ul>
             </div>
