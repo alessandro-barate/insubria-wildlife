@@ -255,13 +255,13 @@ h4 {
   }
 
   img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 
 .insubria-description {
   width: 90%;
-  padding-top: 30px;
+  padding-top: 50px;
 
   .description {
     width: 200%;
@@ -285,17 +285,10 @@ h4 {
 .img-container {
   align-items: center;
 
-  .img-container-2 {
-    text-align: center;
-  }
-
   img {
-    width: 150%;
+    width: 170%;
+    margin-left: -90px;
   }
-}
-
-.history-nowaday {
-  padding-top: 40px;
 }
 
 .why-insubria {
@@ -480,33 +473,6 @@ h4 {
 // END bottom list styles
 
 /* Media queries */
-/* Various media queries */
-@media (max-width: 980px) {
-  .insubria-description {
-    display: block;
-
-    .description {
-      width: 100%;
-      padding-bottom: 50px;
-    }
-  }
-
-  .img-container-2 img {
-    width: 50%;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-}
-
-@media (max-width: 1065px) {
-  .characteristic {
-    margin-left: 40px;
-  }
-}
-/* END various media queries */
-
 /* Mobile layout */
 @media (max-width: 729px) {
   .history-old,
@@ -617,4 +583,35 @@ h4 {
   }
 }
 /* END tablet layout */
+/* Various media queries */
+@media (max-width: 980px) {
+  .insubria-description {
+    display: block;
+    padding-top: 0;
+
+    .description {
+      width: 100%;
+    }
+  }
+
+  .img-container-2 {
+    width: 100%;
+
+    img {
+      width: 90%;
+      margin: 0 auto;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+@media (max-width: 1065px) {
+  .characteristic {
+    margin-left: 40px;
+  }
+}
+/* END various media queries */
 </style>
