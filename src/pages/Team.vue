@@ -32,15 +32,17 @@ export default {
       <div class="row">
         <div class="col">
           <!-- Team container -->
-          <div class="team-container">
+          <section class="team-container">
             <div class="overlay description-section">
               <h1>IL NOSTRO TEAM</h1>
               <h2>Ecco le fondatrici di Insubria Wildlife!</h2>
               <div class="team-group-img">
-                <img
-                  src="/team/background/team-group.jpg"
-                  alt="Foto di gruppo del team"
-                />
+                <figure>
+                  <img
+                    src="/team/background/team-group.jpg"
+                    alt="Foto di gruppo del team"
+                  />
+                </figure>
               </div>
               <p class="team-description">
                 <br />
@@ -66,11 +68,11 @@ export default {
                 avverare tanti piccoli sogni assieme!
               </p>
             </div>
-          </div>
+          </section>
           <!-- END team container -->
 
           <!-- Grid Container -->
-          <div class="grid-section">
+          <section class="grid-section">
             <div class="overlay">
               <div class="cards-container d-flex">
                 <!-- Single team member card -->
@@ -80,7 +82,9 @@ export default {
                   class="col-33"
                 >
                   <div class="member-img">
-                    <img :src="member.image" alt="" />
+                    <figure>
+                      <img :src="member.image" alt="" />
+                    </figure>
                   </div>
                   <h2>{{ member.name }}</h2>
                   <h3>{{ member.title }}</h3>
@@ -107,7 +111,7 @@ export default {
               </div>
               <!-- END single team member overview -->
             </div>
-          </div>
+          </section>
           <!-- END grid Container -->
         </div>
       </div>

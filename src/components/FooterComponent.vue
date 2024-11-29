@@ -25,12 +25,12 @@ export default {
                     alt="Logo GPS"
                   />
                 </div>
-                <div class="address-container">
+                <address class="address-container">
                   <h3>Insubria</h3>
                   <a href=""> Via Roma 20, 20004, Arluno </a>
                   <h3 id="cf">Codice Fiscale</h3>
                   <span>93054540153</span>
-                </div>
+                </address>
               </div>
               <div class="col-50 contacts-socials">
                 <div class="socials">
@@ -147,6 +147,7 @@ a {
   margin-right: 0;
 
   .address-container {
+    font-style: normal;
     margin-left: 10px;
   }
 }

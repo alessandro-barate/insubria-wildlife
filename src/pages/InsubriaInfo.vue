@@ -46,7 +46,7 @@ export default {
   <div class="container">
     <div class="row">
       <!-- History description -->
-      <div class="col upper-bg">
+      <section class="col upper-bg">
         <div class="history-old overlay">
           <h1>INSUBRIA</h1>
           <div class="insubria-description d-flex">
@@ -85,7 +85,9 @@ export default {
             </div>
             <div class="img-container d-flex">
               <div class="img-container-2">
-                <img src="/insubria/maps/insubria-immagini.png" alt="" />
+                <figure>
+                  <img src="/insubria/maps/insubria-immagini.png" alt="" />
+                </figure>
               </div>
             </div>
           </div>
@@ -114,11 +116,11 @@ export default {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- END history description -->
 
       <!-- Why Insubria description -->
-      <div class="col middle-bg">
+      <section class="col middle-bg">
         <div class="why-insubria overlay">
           <h2>Perchè l'Insubria?</h2>
           <div class="why-description">
@@ -136,11 +138,11 @@ export default {
             </p>
           </div>
         </div>
-      </div>
+      </section>
       <!-- END why Insubria description -->
 
       <!-- Logo explanation -->
-      <div class="col lower-bg">
+      <section class="col lower-bg">
         <div class="logo-container overlay">
           <h2>Il nostro Logo</h2>
           <div class="images-container d-flex">
@@ -213,7 +215,7 @@ export default {
             </p>
           </div>
         </div>
-      </div>
+      </section>
       <!-- END logo explanation -->
     </div>
   </div>

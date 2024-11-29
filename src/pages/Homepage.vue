@@ -40,18 +40,18 @@ export default {
     <div class="row">
       <div class="col">
         <!-- Jumbo section -->
-        <div class="jumbo">
+        <section class="jumbo">
           <h1 class="padding-l-60">Insubria <span>Wild</span>Life</h1>
           <p class="padding-l-60">
             Il mondo selvatico è più vicino di quanto pensi: unisciti a noi
             nella sua scoperta!
           </p>
-        </div>
+        </section>
         <!-- END jumbo section -->
 
         <!-- Mission section -->
-        <div class="mission">
-          <div class="overlay margin-l-60">
+        <section class="mission">
+          <article class="overlay margin-l-60">
             <h2>MISSION</h2>
             <p>
               <span>Insubria Wildlife APS</span> è la voce giovane, dinamica e
@@ -77,22 +77,22 @@ export default {
               condividere gli stessi obiettivi.
             </p>
 
-            <!-- Help animal section -->
-            <div class="animal-help">
-              <div class="animal-help-container">
+            <!-- Events link section -->
+            <aside class="events-container">
+              <div class="events">
                 <p>Vuoi restare sempre aggiornato sui nostri eventi?</p>
                 <a href="">
                   <button class="help-btn">Clicca qui!</button>
                 </a>
               </div>
-            </div>
-            <!-- END help animal section -->
-          </div>
-        </div>
+            </aside>
+            <!-- END events link section -->
+          </article>
+        </section>
         <!-- END mission section -->
 
         <!-- Video section -->
-        <div class="video-container">
+        <section class="video-container">
           <div class="video-background">
             <video
               src="../assets/video/background-video-2.mp4"
@@ -101,20 +101,22 @@ export default {
               loop
             ></video>
           </div>
-        </div>
+        </section>
         <!-- END video section -->
 
         <!-- Vision section -->
-        <div class="vision d-flex">
-          <div class="events-container">
-            <div class="events">
+        <section class="vision d-flex">
+          <!-- Animal help section -->
+          <aside class="animal-help-container">
+            <div class="animal-help">
               <h2>Hai trovato un esemplare di animale ma non sai cosa fare?</h2>
               <a href="">
                 <button>Ti aiutiamo noi!</button>
               </a>
             </div>
-          </div>
-          <div class="vision-card d-flex">
+            <!-- END animal help section -->
+          </aside>
+          <article class="vision-card d-flex">
             <div class="overlay margin-r-60">
               <h2>VISION</h2>
               <p>
@@ -135,7 +137,9 @@ export default {
                   <div class="card-box">
                     <div class="card-body">
                       <div class="carousel-img-container">
-                        <img :src="vision.image" />
+                        <figure>
+                          <img :src="vision.image" />
+                        </figure>
                       </div>
                       <!-- Carousel buttons -->
                       <div class="buttons-container d-flex">
@@ -154,8 +158,8 @@ export default {
               </div>
               <!-- END Carousel -->
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
         <!-- END vision section -->
       </div>
     </div>
@@ -224,7 +228,8 @@ h1 {
     }
   }
 
-  .animal-help {
+  .events-container,
+  .animal-help-container {
     width: 55%;
     margin-top: 70px;
     font-weight: bold;
@@ -299,7 +304,7 @@ h1 {
     width: 150%;
   }
 
-  .events {
+  .animal-help {
     width: 100%;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -417,7 +422,7 @@ h1 {
     margin-left: 0;
     margin-right: 0;
 
-    .animal-help {
+    .events-container {
       width: 50%;
     }
   }
@@ -464,7 +469,7 @@ h1 {
       width: 80%;
     }
 
-    .events {
+    .animal-help {
       width: 65%;
       color: black;
     }
