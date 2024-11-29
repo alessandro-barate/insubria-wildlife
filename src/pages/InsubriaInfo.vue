@@ -528,6 +528,7 @@ h4 {
 
   .characteristics-list {
     width: 20%;
+    margin-left: 32%;
   }
 
   .characteristic {
