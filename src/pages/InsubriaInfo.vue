@@ -171,6 +171,12 @@ export default {
                   <h4 class="description-index">{{ index + 1 }}</h4>
                   <h4 class="description-title">
                     {{ characteristic.intro }}
+                    <div class="chevron-right">
+                      <img
+                        src="/insubria/list-elements/chevron-right.svg"
+                        alt=""
+                      />
+                    </div>
                   </h4>
                 </li>
               </ul>
@@ -416,6 +422,22 @@ h4 {
   display: none;
 }
 
+.description-title {
+  display: flex;
+  align-items: center;
+
+  .chevron-right {
+    width: 10%;
+    text-align: end;
+    padding-top: 3px;
+    margin-right: 0;
+
+    img {
+      width: 30%;
+    }
+  }
+}
+
 .paragraph-container {
   z-index: 6;
   width: 90%;
@@ -610,9 +632,28 @@ h4 {
   }
 }
 
-@media (max-width: 1065px) {
+@media (max-width: 1250px) {
   .characteristic {
+    width: 90%;
     margin-left: 40px;
+  }
+
+  .description-title .chevron-right {
+    width: 20%;
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+@media only screen and (min-width: 730px) and (max-width: 1000px) {
+  .description-title .chevron-right {
+    width: 20%;
+
+    img {
+      width: 40%;
+    }
   }
 }
 /* END various media queries */
