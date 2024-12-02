@@ -118,37 +118,44 @@ export const store = reactive({
     {
       title: "Trasporto",
       image: "sos-animal/cards/1-box.png",
-      decription: "",
+      description:
+        "Il trasporto corretto è fondamentale per evitare ulteriore stress o ferite. Scegli una scatola della giusta misura per limitare i movimenti eccessivi, ma permettendo all'animale di poter stare in stazionamento eretto. Sul fondo, usa carta assorbente o un panno morbido (assicurati che non ci siano fili che possono intrecciarsi attorno a zampe e ali!. In caso di shock, animale privo di pelo o piume, o evidentemente ipotermico, aggiungere una fonte di calore(es. bottiglia d'acqua calda avvolta in tessuto). N.B.: deve esserci sempre la possibilità da parte dell'animale di allontanarsi dalla fonte di calore, se diventa troppo caldo. Inoltre, essa non deve essere a diretto contatto con l'animale (avvolgerla con carta assorbente o panno). Chiudere la scatola con un coperchio forato per garantire ventilazione.",
     },
     {
       title: "Cibo e acqua",
       image: "sos-animal/cards/2-food-water.png",
-      decription: "",
+      description:
+        "La fauna selvatica, soprattutto quella in difficoltà, è particolarmente suscettibile ad un alimento non adatto, che può causargli molti problemi, portandola persino alla morte. Per questo motivo, bisognerebbe sempre evitare di alimentare gli animali. Cibi da evitare assolutamente: LATTE VACCINO e latticini in generale, pane, biscotti, dolciumi, alimenti processati. Contatta subito il C.R.A.S. e chiedi consigli specifici, se non puoi portarlo immediatamente.L'acqua si può dare solo in caso di animali vigili e reattivi; è importante evitare contenitori non adatti che, con i movimenti dell'animale, potrebbero rovesciarsi bagnando scatola e animale. Un tappo di barattolo è di solito sufficiente.",
     },
     {
       title: "Chi chiamare",
       image: "sos-animal/cards/3-who-to-call.jpg",
-      decription: "",
+      description:
+        "Sul territorio, ci sono i Centri di Recupero Animali Selvatici. Qui trovi l'elenco per regione https://elencocras.it/. Per il recupero sul territorio, non tutti i C.R.A.S. hanno la possibilità di effettuarlo. La competenza sul recupero territoriale è della Polizia Provinciale.",
     },
     {
       title: "Mammiferi nudi",
       image: "sos-animal/cards/4-naked-mammals.jpg",
-      decription: "",
+      description:
+        "Se nudi e con occhi chiusi, fuori dal nido, necessitano sempre di intervento. Un reinserimento nel nido è possibile e consigliabile se non feriti e vitali (quando manipolati reagiscono, si muovono e sono caldi) e il nido accessibile e integro. Usa guanti o un panno per evitare di lasciare il tuo odore, altrimenti il genitore potrebbe abbandonarli. Una volta riposizionato nella tana, bisogna allontanarsi (mai rimanere in vista) e mantenere monitorata l'attività di cuccioli e genitori nelle successive 4-6 ore e, nel frattempo, contattare il C.R.A.S.",
     },
     {
       title: "Mammiferi con pelo",
       image: "sos-animal/cards/5-furry-mammals.png",
-      decription: "",
+      description:
+        "Non sempre gli animali giovani sono abbandonati. È parte del loro ciclo di vita. I cuccioli con il mantello sviluppato e gli occhi ben aperti, iniziano ad esplorare il territorio. Non capita di rado di trovare giovani minilepri, conigli o scoiattoli da soli.  È tutto normale ed è una fase fondamentale per la loro crescita, perciò NON VANNO RECUPERATI. Se in zona con pericoli, contattare il C.R.A.S. per farsi consigliare. Emblematici sono i cuccioli di CAPRIOLO e CERVO: essi nascono senza odore e per diverso tempo rimangono nascosti nella vegetazione mentre le madri si nutrono. Se toccati, verranno abbandonati dalle madri.",
     },
     {
       title: "Uccelli fuori dal nido",
       image: "sos-animal/cards/6-no-nest-bird.jpg",
-      decription: "",
+      description:
+        "Molti uccelli giovani passano del tempo a terra durante l'apprendimento del volo. È normale. Uccelli che nascono privi di piume (merli, passeri, cornacchie..): se trovati fuori dal nido e senza un piumaggio completo, necessitano un nostro intervento. Se possibile, vanno rimessi nel nido e monitorati da lontano (per vedere se i genitori si avvicinano, anche 4-5 ore). Se completamente ricoperti di piume e penne, sono nella fase di esplorazione e apprendimento: stanno facendo le prove di volo,  non vanno prelevati dal territorio e sottratti alle cure dei genitori, che li controllano e li alimentano ancora di tanto in tanto. Uccelli che nascono ricoperti di piumino (civette, gheppi, allocchi, colombacci…): se trovati in questa fase, vanno ricollocati o messi in un nido artificiale protetto (es. scatola) in un punto accessibile per i genitori, che continueranno a prendersi cura del pullo (contattare il C.R.A.S. per chiedere consigli specifici).  Una volta sviluppato il piumaggio, invece, vale il discorso come sopra. Questa è una fase fondamentale per la crescita dell'animale che, se privato di essa, avrà minori possibilità di sopravvivere in futuro.",
     },
     {
       title: "Rondoni, rondini e Balestrucci",
       image: "sos-animal/cards/7-swift.png",
-      decription: "",
+      description:
+        "Solitamente, i nidi di rondini e balestrucci sono ben visibili e, se troviamo un pulcino in buone condizioni, va ricollocato nel nido. Questi animali sono caratterizzati da zampe estremamente corte (in particolare, i rondoni) poiché sono estremamente specializzati nella vita in volo. Per questo motivo, potrebbero far fatica a spiccare il volo da terra, (questo vale anche per gli esemplari adulti!). Un rondone a terra, va sempre soccorso. Si può contattare il C.R.A.S. e richiedere assistenza tramite invio di foto per valutare se tentare una reimmissione in natura o se necessario un ricovero.",
     },
   ],
 });

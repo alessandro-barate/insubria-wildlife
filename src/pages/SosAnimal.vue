@@ -35,17 +35,17 @@ export default {
             <div class="overlay description-section">
               <h1>SOS ANIMALI</h1>
               <h2>Cosa fare nel caso di ritrovamento di un esemplare</h2>
-              <div class="team-group-img">
-                <figure>
-                  <img
-                    src="/team/background/team-group.jpg"
-                    alt="Foto di gruppo del team"
-                  />
-                </figure>
-              </div>
               <p class="sos-description">
                 Hai trovato un esemplare di animale e non sai come comportarti?
               </p>
+              <div class="flow-chart-img">
+                <figure>
+                  <img
+                    src="/sos-animal/flow-chart.png"
+                    alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+                  />
+                </figure>
+              </div>
             </div>
           </section>
           <!-- END team container -->
@@ -56,17 +56,16 @@ export default {
               <div class="cards-container d-flex">
                 <!-- Single team member card -->
                 <div
-                  v-for="(member, index) in store.members"
+                  v-for="(sosCard, index) in store.sosCards"
                   :key="index"
                   class="col-33"
                 >
                   <div class="card-img">
                     <figure>
-                      <img :src="member.image" alt="" />
+                      <img :src="sosCard.image" alt="" />
                     </figure>
                   </div>
-                  <h2>{{ member.name }}</h2>
-                  <h3>{{ member.title }}</h3>
+                  <h2>{{ sosCard.title }}</h2>
                   <div class="info-btn">
                     <button @click="this.showMemberDetails(index)">
                       Scopri di più
@@ -82,10 +81,10 @@ export default {
                   <button @click="hideMemberDetails(index)">X</button>
                 </div>
                 <div class="details-img">
-                  <img :src="store.members[currentIndex].image" alt="" />
+                  <img :src="store.sosCards[currentIndex].image" alt="" />
                 </div>
                 <div class="details-description">
-                  <p>{{ store.members[currentIndex].description }}</p>
+                  <p>{{ store.sosCards[currentIndex].description }}</p>
                 </div>
               </div>
               <!-- END single team member overview -->
@@ -142,6 +141,7 @@ export default {
 .description-section h2 {
   width: 90%;
   font-size: 24px;
+  padding-bottom: 20px;
 }
 
 .description-section p {
@@ -151,13 +151,13 @@ export default {
   padding-bottom: 20px;
 }
 
-.team-group-img {
+.flow-chart-img {
   width: 100%;
-  padding-top: 30px;
-  margin-bottom: -20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   img {
-    width: 50%;
+    width: 85%;
   }
 }
 
