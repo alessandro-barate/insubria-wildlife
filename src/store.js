@@ -5,27 +5,27 @@ export const store = reactive({
     {
       description:
         "Diventare un faro nella promozione sociale, creando una comunità vibrante di cittadini consapevoli e attivi nella conservazione di ambiente e fauna.",
-      image: "/homepage/carousel/swan.jpg",
-    },
-    {
-      description:
-        "Realizzare un centro di recupero per la fauna all'avanguardia, dove gli animali selvatici in difficoltà trovano cura e vengono reimmessi nel territorio di appartenenza, mantenendone le caratteristiche selvatiche.",
-      image: "/homepage/carousel/bird-jumbo.jpg",
+      image: "/homepage/carousel/1-social-promotion.jpg",
     },
     {
       description:
         "Creare un luogo nel quale il volontariato può prendere parte in diverse forme, ed è un'attività sempre stimolante e formativa.",
-      image: "/homepage/carousel/fox-2.jpg",
+      image: "/homepage/carousel/2-volunteering.jpg",
+    },
+    {
+      description:
+        "Realizzare un centro di recupero per la fauna all'avanguardia, dove gli animali selvatici in difficoltà trovano cura e vengono reimmessi nel territorio di appartenenza, mantenendone le caratteristiche selvatiche.",
+      image: "/homepage/carousel/3-wildlife-rehab.jpg",
     },
     {
       description:
         "Stabilire collaborazioni con università, enti di ricerca e istituzioni, per contribuire attivamente alla conoscenza e alla ricerca scientifica.",
-      image: "/homepage/carousel/eagle.jpg",
+      image: "/homepage/carousel/4-research.png",
     },
     {
       description:
         "Creare una rete tra i professionisti del settore, per rendere le nostre azioni trasparenti e omogenee sul territorio, per arricchirci con stimoli provenienti da altre aree italiane e da oltre confine.",
-      image: "/homepage/carousel/fox.jpg",
+      image: "/homepage/carousel/5-network.png",
     },
   ],
 

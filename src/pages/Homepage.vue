@@ -343,8 +343,8 @@ h1 {
     padding-bottom: 20px;
 
     img {
-      width: 20vh;
-      height: 20vh;
+      width: 25vh;
+      height: 25vh;
       border-radius: 100px;
       object-fit: cover;
     }

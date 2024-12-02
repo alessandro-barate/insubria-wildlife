@@ -372,7 +372,7 @@ h4 {
 .upper-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(/homepage/carousel/fox-2.jpg);
+  background-image: url(/insubria/background/fox-2.jpg);
 }
 
 .middle-bg {
