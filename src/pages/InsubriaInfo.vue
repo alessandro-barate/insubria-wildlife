@@ -518,13 +518,33 @@ h4 {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    position: relative;
 
     .overlay-2 {
       width: 95%;
       height: 95%;
-      z-index: 10;
-      background-color: rgba(0, 0, 0, 0.801);
+      z-index: 1;
+      position: relative;
     }
+
+    .overlay-2::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 5;
+      pointer-events: none;
+    }
+  }
+
+  .images-container,
+  .bird-description,
+  .list-container,
+  .bottom-paragraph {
+    z-index: 1;
   }
 
   .logo-container .logo-img img {
