@@ -30,7 +30,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col">
-          <!-- Team container -->
+          <!-- SOS animal container -->
           <section class="sos-container">
             <div class="overlay description-section">
               <h1>SOS ANIMALI</h1>
@@ -48,13 +48,13 @@ export default {
               </div>
             </div>
           </section>
-          <!-- END team container -->
+          <!-- END SOS animal container -->
 
-          <!-- Grid Container -->
+          <!-- Grid container -->
           <section class="grid-section">
             <div class="overlay">
               <div class="cards-container d-flex">
-                <!-- Single team member card -->
+                <!-- Single sos animal card -->
                 <div
                   v-for="(sosCard, index) in store.sosCards"
                   :key="index"
@@ -72,10 +72,10 @@ export default {
                     </button>
                   </div>
                 </div>
-                <!-- END single team member card -->
+                <!-- END single sos animal card -->
               </div>
 
-              <!-- Single team member overview -->
+              <!-- Single sos animal overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
                 <div class="details-btn d-flex">
                   <button @click="hideMemberDetails(index)">X</button>
@@ -87,10 +87,10 @@ export default {
                   <p>{{ store.sosCards[currentIndex].description }}</p>
                 </div>
               </div>
-              <!-- END single team member overview -->
+              <!-- END single sos animal overview -->
             </div>
           </section>
-          <!-- END grid Container -->
+          <!-- END grid container -->
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@ export default {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 10px;
-  background-image: url(/team/background/swan.jpg);
+  background-image: url(/sos-animal/background/eagle-2.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -162,7 +162,7 @@ export default {
 }
 
 .grid-section {
-  background-image: url(/team/background/reindeer.jpg);
+  background-image: url(/sos-animal/background/blue-bird.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -352,7 +352,6 @@ export default {
   }
 
   .grid-section {
-    background-image: url(/team/background/reindeer.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -376,7 +375,7 @@ export default {
 
 @media (max-width: 800px) {
   .grid-section {
-    background-image: url(/team/background/red-deer.jpg);
+    background-image: url(sos-animal/background/fox-3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

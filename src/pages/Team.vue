@@ -371,13 +371,6 @@ export default {
     padding-bottom: 20px;
   }
 
-  .grid-section {
-    background-image: url(/team/background/reindeer.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
   .grid-section .overlay {
     padding-top: 30px;
   }
