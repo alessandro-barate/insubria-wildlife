@@ -287,7 +287,8 @@ export default {
   padding-bottom: 15px;
 
   img {
-    width: 45%;
+    width: 20vh;
+    height: 20vh;
     border: 3px solid #ff6b3a;
     object-fit: cover;
     border-radius: 110px;
@@ -333,10 +334,6 @@ export default {
 @media only screen and (min-width: 560px) and (max-width: 800px) {
   .col-33 {
     width: calc(100% / 2.2 - 10px);
-
-    .card-img img {
-      width: 50%;
-    }
   }
 
   .description-section h2 {

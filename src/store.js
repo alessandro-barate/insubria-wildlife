@@ -135,7 +135,7 @@ export const store = reactive({
     },
     {
       title: "Mammiferi nudi",
-      image: "sos-animal/cards/4-naked-mammals.jpg",
+      image: "sos-animal/cards/4-naked-mammals.png",
       description:
         "Se nudi e con occhi chiusi, fuori dal nido, necessitano sempre di intervento. Un reinserimento nel nido è possibile e consigliabile se non feriti e vitali (quando manipolati reagiscono, si muovono e sono caldi) e il nido accessibile e integro. Usa guanti o un panno per evitare di lasciare il tuo odore, altrimenti il genitore potrebbe abbandonarli. Una volta riposizionato nella tana, bisogna allontanarsi (mai rimanere in vista) e mantenere monitorata l'attività di cuccioli e genitori nelle successive 4-6 ore e, nel frattempo, contattare il C.R.A.S.",
     },
@@ -152,7 +152,7 @@ export const store = reactive({
         "Molti uccelli giovani passano del tempo a terra durante l'apprendimento del volo. È normale. Uccelli che nascono privi di piume (merli, passeri, cornacchie..): se trovati fuori dal nido e senza un piumaggio completo, necessitano un nostro intervento. Se possibile, vanno rimessi nel nido e monitorati da lontano (per vedere se i genitori si avvicinano, anche 4-5 ore). Se completamente ricoperti di piume e penne, sono nella fase di esplorazione e apprendimento: stanno facendo le prove di volo,  non vanno prelevati dal territorio e sottratti alle cure dei genitori, che li controllano e li alimentano ancora di tanto in tanto. Uccelli che nascono ricoperti di piumino (civette, gheppi, allocchi, colombacci…): se trovati in questa fase, vanno ricollocati o messi in un nido artificiale protetto (es. scatola) in un punto accessibile per i genitori, che continueranno a prendersi cura del pullo (contattare il C.R.A.S. per chiedere consigli specifici).  Una volta sviluppato il piumaggio, invece, vale il discorso come sopra. Questa è una fase fondamentale per la crescita dell'animale che, se privato di essa, avrà minori possibilità di sopravvivere in futuro.",
     },
     {
-      title: "Rondoni, rondini e Balestrucci",
+      title: "Rondoni, Rondini e Balestrucci",
       image: "sos-animal/cards/7-swift.png",
       description:
         "Solitamente, i nidi di rondini e balestrucci sono ben visibili e, se troviamo un pulcino in buone condizioni, va ricollocato nel nido. Questi animali sono caratterizzati da zampe estremamente corte (in particolare, i rondoni) poiché sono estremamente specializzati nella vita in volo. Per questo motivo, potrebbero far fatica a spiccare il volo da terra, (questo vale anche per gli esemplari adulti!). Un rondone a terra, va sempre soccorso. Si può contattare il C.R.A.S. e richiedere assistenza tramite invio di foto per valutare se tentare una reimmissione in natura o se necessario un ricovero.",
