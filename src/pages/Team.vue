@@ -8,7 +8,6 @@ export default {
       store,
       currentIndex: 0,
       showDetails: false,
-      intervalTimer: false,
     };
   },
 

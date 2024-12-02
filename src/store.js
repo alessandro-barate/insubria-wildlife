@@ -114,4 +114,41 @@ export const store = reactive({
       poster: "30-11-2024.png",
     },
   ],
+  sosCards: [
+    {
+      title: "Trasporto",
+      image: "sos-animal/cards/1-box.png",
+      decription: "",
+    },
+    {
+      title: "Cibo e acqua",
+      image: "sos-animal/cards/2-food-water.png",
+      decription: "",
+    },
+    {
+      title: "Chi chiamare",
+      image: "sos-animal/cards/3-who-to-call.jpg",
+      decription: "",
+    },
+    {
+      title: "Mammiferi nudi",
+      image: "sos-animal/cards/4-naked-mammals.jpg",
+      decription: "",
+    },
+    {
+      title: "Mammiferi con pelo",
+      image: "sos-animal/cards/5-furry-mammals.png",
+      decription: "",
+    },
+    {
+      title: "Uccelli fuori dal nido",
+      image: "sos-animal/cards/6-no-nest-bird.jpg",
+      decription: "",
+    },
+    {
+      title: "Rondoni, rondini e Balestrucci",
+      image: "sos-animal/cards/7-swift.png",
+      decription: "",
+    },
+  ],
 });
