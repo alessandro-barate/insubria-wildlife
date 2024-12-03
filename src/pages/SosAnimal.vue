@@ -7,6 +7,7 @@ export default {
     return {
       store,
       currentIndex: 0,
+      showZoom: false,
       showDetails: false,
     };
   },
@@ -21,12 +22,21 @@ export default {
     hideMemberDetails(index) {
       this.showDetails = false;
     },
+
+    toggleZoom(event) {
+      if (event && event.target.tagName === "img" && this.showZoom) {
+        return;
+      }
+
+      this.showZoom = !this.showZoom;
+      document.body.style.overflow = this.showZoom ? "hidden" : "";
+    },
   },
 };
 </script>
 
 <template>
-  <div :class="{ 'no-interaction': showDetails }">
+  <div :class="{ 'no-interaction': showDetails || showZoom }">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -39,7 +49,7 @@ export default {
                 Hai trovato un esemplare di animale e non sai come comportarti?
               </p>
               <div class="flow-chart-img">
-                <figure>
+                <figure @click="toggleZoom">
                   <img
                     src="/sos-animal/flow-chart.png"
                     alt="Flusso delle azioni da svolgere in caso di ritrovamento"
@@ -95,15 +105,24 @@ export default {
       </div>
     </div>
   </div>
+  <div v-if="showZoom" class="zoomed-container">
+    <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
+    <img
+      :src="'/sos-animal/flow-chart.png'"
+      alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+      @click.stop
+    />
+  </div>
 </template>
 
 <style scoped lang="scss">
 .no-interaction {
   pointer-events: none;
-}
 
-.no-interaction .overlay-single-card {
-  pointer-events: auto;
+  .overlay-single-card,
+  .flow-chart-img {
+    pointer-events: auto;
+  }
 }
 
 .sos-container,
@@ -153,11 +172,48 @@ export default {
 
 .flow-chart-img {
   width: 100%;
+  cursor: pointer;
   padding-top: 20px;
   padding-bottom: 20px;
 
   img {
     width: 85%;
+    transition: all 0.3s ease;
+  }
+}
+
+.zoomed-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  img {
+    width: auto;
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .zoom-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -218,7 +274,8 @@ export default {
   width: 100%;
 
   img {
-    width: 30%;
+    width: 30vh;
+    height: 30vh;
     margin-bottom: 20px;
     border-radius: 145px;
     object-fit: cover;
@@ -324,7 +381,8 @@ export default {
     overflow: scroll;
 
     .details-img img {
-      width: 60%;
+      width: 30vh;
+      height: 30vh;
     }
   }
 }
