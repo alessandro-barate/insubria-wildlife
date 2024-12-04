@@ -23,18 +23,11 @@ export default {
     // Click on mobile layout
     toggleParagraph(index) {
       if (!this.isMobile) return;
-      const overlay = document.getElementById("overlay-2");
-      overlay.classList.add("overlay-2");
       this.currentIndex = this.currentIndex === index ? null : index;
     },
 
     checkIfMobile() {
       this.isMobile = window.innerWidth < 730;
-    },
-
-    removeOverlay() {
-      const overlay = document.getElementById("overlay-2");
-      overlay.classList.remove("overlay-2");
     },
   },
 
@@ -151,79 +144,77 @@ export default {
       <!-- Logo explanation -->
       <section class="col lower-bg">
         <div class="logo-container overlay">
-          <div id="overlay-2">
-            <h2>Il nostro Logo</h2>
-            <div class="images-container d-flex">
-              <div class="logo-img">
-                <img src="/logo/double-circle.png" alt="" />
-              </div>
-              <div class="real-image d-flex">
-                <img src="/insubria/fiorrancino.png" alt="" />
-              </div>
+          <h2>Il nostro Logo</h2>
+          <div class="images-container d-flex">
+            <div class="logo-img">
+              <img src="/logo/double-circle.png" alt="" />
             </div>
-            <p class="bird-description">
-              Il nostro logo è un <strong>Fiorrancino</strong> -
-              <span>Regulus ignicapilla</span> - e qui vi spieghiamo perchè
-              l'abbiamo scelto:
-            </p>
-            <div class="list-container d-flex">
-              <!-- List section -->
-              <div class="left-section">
-                <ul class="characteristics-list">
-                  <li
-                    v-for="(characteristic, index) in store.characteristics"
-                    :key="index"
-                    @mouseenter="showParagraph(index)"
-                    @mouseleave="hideParagraph"
-                    @click="isMobile && toggleParagraph(index)"
-                    class="characteristic"
-                  >
-                    <h4 class="description-index">{{ index + 1 }}</h4>
-                    <h4 class="description-title">
-                      {{ characteristic.intro }}
-                      <div class="chevron-right">
-                        <img
-                          src="/insubria/list-elements/chevron-right.svg"
-                          alt=""
-                        />
-                      </div>
-                    </h4>
-                  </li>
-                </ul>
-              </div>
-              <!-- END list section -->
-
-              <!-- Description section -->
-              <div class="right-section">
-                <div
+            <div class="real-image d-flex">
+              <img src="/insubria/fiorrancino.png" alt="" />
+            </div>
+          </div>
+          <p class="bird-description">
+            Il nostro logo è un <strong>Fiorrancino</strong> -
+            <span>Regulus ignicapilla</span> - e qui vi spieghiamo perchè
+            l'abbiamo scelto:
+          </p>
+          <div class="list-container d-flex">
+            <!-- List section -->
+            <div class="left-section">
+              <ul class="characteristics-list">
+                <li
                   v-for="(characteristic, index) in store.characteristics"
                   :key="index"
-                  class="paragraph-container"
+                  @mouseenter="showParagraph(index)"
+                  @mouseleave="hideParagraph"
+                  @click="isMobile && toggleParagraph(index)"
+                  class="characteristic"
                 >
-                  <div
-                    v-show="this.currentIndex === index"
-                    class="paragraph-card overlay"
-                  >
-                    <div class="close-button">
-                      <button @click="toggleParagraph(index), removeOverlay()">
-                        X
-                      </button>
+                  <h4 class="description-index">{{ index + 1 }}</h4>
+                  <h4 class="description-title">
+                    {{ characteristic.intro }}
+                    <div class="chevron-right">
+                      <img
+                        src="/insubria/list-elements/chevron-right.svg"
+                        alt=""
+                      />
                     </div>
-                    <p class="paragraph-description">
-                      {{ characteristic.description }}
-                    </p>
+                  </h4>
+                </li>
+              </ul>
+            </div>
+            <!-- END list section -->
+
+            <!-- Description section -->
+            <div class="right-section">
+              <div
+                v-for="(characteristic, index) in store.characteristics"
+                :key="index"
+                class="paragraph-container"
+              >
+                <div
+                  v-show="this.currentIndex === index"
+                  class="paragraph-card overlay"
+                >
+                  <div class="close-button">
+                    <button @click="toggleParagraph(index), removeOverlay()">
+                      ✕
+                    </button>
                   </div>
+                  <p class="paragraph-description">
+                    {{ characteristic.description }}
+                  </p>
                 </div>
               </div>
-              <!-- END description section -->
             </div>
-            <div class="bottom-paragraph">
-              <p>
-                Come questo piccolo uccello che esplora instancabilmente il suo
-                ambiente, noi ci impegniamo a scoprire e condividere i tesori
-                nascosti del nostro territorio.
-              </p>
-            </div>
+            <!-- END description section -->
+          </div>
+          <div class="bottom-paragraph">
+            <p>
+              Come questo piccolo uccello che esplora instancabilmente il suo
+              ambiente, noi ci impegniamo a scoprire e condividere i tesori
+              nascosti del nostro territorio.
+            </p>
           </div>
         </div>
       </section>
@@ -519,25 +510,6 @@ h4 {
     padding-left: 0px;
     padding-right: 0px;
     position: relative;
-
-    .overlay-2 {
-      width: 95%;
-      height: 95%;
-      z-index: 1;
-      position: relative;
-    }
-
-    .overlay-2::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 5;
-      pointer-events: none;
-    }
   }
 
   .images-container,
@@ -612,6 +584,7 @@ h4 {
     .close-button {
       display: block;
       padding-top: 15px;
+      padding-bottom: 20px;
     }
 
     button {

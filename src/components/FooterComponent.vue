@@ -141,6 +141,10 @@ a {
   }
 }
 
+address a {
+  display: none;
+}
+
 .address,
 .contacts-socials {
   margin-left: 0;
@@ -150,6 +154,10 @@ a {
     font-style: normal;
     margin-left: 10px;
   }
+}
+
+.contacts .phone-container a {
+  display: none;
 }
 
 #cf {
