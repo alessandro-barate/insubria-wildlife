@@ -1,0 +1,19 @@
+.details-description-list {
+  margin-top: 10px;
+
+  li {
+    width: 50%;
+    text-align: start;
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+}
+
+.details-description a {
+  color: #ff6a3a;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: #ff0000;
+  }
+}
