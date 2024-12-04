@@ -33,9 +33,9 @@ export default {
     },
   },
 
-  mounted() {
-    console.log("Sanitizzazione disponibile: ", !!this.$sanitize);
-  },
+  // mounted() {
+  //   console.log("Sanitizzazione disponibile: ", !!this.$sanitize);
+  // },
 };
 </script>
 
@@ -99,9 +99,9 @@ export default {
                   <img :src="store.sosCards[currentIndex].image" alt="" />
                 </div>
                 <div class="details-description">
-                  <p
+                  <div
                     v-html="$sanitize(store.sosCards[currentIndex].description)"
-                  ></p>
+                  ></div>
                 </div>
               </div>
               <!-- END single sos animal overview -->
@@ -289,7 +289,7 @@ export default {
   }
 }
 
-.details-description p {
+.details-description div {
   width: 85%;
   font-size: 18px;
   line-height: 25px;
