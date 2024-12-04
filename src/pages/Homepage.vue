@@ -130,7 +130,7 @@ export default {
                 l'orizzonte, mirando a:
               </p>
 
-              <!-- Carousel -->
+              <!-- Carousel container -->
               <div class="carousel-wrapper">
                 <div
                   v-for="(vision, index) in store.visions"
@@ -140,27 +140,33 @@ export default {
                 >
                   <div class="card-box">
                     <div class="card-body">
+                      <!-- Carousel -->
                       <div class="carousel-img-container">
-                        <figure>
-                          <img :src="vision.image" />
-                        </figure>
-                      </div>
-                      <!-- Carousel buttons -->
-                      <div class="buttons-container d-flex">
-                        <div class="carousel-button-left d-flex">
-                          <button @click="prevCard" id="prev-btn"><</button>
+                        <!-- Carousel buttons -->
+                        <div class="buttons-container d-flex">
+                          <div class="carousel-button-left d-flex">
+                            <button @click="prevCard" id="prev-btn"><</button>
+                          </div>
+                          <figure>
+                            <img :src="vision.image" />
+                          </figure>
+                          <div class="carousel-button-right d-flex">
+                            <button @click="nextCard" id="next-btn">></button>
+                          </div>
                         </div>
+                        <!-- END carousel buttons -->
+                      </div>
+                      <!-- END carousel -->
+                      <!-- Bottom paragraph -->
+                      <div class="bottom-paragraph-container">
                         <p>{{ vision.description }}</p>
-                        <div class="carousel-button-right d-flex">
-                          <button @click="nextCard" id="next-btn">></button>
-                        </div>
                       </div>
+                      <!-- END bottom paragraph -->
                     </div>
                   </div>
                 </div>
-                <!-- END carousel buttons -->
               </div>
-              <!-- END Carousel -->
+              <!-- END carousel container -->
             </div>
           </article>
         </section>
@@ -343,11 +349,16 @@ h1 {
     padding-bottom: 20px;
 
     img {
-      width: 25vh;
-      height: 25vh;
+      width: 24vh;
+      height: 24vh;
       border-radius: 100px;
       object-fit: cover;
     }
+  }
+
+  figure {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .card-body p {
@@ -490,12 +501,12 @@ h1 {
 
   .carousel-button-left {
     display: block;
-    line-height: 150px;
+    line-height: 210px;
   }
 
   .carousel-button-right {
     display: block;
-    line-height: 150px;
+    line-height: 210px;
   }
 }
 </style>

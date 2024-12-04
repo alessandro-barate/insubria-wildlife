@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 export const sanitizeHTML = (html) => {
   const config = {
     ALLOWED_TAGS: ["br", "strong", "a", "ul", "li", "p"],
-    ALLOWED_ATTR: ["href", "target"],
+    ALLOWED_ATTR: ["href", "target", "class"],
     ALLOW_DATA_ATTR: false,
     SAFE_FOR_TEMPLATES: true,
     RETURN_DOM: false,

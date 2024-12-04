@@ -197,10 +197,11 @@ export default {
                   class="paragraph-card overlay"
                 >
                   <div class="close-button">
-                    <button @click="toggleParagraph(index), removeOverlay()">
-                      ✕
-                    </button>
+                    <button @click="toggleParagraph(index)">✕</button>
                   </div>
+                  <h2>
+                    {{ characteristic.intro }}
+                  </h2>
                   <p class="paragraph-description">
                     {{ characteristic.description }}
                   </p>

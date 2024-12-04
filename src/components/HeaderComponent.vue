@@ -126,12 +126,18 @@ export default {
 
 <style scoped lang="scss">
 header {
+  z-index: 1000;
+  position: relative;
   background-color: #000000;
 }
 
+.container {
+  position: relative;
+}
+
 .sticky-header {
-  z-index: 100;
   top: 0;
+  z-index: 1000;
   position: sticky;
 
   .logo {
@@ -228,7 +234,6 @@ header {
 }
 
 // Media queries
-
 @media (max-width: 800px) {
   .lang-container {
     width: 120%;
@@ -253,6 +258,7 @@ header {
     width: 100%;
     text-align: center;
     transition: 1s;
+    z-index: 1000;
     background-color: rgb(0, 0, 0);
   }
 
@@ -277,6 +283,7 @@ header {
   .nav-menu.active {
     left: 0;
     width: 100%;
+    z-index: 1000;
   }
 
   .right-container {

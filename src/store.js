@@ -5,7 +5,7 @@ export const store = reactive({
     {
       description:
         "Diventare un faro nella promozione sociale, creando una comunità vibrante di cittadini consapevoli e attivi nella conservazione di ambiente e fauna.",
-      image: "/homepage/carousel/1-social-promotion.jpg",
+      image: "/homepage/carousel/1-social-promotion.png",
     },
     {
       description:
@@ -126,7 +126,7 @@ export const store = reactive({
       title: "Cibo e acqua",
       image: "sos-animal/cards/2-food-water.png",
       description:
-        "La fauna selvatica, soprattutto quella in difficoltà, è particolarmente suscettibile ad un alimento non adatto, che può causargli molti problemi, portandola persino alla morte. Per questo motivo, bisognerebbe sempre evitare di alimentare gli animali. Cibi da evitare assolutamente: LATTE VACCINO e latticini in generale, pane, biscotti, dolciumi, alimenti processati. Contatta subito il C.R.A.S. e chiedi consigli specifici, se non puoi portarlo immediatamente.L'acqua si può dare solo in caso di animali vigili e reattivi; è importante evitare contenitori non adatti che, con i movimenti dell'animale, potrebbero rovesciarsi bagnando scatola e animale. Un tappo di barattolo è di solito sufficiente.",
+        "La fauna selvatica, soprattutto quella in difficoltà, è <strong>particolarmente sensibile ad un alimento non adatto</strong>, il quale può arrecargli diversi problemi, portandola persino alla morte. Per questo motivo, <strong>bisognerebbe sempre evitare</strong> di alimentare gli animali.<br><br>Ecco una breve lista di alimenti <strong>da evitare assolutamente</strong>:<ul class='details-description-list'><li><strong>Latte vaccino e latticini in generale</strong></li><li><strong>Pane</strong></li><li><strong>Biscotti</strong></li><li><strong>Dolciumi</strong></li><li><strong>Alimenti processati</strong></li><br><strong>Nel caso tu non riesca a portare direttamente l'esemplare in un C.R.A.S., contattalo e chiedi consigli specifici</strong>.<br><br><strong>L'acqua si può dare solo in caso di animali vigili e reattivi</strong> ed è importante evitare contenitori non adatti che, con i movimenti dell'animale, potrebbero rovesciare il contenuto bagnando scatola e animale: il tappo di un barattolo è di solito sufficiente.",
     },
     {
       title: "Chi chiamare",

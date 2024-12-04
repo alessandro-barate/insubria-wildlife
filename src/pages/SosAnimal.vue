@@ -256,7 +256,7 @@ export default {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 999;
   background-color: rgba(0, 0, 0, 1);
 
   .details-btn {
@@ -427,10 +427,6 @@ export default {
     max-height: 670px;
     transform: translate(-50%, -41%);
     overflow: auto;
-
-    .details-img img {
-      width: 50%;
-    }
   }
 }
 /* END Tablet layout */
