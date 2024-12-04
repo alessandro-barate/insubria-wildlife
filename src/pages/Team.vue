@@ -99,7 +99,7 @@ export default {
               <!-- Single team member overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
                 <div class="details-btn d-flex">
-                  <button @click="hideMemberDetails(index)">X</button>
+                  <button @click="hideMemberDetails(index)">✕</button>
                 </div>
                 <div class="details-img">
                   <img :src="store.members[currentIndex].image" alt="" />

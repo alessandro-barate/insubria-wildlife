@@ -8,5 +8,6 @@ import "./style.scss";
 
 // Importing Vue root component
 import App from "./App.vue";
+import SanitizePlugin from "./plugins/sanitize";
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(SanitizePlugin).use(router).mount("#app");

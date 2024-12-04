@@ -98,7 +98,7 @@ export const store = reactive({
     {
       intro: "La cresta arancione",
       description:
-        "Infine la sua cresta arancione brillante rappresenta quel guizzo di estro e creatività che contraddistingue il nostro entusiasmo, le nostre idee e i numerosi progetti che abbiamo in mente per Insubria Wildlife.",
+        "Infine la sua cresta giallo-arancione brillante rappresenta quel guizzo di estro e creatività che contraddistingue il nostro entusiasmo, le nostre idee e i numerosi progetti che abbiamo in mente per Insubria Wildlife.",
     },
   ],
 
@@ -114,12 +114,13 @@ export const store = reactive({
       poster: "30-11-2024.png",
     },
   ],
+
   sosCards: [
     {
       title: "Trasporto",
       image: "sos-animal/cards/1-box.png",
       description:
-        "Il trasporto corretto è fondamentale per evitare ulteriore stress o ferite: scegli una scatola della giusta misura per limitare i movimenti eccessivi, che permetta però all'animale di poter stare in stazionamento eretto. Sul fondo usa carta assorbente o un panno morbido, assicurandoti che non ci siano fili che possano intrecciarsi attorno a zampe e ali. In caso di shock, animale privo di pelo o piume o evidentemente ipotermico, aggiungi una fonte di calore, come ad esempio una bottiglia d'acqua calda: è IMPORTANTISSIMO però che l'animale NON VI SIA MAI a diretto contatto, quindi bisogna avvolgere intorno alla fonte di calore un panno o della carta assorbente, e che abbia sempre la possibilità di allontanarsi da questa, se necessario. Infine chiudere la scatola con un COPERCHIO FORATO per garantire la ventilazione.",
+        "Il <strong>trasporto corretto è fondamentale</strong> per evitare ulteriore stress o ferite: scegli una scatola della giusta misura per limitare i movimenti eccessivi, che permetta però all'animale di poter stare in stazionamento eretto.<br><br> Sul fondo usa carta assorbente o un panno morbido, <strong>assicurandoti che non ci siano fili</strong> che possano intrecciarsi attorno a zampe e ali.<br><br>In caso di shock, animale privo di pelo o piume o evidentemente ipotermico, <strong>aggiungi una fonte di calore</strong>, come ad esempio una bottiglia d'acqua calda: è importantissimo però che l'animale non vi sia <strong>mai a diretto contatto</strong>, quindi bisogna avvolgere intorno alla fonte di calore un panno o della carta assorbente, e che abbia <strong>sempre la possibilità di allontanarsi</strong> da questa, se necessario.<br><br>Infine chiudere la scatola con un <strong>coperchio forato</strong> per garantire la ventilazione.",
     },
     {
       title: "Cibo e acqua",

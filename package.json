@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dompurify": "^3.2.2",
     "router": "^2.0.0",
     "sass": "^1.80.6",
     "scss": "^0.2.4",

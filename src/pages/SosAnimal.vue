@@ -32,6 +32,10 @@ export default {
       document.body.style.overflow = this.showZoom ? "hidden" : "";
     },
   },
+
+  mounted() {
+    console.log("Sanitizzazione disponibile: ", !!this.$sanitize);
+  },
 };
 </script>
 
@@ -49,10 +53,11 @@ export default {
                 Hai trovato un esemplare di animale e non sai come comportarti?
               </p>
               <div class="flow-chart-img">
-                <figure @click="toggleZoom">
+                <figure>
                   <img
                     src="/sos-animal/flow-chart.png"
                     alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+                    @click="toggleZoom"
                   />
                 </figure>
               </div>
@@ -88,13 +93,15 @@ export default {
               <!-- Single sos animal overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
                 <div class="details-btn d-flex">
-                  <button @click="hideMemberDetails(index)">X</button>
+                  <button @click="hideMemberDetails(index)">✕</button>
                 </div>
                 <div class="details-img">
                   <img :src="store.sosCards[currentIndex].image" alt="" />
                 </div>
                 <div class="details-description">
-                  <p>{{ store.sosCards[currentIndex].description }}</p>
+                  <p
+                    v-html="$sanitize(store.sosCards[currentIndex].description)"
+                  ></p>
                 </div>
               </div>
               <!-- END single sos animal overview -->
@@ -172,12 +179,12 @@ export default {
 
 .flow-chart-img {
   width: 100%;
-  cursor: pointer;
   padding-top: 20px;
   padding-bottom: 20px;
 
   img {
     width: 85%;
+    cursor: pointer;
     transition: all 0.3s ease;
   }
 }
