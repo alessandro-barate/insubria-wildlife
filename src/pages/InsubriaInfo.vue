@@ -196,15 +196,17 @@ export default {
                   v-show="this.currentIndex === index"
                   class="paragraph-card overlay"
                 >
-                  <div class="close-button">
-                    <button @click="toggleParagraph(index)">✕</button>
+                  <div class="scrollbar-container">
+                    <div class="close-button">
+                      <button @click="toggleParagraph(index)">✕</button>
+                    </div>
+                    <h2>
+                      {{ characteristic.intro }}
+                    </h2>
+                    <p class="paragraph-description">
+                      {{ characteristic.description }}
+                    </p>
                   </div>
-                  <h2>
-                    {{ characteristic.intro }}
-                  </h2>
-                  <p class="paragraph-description">
-                    {{ characteristic.description }}
-                  </p>
                 </div>
               </div>
             </div>
@@ -497,6 +499,7 @@ h4 {
 }
 
 .bottom-paragraph {
+  width: 95%;
   padding: 20px 20px 10px 20px;
 }
 // END bottom list styles
@@ -581,6 +584,10 @@ h4 {
     position: absolute;
     transform: translate(-22%, -100%);
     background-color: rgba(0, 0, 0, 0.95);
+
+    .scrollbar-container {
+      height: 360px;
+    }
 
     .close-button {
       display: block;

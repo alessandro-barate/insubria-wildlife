@@ -17,11 +17,15 @@ SCROLLBAR RESET FOR WEBKIT ENGINE
 }
 
 *::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.808);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+*::-webkit-scrollbar-corner {
+  display: none;
 }
 
 *::-webkit-scrollbar {
-  width: 7px;
+  width: 4px;
 }
 
 /********

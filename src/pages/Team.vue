@@ -98,14 +98,16 @@ export default {
 
               <!-- Single team member overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
-                <div class="details-btn d-flex">
-                  <button @click="hideMemberDetails(index)">✕</button>
-                </div>
-                <div class="details-img">
-                  <img :src="store.members[currentIndex].image" alt="" />
-                </div>
-                <div class="details-description">
-                  <p>{{ store.members[currentIndex].description }}</p>
+                <div class="scrollbar-container">
+                  <div class="details-btn d-flex">
+                    <button @click="hideMemberDetails(index)">✕</button>
+                  </div>
+                  <div class="details-img">
+                    <img :src="store.members[currentIndex].image" alt="" />
+                  </div>
+                  <div class="details-description">
+                    <p>{{ store.members[currentIndex].description }}</p>
+                  </div>
                 </div>
               </div>
               <!-- END single team member overview -->
@@ -206,15 +208,18 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -42%);
-  width: 80%;
+  width: 85%;
   max-width: 1000px;
-  max-height: 600px;
-  overflow: auto;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
   background-color: rgba(0, 0, 0, 1);
+
+  .scrollbar-container {
+    width: 101%;
+    height: 640px;
+  }
 
   .details-btn {
     text-align: start;
@@ -340,7 +345,6 @@ export default {
   .overlay-single-card {
     max-height: 700px;
     transform: translate(-50%, -42%);
-    overflow: scroll;
 
     .details-img img {
       width: 60%;
@@ -378,7 +382,6 @@ export default {
   .overlay-single-card {
     max-height: 670px;
     transform: translate(-50%, -41%);
-    overflow: auto;
 
     .details-img img {
       width: 50%;

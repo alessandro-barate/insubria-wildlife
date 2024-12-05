@@ -8,9 +8,5 @@ export default defineConfig({
     importers: [],
   },
   plugins: [vue()],
-  resolve: {
-    alias: {
-      "~@fortawesome": "@fortawesome",
-    },
-  },
+  resolve: {},
 });
