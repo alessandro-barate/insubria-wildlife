@@ -1,14 +1,15 @@
-li {
-  width: 50%;
+.details-description-list li,
+.no-nest-list li {
   text-align: start;
-  margin-bottom: 10px;
+  list-style-type: disc;
 }
 
 .details-description-list {
   margin-top: 10px;
 
   li {
-    list-style-type: disc;
+    width: 50%;
+    margin-bottom: 10px;
   }
 }
 
@@ -27,7 +28,6 @@ li {
 
   li {
     width: 75%;
-    list-style-type: disc;
     margin-bottom: 20px;
   }
 

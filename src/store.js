@@ -156,7 +156,7 @@ export const store = reactive({
       title: "Rondoni, Rondini e Balestrucci",
       image: "sos-animal/cards/7-swift.png",
       description:
-        "Solitamente, i nidi di rondini e balestrucci sono ben visibili e, se troviamo un pulcino in buone condizioni, va ricollocato nel nido. Questi animali sono caratterizzati da zampe estremamente corte (in particolare, i rondoni) poiché sono estremamente specializzati nella vita in volo. Per questo motivo, potrebbero far fatica a spiccare il volo da terra, (questo vale anche per gli esemplari adulti!). Un rondone a terra, va sempre soccorso. Si può contattare il C.R.A.S. e richiedere assistenza tramite invio di foto per valutare se tentare una reimmissione in natura o se necessario un ricovero.",
+        "<p>Solitamente, i nidi di rondini e balestrucci sono ben visibili e, se troviamo <strong>un pulcino in buone condizioni, va ricollocato nel nido.</strong></p><br><p>Questi animali sono caratterizzati da <strong>zampe estremamente corte</strong> (in particolar modo i rondoni) perché sono estremamente specializzati nella vita in volo: per questo motivo <strong>potrebbero far fatica a spiccare il volo da terra</strong>, e non vale solo per i pulcini ma anche per gli esemplari adulti!.</p><br><h4>Un rondone a terra, quindi, va sempre soccorso.</h4><br><p>Si può contattare il C.R.A.S. e richiedere assistenza tramite l'invio di foto, per valutare se tentare una reimmissione in natura o se fosse necessario un ricovero.</p>",
     },
   ],
 });
