@@ -98,6 +98,7 @@ export default {
           <div class="video-background">
             <video
               src="../assets/video/background-video-2.mp4"
+              loading="lazy"
               autoplay
               muted
               loop
@@ -118,8 +119,10 @@ export default {
                 >
               </a>
             </div>
-            <!-- END animal help section -->
           </aside>
+          <!-- END animal help section -->
+
+          <!-- Vision description -->
           <article class="vision-card d-flex">
             <div class="overlay margin-r-60">
               <h2>VISION</h2>
@@ -157,6 +160,7 @@ export default {
                         <!-- END carousel buttons -->
                       </div>
                       <!-- END carousel -->
+
                       <!-- Bottom paragraph -->
                       <div class="bottom-paragraph-container">
                         <p>{{ vision.description }}</p>
@@ -169,6 +173,7 @@ export default {
               <!-- END carousel container -->
             </div>
           </article>
+          <!-- END vision description -->
         </section>
         <!-- END vision section -->
       </div>

@@ -49,6 +49,7 @@ export default {
       <section class="col upper-bg">
         <div class="history-old overlay">
           <h1>INSUBRIA</h1>
+          <!-- History old -->
           <div class="insubria-description d-flex">
             <div class="description">
               <h2>Un pò di Storia</h2>
@@ -88,12 +89,16 @@ export default {
                 <figure>
                   <img
                     src="../assets/img/insubria/maps/insubria-immagini.png"
-                    alt=""
+                    loading="lazy"
+                    alt="Territorio dell'Insubria"
                   />
                 </figure>
               </div>
             </div>
           </div>
+          <!-- END history old -->
+
+          <!-- History today -->
           <div class="history-nowaday">
             <div class="insubria-description">
               <h2>L'Insubria oggi</h2>
@@ -118,6 +123,7 @@ export default {
               </p>
             </div>
           </div>
+          <!-- END history today -->
         </div>
       </section>
       <!-- END history description -->
@@ -148,27 +154,37 @@ export default {
       <section class="col lower-bg">
         <div class="logo-container overlay">
           <h2>Il nostro Logo</h2>
+
+          <!-- Logo-real image section -->
           <div class="images-container d-flex">
             <div class="logo-img">
               <img
                 src="../assets/img/logo/double-circle.png"
+                loading="lazy"
                 alt="Insubria logo"
               />
             </div>
             <div class="real-image d-flex">
               <img
                 src="../assets/img/insubria/fiorrancino.png"
+                loading="lazy"
                 alt="Fiorrancino in primo piano"
               />
             </div>
           </div>
+          <!-- END logo-real image section -->
+
+          <!-- Bird description -->
           <p class="bird-description">
             Il nostro logo è un <strong>Fiorrancino</strong> -
             <span>Regulus ignicapilla</span> - e qui vi spieghiamo perchè
             l'abbiamo scelto:
           </p>
+          <!-- END bird description -->
+
+          <!-- List container -->
           <div class="list-container d-flex">
-            <!-- List section -->
+            <!-- List -->
             <div class="left-section">
               <ul class="characteristics-list">
                 <li
@@ -185,6 +201,7 @@ export default {
                     <div class="chevron-right">
                       <img
                         src="../assets/img/insubria/list-elements/chevron-right.svg"
+                        loading="lazy"
                         alt="Chevron destro"
                       />
                     </div>
@@ -192,7 +209,7 @@ export default {
                 </li>
               </ul>
             </div>
-            <!-- END list section -->
+            <!-- END list -->
 
             <!-- Description section -->
             <div class="right-section">
@@ -221,6 +238,9 @@ export default {
             </div>
             <!-- END description section -->
           </div>
+          <!-- END list container -->
+
+          <!-- Bottom paragraph section -->
           <div class="bottom-paragraph">
             <p>
               Come questo piccolo uccello che esplora instancabilmente il suo
@@ -228,6 +248,7 @@ export default {
               nascosti del nostro territorio.
             </p>
           </div>
+          <!-- END bottom paragraph section -->
         </div>
       </section>
       <!-- END logo explanation -->

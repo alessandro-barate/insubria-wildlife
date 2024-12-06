@@ -43,6 +43,8 @@ export default {
                   />
                 </figure>
               </div>
+
+              <!-- Team description -->
               <p class="team-description">
                 <br />
                 <br />
@@ -66,6 +68,7 @@ export default {
                 Speriamo di portarti con noi in quest'avventura e di poter
                 avverare tanti piccoli sogni assieme!
               </p>
+              <!-- END team description -->
             </div>
           </section>
           <!-- END team container -->

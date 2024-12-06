@@ -116,6 +116,8 @@ export default {
       </div>
     </div>
   </div>
+
+  <!-- Map zoomed container -->
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
@@ -124,6 +126,7 @@ export default {
       @click.stop
     />
   </div>
+  <!-- END map zoomed container -->
 </template>
 
 <style scoped lang="scss">
