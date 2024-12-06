@@ -188,7 +188,7 @@ export default {
 
   img {
     width: 85%;
-    cursor: pointer;
+    cursor: url("../../public/cursor/binoculars-icon.svg"), zoom-in;
     transition: all 0.3s ease;
   }
 }

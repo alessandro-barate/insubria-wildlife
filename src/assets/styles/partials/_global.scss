@@ -13,8 +13,12 @@ a {
 }
 
 button {
-  cursor: pointer;
   font-family: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
 }
 
 .overlay {
