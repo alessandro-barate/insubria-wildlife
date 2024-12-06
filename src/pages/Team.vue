@@ -38,7 +38,7 @@ export default {
               <div class="team-group-img">
                 <figure>
                   <img
-                    src="/team/background/team-group.jpg"
+                    src="../assets/img/team/background/team-group.jpg"
                     alt="Foto di gruppo del team"
                   />
                 </figure>
@@ -140,7 +140,7 @@ export default {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 10px;
-  background-image: url(/team/background/swan.jpg);
+  background-image: url(../assets/img/team/background/swan.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -179,12 +179,12 @@ export default {
   margin-bottom: -20px;
 
   img {
-    width: 50%;
+    width: 60%;
   }
 }
 
 .grid-section {
-  background-image: url(/team/background/reindeer.jpg);
+  background-image: url(../assets/img/team/background/reindeer.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -322,6 +322,10 @@ export default {
 /* Media queries */
 /* Mobile layout */
 @media (max-width: 559px) {
+  .team-group-img img {
+    width: 80%;
+  }
+
   .col-33 {
     width: 85%;
   }
@@ -355,6 +359,10 @@ export default {
 
 /* Tablet layout */
 @media only screen and (min-width: 560px) and (max-width: 800px) {
+  .team-group-img img {
+    width: 75%;
+  }
+
   .col-33 {
     width: calc(100% / 2.2 - 10px);
 
@@ -392,7 +400,7 @@ export default {
 
 @media (max-width: 800px) {
   .grid-section {
-    background-image: url(/team/background/red-deer.jpg);
+    background-image: url(../assets/img/team/background/red-deer.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

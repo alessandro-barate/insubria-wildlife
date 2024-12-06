@@ -86,7 +86,10 @@ export default {
             <div class="img-container d-flex">
               <div class="img-container-2">
                 <figure>
-                  <img src="/insubria/maps/insubria-immagini.png" alt="" />
+                  <img
+                    src="../assets/img/insubria/maps/insubria-immagini.png"
+                    alt=""
+                  />
                 </figure>
               </div>
             </div>
@@ -147,10 +150,16 @@ export default {
           <h2>Il nostro Logo</h2>
           <div class="images-container d-flex">
             <div class="logo-img">
-              <img src="/logo/double-circle.png" alt="" />
+              <img
+                src="../assets/img/logo/double-circle.png"
+                alt="Insubria logo"
+              />
             </div>
             <div class="real-image d-flex">
-              <img src="/insubria/fiorrancino.png" alt="" />
+              <img
+                src="../assets/img/insubria/fiorrancino.png"
+                alt="Fiorrancino in primo piano"
+              />
             </div>
           </div>
           <p class="bird-description">
@@ -175,8 +184,8 @@ export default {
                     {{ characteristic.intro }}
                     <div class="chevron-right">
                       <img
-                        src="/insubria/list-elements/chevron-right.svg"
-                        alt=""
+                        src="../assets/img/insubria/list-elements/chevron-right.svg"
+                        alt="Chevron destro"
                       />
                     </div>
                   </h4>
@@ -366,19 +375,19 @@ h4 {
 .upper-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(/insubria/background/fox-2.jpg);
+  background-image: url(../assets/img/insubria/background/fox-2.jpg);
 }
 
 .middle-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(/insubria/background/orange-bird.jpg);
+  background-image: url(../assets/img/insubria/background/orange-bird.jpg);
 }
 
 .lower-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(/insubria/background/deer.png);
+  background-image: url(../assets/img/insubria/background/deer.png);
 }
 
 // Bottom list styles

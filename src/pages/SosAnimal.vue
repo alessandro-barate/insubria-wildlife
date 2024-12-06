@@ -55,7 +55,7 @@ export default {
               <div class="flow-chart-img">
                 <figure>
                   <img
-                    src="/sos-animal/flow-chart.png"
+                    src="../assets/img/sos-animal/flow-chart.png"
                     alt="Flusso delle azioni da svolgere in caso di ritrovamento"
                     @click="toggleZoom"
                   />
@@ -119,7 +119,7 @@ export default {
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
-      :src="'/sos-animal/flow-chart.png'"
+      :src="'src/assets/img/sos-animal/flow-chart.png'"
       alt="Flusso delle azioni da svolgere in caso di ritrovamento"
       @click.stop
     />
@@ -147,7 +147,7 @@ export default {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 10px;
-  background-image: url(/sos-animal/background/eagle-2.jpg);
+  background-image: url(../assets/img/sos-animal/background/eagle-2.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -188,7 +188,7 @@ export default {
 
   img {
     width: 85%;
-    cursor: url("../../public/cursor/binoculars-icon.svg"), zoom-in;
+    cursor: url("../assets/img/cursor/binoculars-icon.svg"), zoom-in;
     transition: all 0.3s ease;
   }
 }
@@ -229,7 +229,7 @@ export default {
 }
 
 .grid-section {
-  background-image: url(/sos-animal/background/blue-bird.jpg);
+  background-image: url(../assets/img/sos-animal/background/blue-bird.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -440,7 +440,7 @@ export default {
 
 @media (max-width: 800px) {
   .grid-section {
-    background-image: url(sos-animal/background/fox-3.jpg);
+    background-image: url(../assets/img/sos-animal/background/fox-3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

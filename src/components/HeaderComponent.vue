@@ -53,7 +53,7 @@ export default {
             <div class="logo">
               <a>
                 <router-link :to="{ name: 'Home' }">
-                  <img src="/logo/double-circle.png" alt="" />
+                  <img src="/./src/assets/img/logo/double-circle.png" alt="" />
                 </router-link>
               </a>
             </div>
@@ -110,10 +110,16 @@ export default {
               </div>
               <div class="lang-container">
                 <button id="italian">
-                  <img src="/header/flags/italy-flag-round.png" alt="" />
+                  <img
+                    src="../assets/img/header/flags/italy-flag-round.png"
+                    alt=""
+                  />
                 </button>
                 <button id="english">
-                  <img src="/header/flags/uk-flag-round.png" alt="" />
+                  <img
+                    src="../assets/img/header/flags/uk-flag-round.png"
+                    alt=""
+                  />
                 </button>
               </div>
             </div>
