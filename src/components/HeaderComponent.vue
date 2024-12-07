@@ -58,6 +58,8 @@ export default {
               </a>
             </div>
             <!-- END Logo -->
+
+            <!-- Nav menu -->
             <ul class="nav-menu d-flex">
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
@@ -74,7 +76,7 @@ export default {
                 </a>
               </li>
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a @click="listDisappearance()" class="nav-link" id="events">
                   <router-link :to="{ name: 'Eventi' }" class="link"
                     >EVENTI</router-link
                   >
@@ -88,26 +90,33 @@ export default {
                 </a>
               </li>
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a @click="listDisappearance()" class="nav-link" id="news">
                   <router-link :to="{ name: 'News' }" class="link"
                     >NEWS</router-link
                   >
                 </a>
               </li>
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a @click="listDisappearance()" class="nav-link" id="support">
                   <router-link :to="{ name: 'Supportaci' }" class="link"
                     >SUPPORTACI</router-link
                   ></a
                 >
               </li>
             </ul>
+            <!-- END nav menu -->
+
+            <!-- Right container -->
             <div class="right-container d-flex">
+              <!-- Hamburger menu -->
               <div @click="toggleNavbarHamburger()" class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
               </div>
+              <!-- END hamburger menu -->
+
+              <!-- Language container -->
               <div class="lang-container">
                 <button id="italian">
                   <img
@@ -122,7 +131,9 @@ export default {
                   />
                 </button>
               </div>
+              <!-- END language container -->
             </div>
+            <!-- END right container -->
           </nav>
         </div>
       </div>
@@ -156,7 +167,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    gap: 30px;
+    gap: 20px;
     text-align: center;
     align-items: center;
     margin-right: 0;
@@ -198,6 +209,12 @@ header {
   }
 }
 
+#events,
+#news,
+#support {
+  pointer-events: none;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -215,6 +232,7 @@ header {
 .right-container {
   width: 10%;
   margin-left: 0;
+  margin-right: 35px;
   justify-content: end;
 }
 
@@ -231,25 +249,24 @@ header {
     border: none;
     border-radius: 50%;
     background-color: transparent;
+    pointer-events: none;
   }
 
   #italian img,
   #english img {
     width: 60%;
   }
+
+  #italian {
+    margin-right: -4px;
+  }
+
+  #english {
+    margin-left: -4px;
+  }
 }
 
 // Media queries
-@media (max-width: 800px) {
-  .lang-container {
-    width: 120%;
-
-    #italian,
-    #english {
-      width: 100%;
-    }
-  }
-}
 
 @media (max-width: 999px) {
   .row {
@@ -302,14 +319,26 @@ header {
     display: flex;
     padding-left: 20px;
     align-items: center;
-    margin-right: -40px;
+    margin-right: -55px;
 
     #italian {
-      margin-right: 0;
+      margin-right: -5px;
     }
 
     #english {
-      margin-left: 0;
+      margin-left: -5px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .lang-container {
+    width: 120%;
+    margin-right: -40px;
+
+    #italian,
+    #english {
+      width: 100%;
     }
   }
 }

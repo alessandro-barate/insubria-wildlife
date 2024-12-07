@@ -21,7 +21,7 @@ export default {
             <!-- END logo footer -->
 
             <!-- Upper right section -->
-            <div class="right-details">
+            <div class="right-details d-flex">
               <!-- Upper section -->
               <div class="upper-section d-flex">
                 <!-- Address section -->
@@ -39,7 +39,7 @@ export default {
                   <address class="address-container">
                     <h3>Insubria</h3>
                     <a id="address" href=""> Via Roma 20, 20004, Arluno </a>
-                    <h3 id="cf">Codice Fiscale</h3>
+                    <h3 id="pi">Partita IVA</h3>
                     <span>93054540153</span>
                   </address>
                   <!-- END address container -->
@@ -86,45 +86,6 @@ export default {
                 <!-- END socials container -->
               </div>
               <!-- END upper section -->
-
-              <!-- Lower section -->
-              <div class="lower-section d-flex">
-                <!-- Contacts section -->
-                <div class="contacts">
-                  <h3>Contattaci</h3>
-                  <!-- Phone number -->
-                  <div class="phone-container d-flex">
-                    <img
-                      src="../assets/img/footer/phone-icon.png"
-                      alt="Icona telefono"
-                    />
-                    <a href="">0230256512</a>
-                  </div>
-                  <!-- END phone number -->
-
-                  <!-- Mail -->
-                  <div class="mail-container d-flex">
-                    <img
-                      src="../assets/img/footer/mail-icon.png"
-                      alt="Immagine email"
-                    />
-                    <p>insubria.wildlife@gmail.com</p>
-                  </div>
-                  <!-- END mail -->
-
-                  <!-- PEC mail -->
-                  <div class="mail-container d-flex">
-                    <img
-                      src="../assets/img/footer/mail-icon.png"
-                      alt="Immagine email"
-                    />
-                    <p>insubriawildlifeaps@pec.insubriawildlife.com</p>
-                  </div>
-                  <!-- END PEC mail -->
-                </div>
-                <!-- END contacts section -->
-              </div>
-              <!-- END lower section -->
             </div>
             <!-- END upper right section -->
           </div>
@@ -149,21 +110,6 @@ footer {
   padding-bottom: 40px;
 }
 
-.mail-container {
-  margin-bottom: 5px;
-
-  p {
-    color: white;
-    margin-left: 10px;
-    margin-right: 5px;
-    text-decoration: none;
-
-    &:hover {
-      color: #ff6a3a;
-    }
-  }
-}
-
 .main-container {
   width: 87%;
   padding-top: 20px;
@@ -173,15 +119,8 @@ footer {
 
   .right-details {
     width: 70%;
-
-    .upper-section {
-      margin-bottom: 20px;
-    }
+    align-items: center;
   }
-}
-
-.lower-section {
-  justify-content: center;
 }
 
 .logo-footer-container {
@@ -213,14 +152,6 @@ address a,
   }
 }
 
-.phone-container {
-  display: none;
-}
-
-#cf {
-  padding-top: 10px;
-}
-
 .location-container {
   display: none;
   align-items: center;
@@ -232,24 +163,6 @@ address a,
     height: 30px;
     margin: 0;
   }
-}
-
-.contacts h3 {
-  margin-bottom: 10px;
-  margin-left: -10px;
-}
-
-.contacts img {
-  width: 25px;
-  margin-left: -10px;
-  margin-right: 0;
-}
-
-.contacts a {
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .socials {
@@ -298,8 +211,7 @@ address a,
   width: 100%;
   text-align: center;
 
-  .phone-container,
-  .mail-container {
+  .phone-container {
     justify-content: center;
     align-items: center;
   }

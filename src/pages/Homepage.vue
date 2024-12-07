@@ -176,6 +176,38 @@ export default {
           <!-- END vision description -->
         </section>
         <!-- END vision section -->
+
+        <!-- Form section -->
+        <div class="form-container">
+          <div class="contact">
+            <h2>
+              Se necessiti di contattarci compila il form sottostante, ti
+              risponderemo il prima possibile
+            </h2>
+          </div>
+          <form action="" method="POST">
+            <label for="name">Nome</label>
+            <input type="text" name="name" />
+            <br />
+            <label for="surname">Cognome</label>
+            <input type="text" name="surname" />
+            <br />
+            <label for="mail">Mail</label>
+            <input type="mail" />
+            <br />
+            <label for="message"></label>
+            <textarea
+              name="message"
+              id=""
+              placeholder="Scrivi il tuo messaggio"
+              rows="8"
+              cols="50"
+            ></textarea>
+            <br />
+            <button type="submit">Invia</button>
+          </form>
+        </div>
+        <!-- END form section -->
       </div>
     </div>
   </div>
@@ -188,6 +220,24 @@ h1 {
 
   span {
     color: #ff6a3a;
+  }
+}
+
+.events button,
+.link button,
+form button {
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 20px;
+  background-color: #ff6b3ad8;
+
+  &:hover {
+    background-color: #ff6b3a;
+    box-shadow: 0 -1px 10px #ff6b3ad8;
+    transform: scale(1.05);
   }
 }
 
@@ -255,22 +305,6 @@ h1 {
       line-height: 35px;
       padding-bottom: 20px;
     }
-
-    button {
-      border: none;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      padding: 10px 30px 10px 30px;
-      border-radius: 20px;
-      background-color: #ff6b3ad8;
-
-      &:hover {
-        background-color: #ff6b3a;
-        box-shadow: 0 -1px 10px #ff6b3ad8;
-        transform: scale(1.05);
-      }
-    }
   }
 
   &:hover {
@@ -329,22 +363,6 @@ h1 {
       line-height: 33px;
       font-weight: bold;
       padding-bottom: 30px;
-    }
-
-    button {
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 25px 10px 25px;
-      border: none;
-      border-radius: 20px;
-      background-color: #ff6b3ad8;
-
-      &:hover {
-        background-color: #ff6b3a;
-        box-shadow: 0 -1px 10px #ff6b3ab2;
-        transform: scale(1.05);
-      }
     }
   }
 
@@ -410,6 +428,45 @@ h1 {
       box-shadow: 2px 2px 2px rgba(100, 56, 56, 0.2);
       transform: scale(1.2);
     }
+  }
+}
+
+.contact {
+  width: 60%;
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+.form-container {
+  padding-top: 50px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.753);
+
+  label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 20%;
+    height: 3vh;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 17px 20px 17px 20px;
+  }
+
+  textarea {
+    font-size: 18px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
 }
 
