@@ -8,83 +8,132 @@ export default {
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col d-flex">
-          <div class="logo-footer-container d-flex">
-            <img
-              class="footer-logo"
-              src="../assets/img/logo/bird-only.png"
-              alt="Insubria logo"
-            />
-          </div>
-          <div class="right-details">
-            <div class="upper-section d-flex">
-              <div class="col-50 address d-flex">
-                <div class="location-container d-flex">
-                  <img
-                    src="../assets/img/footer-img/location-icon.png"
-                    alt="Logo GPS"
-                  />
+        <div class="col">
+          <div class="main-container d-flex">
+            <!-- Logo footer -->
+            <div class="logo-footer-container d-flex">
+              <img
+                class="footer-logo"
+                src="../assets/img/logo/bird-only.png"
+                alt="Insubria logo"
+              />
+            </div>
+            <!-- END logo footer -->
+
+            <!-- Upper right section -->
+            <div class="right-details">
+              <!-- Upper section -->
+              <div class="upper-section d-flex">
+                <!-- Address section -->
+                <div class="col-50 address d-flex">
+                  <!-- GPS image -->
+                  <div class="location-container d-flex">
+                    <img
+                      src="../assets/img/footer/location-icon.png"
+                      alt="Logo GPS"
+                    />
+                  </div>
+                  <!-- END GPS image -->
+
+                  <!-- Address container -->
+                  <address class="address-container">
+                    <h3>Insubria</h3>
+                    <a id="address" href=""> Via Roma 20, 20004, Arluno </a>
+                    <h3 id="cf">Codice Fiscale</h3>
+                    <span>93054540153</span>
+                  </address>
+                  <!-- END address container -->
                 </div>
-                <address class="address-container">
-                  <h3>Insubria</h3>
-                  <a href=""> Via Roma 20, 20004, Arluno </a>
-                  <h3 id="cf">Codice Fiscale</h3>
-                  <span>93054540153</span>
-                </address>
-              </div>
-              <div class="col-50 contacts-socials">
-                <div class="socials">
-                  <h3>Seguici sui nostri social</h3>
-                  <div class="buttons-container d-flex">
-                    <div class="fb-container">
-                      <a href="">
-                        <img
-                          src="../assets/img/footer-img/facebook-icon.svg"
-                          alt="Facebook logo"
-                          id="fb-logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="ig-container">
-                      <a href="">
-                        <img
-                          src="../assets/img/footer-img/instagram-icon.svg"
-                          alt="Instagram logo"
-                          id="ig-logo"
-                        />
-                      </a>
+                <!-- END address section -->
+
+                <!-- Socials container -->
+                <div class="col-50 contacts-socials">
+                  <div class="socials">
+                    <h3>Seguici sui nostri social</h3>
+                    <div class="buttons-container d-flex">
+                      <!-- Facebook link -->
+                      <div class="fb-container">
+                        <a
+                          href="https://www.facebook.com/people/Insubria-Wildlife-APS/61568161029341/"
+                          target="_blank"
+                        >
+                          <img
+                            src="../assets/img/footer/facebook-icon.svg"
+                            alt="Facebook logo"
+                            id="fb-logo"
+                          />
+                        </a>
+                      </div>
+                      <!-- END Facebook link -->
+
+                      <!-- Instagram link -->
+                      <div class="ig-container">
+                        <a
+                          href="https://www.instagram.com/insubria_wildlife/"
+                          target="_blank"
+                        >
+                          <img
+                            src="../assets/img/footer/instagram-icon.svg"
+                            alt="Instagram logo"
+                            id="ig-logo"
+                          />
+                        </a>
+                      </div>
+                      <!-- END Instagram link -->
                     </div>
                   </div>
                 </div>
+                <!-- END socials container -->
               </div>
-            </div>
-            <div class="lower-section d-flex">
-              <div class="contacts">
-                <h3>Contattaci</h3>
-                <div class="phone-container d-flex">
-                  <img
-                    src="../assets/img/footer-img/phone-icon.png"
-                    alt="Icona telefono"
-                  />
-                  <a href="">0230256512</a>
+              <!-- END upper section -->
+
+              <!-- Lower section -->
+              <div class="lower-section d-flex">
+                <!-- Contacts section -->
+                <div class="contacts">
+                  <h3>Contattaci</h3>
+                  <!-- Phone number -->
+                  <div class="phone-container d-flex">
+                    <img
+                      src="../assets/img/footer/phone-icon.png"
+                      alt="Icona telefono"
+                    />
+                    <a href="">0230256512</a>
+                  </div>
+                  <!-- END phone number -->
+
+                  <!-- Mail -->
+                  <div class="mail-container d-flex">
+                    <img
+                      src="../assets/img/footer/mail-icon.png"
+                      alt="Immagine email"
+                    />
+                    <p>insubria.wildlife@gmail.com</p>
+                  </div>
+                  <!-- END mail -->
+
+                  <!-- PEC mail -->
+                  <div class="mail-container d-flex">
+                    <img
+                      src="../assets/img/footer/mail-icon.png"
+                      alt="Immagine email"
+                    />
+                    <p>insubriawildlifeaps@pec.insubriawildlife.com</p>
+                  </div>
+                  <!-- END PEC mail -->
                 </div>
-                <div class="mail-container d-flex">
-                  <img
-                    src="../assets/img/footer-img/mail-icon.png"
-                    alt="Immagine email"
-                  />
-                  <a href=""> insubria.wildlife@gmail.com </a>
-                </div>
-                <div class="mail-container d-flex">
-                  <img
-                    src="../assets/img/footer-img/mail-icon.png"
-                    alt="Immagine email"
-                  />
-                  <a href=""> insubriawildlifeaps@pec.insubriawildlife.com </a>
-                </div>
+                <!-- END contacts section -->
               </div>
+              <!-- END lower section -->
             </div>
+            <!-- END upper right section -->
           </div>
+
+          <!-- Copyright container -->
+          <div class="copyright-container">
+            <p>&copy; 2024 Insubria WildLife APS</p>
+          </div>
+          <!-- END copyright container -->
         </div>
       </div>
     </div>
@@ -100,16 +149,22 @@ footer {
   padding-bottom: 40px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+.mail-container {
+  margin-bottom: 5px;
 
-  &:hover {
-    color: #ff6a3a;
+  p {
+    color: white;
+    margin-left: 10px;
+    margin-right: 5px;
+    text-decoration: none;
+
+    &:hover {
+      color: #ff6a3a;
+    }
   }
 }
 
-.col {
+.main-container {
   width: 87%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -141,7 +196,9 @@ a {
   }
 }
 
-address a {
+address h3:first-child,
+address a,
+#address {
   display: none;
 }
 
@@ -156,7 +213,7 @@ address a {
   }
 }
 
-.contacts .phone-container a {
+.phone-container {
   display: none;
 }
 
@@ -165,6 +222,7 @@ address a {
 }
 
 .location-container {
+  display: none;
   align-items: center;
   width: 10%;
   margin: 0;
@@ -177,12 +235,12 @@ address a {
 }
 
 .contacts h3 {
+  margin-bottom: 10px;
   margin-left: -10px;
 }
 
 .contacts img {
   width: 25px;
-  padding-top: 10px;
   margin-left: -10px;
   margin-right: 0;
 }
@@ -245,6 +303,14 @@ address a {
     justify-content: center;
     align-items: center;
   }
+}
+
+.copyright-container {
+  width: 87%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.753);
 }
 
 // Media queries
