@@ -57,7 +57,7 @@ export default {
               <span>Insubria Wildlife APS</span> è la voce giovane, dinamica e
               internazionale della divulgazione scientifica sulla
               <span>fauna selvatica</span> e gli
-              <span>ambienti insubrici</span>.Vogliamo portare il valore della
+              <span>ambienti insubrici</span>. Vogliamo portare il valore della
               biodiversità sotto i riflettori, rendendolo accessibile e
               interessante per tutti, ispirando curiosità e consapevolezza.
               <span>La tutela</span> delle risorse naturali può arricchire la
@@ -414,14 +414,15 @@ form button {
 
   #prev-btn,
   #next-btn {
+    width: 27px;
+    height: 27px;
+    border: none;
     color: white;
-    transition-property: background-color, box-shadow;
+    font-size: 17px;
+    border-radius: 50%;
     transition-duration: 0.5s;
     background-color: rgb(0, 0, 0);
-    width: 20px;
-    height: 20px;
-    border: none;
-    border-radius: 50%;
+    transition-property: background-color, box-shadow;
 
     &:hover {
       background-color: rgba(100, 56, 56, 0.425);

@@ -39,6 +39,20 @@ export default {
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
     },
+
+    containerAppearance() {
+      const newsEvents = document.getElementById("news-events-container");
+
+      newsEvents.classList.remove("display-none");
+      newsEvents.classList.add("display-block");
+    },
+
+    containerDisappearance() {
+      const newsEvents = document.getElementById("news-events-container");
+
+      newsEvents.classList.remove("display-block");
+      newsEvents.classList.add("display-none");
+    },
   },
 };
 </script>
@@ -61,6 +75,7 @@ export default {
 
             <!-- Nav menu -->
             <ul class="nav-menu d-flex">
+              <!-- Insubria link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Insubria' }" class="link">
@@ -68,6 +83,9 @@ export default {
                   </router-link>
                 </a>
               </li>
+              <!-- END Insubria link -->
+
+              <!-- Team link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Team' }" class="link"
@@ -75,13 +93,49 @@ export default {
                   >
                 </a>
               </li>
-              <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link" id="events">
-                  <router-link :to="{ name: 'Eventi' }" class="link"
-                    >EVENTI</router-link
-                  >
-                </a>
+              <!-- END team link -->
+
+              <!-- News and events link -->
+              <li
+                class="nav-item container-bg"
+                @mouseleave="containerDisappearance"
+              >
+                <div class="chevron-down">
+                  <p>RESTA AGGIORNATO</p>
+                  <img
+                    src="../assets/img/header/nav-menu/chevron-down.svg"
+                    alt=""
+                    @mouseenter="containerAppearance"
+                  />
+                </div>
+                <div
+                  @mouseleave="containerDisappearance"
+                  id="news-events-container"
+                  class="display-none"
+                >
+                  <div class="events-container">
+                    <a
+                      @click="listDisappearance()"
+                      class="nav-link"
+                      id="events"
+                    >
+                      <router-link :to="{ name: 'Eventi' }" class="link"
+                        >EVENTI</router-link
+                      >
+                    </a>
+                  </div>
+                  <div class="news-container">
+                    <a @click="listDisappearance()" class="nav-link" id="news">
+                      <router-link :to="{ name: 'News' }" class="link"
+                        >NEWS</router-link
+                      >
+                    </a>
+                  </div>
+                </div>
               </li>
+              <!-- END news and events link -->
+
+              <!-- SOS animals link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'SosAnimali' }" class="link"
@@ -89,13 +143,19 @@ export default {
                   >
                 </a>
               </li>
+              <!-- END SOS animals link -->
+
+              <!-- Contact us link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link" id="news">
-                  <router-link :to="{ name: 'News' }" class="link"
-                    >NEWS</router-link
+                <a @click="listDisappearance()" class="nav-link">
+                  <router-link :to="{ name: 'Contattaci' }" class="link"
+                    >CONTATTACI</router-link
                   >
                 </a>
               </li>
+              <!-- END contact us link -->
+
+              <!-- Support us link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link" id="support">
                   <router-link :to="{ name: 'Supportaci' }" class="link"
@@ -103,6 +163,7 @@ export default {
                   ></a
                 >
               </li>
+              <!-- END support us link -->
             </ul>
             <!-- END nav menu -->
 
@@ -167,7 +228,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    gap: 20px;
+    gap: 10px;
     text-align: center;
     align-items: center;
     margin-right: 0;
@@ -178,12 +239,42 @@ header {
 
   .nav-item {
     width: 70%;
+
+    p {
+      color: white;
+      font-size: 20px;
+    }
   }
+}
+
+.container-bg {
+  height: 100%;
+  position: relative;
+
+  #news-events-container {
+    top: 100%;
+    left: 18%;
+    padding: 10px;
+    margin-top: 2px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgba(219, 13, 13, 0.75);
+  }
+}
+
+.chevron-down:hover {
+  color: #ff6a3a;
+}
+
+.chevron-down img {
+  width: 15%;
+  color: white;
 }
 
 .logo {
   width: 8%;
   margin-left: 50px;
+  margin-right: 30px;
 
   img {
     width: 100%;
@@ -209,8 +300,8 @@ header {
   }
 }
 
-#events,
-#news,
+// #events,
+// #news,
 #support {
   pointer-events: none;
 }
@@ -283,6 +374,25 @@ header {
     transition: 1s;
     z-index: 1000;
     background-color: rgb(0, 0, 0);
+  }
+
+  .chevron-down {
+    display: none;
+  }
+
+  .container-bg #news-events-container {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin-top: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .events-container {
+    padding-bottom: 10px;
   }
 
   .hamburger {

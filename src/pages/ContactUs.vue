@@ -1,7 +1,7 @@
 <script>
 import { store } from "../store.js";
 export default {
-  name: "Eventi",
+  name: "Contattaci",
 
   data() {
     return {
@@ -16,7 +16,7 @@ export default {
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>EVENTI</h1>
+        <h1>CONTATTACI</h1>
       </div>
     </div>
   </div>

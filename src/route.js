@@ -4,8 +4,9 @@ import Homepage from "./pages/Homepage.vue";
 import InsubriaInfo from "./pages/InsubriaInfo.vue";
 import Team from "./pages/Team.vue";
 import Events from "./pages/Events.vue";
-import SosAnimals from "./pages/SosAnimal.vue";
 import News from "./pages/News.vue";
+import SosAnimals from "./pages/SosAnimal.vue";
+import ContactUs from "./pages/ContactUs.vue";
 import SupportUs from "./pages/SupportUs.vue";
 
 const router = createRouter({
@@ -32,7 +33,7 @@ const router = createRouter({
       component: Events,
     },
     {
-      path: "/sosanimali",
+      path: "/sos-animali",
       name: "SosAnimali",
       component: SosAnimals,
     },
@@ -42,7 +43,12 @@ const router = createRouter({
       component: News,
     },
     {
-      path: "/support",
+      path: "/contattaci",
+      name: "Contattaci",
+      component: ContactUs,
+    },
+    {
+      path: "/supportaci",
       name: "Supportaci",
       component: SupportUs,
     },

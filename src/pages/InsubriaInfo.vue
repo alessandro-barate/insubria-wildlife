@@ -661,6 +661,12 @@ h4 {
 }
 /* END tablet layout */
 /* Various media queries */
+@media (min-width: 730px) {
+  .paragraph-card h2 {
+    display: none;
+  }
+}
+
 @media (max-width: 980px) {
   .insubria-description {
     display: block;
