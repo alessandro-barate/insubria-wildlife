@@ -100,7 +100,7 @@ export default {
                 class="nav-item container-bg"
                 @mouseleave="containerDisappearance"
               >
-                <div class="chevron-down">
+                <div id="chevron-down">
                   <p>RESTA AGGIORNATO</p>
                   <img
                     src="../assets/img/header/nav-menu/chevron-down.svg"
@@ -147,7 +147,7 @@ export default {
 
               <!-- Contact us link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a @click="listDisappearance()" class="nav-link" id="contact">
                   <router-link :to="{ name: 'Contattaci' }" class="link"
                     >CONTATTACI</router-link
                   >
@@ -249,26 +249,35 @@ header {
 
 .container-bg {
   height: 100%;
+  padding-bottom: 4px;
   position: relative;
 
   #news-events-container {
-    top: 100%;
-    left: 18%;
-    padding: 10px;
+    top: 90%;
+    left: 15%;
+    padding: 15px;
     margin-top: 2px;
     border-radius: 10px;
     position: absolute;
-    background-color: rgba(219, 13, 13, 0.75);
+    background-color: rgba(0, 0, 0, 0.85);
   }
 }
 
-.chevron-down:hover {
+.events-container {
+  padding-bottom: 5px;
+}
+
+#chevron-down p:hover {
   color: #ff6a3a;
 }
 
-.chevron-down img {
+#chevron-down img {
   width: 15%;
   color: white;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .logo {
@@ -300,8 +309,9 @@ header {
   }
 }
 
-// #events,
-// #news,
+#events,
+#news,
+#contact,
 #support {
   pointer-events: none;
 }
@@ -376,7 +386,7 @@ header {
     background-color: rgb(0, 0, 0);
   }
 
-  .chevron-down {
+  #chevron-down {
     display: none;
   }
 
