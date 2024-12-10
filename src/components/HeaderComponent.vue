@@ -248,7 +248,6 @@ header {
 }
 
 .container-bg {
-  height: 100%;
   padding-bottom: 4px;
   position: relative;
 
@@ -309,13 +308,6 @@ header {
   }
 }
 
-#events,
-#news,
-#contact,
-#support {
-  pointer-events: none;
-}
-
 .hamburger {
   display: none;
   cursor: pointer;
@@ -368,7 +360,6 @@ header {
 }
 
 // Media queries
-
 @media (max-width: 999px) {
   .row {
     position: relative;
@@ -403,6 +394,10 @@ header {
 
   .events-container {
     padding-bottom: 10px;
+  }
+
+  .news-container {
+    margin-bottom: -4px;
   }
 
   .hamburger {
