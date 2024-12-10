@@ -48,7 +48,6 @@ export default {
           <section class="sos-container">
             <div class="overlay description-section">
               <h1 class="uppercase">sos animali</h1>
-              <br />
               <div class="sos">
                 <h2 class="uppercase">soccorso fauna</h2>
               </div>
@@ -196,7 +195,7 @@ export default {
 .description-section h1 {
   font-size: 50px;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .description-section h2 {

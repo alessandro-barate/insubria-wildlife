@@ -54,8 +54,8 @@ export default {
             <div class="description">
               <h2>Un pò di Storia</h2>
               <p>
-                Gli antichi romani chiamavano Insubri il popolo che abitava
-                alcune aree settentrionali dell'odierna Italia.
+                Gli antichi romani chiamavano <strong>Insubri</strong> il popolo
+                che abitava alcune aree settentrionali dell'odierna Italia.
                 <br />
                 <br />Sono stati trovati reperti archeologici risalenti a 9000
                 anni fa che ci raccontano di uomini vissuti nei territori
@@ -268,14 +268,14 @@ export default {
 
 .col {
   margin-bottom: 10px;
-  padding: 60px 30px 60px 30px;
+  padding: 50px 30px 50px 30px;
 }
 
 h1 {
   font-size: 50px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 h2 {
@@ -306,7 +306,6 @@ h4 {
 
 .insubria-description {
   width: 90%;
-  padding-top: 50px;
 
   .description {
     width: 200%;
@@ -671,6 +670,10 @@ h4 {
   .insubria-description {
     display: block;
     padding-top: 0;
+
+    h2 {
+      text-align: center;
+    }
 
     .description {
       width: 100%;

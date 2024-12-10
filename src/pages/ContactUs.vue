@@ -19,22 +19,25 @@ export default {
         <!-- Form section -->
         <div class="form-container overlay">
           <div class="contact">
-            <h1>
+            <h1 class="uppercase">contattaci</h1>
+            <h2>
               Hai bisogno di contattarci? Compila il form sottostante, ti
               risponderemo il prima possibile
-            </h1>
+            </h2>
           </div>
           <form action="" method="POST">
-            <label for="name">Nome</label>
+            <label for="name"><strong>Nome</strong></label>
             <input type="text" name="name" id="name" />
             <br />
-            <label for="surname">Cognome</label>
+            <label for="surname"><strong>Cognome</strong></label>
             <input type="text" name="surname" />
             <br />
-            <label for="mail">Email</label>
+            <label for="mail"><strong>Email</strong></label>
             <input type="mail" />
             <br />
-            <label for="message">Scrivi qui il tuo messaggio</label>
+            <label for="message"
+              ><strong>Scrivi qui il tuo messaggio</strong></label
+            >
             <textarea name="message" id="" rows="8" cols="50"></textarea>
             <br />
             <button type="submit">Invia</button>
@@ -60,8 +63,12 @@ export default {
   width: 60%;
 
   h1 {
-    font-size: 35px;
-    margin-bottom: 35px;
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    padding-bottom: 35px;
   }
 }
 
@@ -97,13 +104,19 @@ export default {
     border-radius: 10px;
     margin-bottom: 20px;
   }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.01);
+  }
 }
 
 button {
   border: none;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 10px 30px 10px 30px;
   border-radius: 20px;
   background-color: #ff6b3ad8;
