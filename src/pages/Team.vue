@@ -33,8 +33,8 @@ export default {
           <!-- Team container -->
           <section class="team-container">
             <div class="overlay description-section">
-              <h1>IL NOSTRO TEAM</h1>
-              <h2>Ecco le fondatrici di Insubria Wildlife!</h2>
+              <h1 class="uppercase">il nostro team</h1>
+              <h2>Ecco le fondatrici di Insubria WildLife!</h2>
               <div class="team-group-img">
                 <figure>
                   <img

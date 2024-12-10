@@ -47,11 +47,16 @@ export default {
           <!-- SOS animal container -->
           <section class="sos-container">
             <div class="overlay description-section">
-              <h1>SOS ANIMALI</h1>
-              <h2>Cosa fare nel caso di ritrovamento di un esemplare</h2>
+              <h1 class="uppercase">sos animali</h1>
+              <br />
+              <div class="sos">
+                <h2 class="uppercase">soccorso fauna</h2>
+              </div>
               <p class="sos-description">
-                Hai trovato un esemplare di animale e non sai come comportarti?
+                Hai trovato un esemplare di animale selvatico e non sai cosa
+                fare?<br />
               </p>
+              <p><strong>Niente paura, ti aiutiamo noi!</strong></p>
               <div class="flow-chart-img">
                 <figure>
                   <img
@@ -60,6 +65,29 @@ export default {
                     @click="toggleZoom"
                   />
                 </figure>
+              </div>
+              <div class="bottom-paragraphs">
+                <p>
+                  <strong><span class="uppercase">ricorda:</span></strong>
+                  nessuna cura umana può essere migliore di quelle dei genitori!
+                </p>
+                <p>
+                  <strong
+                    >Prima di intervenire, assicurati che sia davvero
+                    necessario.</strong
+                  >
+                </p>
+                <p>
+                  <strong><span class="uppercase">dubbi?</span></strong> Chiama
+                  il
+                  <a
+                    href="https://elencocras.it/"
+                    target="_blank"
+                    class="uppercase"
+                    >cras</a
+                  >
+                  di riferimento.
+                </p>
               </div>
             </div>
           </section>
@@ -168,12 +196,11 @@ export default {
 .description-section h1 {
   font-size: 50px;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .description-section h2 {
-  width: 90%;
-  font-size: 24px;
+  font-size: 32px;
   padding-bottom: 20px;
 }
 
@@ -193,6 +220,18 @@ export default {
     width: 85%;
     cursor: url("../assets/img/cursor/binoculars-icon.svg"), zoom-in;
     transition: all 0.3s ease;
+  }
+}
+
+.bottom-paragraphs {
+  margin-top: 40px;
+
+  a {
+    color: #ff6a3a;
+
+    &:hover {
+      color: #ff0000;
+    }
   }
 }
 

@@ -52,7 +52,7 @@ export default {
         <!-- Mission section -->
         <section class="mission">
           <article class="overlay margin-l-60">
-            <h2>MISSION</h2>
+            <h2 class="uppercase">mission</h2>
             <p>
               <span>Insubria Wildlife APS</span> è la voce giovane, dinamica e
               internazionale della divulgazione scientifica sulla
@@ -125,7 +125,7 @@ export default {
           <!-- Vision description -->
           <article class="vision-card d-flex">
             <div class="overlay margin-r-60">
-              <h2>VISION</h2>
+              <h2 class="uppercase">vision</h2>
               <p>
                 Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
                 coesistono in sinergia con la comunità locale, dove ognuno può

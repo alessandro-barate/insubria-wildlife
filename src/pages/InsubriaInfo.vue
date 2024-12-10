@@ -48,7 +48,7 @@ export default {
       <!-- History description -->
       <section class="col upper-bg">
         <div class="history-old overlay">
-          <h1>INSUBRIA</h1>
+          <h1 class="uppercase">insubria</h1>
           <!-- History old -->
           <div class="insubria-description d-flex">
             <div class="description">
