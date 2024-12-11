@@ -146,13 +146,13 @@ export default {
               <!-- END SOS animals link -->
 
               <!-- Contact us link -->
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link" id="contact">
                   <router-link :to="{ name: 'Contattaci' }" class="link"
                     >CONTATTACI</router-link
                   >
                 </a>
-              </li>
+              </li> -->
               <!-- END contact us link -->
 
               <!-- Support us link -->
@@ -180,21 +180,16 @@ export default {
               <!-- Language container -->
               <div class="lang-container">
                 <button id="italian">
-                  <a href="../pages/Homepage.vue">
-                    <router-link :to="{ name: 'Homepage' }" class="link"
-                      ><img
-                        src="../assets/img/header/flags/italy-flag-round.png"
-                        alt=""
-                    /></router-link>
-                  </a>
+                  <img
+                    src="../assets/img/header/flags/italy-flag-round.png"
+                    alt=""
+                  />
                 </button>
                 <button id="english">
-                  <a
-                    ><router-link :to="{ name: 'HomepageEnglish' }" class="link"
-                      ><img
-                        src="../assets/img/header/flags/uk-flag-round.png"
-                        alt="" /></router-link
-                  ></a>
+                  <img
+                    src="../assets/img/header/flags/uk-flag-round.png"
+                    alt=""
+                  />
                 </button>
               </div>
               <!-- END language container -->
@@ -233,7 +228,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    gap: 10px;
+    gap: 50px;
     text-align: center;
     align-items: center;
     margin-right: 0;
@@ -243,7 +238,7 @@ header {
   }
 
   .nav-item {
-    width: 70%;
+    // width: 70%;
 
     p {
       color: white;
@@ -258,7 +253,7 @@ header {
   position: relative;
 
   #news-events-container {
-    top: 90%;
+    top: 0%;
     left: 15%;
     padding: 15px;
     margin-top: 2px;
@@ -287,7 +282,7 @@ header {
 
 .logo {
   width: 8%;
-  margin-left: 50px;
+  margin-left: 33px;
   margin-right: 30px;
 
   img {
@@ -347,6 +342,7 @@ header {
     width: 40%;
     border: none;
     border-radius: 50%;
+    pointer-events: none;
     background-color: transparent;
   }
 
@@ -368,14 +364,19 @@ header {
 #english,
 #events,
 #news,
-#contact {
-  pointer-events: none;
+#contact,
+.container-bg {
+  display: none;
 }
 
 // Media queries
 @media (max-width: 999px) {
   .row {
     position: relative;
+  }
+
+  .navbar .nav-menu {
+    gap: 10px;
   }
 
   .nav-menu {
@@ -444,7 +445,7 @@ header {
   .right-container {
     width: 17%;
     align-items: center;
-    margin-right: 70px;
+    margin-right: 0;
   }
 
   .lang-container {

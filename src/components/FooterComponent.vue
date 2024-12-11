@@ -226,6 +226,19 @@ address a,
 }
 
 // Media queries
+@media (max-width: 500px) {
+  .upper-section {
+    justify-content: space-between;
+
+    .address-container,
+    .socials {
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .col-flexible {
     width: calc(100% / 2);

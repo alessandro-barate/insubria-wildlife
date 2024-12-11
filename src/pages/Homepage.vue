@@ -78,16 +78,18 @@ export default {
             </p>
 
             <!-- Events link section -->
-            <aside class="events-container">
+            <!-- <aside class="events-container">
               <div class="events">
-                <p>Vuoi restare sempre aggiornato sui nostri eventi?</p>
+                <p class="events-update">
+                  Vuoi restare sempre aggiornato sui nostri eventi?
+                </p>
                 <a href="">
                   <router-link :to="{ name: 'Eventi' }" class="link">
                     <button class="help-btn">Clicca qui!</button></router-link
                   >
                 </a>
               </div>
-            </aside>
+            </aside> -->
             <!-- END events link section -->
           </article>
         </section>
@@ -352,9 +354,12 @@ h1 {
   }
 
   .card-body p {
-    width: 50%;
     padding-bottom: 10px;
     text-align: center;
+  }
+
+  .buttons-container {
+    align-items: center;
   }
 
   .buttons-container p {
@@ -405,6 +410,7 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+    font-size: 3.8em;
   }
 
   h2 {
@@ -417,6 +423,8 @@ h1 {
     background-image: url(../assets/img/homepage/background/bird-jumbo-reverse.jpg);
 
     p {
+      margin-top: 10px;
+      font-size: 1.25em;
       width: 70%;
       padding-left: 0;
       text-align: center;
@@ -429,7 +437,7 @@ h1 {
     margin-right: 0;
 
     .events-container {
-      width: 50%;
+      width: 80%;
     }
   }
 
@@ -448,6 +456,11 @@ h1 {
     h2 {
       width: 80%;
     }
+
+    .events-update {
+      width: 100%;
+      line-height: 25px;
+    }
   }
 
   .vision {
@@ -463,6 +476,7 @@ h1 {
     background-position: center;
 
     .vision-card {
+      text-align: center;
       justify-content: center;
     }
 
@@ -483,6 +497,10 @@ h1 {
     button {
       margin-bottom: 100px;
     }
+  }
+
+  .vision .carousel-img-container {
+    padding-top: 30px;
   }
 
   .video-container {
