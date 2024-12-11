@@ -72,9 +72,13 @@ export default {
             <br />
 
             <p id="join">
-              <a href="" id="join-2"><span>Unendoti a noi</span></a> potrai
-              conoscere realtà diverse e far parte di una comunità con cui
-              condividere gli stessi obiettivi.
+              <a id="join-2"
+                ><router-link :to="{ name: 'Supportaci' }" class="link"
+                  ><span>Unendoti a noi</span></router-link
+                >
+              </a>
+              potrai conoscere realtà diverse e far parte di una comunità con
+              cui condividere gli stessi obiettivi.
             </p>
 
             <!-- Events link section -->
@@ -250,7 +254,7 @@ h1 {
     text-align: center;
   }
 
-  #join-2 {
+  #join-2 .link {
     color: #ff6a3a;
 
     span {
