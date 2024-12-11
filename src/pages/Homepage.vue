@@ -293,9 +293,9 @@ h1 {
   color: rgba(255, 255, 255, 0.753);
 
   h2 {
-    width: 80%;
+    width: 60%;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 15px;
   }
 
@@ -414,7 +414,7 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
-    font-size: 3.8em;
+    font-size: 3.9em;
   }
 
   h2 {
@@ -428,7 +428,7 @@ h1 {
 
     p {
       margin-top: 10px;
-      font-size: 1.25em;
+      font-size: 1.45em;
       width: 70%;
       padding-left: 0;
       text-align: center;
@@ -448,6 +448,7 @@ h1 {
   .mission {
     width: 100%;
     display: flex;
+    text-align: center;
     position: static;
     justify-content: center;
     background-color: #0d0907;
@@ -494,8 +495,12 @@ h1 {
     }
 
     .animal-help {
-      width: 65%;
+      width: 80%;
       color: black;
+
+      h2 {
+        font-size: 1.7em;
+      }
     }
 
     button {
@@ -520,6 +525,13 @@ h1 {
   .carousel-button-right {
     display: block;
     line-height: 210px;
+  }
+}
+
+@media (max-width: 500px) {
+  .vision h2 {
+    width: 100%;
+    font-size: 2em;
   }
 }
 </style>
