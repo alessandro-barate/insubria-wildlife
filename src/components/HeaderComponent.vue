@@ -66,7 +66,7 @@ export default {
             <!-- Logo -->
             <div class="logo">
               <a>
-                <router-link :to="{ name: 'Home' }">
+                <router-link :to="{ name: 'Homepage' }">
                   <img src="/./src/assets/img/logo/double-circle.png" alt="" />
                 </router-link>
               </a>
@@ -78,7 +78,7 @@ export default {
               <!-- Insubria link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
-                  <router-link :to="{ name: 'Insubria' }" class="link">
+                  <router-link :to="{ name: 'InsubriaInfo' }" class="link">
                     INSUBRIA
                   </router-link>
                 </a>
@@ -101,7 +101,7 @@ export default {
                 @mouseleave="containerDisappearance"
               >
                 <div id="chevron-down">
-                  <p>RESTA AGGIORNATO</p>
+                  <p>NOVITÁ</p>
                   <img
                     src="../assets/img/header/nav-menu/chevron-down.svg"
                     alt=""
@@ -180,16 +180,21 @@ export default {
               <!-- Language container -->
               <div class="lang-container">
                 <button id="italian">
-                  <img
-                    src="../assets/img/header/flags/italy-flag-round.png"
-                    alt=""
-                  />
+                  <a href="../pages/Homepage.vue">
+                    <router-link :to="{ name: 'Homepage' }" class="link"
+                      ><img
+                        src="../assets/img/header/flags/italy-flag-round.png"
+                        alt=""
+                    /></router-link>
+                  </a>
                 </button>
                 <button id="english">
-                  <img
-                    src="../assets/img/header/flags/uk-flag-round.png"
-                    alt=""
-                  />
+                  <a
+                    ><router-link :to="{ name: 'HomepageEnglish' }" class="link"
+                      ><img
+                        src="../assets/img/header/flags/uk-flag-round.png"
+                        alt="" /></router-link
+                  ></a>
                 </button>
               </div>
               <!-- END language container -->
@@ -248,6 +253,7 @@ header {
 }
 
 .container-bg {
+  padding-top: 26px;
   padding-bottom: 4px;
   position: relative;
 
@@ -271,7 +277,7 @@ header {
 }
 
 #chevron-down img {
-  width: 15%;
+  width: 12%;
   color: white;
 
   &:hover {
@@ -342,7 +348,6 @@ header {
     border: none;
     border-radius: 50%;
     background-color: transparent;
-    pointer-events: none;
   }
 
   #italian img,
@@ -357,6 +362,14 @@ header {
   #english {
     margin-left: -4px;
   }
+}
+
+#italian,
+#english,
+#events,
+#news,
+#contact {
+  pointer-events: none;
 }
 
 // Media queries

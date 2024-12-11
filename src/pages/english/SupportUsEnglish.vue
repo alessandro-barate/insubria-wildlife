@@ -1,10 +1,12 @@
 <script>
-import { store } from "../store.js";
+import { store } from "../../store";
 export default {
-  name: "Supportaci",
+  name: "SupportUsEnglish",
 
   data() {
-    return {};
+    return {
+      store,
+    };
   },
 };
 </script>
@@ -23,13 +25,11 @@ export default {
           </div>
           <!-- END top paragraphs -->
 
-          <!-- Payment methods section -->
+          <!-- Payment methods secetion -->
           <div class="payments-list">
             <ul>
-              <li>
-                <strong>Bonifico bancario - IBAN:</strong> disponibile a breve
-              </li>
-              <li><strong>PayPal:</strong> disponibile a breve</li>
+              <li><strong>Bonifico bancario - IBAN:</strong></li>
+              <li><strong>PayPal:</strong></li>
             </ul>
             <p>
               Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna
@@ -37,7 +37,7 @@ export default {
               generazioni.
             </p>
           </div>
-          <!-- END payment methods section -->
+          <!-- END payment methods secetion -->
 
           <!-- Bottom paragraphs -->
           <div class="bottom-paragraphs">
