@@ -77,8 +77,12 @@ export default {
                   >
                 </p>
                 <p>
-                  <strong><span class="uppercase">dubbi?</span></strong> Chiama
-                  il
+                  <strong><span class="uppercase">dubbi?</span></strong>
+                  Approfondisci
+                  <a href="https://animaliferiti.lipu.it/" target="_blank"
+                    >qui</a
+                  >
+                  o chiama il
                   <a
                     href="https://elencocras.it/"
                     target="_blank"

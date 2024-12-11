@@ -394,15 +394,19 @@ header {
     display: none;
   }
 
-  .container-bg #news-events-container {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 0;
-    margin-top: 0;
-    border-radius: 0;
-    background-color: transparent;
+  .container-bg {
+    padding-top: 0;
+
+    #news-events-container {
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 0;
+      margin-top: 0;
+      border-radius: 0;
+      background-color: transparent;
+    }
   }
 
   .events-container {

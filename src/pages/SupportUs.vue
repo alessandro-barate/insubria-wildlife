@@ -27,7 +27,8 @@ export default {
           <div class="payments-list">
             <ul>
               <li>
-                <strong>Bonifico bancario - IBAN:</strong> disponibile a breve
+                <strong>Bonifico bancario - IBAN:</strong>
+                IT02S0623022808000047552608
               </li>
               <li><strong>PayPal:</strong> disponibile a breve</li>
             </ul>
@@ -99,7 +100,7 @@ p {
 }
 
 ul {
-  width: 45%;
+  width: 50%;
   padding-top: 12px;
   text-align: start;
 
@@ -124,6 +125,16 @@ ul {
         color: #ff0000;
       }
     }
+  }
+}
+
+@media (max-width: 999px) {
+  section {
+    width: 90%;
+  }
+
+  ul {
+    width: 80%;
   }
 }
 </style>
