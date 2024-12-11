@@ -270,6 +270,13 @@ address a,
   }
 }
 
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  #fb-logo,
+  #ig-logo {
+    width: 40%;
+  }
+}
+
 @media (min-width: 1000px) {
   #fb-logo,
   #ig-logo {
