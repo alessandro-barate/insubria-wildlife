@@ -236,6 +236,10 @@ address a,
       margin-left: 0;
       margin-right: 0;
     }
+
+    .socials {
+      width: 100%;
+    }
   }
 }
 

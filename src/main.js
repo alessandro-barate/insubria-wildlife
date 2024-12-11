@@ -1,5 +1,9 @@
 import { createApp } from "vue";
 
+//Importing Vue FormKit
+import { plugin, defaultConfig } from "@formkit/vue";
+// import config from "./formkit.config.js";
+
 // Importing Vue Router
 import { router } from "./route";
 
@@ -10,4 +14,13 @@ import "./style.scss";
 import App from "./App.vue";
 import SanitizePlugin from "./plugins/sanitize";
 
-createApp(App).use(SanitizePlugin).use(router).mount("#app");
+createApp(App)
+  .use(
+    plugin,
+    defaultConfig({
+      theme: "genesis",
+    })
+  )
+  .use(SanitizePlugin)
+  .use(router)
+  .mount("#app");

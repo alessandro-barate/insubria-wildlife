@@ -1,4 +1,5 @@
 <script>
+import { FormKit } from "@formkit/vue";
 import { store } from "../store.js";
 export default {
   name: "Contattaci",
@@ -9,6 +10,13 @@ export default {
       currentIndex: null,
     };
   },
+};
+</script>
+
+<script setup>
+const createCharacter = async (fields) => {
+  await new Promise((r) => setTimeout(r, 1000));
+  alert(JSON.stringify(fields));
 };
 </script>
 
@@ -25,23 +33,22 @@ export default {
               risponderemo il prima possibile
             </h2>
           </div>
-          <form action="" method="POST">
-            <label for="name"><strong>Nome</strong></label>
-            <input type="text" name="name" id="name" />
-            <br />
-            <label for="surname"><strong>Cognome</strong></label>
-            <input type="text" name="surname" />
-            <br />
-            <label for="mail"><strong>Email</strong></label>
-            <input type="mail" />
-            <br />
-            <label for="message"
-              ><strong>Scrivi qui il tuo messaggio</strong></label
-            >
-            <textarea name="message" id="" rows="8" cols="50"></textarea>
-            <br />
-            <button type="submit">Invia</button>
-          </form>
+          <FormKit type="form" @submit="createCharacter" submit-label="Invia">
+            <FormKit type="text" name="name" id="name" label="Nome" required />
+
+            <FormKit type="text" name="surname" label="Cognome" required />
+
+            <FormKit type="email" label="Email" required />
+
+            <FormKit
+              name="message"
+              id=""
+              rows="8"
+              cols="50"
+              label="Scrivi qui il tuo messaggio"
+              required
+            />
+          </FormKit>
         </div>
         <!-- END form section -->
       </div>
