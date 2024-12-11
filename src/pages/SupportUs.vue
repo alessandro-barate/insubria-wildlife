@@ -28,9 +28,14 @@ export default {
             <ul>
               <li>
                 <strong>Bonifico bancario - IBAN:</strong>
-                IT02S0623022808000047552608
+                <br />
+                <span id="iban">IT02S0623022808000047552608</span>
               </li>
-              <li><strong>PayPal:</strong> disponibile a breve</li>
+              <li>
+                <strong>PayPal:</strong>
+                <br />
+                <span>disponibile a breve</span>
+              </li>
             </ul>
             <p>
               Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna
@@ -132,6 +137,10 @@ ul {
 @media (max-width: 500px) {
   h1 {
     font-size: 40px;
+  }
+
+  #iban {
+    font-size: 15px;
   }
 }
 
