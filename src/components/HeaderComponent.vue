@@ -219,7 +219,7 @@ header {
   position: sticky;
 
   .logo {
-    width: 6%;
+    width: 9%;
   }
 }
 
@@ -373,6 +373,10 @@ header {
 @media (max-width: 999px) {
   .row {
     position: relative;
+  }
+
+  .logo {
+    width: 10%;
   }
 
   .navbar .nav-menu {

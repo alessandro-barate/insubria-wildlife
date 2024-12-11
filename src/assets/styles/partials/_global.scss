@@ -19,11 +19,11 @@ button {
 button,
 a {
   cursor: pointer;
+}
 
-  &:active,
-  &:visited {
-    color: black;
-  }
+a:active,
+a:visited {
+  color: black;
 }
 
 .overlay {
