@@ -416,7 +416,7 @@ export default {
 /* Mobile layout */
 @media (max-width: 559px) {
   .col-33 {
-    width: 85%;
+    width: 100%;
   }
 
   .description-section h1 {
@@ -425,12 +425,12 @@ export default {
 
   .description-section h2 {
     width: 75%;
-    font-size: 25px;
+    font-size: 26px;
   }
 
   .description-section p {
     width: 83%;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 23px;
   }
 
@@ -447,6 +447,10 @@ export default {
       width: 30vh;
       height: 30vh;
     }
+  }
+
+  .details-description div {
+    font-size: 19px;
   }
 }
 /* END mobile layout */
