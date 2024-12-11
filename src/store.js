@@ -118,7 +118,7 @@ export const store = reactive({
   sosCards: [
     {
       title: "Trasporto",
-      image: "./src/assets/img/sos-animal/cards/1-box.png",
+      image: "./src/assets/img/sos-animal/cards/1-box.jpg",
       description:
         "<p>Il <strong>trasporto corretto è fondamentale</strong> per evitare ulteriore stress o ferite: scegli una scatola della giusta misura per limitare i movimenti eccessivi, che permetta però all'animale di poter stare in stazionamento eretto.<br><br> Sul fondo usa carta assorbente o un panno morbido, <strong>assicurandoti che non ci siano fili</strong> che possano intrecciarsi attorno a zampe e ali.<br><br>In caso di shock, animale privo di pelo o piume o evidentemente ipotermico, <strong>aggiungi una fonte di calore</strong>, come ad esempio una bottiglia d'acqua calda: è importantissimo però che l'animale non vi sia <strong>mai a diretto contatto</strong>, quindi bisogna avvolgere intorno alla fonte di calore un panno o della carta assorbente, e che abbia <strong>sempre la possibilità di allontanarsi</strong> da questa, se necessario.<br><br>Infine chiudere la scatola con un <strong>coperchio forato</strong> per garantire la ventilazione.",
     },

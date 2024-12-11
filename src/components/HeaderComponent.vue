@@ -282,7 +282,7 @@ header {
 
 .logo {
   width: 8%;
-  margin-left: 33px;
+  margin-left: 120px;
   margin-right: 30px;
 
   img {
@@ -370,6 +370,12 @@ header {
 }
 
 // Media queries
+@media (max-width: 500px) {
+  .logo {
+    margin-left: 30px;
+  }
+}
+
 @media (max-width: 999px) {
   .row {
     position: relative;
@@ -377,6 +383,7 @@ header {
 
   .logo {
     width: 10%;
+    margin-left: 50px;
   }
 
   .navbar .nav-menu {

@@ -330,7 +330,7 @@ export default {
   }
 
   .col-33 {
-    width: 100%;
+    width: 93%;
   }
 
   .description-section h1 {
