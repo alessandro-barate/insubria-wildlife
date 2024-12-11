@@ -333,8 +333,12 @@ export default {
     width: 85%;
   }
 
+  .description-section h1 {
+    font-size: 40px;
+  }
+
   .description-section h2 {
-    width: 75%;
+    width: 90%;
     font-size: 25px;
   }
 

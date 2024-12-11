@@ -419,6 +419,10 @@ export default {
     width: 85%;
   }
 
+  .description-section h1 {
+    font-size: 40px;
+  }
+
   .description-section h2 {
     width: 75%;
     font-size: 25px;

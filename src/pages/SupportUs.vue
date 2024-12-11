@@ -128,6 +128,13 @@ ul {
   }
 }
 
+// Media queries
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 999px) {
   section {
     width: 90%;

@@ -542,6 +542,24 @@ h4 {
 // END bottom list styles
 
 /* Media queries */
+@media (max-width: 500px) {
+  .upper-bg {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .container p,
+  .container span {
+    font-size: 19px;
+  }
+}
 
 @media (max-width: 1250px) {
   .characteristic {
