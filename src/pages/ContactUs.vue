@@ -17,7 +17,7 @@ export default {
 <script setup>
 const sendMail = async (fields) => {
   
-  axios.get(import.meta.env.VITE_ENDPOINT_URL).then(function(response){
+  axios.post(import.meta.env.VITE_ENDPOINT_URL, fields).then(function(response){
     alert(JSON.stringify(response));
     }).catch(function(error){
       console.debug(error)
