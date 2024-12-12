@@ -14,10 +14,12 @@ export default {
 </script>
 
 <script setup>
-const createCharacter = async (fields) => {
+const sendMail = async (fields) => {
   await new Promise((r) => setTimeout(r, 1000));
   alert(JSON.stringify(fields));
 };
+
+alert(import.meta.env.VITE_ENDPOINT_URL);
 </script>
 
 <template>
@@ -33,7 +35,7 @@ const createCharacter = async (fields) => {
               risponderemo il prima possibile
             </h2>
           </div>
-          <FormKit type="form" @submit="createCharacter" submit-label="Invia">
+          <FormKit type="form" @submit="sendMail" submit-label="Invia">
             <FormKit type="text" name="name" id="name" label="Nome" required />
 
             <FormKit type="text" name="surname" label="Cognome" required />
