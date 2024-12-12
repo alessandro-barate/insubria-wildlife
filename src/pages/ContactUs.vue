@@ -18,7 +18,7 @@ export default {
 const sendMail = async (fields) => {
   
   axios.post(import.meta.env.VITE_ENDPOINT_URL, fields).then(function(response){
-    alert(JSON.stringify(response));
+    alert(JSON.stringify(response.data));
     }).catch(function(error){
       console.debug(error)
       console.log("Si è verificato un errore")
@@ -26,7 +26,6 @@ const sendMail = async (fields) => {
     });
 };
 
-alert(import.meta.env.VITE_ENDPOINT_URL);
 
 
 </script>
@@ -49,7 +48,7 @@ alert(import.meta.env.VITE_ENDPOINT_URL);
 
             <FormKit type="text" name="surname" label="Cognome" required />
 
-            <FormKit type="email" label="Email" required />
+            <FormKit type="email" name="mail" label="Email" required />
 
             <FormKit
               name="message"
