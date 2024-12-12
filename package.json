@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@formkit/vue": "^1.6.9",
+    "axios": "^1.7.9",
     "dompurify": "^3.2.2",
     "router": "^2.0.0",
     "sass": "^1.80.6",

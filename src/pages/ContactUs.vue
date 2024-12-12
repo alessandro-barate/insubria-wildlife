@@ -1,6 +1,7 @@
 <script>
 import { FormKit } from "@formkit/vue";
 import { store } from "../store.js";
+import axios from "axios";
 export default {
   name: "Contattaci",
 
@@ -15,11 +16,19 @@ export default {
 
 <script setup>
 const sendMail = async (fields) => {
-  await new Promise((r) => setTimeout(r, 1000));
-  alert(JSON.stringify(fields));
+  
+  axios.get(import.meta.env.VITE_ENDPOINT_URL).then(function(response){
+    alert(JSON.stringify(response));
+    }).catch(function(error){
+      console.debug(error)
+      console.log("Si è verificato un errore")
+      alert("Si è verificato un errore, riprovare tra qualche minuto")
+    });
 };
 
 alert(import.meta.env.VITE_ENDPOINT_URL);
+
+
 </script>
 
 <template>
