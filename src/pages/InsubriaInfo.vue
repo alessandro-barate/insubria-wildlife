@@ -415,7 +415,7 @@ h4 {
 .lower-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(../assets/img/insubria/background/deer.png);
+  background-image: url(../assets/img/insubria/background/deer.jpg);
 }
 
 // Bottom list styles

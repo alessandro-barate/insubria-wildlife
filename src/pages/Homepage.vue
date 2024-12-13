@@ -215,9 +215,10 @@ h1 {
 }
 
 .jumbo {
-  background-image: url(../assets/img/homepage/background/bird-jumbo.jpg);
+  background-image: url(../assets/img/homepage/background/bird-jumbo-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 100% 20%;
   padding-bottom: 200px;
 
   p {
@@ -244,7 +245,7 @@ h1 {
 }
 
 .overlay {
-  width: 65%;
+  width: 55%;
 
   span {
     font-weight: bold;
@@ -311,19 +312,21 @@ h1 {
   margin-right: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-image: url(../assets/img/homepage/background/deer-night.png);
+  background-image: url(../assets/img/homepage/background/deer-night-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100% 30%;
 }
 
 .vision {
   padding-bottom: 30px;
-  background-image: url(../assets/img/homepage/background/eagle.jpg);
+  background-image: url(../assets/img/homepage/background/eagle-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50%;
 
   .overlay {
-    width: 150%;
+    width: 80%;
   }
 
   .animal-help {
@@ -409,7 +412,12 @@ h1 {
 }
 
 /* Media queries */
-@media (max-width: 768px) {
+/* Tablet large */
+/* Mobile layout */
+@media (max-width: 936px) {
+}
+
+@media (max-width: 936px) {
   h1 {
     padding-left: 20px;
     padding-right: 20px;
@@ -424,7 +432,8 @@ h1 {
   }
 
   .jumbo {
-    background-image: url(../assets/img/homepage/background/bird-jumbo-reverse.jpg);
+    background-image: url(../assets/img/homepage/background/bird-jumbo-reverse-mobile.jpg);
+    background-position: 20% 0px;
 
     p {
       margin-top: 10px;
@@ -452,7 +461,7 @@ h1 {
     position: static;
     justify-content: center;
     background-color: #0d0907;
-    background-image: url(../assets/img/homepage/background/bird-coloured.jpg);
+    background-image: url(../assets/img/homepage/background/bird-coloured-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -476,7 +485,7 @@ h1 {
     margin-right: 0;
     padding-top: 50px;
     background-color: #0d0907;
-    background-image: url(../assets/img/homepage/background/fox.png);
+    background-image: url(../assets/img/homepage/background/fox.jpg);
     background-size: cover;
     background-position: center;
 

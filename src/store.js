@@ -5,7 +5,7 @@ export const store = reactive({
     {
       description:
         "Diventare un faro nella promozione sociale, creando una comunità vibrante di cittadini consapevoli e attivi nella conservazione di ambiente e fauna.",
-      image: "/src/assets/img/homepage/carousel/1-social-promotion.png",
+      image: "/src/assets/img/homepage/carousel/1-social-promotion.jpg",
     },
     {
       description:
@@ -20,12 +20,12 @@ export const store = reactive({
     {
       description:
         "Stabilire collaborazioni con università, enti di ricerca e istituzioni, per contribuire attivamente alla conoscenza e alla ricerca scientifica.",
-      image: "/src/assets/img/homepage/carousel/4-research.png",
+      image: "/src/assets/img/homepage/carousel/4-research.jpg",
     },
     {
       description:
         "Creare una rete tra i professionisti del settore, per rendere le nostre azioni trasparenti e omogenee sul territorio, per arricchirci con stimoli provenienti da altre aree italiane e da oltre confine.",
-      image: "/src/assets/img/homepage/carousel/5-network.png",
+      image: "/src/assets/img/homepage/carousel/5-network.jpg",
     },
   ],
 
