@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" @scroll="windowScroll">
     <div class="row">
       <div class="col">
         <!-- Jumbo section -->
@@ -188,6 +188,10 @@ export default {
 </template>
 
 <style scoped>
+.container {
+  position: relative;
+}
+
 h1 {
   padding-top: 100px;
   font-size: 95px;
