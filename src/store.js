@@ -124,7 +124,7 @@ export const store = reactive({
     },
     {
       title: "Cibo e acqua",
-      image: "src/assets/img/sos-animal/cards/2-food-water.png",
+      image: "src/assets/img/sos-animal/cards/2-food-water.jpg",
       description:
         "<p>La fauna selvatica, soprattutto quella in difficoltà, è <strong>particolarmente sensibile ad un alimento non adatto</strong>, il quale può arrecargli diversi problemi, portandola persino alla morte: per questo motivo, <strong>bisognerebbe sempre evitare</strong> di alimentare gli animali.</p><br><h4>Ecco una breve lista di alimenti da evitare assolutamente:</h4><ul class='details-description-list'><li>Latte vaccino e latticini in generale</li><li>Pane</li><li>Biscotti</li><li>Dolciumi</li><li>Alimenti processati</li></ul><br><p>Per quanto riguarda l'idratazione dell' esemplare, <strong>l'acqua si può somministrare solo in caso di animali vigili e reattivi</strong>, avendo la cura di scegliere contenitori adatti alla dimensione dell'animale: se troppo ingombranti potrebbero essere colpiti accidentalmente da alcuni movimenti dell'animale e rovesciare così il loro contenuto, finendo per bagnare la scatola e l'animale stesso.<br>Nel caso di dimensioni ridotte, come volatili o cuccioli molto piccoli, il tappo di un barattolo è di solito sufficiente.</p><br><h4>Nel caso tu non riesca a portare direttamente l'esemplare in un C.R.A.S., contattalo e chiedi consigli specifici</h4>",
     },
@@ -136,13 +136,13 @@ export const store = reactive({
     },
     {
       title: "Mammiferi nudi",
-      image: "src/assets/img/sos-animal/cards/4-naked-mammals.png",
+      image: "src/assets/img/sos-animal/cards/4-naked-mammals.jpg",
       description:
         "<p><strong>Se nudi e con occhi chiusi o fuori dal nido, necessitano sempre di intervento.</strong>.</p><br><p>Un reinserimento nel nido è possibile e consigliabile se non sono feriti e presentano una certa vitalità (ovvero se si muovono e sono caldi e se reagiscono se stimolati) ed il nido risulta accessibile e integro.</p><br><h4>Usa guanti o un panno per evitare di lasciare il tuo odore, altrimenti il genitore potrebbe abbandonarli!<br><br></h4><p>Una volta riposizionato nella tana è obbligatorio allontanarsi (mai rimanere in vista), mantenere monitorata l'attività di cuccioli e genitori per le successive 4-6 ore e, nel frattempo, contattare il C.R.A.S.</p>",
     },
     {
       title: "Mammiferi cuccioli con pelo",
-      image: "src/assets/img/sos-animal/cards/5-furry-mammals.png",
+      image: "src/assets/img/sos-animal/cards/5-furry-mammals.jpg",
       description:
         "<p><strong>Non sempre gli animali giovani sono abbandonati</strong>.</p><br><p>I cuccioli con il mantello sviluppato e gli occhi ben aperti, <strong>iniziano ad esplorare il territorio</strong>, quindi non capita di rado trovare giovani lepri, conigli o scoiattoli da soli: fa parte del loro ciclo di vita.</p><br><h4>È tutto normale ed è una fase fondamentale per la loro crescita, perciò non vanno recuperati.</h4><br><p>Emblematici sono i <strong>cuccioli di capriolo e cervo</strong>: essi <strong>nascono senza odore</strong> e quando le madri si allontanano per nutrirsi li lasciano per diverso tempo nascosti nella vegetazione. Il loro non avere odore li protegge da eventuali predatori ma, <strong>se toccati, ne acquisiranno uno estraneo alla madre e verranno abbandonati!</strong></p><br><h4>Se la zona di ritrovamento presenta dei pericoli, è buona norma contattare il C.R.A.S. per farsi consigliare.</h4>",
     },
@@ -154,7 +154,7 @@ export const store = reactive({
     },
     {
       title: "Rondoni, Rondini e Balestrucci",
-      image: "src/assets/img/sos-animal/cards/7-swift.png",
+      image: "src/assets/img/sos-animal/cards/7-swift.jpg",
       description:
         "<p>Solitamente, i nidi di rondini e balestrucci sono ben visibili e, se troviamo <strong>un pulcino in buone condizioni, va ricollocato nel nido.</strong></p><br><p>Questi animali sono caratterizzati da <strong>zampe estremamente corte</strong> (in particolar modo i rondoni) perché sono estremamente specializzati nella vita in volo: per questo motivo <strong>potrebbero far fatica a spiccare il volo da terra</strong>, e non vale solo per i pulcini ma anche per gli esemplari adulti!.</p><br><h4>Un rondone a terra, quindi, va sempre soccorso.</h4><br><p>Si può contattare il C.R.A.S. e richiedere assistenza tramite l'invio di foto, per valutare se tentare una reimmissione in natura o se fosse necessario un ricovero.</p>",
     },

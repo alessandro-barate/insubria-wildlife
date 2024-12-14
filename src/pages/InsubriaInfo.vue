@@ -52,7 +52,7 @@ export default {
           <!-- History old -->
           <div class="insubria-description d-flex">
             <div class="description">
-              <h2>Un pò di Storia</h2>
+              <h2>Un po' di Storia</h2>
               <p>
                 Gli antichi romani chiamavano <strong>Insubri</strong> il popolo
                 che abitava alcune aree settentrionali dell'odierna Italia.
