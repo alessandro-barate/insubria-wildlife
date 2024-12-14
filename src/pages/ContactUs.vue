@@ -1,20 +1,20 @@
 <script>
-import { FormKit } from "@formkit/vue";
-import { store } from "../store.js";
-import axios from "axios";
-export default {
-  name: "Contattaci",
+// import { FormKit } from "@formkit/vue";
+// import { store } from "../store.js";
+// import axios from "axios";
+// export default {
+//   name: "Contattaci",
 
-  data() {
-    return {
-      store,
-      currentIndex: null,
-    };
-  },
-};
+//   data() {
+//     return {
+//       store,
+//       currentIndex: null,
+//     };
+//   },
+// };
 </script>
 
-<script setup>
+<!-- <script setup>
 const sendMail = async (fields) => {
   axios
     .post(import.meta.env.VITE_ENDPOINT_URL, fields)
@@ -27,14 +27,14 @@ const sendMail = async (fields) => {
       alert("Si è verificato un errore, riprovare tra qualche minuto");
     });
 };
-</script>
+</script> -->
 
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
-      <div class="col">
-        <!-- Form section -->
-        <section>
+      <div class="col"> -->
+  <!-- Form section -->
+  <!-- <section>
           <div class="form-container overlay">
             <div class="contact">
               <h1 class="uppercase">contattaci</h1>
@@ -63,14 +63,14 @@ const sendMail = async (fields) => {
               />
             </FormKit>
           </div>
-        </section>
-        <!-- END form section -->
-      </div>
+        </section> -->
+  <!-- END form section -->
+  <!-- </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
-<style scoped lang="scss">
+<!-- <style scoped lang="scss">
 .col {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -179,4 +179,4 @@ button {
     width: 250px;
   }
 }
-</style>
+</style> -->
