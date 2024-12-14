@@ -48,6 +48,8 @@ export default {
           <section class="sos-container">
             <div class="overlay description-section">
               <h1 class="uppercase">sos animali</h1>
+
+              <!-- Upper paragraph -->
               <div class="sos">
                 <h2 class="uppercase">soccorso fauna</h2>
               </div>
@@ -56,6 +58,9 @@ export default {
                 fare?<br />
               </p>
               <p><strong>Niente paura, ti aiutiamo noi!</strong></p>
+              <!-- END Upper paragraph -->
+
+              <!-- Flow chart container -->
               <div class="flow-chart-img">
                 <figure>
                   <img
@@ -65,6 +70,9 @@ export default {
                   />
                 </figure>
               </div>
+              <!-- END flow chart container -->
+
+              <!-- Bottom paragraph -->
               <div class="bottom-paragraphs">
                 <p>
                   <strong><span class="uppercase">ricorda:</span></strong>
@@ -92,6 +100,7 @@ export default {
                   di riferimento.
                 </p>
               </div>
+              <!-- END bottom paragraph -->
             </div>
           </section>
           <!-- END SOS animal container -->
