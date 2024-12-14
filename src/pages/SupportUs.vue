@@ -49,11 +49,17 @@ export default {
           <div class="bottom-paragraphs">
             <h2>Condividi la nostra visione e i nostri valori?</h2>
             <p>
-              Hai idee, passione e voglia di metterti in gioco? Unisciti a noi!
-            </p>
-            <p class="link-paragraph">
-              Compila il <a href="">modulo di contatto</a> e diventa parte di
-              <strong>Insubria WildLife</strong>: siamo sempre alla ricerca di
+              Hai idee, passione e voglia di metterti in gioco? Unisciti a noi
+              <!-- </p> -->
+              <!-- <p class="link-paragraph">
+              Compila il
+              <a
+                ><router-link :to="{ name: 'Contattaci' }" class="link"
+                  >modulo di contatto</router-link
+                ></a
+              > -->
+              e diventa parte di <strong>Insubria WildLife</strong>: siamo
+              sempre alla ricerca di
               <strong>voci libere, innovative ed entusiaste</strong> per
               costruire insieme un futuro migliore per la natura.
             </p>
