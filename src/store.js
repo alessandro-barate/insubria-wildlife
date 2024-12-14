@@ -33,42 +33,42 @@ export const store = reactive({
     {
       name: "Ilaria",
       title: "Presidentessa",
-      image: "src/assets/img/team/grid/ilaria.png",
+      image: "src/assets/img/team/grid/ilaria.jpg",
       description:
         "Naturalista da quando ho memoria. Ho guardato le foto delle piante, degli animali, dei minerali e delle stelle e ho capito qual era la mia strada. La passione per gli animali, però, è nata molto prima, quando un tartufo umido mi ha svegliato nella culla, e non mi ha mai più abbandonata; quando con la nonna passavo il tempo in giardino a imparare nomi di fiori che avrei poi dimenticato, perché impegnata a guardare una lucertola, un'ape o rincorrere un uccellino di passaggio. Oggi parte del mio lavoro è cercare di trasmettere la meraviglia che provo ad ogni piccola scoperta...se non mi ci perdo dentro!",
     },
     {
       name: "Alessia",
       title: "Vice Presidentessa",
-      image: "src/assets/img/team/grid/alessia.png",
+      image: "src/assets/img/team/grid/alessia.jpg",
       description:
         "Non potrei immaginare la mia vita lontana dal mondo naturale: per questo ho scelto questo percorso ancora prima di esserne consapevole. Profondamente appassionata e curiosa, appena ho potuto ho viaggiato: per svago e per lavoro, in Italia e all'estero, facendo parte di progetti di volontariato. Ad ogni  ritorno a casa mi trovavo arricchita di un bagaglio professionale e personale più ampio. Amo da sempre imparare e condividere con le persone che mi stanno intorno e nel tempo libero viaggio, dormo in tenda, leggo e disegno (per lo più pennuti!)",
     },
     {
       name: "Elena",
       title: "Segretaria",
-      image: "src/assets/img/team/grid/elena.png",
+      image: "src/assets/img/team/grid/elena.jpg",
       description:
         "Da sempre appassionata di animali e natura, entro in questo mondo (quasi 20 anni fa) tramite un'associazione operante nel monitoraggio ambientale. Da allora ho collaborato con molte associazioni come divulgatrice scientifica, guida in oasi protette e parchi faunistici, e per didattica nelle scuole. Il volontariato mi ha dato la possibilità di entrare in contatto con la fauna selvatica, e tutt'oggi lavoro in questo ambito. Sono entusiasta del mio percorso e delle innumerevoli possibilità che mi ha donato, ma lo sono ancora di più pensando al supporto che potrò dare a Insubria Wildlife e a tutto ciò che questa nuova avventura riuscirà a darmi!",
     },
     {
       name: "Giulia",
       title: "Consigliera",
-      image: "src/assets/img/team/grid/giulia.png",
+      image: "src/assets/img/team/grid/giulia.jpg",
       description:
         "Ricordo ancora nitidamente quando iniziò ad affacciarsi tra i miei pensieri la passione per gli animali. A 7 anni, però, non ne sei ancora pienamente consapevole. Un rapace urtò accidentalmente contro la porta di casa dei miei nonni: lo raccolsi con molta attenzione, scesi in giardino, e quando allentai leggermente la presa, si librò in volo in un attimo. Qualcosa scattò in me quel giorno: un sentimento, un amore verso gli animali selvatici, che però non era ancora pronto a sbocciare completamente. Lo fece durante il mio percorso universitario, insieme alla sicurezza che non mi avrebbe mai più lasciato. Oggi ho fatto della mia passione il mio lavoro. Amo passare il tempo all'aria aperta, in mezzo ai boschi, in compagnia dei miei cani o anche solo in silenzio con la mia macchina fotografica, aspettando che un martin pescatore si posi sul ramo di fronte a me.",
     },
     {
       name: "Maura",
       title: "Consigliera",
-      image: "src/assets/img/team/grid/maura.png",
+      image: "src/assets/img/team/grid/maura.jpg",
       description:
         "Se la prima parola che pronunci quando sei piccola è “cane”, vuol dire che da qualche parte il tuo percorso è già tracciato. Diventare veterinaria è stato un sogno che si è realizzato, ma l'incontro con la fauna selvatica si è preso una grossa parte del mio cuore. Durante il progetto Erasmus in una clinica universitaria ebbi come paziente una piccola lontra, seguita poi da rapaci e pipistrelli: queste esperienze non fecero altro che rafforzare il mio amore per gli animali selvatici, culminato con un tirocinio presso un CRAS, dove ho scoperto il mondo della fauna locale e il valore del volontariato.",
     },
     {
       name: "Roberto",
       title: "Consigliere",
-      image: "src/assets/img/team/grid/roberto.png",
+      image: "src/assets/img/team/grid/roberto.jpg",
       description:
         "La natura ha sempre avuto un lato attrattivo su di me: un sentimento profondo, difficilmente spiegabile a parole. È la mia passione, la mia valvola di sfogo, il mio porto sicuro. Dove imparare cose nuove e passare il tempo con le persone che amo: ne ho fatto anche un lavoro, diventando guida safari in Africa. Con Insubria Wildlife voglio portare le persone ad esplorare anche la meravigliosa natura locale, spesso poco conosciuta.",
     },
@@ -141,7 +141,7 @@ export const store = reactive({
         "<p><strong>Se nudi e con occhi chiusi o fuori dal nido, necessitano sempre di intervento.</strong>.</p><br><p>Un reinserimento nel nido è possibile e consigliabile se non sono feriti e presentano una certa vitalità (ovvero se si muovono e sono caldi e se reagiscono se stimolati) ed il nido risulta accessibile e integro.</p><br><h4>Usa guanti o un panno per evitare di lasciare il tuo odore, altrimenti il genitore potrebbe abbandonarli!<br><br></h4><p>Una volta riposizionato nella tana è obbligatorio allontanarsi (mai rimanere in vista), mantenere monitorata l'attività di cuccioli e genitori per le successive 4-6 ore e, nel frattempo, contattare il C.R.A.S.</p>",
     },
     {
-      title: "Mammiferi con pelo",
+      title: "Mammiferi cuccioli con pelo",
       image: "src/assets/img/sos-animal/cards/5-furry-mammals.png",
       description:
         "<p><strong>Non sempre gli animali giovani sono abbandonati</strong>.</p><br><p>I cuccioli con il mantello sviluppato e gli occhi ben aperti, <strong>iniziano ad esplorare il territorio</strong>, quindi non capita di rado trovare giovani lepri, conigli o scoiattoli da soli: fa parte del loro ciclo di vita.</p><br><h4>È tutto normale ed è una fase fondamentale per la loro crescita, perciò non vanno recuperati.</h4><br><p>Emblematici sono i <strong>cuccioli di capriolo e cervo</strong>: essi <strong>nascono senza odore</strong> e quando le madri si allontanano per nutrirsi li lasciano per diverso tempo nascosti nella vegetazione. Il loro non avere odore li protegge da eventuali predatori ma, <strong>se toccati, ne acquisiranno uno estraneo alla madre e verranno abbandonati!</strong></p><br><h4>Se la zona di ritrovamento presenta dei pericoli, è buona norma contattare il C.R.A.S. per farsi consigliare.</h4>",

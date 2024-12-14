@@ -598,7 +598,7 @@ h4 {
   }
 
   .logo-container .real-image img {
-    width: 70%;
+    width: 66%;
   }
 
   .list-container {

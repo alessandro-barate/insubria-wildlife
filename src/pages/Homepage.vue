@@ -412,11 +412,7 @@ h1 {
 }
 
 /* Media queries */
-/* Tablet large */
 /* Mobile layout */
-@media (max-width: 936px) {
-}
-
 @media (max-width: 936px) {
   h1 {
     padding-left: 20px;
@@ -519,6 +515,11 @@ h1 {
 
   .vision .carousel-img-container {
     padding-top: 30px;
+
+    img {
+      width: 10em;
+      height: 10em;
+    }
   }
 
   .video-container {
@@ -536,11 +537,27 @@ h1 {
     line-height: 210px;
   }
 }
+/* END mobile layout */
 
+/* Tablet layout */
+@media (min-width: 937px) {
+  .vision .carousel-img-container {
+    width: 100%;
+
+    img {
+      width: 12em;
+      height: 12em;
+    }
+  }
+}
+/* END tablet layout */
+
+/* Other layout */
 @media (max-width: 500px) {
   .vision h2 {
     width: 100%;
     font-size: 2em;
   }
 }
+/* END other layout */
 </style>

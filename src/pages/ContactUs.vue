@@ -16,18 +16,17 @@ export default {
 
 <script setup>
 const sendMail = async (fields) => {
-  
-  axios.post(import.meta.env.VITE_ENDPOINT_URL, fields).then(function(response){
-    alert(JSON.stringify(response.data));
-    }).catch(function(error){
-      console.debug(error)
-      console.log("Si è verificato un errore")
-      alert("Si è verificato un errore, riprovare tra qualche minuto")
+  axios
+    .post(import.meta.env.VITE_ENDPOINT_URL, fields)
+    .then(function (response) {
+      alert(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.debug(error);
+      console.log("Si è verificato un errore");
+      alert("Si è verificato un errore, riprovare tra qualche minuto");
     });
 };
-
-
-
 </script>
 
 <template>
@@ -35,31 +34,36 @@ const sendMail = async (fields) => {
     <div class="row">
       <div class="col">
         <!-- Form section -->
-        <div class="form-container overlay">
-          <div class="contact">
-            <h1 class="uppercase">contattaci</h1>
-            <h2>
-              Hai bisogno di contattarci? Compila il form sottostante, ti
-              risponderemo il prima possibile
-            </h2>
+        <section>
+          <div class="form-container overlay">
+            <div class="contact">
+              <h1 class="uppercase">contattaci</h1>
+              <h2>
+                Hai bisogno di contattarci? Compila il form sottostante, ti
+                risponderemo il prima possibile
+              </h2>
+            </div>
+            <FormKit type="form" @submit="sendMail" submit-label="Invia">
+              <FormKit
+                type="text"
+                name="name"
+                id="name"
+                label="Nome"
+                required
+              />
+              <FormKit type="text" name="surname" label="Cognome" required />
+              <FormKit type="email" name="mail" label="Email" required />
+              <FormKit
+                name="message"
+                id=""
+                rows="8"
+                cols="50"
+                label="Scrivi qui il tuo messaggio"
+                required
+              />
+            </FormKit>
           </div>
-          <FormKit type="form" @submit="sendMail" submit-label="Invia">
-            <FormKit type="text" name="name" id="name" label="Nome" required />
-
-            <FormKit type="text" name="surname" label="Cognome" required />
-
-            <FormKit type="email" name="mail" label="Email" required />
-
-            <FormKit
-              name="message"
-              id=""
-              rows="8"
-              cols="50"
-              label="Scrivi qui il tuo messaggio"
-              required
-            />
-          </FormKit>
-        </div>
+        </section>
         <!-- END form section -->
       </div>
     </div>
@@ -78,6 +82,7 @@ const sendMail = async (fields) => {
 
 .contact {
   width: 60%;
+  text-align: center;
 
   h1 {
     font-size: 50px;
@@ -146,6 +151,18 @@ button {
 }
 
 // Media queries
+@media (max-width: 500px) {
+  .contact {
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+}
+
 @media (max-width: 609px) {
   .col {
     padding-top: 20px;

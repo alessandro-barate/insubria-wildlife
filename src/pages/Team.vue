@@ -323,6 +323,11 @@ export default {
 }
 
 /* Media queries */
+@media (max-width: 1000px) {
+  .team-container {
+    background-position: 80%;
+  }
+}
 /* Mobile layout */
 @media (max-width: 559px) {
   .team-group-img img {

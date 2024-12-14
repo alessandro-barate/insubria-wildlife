@@ -59,7 +59,7 @@ export default {
               <div class="flow-chart-img">
                 <figure>
                   <img
-                    src="../assets/img/sos-animal/flow-chart.png"
+                    src="../assets/img/sos-animal/flow-chart.jpg"
                     alt="Flusso delle azioni da svolgere in caso di ritrovamento"
                     @click="toggleZoom"
                   />
@@ -152,7 +152,7 @@ export default {
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
-      :src="'src/assets/img/sos-animal/flow-chart.png'"
+      :src="'src/assets/img/sos-animal/flow-chart.jpg'"
       alt="Flusso delle azioni da svolgere in caso di ritrovamento"
       @click.stop
     />
@@ -492,13 +492,6 @@ export default {
 /* END Tablet layout */
 
 @media (max-width: 800px) {
-  .grid-section {
-    background-image: url(../assets/img/sos-animal/background/fox-3.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
   .overlay-single-card {
     top: 46%;
   }
