@@ -21,6 +21,9 @@ import SupportUs from "./pages/SupportUs.vue";
 // import SupportUsEnglish from "./pages/english/SupportUsEnglish.vue";
 
 const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0, behavior: "smooth" };
+  },
   history: createWebHistory(),
   routes: [
     // Italian pages routes

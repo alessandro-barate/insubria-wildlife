@@ -5,25 +5,30 @@ import FooterComponent from "./components/FooterComponent.vue";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      visible: false,
+    };
   },
   components: {
     HeaderComponent,
     FooterComponent,
   },
   methods: {
-    windowScroll(e) {
-      if (window.scrollY > 200) {
-        store.scroll = true;
-      }
-      if (window.scrollY < 200) {
-        store.scroll = false;
-      }
+    windowScroll(event) {
+      this.visible = window.scrollY > 300 ? true : false;
     },
+
     scrollUp() {
       window.scrollTo({ top: 0, behavior: "smooth" });
-      console.log("click up");
     },
+  },
+
+  created() {
+    window.addEventListener("scroll", this.windowScroll);
+  },
+
+  unmounted() {
+    window.removeEventListener("scroll", this.windowScroll);
   },
 };
 </script>
@@ -34,6 +39,7 @@ export default {
   <div id="up-button">
     <button>
       <img
+        v-show="visible"
         src="../src/assets/img/homepage/chevron/chevron-up.svg"
         alt="Freccia in alto per scorrere la pagina in su"
         @click="scrollUp()"
@@ -56,6 +62,20 @@ export default {
     img {
       width: 2em;
     }
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
+
+/* .v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+} */
 </style>
