@@ -40,6 +40,7 @@ export default {
       navMenu.classList.remove("active");
     },
 
+    // To make the events and news container appear when a link is clicked
     containerAppearance() {
       const newsEvents = document.getElementById("news-events-container");
 
@@ -47,6 +48,7 @@ export default {
       newsEvents.classList.add("display-block");
     },
 
+    // To make the events and news container disappear when a link is clicked
     containerDisappearance() {
       const newsEvents = document.getElementById("news-events-container");
 
@@ -382,7 +384,7 @@ header {
 
   .logo {
     width: 10%;
-    margin-left: 50px;
+    margin-left: 2.4em;
   }
 
   .navbar .nav-menu {

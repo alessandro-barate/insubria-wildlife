@@ -70,7 +70,7 @@ export default {
 }
 
 /* Media queries */
-/* Tablet layout */
+/* Mobile layout */
 @media (max-width: 936px) {
   #up-button {
     right: 7px;
