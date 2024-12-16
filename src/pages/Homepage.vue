@@ -103,7 +103,7 @@ export default {
         <section class="video-container">
           <div class="video-background">
             <video
-              src="../assets/video/background-video-2.mp4"
+              src="../assets/video/background-video.mp4"
               loading="lazy"
               autoplay
               muted

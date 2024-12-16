@@ -209,7 +209,7 @@ export default {
 <style scoped lang="scss">
 header {
   z-index: 1000;
-  position: relative;
+  position: sticky;
   background-color: #000000;
 }
 
@@ -221,6 +221,7 @@ header {
   top: 0;
   z-index: 1000;
   position: sticky;
+  -webkit-transition: all 0.2s ease-in-out;
 
   .logo {
     width: 6%;
