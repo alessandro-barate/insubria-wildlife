@@ -286,7 +286,7 @@ header {
   margin-right: 30px;
 
   img {
-    width: 100%;
+    width: 80%;
     padding-top: 10px;
     padding-bottom: 10px;
 

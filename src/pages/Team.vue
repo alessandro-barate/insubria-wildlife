@@ -102,7 +102,7 @@ export default {
               <!-- Single team member overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
                 <div class="scrollbar-container">
-                  <div class="details-btn d-flex">
+                  <div class="details-btn">
                     <button @click="hideMemberDetails(index)">✕</button>
                   </div>
                   <div class="details-img">
@@ -225,11 +225,13 @@ export default {
   }
 
   .details-btn {
-    text-align: start;
+    width: 10%;
+    margin-top: 10px;
+    margin-left: -15px;
 
     button {
       border: none;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       padding-bottom: 20px;
       color: rgba(255, 255, 255, 0.753);
@@ -323,6 +325,28 @@ export default {
 }
 
 /* Media queries */
+@media (max-width: 936px) {
+  .overlay-single-card .details-btn {
+    margin-top: 0.5em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (min-width: 937px) {
+  .overlay-single-card .details-btn {
+    margin-top: 1em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.4em;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .team-container {
     background-position: 80%;
@@ -359,8 +383,18 @@ export default {
   }
 
   .overlay-single-card {
+    margin-top: 50px;
     max-height: 700px;
     transform: translate(-50%, -42%);
+
+    .details-btn {
+      margin-top: 0.5em;
+      margin-left: 0.5em;
+
+      button {
+        font-size: 1.1em;
+      }
+    }
 
     .details-img img {
       width: 60%;

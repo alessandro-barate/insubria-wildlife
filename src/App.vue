@@ -51,8 +51,8 @@ export default {
 
 <style scoped>
 #up-button {
-  right: 20px;
-  bottom: 30px;
+  right: 2%;
+  bottom: 6%;
   position: fixed;
 
   button {
@@ -66,6 +66,15 @@ export default {
     &:hover {
       transform: scale(1.2);
     }
+  }
+}
+
+/* Media queries */
+/* Tablet layout */
+@media (max-width: 936px) {
+  #up-button {
+    right: 7px;
+    bottom: 53px;
   }
 }
 
