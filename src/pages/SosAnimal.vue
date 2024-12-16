@@ -133,7 +133,7 @@ export default {
               <!-- Single sos animal overview -->
               <div v-if="this.showDetails" class="overlay-single-card">
                 <div class="scrollbar-container">
-                  <div class="details-btn d-flex">
+                  <div class="details-btn">
                     <button @click="hideMemberDetails(index)">✕</button>
                   </div>
                   <div class="details-img">
@@ -270,7 +270,7 @@ export default {
   .zoom-close-btn {
     position: absolute;
     top: 20px;
-    right: 30px;
+    left: 30px;
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -322,11 +322,13 @@ export default {
   }
 
   .details-btn {
-    text-align: start;
+    width: 10%;
+    margin-top: 10px;
+    margin-left: -15px;
 
     button {
       border: none;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       padding-bottom: 20px;
       color: rgba(255, 255, 255, 0.753);
@@ -423,6 +425,28 @@ export default {
 
 /* Media queries */
 /* Mobile layout */
+@media (max-width: 936px) {
+  .overlay-single-card .details-btn {
+    margin-top: 0.5em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (min-width: 937px) {
+  .overlay-single-card .details-btn {
+    margin-top: 1em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.4em;
+    }
+  }
+}
+
 @media (max-width: 559px) {
   .col-33 {
     width: 93%;
