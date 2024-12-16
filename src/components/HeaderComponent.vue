@@ -15,7 +15,9 @@ export default {
     headerFixed() {
       const container = document.querySelector("header");
 
-      if (window.scrollY > 100) {
+      if (window.innerWidth <= 999) {
+        container.classList.add("position-sticky");
+      } else if (window.scrollY > 50 && window.innerWidth > 1000) {
         container.classList.add("sticky-header");
       } else {
         container.classList.remove("sticky-header");
@@ -221,7 +223,7 @@ header {
   position: sticky;
 
   .logo {
-    width: 9%;
+    width: 6%;
   }
 }
 
@@ -374,6 +376,12 @@ header {
 @media (max-width: 500px) {
   .logo {
     margin-left: 30px;
+  }
+}
+
+@media (max-width: 936px) {
+  .sticky-header .logo {
+    width: 10%;
   }
 }
 
