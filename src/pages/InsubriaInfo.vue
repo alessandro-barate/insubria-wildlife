@@ -203,7 +203,16 @@ export default {
                   @click="isMobile && toggleParagraph(index)"
                   class="characteristic"
                 >
-                  <h4 class="description-index">{{ index + 1 }}</h4>
+                  <h4 class="description-index">
+                    {{ characteristic.word }}
+                    <div class="chevron-right">
+                      <img
+                        src="../assets/img/insubria/list-elements/chevron-right.svg"
+                        loading="lazy"
+                        alt="Chevron destro"
+                      />
+                    </div>
+                  </h4>
                   <h4 class="description-title">
                     {{ characteristic.intro }}
                     <div class="chevron-right">
@@ -542,24 +551,6 @@ h4 {
 // END bottom list styles
 
 /* Media queries */
-@media (max-width: 500px) {
-  .upper-bg {
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
-
-  .container p,
-  .container span {
-    font-size: 19px;
-  }
-}
 
 @media (max-width: 1250px) {
   .characteristic {
@@ -611,22 +602,29 @@ h4 {
   }
 
   .characteristics-list {
-    width: 30%;
+    width: 40%;
+    margin-left: 24%;
   }
 
   .characteristic {
     width: 100%;
     margin-left: 0;
 
+    h4 {
+      width: 125%;
+      margin-left: 30px;
+    }
+
     .description-index {
       display: block;
-      text-align: center;
+      text-align: start;
+      padding-left: 15px;
     }
   }
 
   .characteristic::before,
   .characteristic::after {
-    width: 120%;
+    width: 130%;
   }
 
   .characteristic::before {
@@ -745,6 +743,42 @@ h4 {
 
     img {
       width: 40%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .upper-bg {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .container p,
+  .container span {
+    font-size: 19px;
+  }
+
+  .characteristics-list {
+    width: 52%;
+    margin-left: 17%;
+  }
+
+  .characteristic h4 {
+    margin-left: 15px;
+  }
+
+  .description-index {
+    display: flex;
+
+    .chevron-right img {
+      width: 10%;
     }
   }
 }
