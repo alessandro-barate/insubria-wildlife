@@ -15,9 +15,10 @@ export default {
     headerFixed() {
       const container = document.querySelector("header");
 
-      if (window.innerWidth <= 999) {
-        container.classList.add("position-sticky");
-      } else if (window.scrollY > 50 && window.innerWidth > 1000) {
+      if (
+        window.innerWidth < 1000 ||
+        (window.scrollY > 50 && window.innerWidth >= 1000)
+      ) {
         container.classList.add("sticky-header");
       } else {
         container.classList.remove("sticky-header");
