@@ -624,7 +624,7 @@ h4 {
 
   .characteristic::before,
   .characteristic::after {
-    width: 130%;
+    width: 120%;
   }
 
   .characteristic::before {
@@ -737,6 +737,41 @@ h4 {
   }
 }
 
+@media only screen and (min-width: 501px) and (max-width: 729px) {
+  .characteristics-list {
+    width: 45%;
+    margin-left: 14%;
+  }
+
+  .characteristic::before,
+  .characteristic::after {
+    width: 110%;
+  }
+
+  .characteristic {
+    width: 130%;
+
+    h4 {
+      margin-left: 35px;
+      padding-right: 10px;
+    }
+  }
+
+  .description-index {
+    display: flex;
+    align-items: center;
+  }
+
+  .chevron-right {
+    display: inline;
+
+    img {
+      width: 3%;
+      margin-left: 40%;
+    }
+  }
+}
+
 @media only screen and (min-width: 730px) and (max-width: 1000px) {
   .description-title .chevron-right {
     width: 20%;
@@ -767,18 +802,29 @@ h4 {
 
   .characteristics-list {
     width: 52%;
-    margin-left: 17%;
+    margin-left: 11%;
   }
 
-  .characteristic h4 {
-    margin-left: 15px;
+  .characteristic {
+    width: 125%;
+
+    h4 {
+      margin-left: 15px;
+      padding-right: 5px;
+    }
   }
 
   .description-index {
     display: flex;
+    align-items: center;
+  }
 
-    .chevron-right img {
-      width: 10%;
+  .chevron-right {
+    display: inline;
+
+    img {
+      width: 5%;
+      margin-left: 10%;
     }
   }
 }
