@@ -425,28 +425,6 @@ export default {
 
 /* Media queries */
 /* Mobile layout */
-@media (max-width: 936px) {
-  .overlay-single-card .details-btn {
-    margin-top: 0.5em;
-    margin-left: 0;
-
-    button {
-      font-size: 1.2em;
-    }
-  }
-}
-
-@media (min-width: 937px) {
-  .overlay-single-card .details-btn {
-    margin-top: 1em;
-    margin-left: 0;
-
-    button {
-      font-size: 1.4em;
-    }
-  }
-}
-
 @media (max-width: 559px) {
   .col-33 {
     width: 93%;
@@ -473,7 +451,8 @@ export default {
   }
 
   .overlay-single-card {
-    max-height: 700px;
+    margin-top: 20px;
+    max-height: 500px;
     transform: translate(-50%, -42%);
 
     .details-img img {
@@ -484,6 +463,32 @@ export default {
 
   .details-description div {
     font-size: 19px;
+  }
+}
+
+@media (max-width: 936px) {
+  .overlay-single-card .details-btn {
+    margin-top: 0.5em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.2em;
+    }
+  }
+
+  .overlay-single-card .scrollbar-container {
+    height: 485px;
+  }
+}
+
+@media (min-width: 937px) {
+  .overlay-single-card .details-btn {
+    margin-top: 1em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.4em;
+    }
   }
 }
 /* END mobile layout */

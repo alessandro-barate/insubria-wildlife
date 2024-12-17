@@ -325,33 +325,6 @@ export default {
 }
 
 /* Media queries */
-@media (max-width: 936px) {
-  .overlay-single-card .details-btn {
-    margin-top: 0.5em;
-    margin-left: 0;
-
-    button {
-      font-size: 1.2em;
-    }
-  }
-}
-
-@media (min-width: 937px) {
-  .overlay-single-card .details-btn {
-    margin-top: 1em;
-    margin-left: 0;
-
-    button {
-      font-size: 1.4em;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .team-container {
-    background-position: 80%;
-  }
-}
 /* Mobile layout */
 @media (max-width: 559px) {
   .team-group-img img {
@@ -383,8 +356,8 @@ export default {
   }
 
   .overlay-single-card {
-    margin-top: 50px;
-    max-height: 700px;
+    margin-top: 20px;
+    max-height: 450px;
     transform: translate(-50%, -42%);
 
     .details-btn {
@@ -406,6 +379,38 @@ export default {
   }
 }
 /* END mobile layout */
+
+@media (max-width: 936px) {
+  .overlay-single-card .details-btn {
+    margin-top: 0.5em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.2em;
+    }
+  }
+
+  .overlay-single-card .scrollbar-container {
+    height: 435px;
+  }
+}
+
+@media (min-width: 937px) {
+  .overlay-single-card .details-btn {
+    margin-top: 1em;
+    margin-left: 0;
+
+    button {
+      font-size: 1.4em;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .team-container {
+    background-position: 80%;
+  }
+}
 
 /* Tablet layout */
 @media only screen and (min-width: 560px) and (max-width: 800px) {
