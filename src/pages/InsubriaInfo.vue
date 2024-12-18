@@ -201,28 +201,36 @@ export default {
                   @mouseenter="showParagraph(index)"
                   @mouseleave="hideParagraph"
                   @click="isMobile && toggleParagraph(index)"
-                  class="characteristic"
                 >
-                  <h4 class="description-index">
-                    {{ characteristic.word }}
-                    <div class="chevron-right">
-                      <img
-                        src="../assets/img/insubria/list-elements/chevron-right.svg"
-                        loading="lazy"
-                        alt="Chevron destro"
-                      />
-                    </div>
-                  </h4>
-                  <h4 class="description-title">
-                    {{ characteristic.intro }}
-                    <div class="chevron-right">
-                      <img
-                        src="../assets/img/insubria/list-elements/chevron-right.svg"
-                        loading="lazy"
-                        alt="Chevron destro"
-                      />
-                    </div>
-                  </h4>
+                  <!-- Description small with chevron -->
+                  <div class="characteristic characteristic-2">
+                    <h4 class="description-index">
+                      {{ characteristic.word }}
+                      <div class="chevron-right">
+                        <img
+                          src="../assets/img/insubria/list-elements/chevron-right.svg"
+                          loading="lazy"
+                          alt="Chevron destro"
+                        />
+                      </div>
+                    </h4>
+                  </div>
+                  <!-- END description small with chevron -->
+
+                  <!-- Description big with chevron -->
+                  <div class="characteristic characteristic-3">
+                    <h4 class="description-title">
+                      {{ characteristic.intro }}
+                      <div class="chevron-right">
+                        <img
+                          src="../assets/img/insubria/list-elements/chevron-right.svg"
+                          loading="lazy"
+                          alt="Chevron destro"
+                        />
+                      </div>
+                    </h4>
+                  </div>
+                  <!-- END description big with chevron -->
                 </li>
               </ul>
             </div>
@@ -627,6 +635,15 @@ h4 {
     width: 120%;
   }
 
+  .characteristic-2 {
+    margin-bottom: -5px;
+  }
+
+  .characteristic-3::before,
+  .characteristic-3::after {
+    display: none;
+  }
+
   .characteristic::before {
     left: 4%;
   }
@@ -687,6 +704,17 @@ h4 {
 /* END mobile layout */
 
 /* Tablet layout */
+@media (min-width: 730px) {
+  .characteristic-3 {
+    margin-bottom: -5px;
+  }
+
+  .characteristic-2::before,
+  .characteristic-2::after {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 730px) and (max-width: 800px) {
   .history-old,
   .why-insubria,
