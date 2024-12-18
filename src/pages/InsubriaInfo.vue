@@ -613,13 +613,6 @@ h4 {
   }
 }
 
-@media (max-width: 936px) {
-  .paragraph-card {
-    width: 171%;
-    height: 500px;
-  }
-}
-
 @media (max-width: 729px) {
   .history-old,
   .why-insubria,
@@ -711,9 +704,9 @@ h4 {
 
   .paragraph-card {
     top: 10px;
-    width: 160%;
+    width: 170%;
     z-index: 10;
-    height: 400px;
+    height: 500px;
     position: absolute;
     transform: translate(-22%, -100%);
     background-color: rgba(0, 0, 0, 0.95);
@@ -724,7 +717,7 @@ h4 {
     }
 
     .scrollbar-container {
-      height: 360px;
+      height: 450px;
     }
 
     .close-button {
