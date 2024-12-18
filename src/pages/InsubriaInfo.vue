@@ -208,7 +208,7 @@ export default {
                       {{ characteristic.word }}
                       <div class="chevron-right">
                         <img
-                          src="../assets/img/insubria/list-elements/chevron-right.svg"
+                          src="../assets/img/insubria/list-elements/chevron-down.svg"
                           loading="lazy"
                           alt="Chevron destro"
                         />
@@ -574,7 +574,52 @@ h4 {
     }
   }
 }
-/* Mobile layout */
+
+@media only screen and (min-width: 730px) and (max-width: 1000px) {
+  .description-title .chevron-right {
+    width: 20%;
+
+    img {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .insubria-description {
+    display: block;
+    padding-top: 0;
+
+    h2 {
+      text-align: center;
+    }
+
+    .description {
+      width: 100%;
+    }
+  }
+
+  .img-container-2 {
+    width: 100%;
+
+    img {
+      width: 90%;
+      margin: 0 auto;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+@media (max-width: 936px) {
+  .paragraph-card {
+    width: 171%;
+    height: 500px;
+  }
+}
+
 @media (max-width: 729px) {
   .history-old,
   .why-insubria,
@@ -617,16 +662,20 @@ h4 {
   .characteristic {
     width: 100%;
     margin-left: 0;
-
-    h4 {
-      width: 125%;
-      margin-left: 30px;
-    }
+    text-align: center;
 
     .description-index {
-      display: block;
-      text-align: start;
+      width: 125%;
+      margin-left: 30px;
       padding-left: 15px;
+
+      .chevron-right {
+        margin-right: 0;
+
+        img {
+          width: 6%;
+        }
+      }
     }
   }
 
@@ -701,19 +750,6 @@ h4 {
     }
   }
 }
-/* END mobile layout */
-
-/* Tablet layout */
-@media (min-width: 730px) {
-  .characteristic-3 {
-    margin-bottom: -5px;
-  }
-
-  .characteristic-2::before,
-  .characteristic-2::after {
-    display: none;
-  }
-}
 
 @media only screen and (min-width: 730px) and (max-width: 800px) {
   .history-old,
@@ -729,39 +765,23 @@ h4 {
     padding-right: 15px;
   }
 }
-/* END tablet layout */
-/* Various media queries */
+
 @media (min-width: 730px) {
+  .characteristic-3 {
+    margin-bottom: -5px;
+  }
+
+  .characteristic-2::before,
+  .characteristic-2::after {
+    display: none;
+  }
+
   .paragraph-card h2 {
     display: none;
   }
-}
 
-@media (max-width: 980px) {
-  .insubria-description {
-    display: block;
-    padding-top: 0;
-
-    h2 {
-      text-align: center;
-    }
-
-    .description {
-      width: 100%;
-    }
-  }
-
-  .img-container-2 {
-    width: 100%;
-
-    img {
-      width: 90%;
-      margin: 0 auto;
-
-      &:hover {
-        transform: scale(1.02);
-      }
-    }
+  .bottom-paragraph {
+    padding-top: 40px;
   }
 }
 
@@ -779,33 +799,15 @@ h4 {
   .characteristic {
     width: 130%;
 
-    h4 {
+    .description-index {
+      display: block;
+      text-align: center;
+      align-items: center;
       margin-left: 35px;
-      padding-right: 10px;
-    }
-  }
 
-  .description-index {
-    display: flex;
-    align-items: center;
-  }
-
-  .chevron-right {
-    display: inline;
-
-    img {
-      width: 3%;
-      margin-left: 40%;
-    }
-  }
-}
-
-@media only screen and (min-width: 730px) and (max-width: 1000px) {
-  .description-title .chevron-right {
-    width: 20%;
-
-    img {
-      width: 40%;
+      .chevron-right img {
+        width: 7%;
+      }
     }
   }
 }
@@ -836,25 +838,23 @@ h4 {
   .characteristic {
     width: 125%;
 
-    h4 {
+    .description-index {
+      width: 100%;
+      display: block;
       margin-left: 15px;
-      padding-right: 5px;
-    }
-  }
+      text-align: center;
+      padding-right: 15px;
+      align-items: center;
 
-  .description-index {
-    display: flex;
-    align-items: center;
-  }
+      .chevron-right {
+        margin-right: 0;
 
-  .chevron-right {
-    display: inline;
-
-    img {
-      width: 5%;
-      margin-left: 10%;
+        img {
+          width: 8%;
+        }
+      }
     }
   }
 }
-/* END various media queries */
+/* END media queries */
 </style>
