@@ -100,16 +100,18 @@ export default {
               </div>
 
               <!-- Single team member overview -->
-              <div v-if="this.showDetails" class="overlay-single-card">
-                <div class="scrollbar-container">
-                  <div class="details-btn">
-                    <button @click="hideMemberDetails(index)">✕</button>
-                  </div>
-                  <div class="details-img">
-                    <img :src="store.members[currentIndex].image" alt="" />
-                  </div>
-                  <div class="details-description">
-                    <p>{{ store.members[currentIndex].description }}</p>
+              <div v-show="showDetails" class="zoomed-container">
+                <div v-if="this.showDetails" class="overlay-single-card">
+                  <div class="scrollbar-container">
+                    <div class="details-btn">
+                      <button @click="hideMemberDetails(index)">✕</button>
+                    </div>
+                    <div class="details-img">
+                      <img :src="store.members[currentIndex].image" alt="" />
+                    </div>
+                    <div class="details-description">
+                      <p>{{ store.members[currentIndex].description }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -130,6 +132,20 @@ export default {
 
 .no-interaction .overlay-single-card {
   pointer-events: auto;
+}
+
+.zoomed-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .team-container,

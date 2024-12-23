@@ -29,7 +29,7 @@ export default {
       }
 
       this.showZoom = !this.showZoom;
-      document.body.style.overflow = this.showZoom ? "hidden" : "";
+      document.body.style.overflow = this.showZoom; // ? "hidden" : ""
     },
   },
 
