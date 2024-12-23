@@ -1,7 +1,6 @@
-.d-flex {
-  display: flex;
-}
-
+/***********************
+VARIOUS SPACING STYLES
+***********************/
 .padding-l-60 {
   padding-left: 60px;
 }
@@ -26,6 +25,13 @@
   width: calc(100% / 2);
 }
 
+/***********************
+VARIOUS DISPLAY STYLES
+***********************/
+.d-flex {
+  display: flex;
+}
+
 .display-block {
   display: block;
 }
@@ -34,6 +40,9 @@
   display: none;
 }
 
+/****************
+UPPERCASE STYLE
+****************/
 .uppercase {
   text-transform: uppercase;
 }
