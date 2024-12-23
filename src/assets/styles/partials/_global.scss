@@ -26,6 +26,20 @@ a:visited {
   color: black;
 }
 
+.zoomed-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
 .overlay {
   padding-top: 20px;
   padding-bottom: 25px;
@@ -36,4 +50,8 @@ a:visited {
 
 .scrollbar-container {
   overflow: auto;
+}
+
+.no-interaction {
+  pointer-events: none;
 }

@@ -7,26 +7,25 @@ export default {
     return {
       store,
       currentIndex: 0,
-      showDetails: false,
     };
   },
 
   methods: {
     showMemberDetails(index) {
-      if (this.showDetails) return;
+      if (store.showDetails) return;
       this.currentIndex = index;
-      this.showDetails = true;
+      store.showDetails = true;
     },
 
     hideMemberDetails(index) {
-      this.showDetails = false;
+      store.showDetails = false;
     },
   },
 };
 </script>
 
 <template>
-  <div :class="{ 'no-interaction': showDetails }">
+  <div :class="{ 'no-interaction': store.showDetails }">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -100,8 +99,8 @@ export default {
               </div>
 
               <!-- Single team member overview -->
-              <div v-show="showDetails" class="zoomed-container">
-                <div v-if="this.showDetails" class="overlay-single-card">
+              <div v-show="store.showDetails" class="zoomed-container">
+                <div v-if="store.showDetails" class="overlay-single-card">
                   <div class="scrollbar-container">
                     <div class="details-btn">
                       <button @click="hideMemberDetails(index)">✕</button>
@@ -126,26 +125,8 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.no-interaction {
-  pointer-events: none;
-}
-
 .no-interaction .overlay-single-card {
   pointer-events: auto;
-}
-
-.zoomed-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
 .team-container,
