@@ -131,20 +131,22 @@ export default {
               </div>
 
               <!-- Single sos animal overview -->
-              <div v-if="this.showDetails" class="overlay-single-card">
-                <div class="scrollbar-container">
-                  <div class="details-btn">
-                    <button @click="hideMemberDetails(index)">✕</button>
-                  </div>
-                  <div class="details-img">
-                    <img :src="store.sosCards[currentIndex].image" alt="" />
-                  </div>
-                  <div class="details-description">
-                    <div
-                      v-html="
-                        $sanitize(store.sosCards[currentIndex].description)
-                      "
-                    ></div>
+              <div v-show="showDetails" class="zoomed-container">
+                <div v-if="this.showDetails" class="overlay-single-card">
+                  <div class="scrollbar-container">
+                    <div class="details-btn">
+                      <button @click="hideMemberDetails(index)">✕</button>
+                    </div>
+                    <div class="details-img">
+                      <img :src="store.sosCards[currentIndex].image" alt="" />
+                    </div>
+                    <div class="details-description">
+                      <div
+                        v-html="
+                          $sanitize(store.sosCards[currentIndex].description)
+                        "
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
