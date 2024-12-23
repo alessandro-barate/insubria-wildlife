@@ -158,7 +158,7 @@ export default {
     </div>
   </div>
 
-  <!-- Map zoomed container -->
+  <!-- Zoomed map container -->
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
@@ -167,7 +167,7 @@ export default {
       @click.stop
     />
   </div>
-  <!-- END map zoomed container -->
+  <!-- END zoomed map container -->
 </template>
 
 <style scoped lang="scss">
@@ -202,12 +202,6 @@ export default {
   transform: scale(1.01);
 }
 
-.description-section h1 {
-  font-size: 50px;
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-
 .description-section h2 {
   font-size: 32px;
   padding-bottom: 20px;
@@ -215,7 +209,6 @@ export default {
 
 .description-section p {
   width: 85%;
-  font-size: 20px;
   line-height: 25px;
   padding-bottom: 20px;
 }

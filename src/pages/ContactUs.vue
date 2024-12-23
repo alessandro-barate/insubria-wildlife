@@ -85,7 +85,6 @@ const sendMail = async (fields) => {
   text-align: center;
 
   h1 {
-    font-size: 50px;
     margin-bottom: 60px;
   }
 
@@ -99,7 +98,6 @@ const sendMail = async (fields) => {
 }
 
 .form-container {
-  padding-top: 50px;
   text-align: center;
   color: rgba(255, 255, 255, 0.753);
 

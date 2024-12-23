@@ -285,7 +285,6 @@ export default {
 .container {
   color: rgba(255, 255, 255, 0.753);
 
-  p,
   span {
     font-size: 20px;
   }
@@ -297,10 +296,7 @@ export default {
 }
 
 h1 {
-  font-size: 50px;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 60px;
 }
 
 h2 {
@@ -559,7 +555,6 @@ h4 {
 // END bottom list styles
 
 /* Media queries */
-
 @media (max-width: 1250px) {
   .characteristic {
     width: 90%;

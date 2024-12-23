@@ -155,12 +155,6 @@ export default {
   transform: scale(1.01);
 }
 
-.description-section h1 {
-  font-size: 50px;
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-
 .description-section h2 {
   width: 90%;
   font-size: 24px;
@@ -168,7 +162,6 @@ export default {
 
 .description-section p {
   width: 85%;
-  font-size: 20px;
   line-height: 25px;
   padding-bottom: 20px;
 }

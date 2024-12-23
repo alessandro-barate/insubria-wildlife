@@ -99,14 +99,7 @@ section {
   width: 80%;
 }
 
-h1 {
-  font-size: 50px;
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-
 p {
-  font-size: 20px;
   padding-top: 30px;
 }
 
