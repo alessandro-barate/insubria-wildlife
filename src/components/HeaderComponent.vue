@@ -313,7 +313,7 @@ header {
 }
 
 #chevron-down img {
-  width: 12%;
+  width: 20%;
   color: white;
 
   &:hover {

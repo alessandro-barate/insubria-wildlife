@@ -15,6 +15,7 @@ export default {
 </script>
 
 <script setup>
+// Form logic
 const sendMail = async (fields) => {
   axios
     .post(import.meta.env.VITE_ENDPOINT_URL, fields)
@@ -26,6 +27,26 @@ const sendMail = async (fields) => {
       console.log("Si è verificato un errore");
       alert("Si è verificato un errore, riprovare tra qualche minuto");
     });
+};
+
+// Page translation logic
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
 };
 </script>
 

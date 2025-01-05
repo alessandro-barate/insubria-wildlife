@@ -42,6 +42,27 @@ export default {
 };
 </script>
 
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+};
+</script>
+
 <template>
   <div class="container">
     <div class="row">
@@ -244,7 +265,7 @@ export default {
                 class="paragraph-container"
               >
                 <div
-                  v-show="this.currentIndex === index"
+                  v-show="currentIndex === index"
                   class="paragraph-card overlay"
                 >
                   <div class="scrollbar-container">

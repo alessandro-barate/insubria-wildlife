@@ -24,6 +24,27 @@ export default {
 };
 </script>
 
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+};
+</script>
+
 <template>
   <div :class="{ 'no-interaction': store.showDetails }">
     <div class="container">
@@ -32,7 +53,7 @@ export default {
           <!-- Team container -->
           <section class="team-container">
             <div class="overlay description-section">
-              <h1 class="uppercase">il nostro team</h1>
+              <h1 class="uppercase">{{ t("team.title") }}</h1>
               <h2>Ecco le fondatrici di Insubria WildLife!</h2>
               <div class="team-group-img">
                 <figure>
