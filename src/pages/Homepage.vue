@@ -26,11 +26,11 @@ export default {
         this.store.visions.length;
     },
 
-    carouselAutoplay() {
-      // const card = document.getElementById("card-box");
-      // card.classList.add("transition");
-      setInterval(this.nextCard, 5000);
-    },
+    // carouselAutoplay() {
+    //   const card = document.getElementById("card-box");
+    //   card.classList.add("transition");
+    //   setInterval(this.nextCard, 5000);
+    // },
   },
 };
 </script>

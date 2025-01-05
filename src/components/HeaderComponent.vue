@@ -62,6 +62,27 @@ export default {
 };
 </script>
 
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+};
+</script>
+
 <template>
   <header>
     <div class="container">
@@ -143,8 +164,10 @@ export default {
               <!-- SOS animals link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
-                  <router-link :to="{ name: 'SosAnimali' }" class="link"
-                    >SOS ANIMALI</router-link
+                  <router-link
+                    :to="{ name: 'SosAnimali' }"
+                    class="link uppercase"
+                    >{{ t("nav.sosAnimal") }}</router-link
                   >
                 </a>
               </li>
@@ -163,8 +186,10 @@ export default {
               <!-- Support us link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link" id="support">
-                  <router-link :to="{ name: 'Supportaci' }" class="link"
-                    >SUPPORTACI</router-link
+                  <router-link
+                    :to="{ name: 'Supportaci' }"
+                    class="link uppercase"
+                    >{{ t("nav.supportUs") }}</router-link
                   ></a
                 >
               </li>
@@ -184,16 +209,24 @@ export default {
 
               <!-- Language container -->
               <div class="lang-container">
-                <button id="italian">
+                <button
+                  id="italian"
+                  @click="changeLanguage('it')"
+                  :class="{ 'active-lang': locale === 'it' }"
+                >
                   <img
                     src="../assets/img/header/flags/italy-flag-round.png"
-                    alt=""
+                    alt="Bandiera italiana"
                   />
                 </button>
-                <button id="english">
+                <button
+                  id="english"
+                  @click="changeLanguage('en')"
+                  :class="{ 'active-lang': locale === 'en' }"
+                >
                   <img
                     src="../assets/img/header/flags/uk-flag-round.png"
-                    alt=""
+                    alt="English flag"
                   />
                 </button>
               </div>
@@ -208,6 +241,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.active-lang {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
 header {
   z-index: 1000;
   position: sticky;
@@ -348,7 +386,6 @@ header {
     width: 40%;
     border: none;
     border-radius: 50%;
-    pointer-events: none;
     background-color: transparent;
   }
 
@@ -366,8 +403,6 @@ header {
   }
 }
 
-#italian,
-#english,
 #events,
 #news,
 .container-bg {

@@ -14,6 +14,17 @@ import "./style.scss";
 import App from "./App.vue";
 import SanitizePlugin from "./plugins/sanitize";
 
+// Importing Vue i18n for translations
+import { createI18n } from "vue-i18n";
+import it from "./locales/it.json";
+import en from "./locales/en.json";
+const i18n = createI18n({
+  legacy: false,
+  locale: "it-IT",
+  fallbackLocale: "it-IT",
+  messages: { it, en },
+});
+
 createApp(App)
   .use(
     plugin,
@@ -23,4 +34,5 @@ createApp(App)
   )
   .use(SanitizePlugin)
   .use(router)
+  .use(i18n)
   .mount("#app");

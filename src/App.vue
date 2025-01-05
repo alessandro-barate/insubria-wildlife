@@ -4,6 +4,7 @@ import FooterComponent from "./components/FooterComponent.vue";
 
 export default {
   name: "App",
+
   data() {
     return {
       visible: false,
@@ -33,6 +34,11 @@ export default {
 };
 </script>
 
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale, availableLocales } = useI18n({ useScope: "global" });
+</script>
+
 <template>
   <HeaderComponent></HeaderComponent>
   <router-view></router-view>
@@ -50,6 +56,10 @@ export default {
 </template>
 
 <style scoped>
+.greet {
+  color: rgb(0, 81, 255);
+}
+
 #up-button {
   right: 2%;
   bottom: 6%;
