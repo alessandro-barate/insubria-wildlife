@@ -1,6 +1,14 @@
 {
   "nav": {
+    "whatsNew": "what' s new",
+    "events": "events",
+    "news": "news",
     "sosAnimal": "sos animals",
+    "contactUs": "contatct us",
     "supportUs": "support us"
+  },
+  "footer": {
+    "vat": "VAT",
+    "followUs": "Follow us on our socials"
   }
 }

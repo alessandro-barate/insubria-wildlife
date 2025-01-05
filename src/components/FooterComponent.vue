@@ -4,6 +4,27 @@ export default {
 };
 </script>
 
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+};
+</script>
+
 <template>
   <footer>
     <div class="container">
@@ -39,7 +60,7 @@ export default {
                   <address class="address-container">
                     <h3>Insubria</h3>
                     <a id="address" href=""> Via Roma 20, 20004, Arluno </a>
-                    <h3 id="pi">Partita IVA</h3>
+                    <h3 id="pi">{{ t("footer.vat") }}</h3>
                     <span>93054540153</span>
                   </address>
                   <!-- END address container -->
@@ -49,7 +70,7 @@ export default {
                 <!-- Socials container -->
                 <div class="col-50 contacts-socials">
                   <div class="socials">
-                    <h3>Seguici sui nostri social</h3>
+                    <h3>{{ t("footer.followUs") }}</h3>
                     <div class="buttons-container d-flex">
                       <!-- Facebook link -->
                       <div class="fb-container">

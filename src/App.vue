@@ -34,11 +34,6 @@ export default {
 };
 </script>
 
-<script setup>
-import { useI18n } from "vue-i18n";
-const { t, locale, availableLocales } = useI18n({ useScope: "global" });
-</script>
-
 <template>
   <HeaderComponent></HeaderComponent>
   <router-view></router-view>
@@ -56,10 +51,6 @@ const { t, locale, availableLocales } = useI18n({ useScope: "global" });
 </template>
 
 <style scoped>
-.greet {
-  color: rgb(0, 81, 255);
-}
-
 #up-button {
   right: 2%;
   bottom: 6%;

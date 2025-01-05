@@ -88,7 +88,7 @@ const changeLanguage = (lang) => {
     <div class="container">
       <div class="row">
         <div class="col">
-          <nav class="navbar d-flex">
+          <nav class="navbar d-flex uppercase">
             <!-- Logo -->
             <div class="logo">
               <a>
@@ -105,7 +105,7 @@ const changeLanguage = (lang) => {
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'InsubriaInfo' }" class="link">
-                    INSUBRIA
+                    insubria
                   </router-link>
                 </a>
               </li>
@@ -115,7 +115,7 @@ const changeLanguage = (lang) => {
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
                   <router-link :to="{ name: 'Team' }" class="link"
-                    >TEAM</router-link
+                    >team</router-link
                   >
                 </a>
               </li>
@@ -127,7 +127,7 @@ const changeLanguage = (lang) => {
                 @mouseleave="containerDisappearance"
               >
                 <div id="chevron-down">
-                  <p>NOVITÁ</p>
+                  <p>{{ t("nav.whatsNew") }}</p>
                   <img
                     src="../assets/img/header/nav-menu/chevron-down.svg"
                     alt=""
@@ -145,16 +145,16 @@ const changeLanguage = (lang) => {
                       class="nav-link"
                       id="events"
                     >
-                      <router-link :to="{ name: 'Eventi' }" class="link"
-                        >EVENTI</router-link
-                      >
+                      <router-link :to="{ name: 'Eventi' }" class="link">{{
+                        t("nav.events")
+                      }}</router-link>
                     </a>
                   </div>
                   <div class="news-container">
                     <a @click="listDisappearance()" class="nav-link" id="news">
-                      <router-link :to="{ name: 'News' }" class="link"
-                        >NEWS</router-link
-                      >
+                      <router-link :to="{ name: 'News' }" class="link">{{
+                        t("nav.news")
+                      }}</router-link>
                     </a>
                   </div>
                 </div>
@@ -164,11 +164,9 @@ const changeLanguage = (lang) => {
               <!-- SOS animals link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link">
-                  <router-link
-                    :to="{ name: 'SosAnimali' }"
-                    class="link uppercase"
-                    >{{ t("nav.sosAnimal") }}</router-link
-                  >
+                  <router-link :to="{ name: 'SosAnimali' }" class="link">{{
+                    t("nav.sosAnimal")
+                  }}</router-link>
                 </a>
               </li>
               <!-- END SOS animals link -->
@@ -177,7 +175,7 @@ const changeLanguage = (lang) => {
               <!-- <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link" id="contact">
                   <router-link :to="{ name: 'Contattaci' }" class="link"
-                    >CONTATTACI</router-link
+                    >{{ t("nav.contactUs") }}</router-link
                   >
                 </a>
               </li> -->
@@ -186,11 +184,9 @@ const changeLanguage = (lang) => {
               <!-- Support us link -->
               <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link" id="support">
-                  <router-link
-                    :to="{ name: 'Supportaci' }"
-                    class="link uppercase"
-                    >{{ t("nav.supportUs") }}</router-link
-                  ></a
+                  <router-link :to="{ name: 'Supportaci' }" class="link">{{
+                    t("nav.supportUs")
+                  }}</router-link></a
                 >
               </li>
               <!-- END support us link -->
@@ -272,7 +268,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    gap: 50px;
+    gap: 20px;
     text-align: center;
     align-items: center;
     margin-right: 0;
@@ -292,13 +288,14 @@ header {
 }
 
 .container-bg {
+  width: 10%;
   padding-top: 26px;
   padding-bottom: 4px;
   position: relative;
 
   #news-events-container {
-    top: 0%;
-    left: 15%;
+    top: 90%;
+    left: -10%;
     padding: 15px;
     margin-top: 2px;
     border-radius: 10px;
@@ -403,11 +400,11 @@ header {
   }
 }
 
-#events,
-#news,
-.container-bg {
-  display: none;
-}
+// #events,
+// #news,
+// .container-bg {
+//   display: none;
+// }
 
 // Media queries
 @media (max-width: 500px) {
@@ -509,7 +506,7 @@ header {
     display: flex;
     padding-left: 20px;
     align-items: center;
-    margin-right: -55px;
+    margin-right: 0;
 
     #italian {
       margin-right: -5px;
@@ -524,7 +521,7 @@ header {
 @media (max-width: 800px) {
   .lang-container {
     width: 120%;
-    margin-right: -40px;
+    margin-right: 0;
 
     #italian,
     #english {

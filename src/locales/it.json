@@ -1,6 +1,14 @@
 {
   "nav": {
+    "whatsNew": "novità",
+    "events": "eventi",
+    "news": "news",
     "sosAnimal": "sos animali",
+    "contactUs": "contattaci",
     "supportUs": "supportaci"
+  },
+  "footer": {
+    "vat": "Partita IVA",
+    "followUs": "Seguici sui nostri social"
   }
 }
