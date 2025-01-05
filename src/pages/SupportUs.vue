@@ -34,7 +34,13 @@ export default {
               <li>
                 <strong>PayPal:</strong>
                 <br />
-                <span>disponibile a breve</span>
+                <span
+                  ><a>
+                    <router-link :to="{ name: 'Paypal' }" class="link"
+                      >Clicca qui
+                    </router-link> </a
+                  >per sostenerci tramite Paypal</span
+                >
               </li>
             </ul>
             <p>
@@ -112,6 +118,14 @@ ul {
     font-size: 18px;
     padding-top: 6px;
     list-style-type: disc;
+  }
+}
+
+a {
+  color: #ff6a3a;
+
+  &:hover {
+    color: #ff0000;
   }
 }
 
