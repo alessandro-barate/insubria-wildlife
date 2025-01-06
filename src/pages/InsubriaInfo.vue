@@ -256,11 +256,7 @@ const changeLanguage = (lang) => {
 
           <!-- Bottom paragraph section -->
           <div class="bottom-paragraph">
-            <p>
-              Come questo piccolo uccello che esplora instancabilmente il suo
-              ambiente, noi ci impegniamo a scoprire e condividere i tesori
-              nascosti del nostro territorio.
-            </p>
+            <TranslatedTextParagraph text-key="insubria.logo.fourthParagraph" />
           </div>
           <!-- END bottom paragraph section -->
         </div>
