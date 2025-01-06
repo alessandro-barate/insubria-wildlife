@@ -1,6 +1,7 @@
 <script>
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { sanitizeHTML } from "../utils/sanitize";
 import { parseTranslationText } from "../utils/textParser";
 
 export default {
@@ -15,7 +16,9 @@ export default {
     const { t } = useI18n();
 
     const translatedText = computed(() => {
-      return parseTranslationText(t(props.textKey));
+      const translated = t(props.textKey);
+      const parsed = parseTranslationText(translated);
+      return sanitizeHTML(parsed);
     });
 
     return {
@@ -26,5 +29,5 @@ export default {
 </script>
 
 <template>
-  <span v-html="translatedText"></span>
+  <p v-html="translatedText" class="paragraph"></p>
 </template>

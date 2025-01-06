@@ -5,24 +5,18 @@ export const parseTranslationText = (text) => {
     // Strong tag using *text*
     {
       pattern: /\*(.*?)\*/g,
-      replacement: "<strong>$1</strong>",
-    },
-
-    // Italic tag using _text_
-    {
-      pattern: /_(.*?)_/g,
-      replacement: "<em>$1</em>",
+      replacement: (match, content) => `<strong>${content}</strong>`,
     },
 
     // Span tag using [text]
     {
       pattern: /\[(.*?)\]/g,
-      replacement: "<span>$1</span>",
+      replacement: (match, content) => `<span>${content}</span>`,
     },
     // Line breaks
     {
-      pattern: /\\n/g,
-      replacement: "<br>",
+      pattern: /\\n\\n/g,
+      replacement: "<br><br>",
     },
   ];
 

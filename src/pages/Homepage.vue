@@ -73,9 +73,7 @@ const changeLanguage = (lang) => {
         <section class="mission">
           <article class="overlay margin-l-60">
             <h2 class="uppercase">mission</h2>
-            <p>
-              <TranslatedText text-key="homepage.mission" />
-            </p>
+            <TranslatedText text-key="homepage.mission" />
             <br />
             <br />
 
@@ -259,10 +257,6 @@ h1 {
 .overlay {
   width: 55%;
 
-  span {
-    font-weight: bold;
-  }
-
   #join {
     text-align: center;
   }
@@ -327,6 +321,10 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 30%;
+}
+
+p.paragraph span {
+  font-weight: bold;
 }
 
 .vision {
