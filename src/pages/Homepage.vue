@@ -64,8 +64,7 @@ const changeLanguage = (lang) => {
         <section class="jumbo">
           <h1 class="padding-l-60">Insubria <span>Wild</span>Life</h1>
           <p class="padding-l-60">
-            Il mondo selvatico è più vicino di quanto pensi: unisciti a noi
-            nella sua scoperta!
+            {{ t("homepage.jumbo") }}
           </p>
         </section>
         <!-- END jumbo section -->
@@ -85,8 +84,8 @@ const changeLanguage = (lang) => {
               vita di ciascuno e il nostro territorio ne è ricchissimo: sta a
               noi proteggerlo. <br /><br />
               Tramite i social, gli eventi e collaborazioni con esperti,
-              vogliamo creare un luogo di incontro per appassionati, “addetti ai
-              lavori” e curiosi, stimolando dibattiti e scambi tra persone con
+              vogliamo creare un luogo di incontro per appassionati, addetti ai
+              lavori e curiosi, stimolando dibattiti e scambi tra persone con
               diverso background.
             </p>
             <br />

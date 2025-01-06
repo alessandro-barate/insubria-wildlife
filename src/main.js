@@ -16,6 +16,7 @@ import SanitizePlugin from "./plugins/sanitize";
 
 // Importing Vue i18n for translations
 import { createI18n } from "vue-i18n";
+import { parseTranslationText } from "./utils/textParser";
 import it from "./locales/it.json";
 import en from "./locales/en.json";
 const i18n = createI18n({
@@ -23,7 +24,11 @@ const i18n = createI18n({
   locale: "it-IT",
   fallbackLocale: "it-IT",
   messages: { it, en },
+  postTranslation: (text) => parseTranslationText(text),
 });
+
+// Importing text translation parser component
+import TranslatedText from "./components/TranslatedText.vue";
 
 createApp(App)
   .use(
@@ -35,4 +40,5 @@ createApp(App)
   .use(SanitizePlugin)
   .use(router)
   .use(i18n)
+  .component("TranslatedText", TranslatedText)
   .mount("#app");
