@@ -8,7 +8,12 @@
     "supportUs": "support us"
   },
   "homepage": {
-    "jumbo": "The wild world is closer than you think: join us in discovering it!"
+    "jumbo": "The wild world is closer than you think: join us in discovering it!",
+    "mission": {
+      "paragraph": "*Insubria Wildlife APS* is the young, dynamic and international voice of scientific dissemination about *wildlife* and the *Insubrian environments*. We want to bring the value of biodiversity into the spotlight, making it accessible and interesting for everyone, inspiring curiosity and awareness.\u000A*The protection* of natural resources can enrich everyone's life and our territory is rich in them: it's up to us to protect it.\u000A\u000AThrough social media, events and collaborations with experts, we want to create a meeting place for enthusiasts, professionals and curious people, stimulating debates and exchanges between people with different backgrounds.",
+      "joining": "By joining us",
+      "description": " you will discover different realities and be part of a community with whom to share the same goals."
+    }
   },
   "team": {
     "title": "our team"

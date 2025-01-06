@@ -73,18 +73,17 @@ const changeLanguage = (lang) => {
         <section class="mission">
           <article class="overlay margin-l-60">
             <h2 class="uppercase">mission</h2>
-            <TranslatedTextParagraph text-key="homepage.mission" />
+            <TranslatedTextParagraph text-key="homepage.mission.paragraph" />
             <br />
             <br />
 
             <p id="join">
               <a id="join-2"
                 ><router-link :to="{ name: 'Supportaci' }" class="link"
-                  ><span>Unendoti a noi</span></router-link
-                >
+                  ><TranslatedTextSpan text-key="homepage.mission.joining"
+                /></router-link>
               </a>
-              potrai conoscere realtà diverse e far parte di una comunità con
-              cui condividere gli stessi obiettivi.
+              <TranslatedTextSpan text-key="homepage.mission.description" />
             </p>
 
             <!-- Events link section -->
