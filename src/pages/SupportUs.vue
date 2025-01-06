@@ -39,8 +39,8 @@ const changeLanguage = (lang) => {
 
           <!-- Top paragraphs -->
           <div class="top-paragraphs">
-            <h2>Vuoi aiutarci a realizzare il nostro sogno?</h2>
-            <p>Sostieni la nostra missione con una donazione</p>
+            <h2>{{ t("supportUs.title") }}</h2>
+            <p>{{ t("supportUs.listTitle") }}</p>
           </div>
           <!-- END top paragraphs -->
 

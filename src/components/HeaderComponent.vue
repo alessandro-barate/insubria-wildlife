@@ -294,12 +294,11 @@ header {
   position: relative;
 
   #news-events-container {
-    top: 90%;
-    left: -10%;
     padding: 15px;
     margin-top: 2px;
-    border-radius: 10px;
     position: absolute;
+    border-radius: 10px;
+    transform: translate(-13%, -5%);
     background-color: rgba(0, 0, 0, 0.85);
   }
 }
@@ -313,7 +312,7 @@ header {
 }
 
 #chevron-down img {
-  width: 20%;
+  width: 19%;
   color: white;
 
   &:hover {
@@ -407,6 +406,11 @@ header {
 // }
 
 // Media queries
+@media (max-width: 1156px) {
+  .container-bg #news-events-container {
+    transform: translate(-2vh, -0.7vh);
+  }
+}
 @media (max-width: 500px) {
   .logo {
     margin-left: 30px;

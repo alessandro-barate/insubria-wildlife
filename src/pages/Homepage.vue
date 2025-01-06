@@ -123,11 +123,14 @@ const changeLanguage = (lang) => {
           <!-- Animal help section -->
           <aside class="animal-help-container">
             <div class="animal-help">
-              <h2>Hai trovato un esemplare di animale ma non sai cosa fare?</h2>
+              <h2>{{ t("homepage.vision.help.title") }}</h2>
               <a href="">
                 <router-link :to="{ name: 'SosAnimali' }" class="link">
-                  <button>Ti aiutiamo noi!</button></router-link
-                >
+                  <button>
+                    <TranslatedTextSpan
+                      text-key="homepage.vision.help.button"
+                    /></button
+                ></router-link>
               </a>
             </div>
           </aside>
@@ -137,12 +140,7 @@ const changeLanguage = (lang) => {
           <article class="vision-card d-flex">
             <div class="overlay margin-r-60">
               <h2 class="uppercase">vision</h2>
-              <p>
-                Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti
-                coesistono in sinergia con la comunità locale, dove ognuno può
-                avere un ruolo attivo. La nostra visione si estende oltre
-                l'orizzonte, mirando a:
-              </p>
+              <p>{{ t("homepage.vision.paragraph") }}</p>
 
               <!-- Carousel container -->
               <div class="carousel-wrapper">

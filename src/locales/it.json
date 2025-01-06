@@ -13,10 +13,28 @@
       "paragraph": "*Insubria Wildlife APS* è la voce giovane, dinamica e internazionale della divulgazione scientifica sulla *fauna selvatica* e gli *ambienti insubrici*. Vogliamo portare il valore della biodiversità sotto i riflettori, rendendolo accessibile e interessante per tutti, ispirando curiosità e consapevolezza.\u000A*La tutela* delle risorse naturali può arricchire la vita di ciascuno e il nostro territorio ne è ricchissimo: sta a noi proteggerlo.\u000A\u000ATramite i social, gli eventi e collaborazioni con esperti, vogliamo creare un luogo di incontro per appassionati, addetti ai lavori e curiosi, stimolando dibattiti e scambi tra persone con diverso background.",
       "joining": "Unendoti a noi",
       "description": " potrai conoscere realtà diverse e far parte di una comunità con cui condividere gli stessi obiettivi."
+    },
+    "vision": {
+      "help": {
+        "title": "Hai trovato un esemplare di animale ma non sai cosa fare?",
+        "button": "Ti aiutiamo noi!"
+      },
+      "paragraph": "Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti coesistono in sinergia con la comunità locale, dove ognuno può avere un ruolo attivo. La nostra visione si estende oltre l'orizzonte, mirando a:",
+      "carousel": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fourth": "",
+        "fifth": ""
+      }
     }
   },
   "team": {
     "title": "il nostro team"
+  },
+  "supportUs": {
+    "title": "Vuoi aiutarci a realizzare il nostro sogno?",
+    "listTitle": "Sostieni la nostra missione con una donazione"
   },
   "footer": {
     "vat": "Partita IVA",

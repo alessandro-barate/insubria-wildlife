@@ -1,8 +1,8 @@
 {
   "nav": {
-    "whatsNew": "what' s new",
+    "whatsNew": "news",
     "events": "events",
-    "news": "news",
+    "news": "posts",
     "sosAnimal": "sos animals",
     "contactUs": "contatct us",
     "supportUs": "support us"
@@ -13,10 +13,28 @@
       "paragraph": "*Insubria Wildlife APS* is the young, dynamic and international voice of scientific dissemination about *wildlife* and the *Insubrian environments*. We want to bring the value of biodiversity into the spotlight, making it accessible and interesting for everyone, inspiring curiosity and awareness.\u000A*The protection* of natural resources can enrich everyone's life and our territory is rich in them: it's up to us to protect it.\u000A\u000AThrough social media, events and collaborations with experts, we want to create a meeting place for enthusiasts, professionals and curious people, stimulating debates and exchanges between people with different backgrounds.",
       "joining": "By joining us",
       "description": " you will discover different realities and be part of a community with whom to share the same goals."
+    },
+    "vision": {
+      "help": {
+        "title": "Have you found an animal but you don't know what to do?",
+        "button": "We'll help you!"
+      },
+      "paragraph": "We envision an Insubria where wildlife and environments coexist in synergy with the local community, where everyone can play an active role. Our vision extends beyond the horizon, aiming to:",
+      "carousel": {
+        "first": "",
+        "second": "",
+        "third": "",
+        "fourth": "",
+        "fifth": ""
+      }
     }
   },
   "team": {
     "title": "our team"
+  },
+  "supportUs": {
+    "title": "Do you want to help us make our dream come true?",
+    "listTitle": "Support our mission with a donation"
   },
   "footer": {
     "vat": "VAT",
