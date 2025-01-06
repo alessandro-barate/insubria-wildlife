@@ -1,4 +1,5 @@
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 export const store = reactive({
   // Variable for Team's and Sos Animals' single card
@@ -7,28 +8,38 @@ export const store = reactive({
   // Arrays
   visions: [
     {
-      description:
-        "Diventare un faro nella promozione sociale, creando una comunità vibrante di cittadini consapevoli e attivi nella conservazione di ambiente e fauna.",
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.0.description");
+      }),
       image: "/src/assets/img/homepage/carousel/1-social-promotion.jpg",
     },
     {
-      description:
-        "Creare un luogo nel quale il volontariato può prendere parte in diverse forme, ed è un'attività sempre stimolante e formativa.",
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.1.description");
+      }),
       image: "/src/assets/img/homepage/carousel/2-volunteering.jpg",
     },
     {
-      description:
-        "Realizzare un centro di recupero per la fauna all'avanguardia, dove gli animali selvatici in difficoltà trovano cura e vengono reimmessi nel territorio di appartenenza, mantenendone le caratteristiche selvatiche.",
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.2.description");
+      }),
       image: "/src/assets/img/homepage/carousel/3-wildlife-rehab.jpg",
     },
     {
-      description:
-        "Stabilire collaborazioni con università, enti di ricerca e istituzioni, per contribuire attivamente alla conoscenza e alla ricerca scientifica.",
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.3.description");
+      }),
       image: "/src/assets/img/homepage/carousel/4-research.jpg",
     },
     {
-      description:
-        "Creare una rete tra i professionisti del settore, per rendere le nostre azioni trasparenti e omogenee sul territorio, per arricchirci con stimoli provenienti da altre aree italiane e da oltre confine.",
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.4.description");
+      }),
       image: "/src/assets/img/homepage/carousel/5-network.jpg",
     },
   ],

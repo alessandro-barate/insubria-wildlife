@@ -20,13 +20,23 @@
         "button": "We'll help you!"
       },
       "paragraph": "We envision an Insubria where wildlife and environments coexist in synergy with the local community, where everyone can play an active role. Our vision extends beyond the horizon, aiming to:",
-      "carousel": {
-        "first": "",
-        "second": "",
-        "third": "",
-        "fourth": "",
-        "fifth": ""
-      }
+      "visions": [
+        {
+          "description": "Become a beacon in social promotion, creating a vibrant community of citizens who are aware and active in the conservation of environment and wildlife."
+        },
+        {
+          "description": "Create a place where volunteering can take many forms, and is always a stimulating and educational activity."
+        },
+        {
+          "description": ""
+        },
+        {
+          "description": ""
+        },
+        {
+          "description": ""
+        }
+      ]
     }
   },
   "insubria": {

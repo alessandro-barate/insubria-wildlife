@@ -20,13 +20,23 @@
         "button": "Ti aiutiamo noi!"
       },
       "paragraph": "Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti coesistono in sinergia con la comunità locale, dove ognuno può avere un ruolo attivo. La nostra visione si estende oltre l'orizzonte, mirando a:",
-      "carousel": {
-        "first": "",
-        "second": "",
-        "third": "",
-        "fourth": "",
-        "fifth": ""
-      }
+      "visions": [
+        {
+          "description": "Diventare un faro nella promozione sociale, creando una comunità vibrante di cittadini consapevoli e attivi nella conservazione di ambiente e fauna."
+        },
+        {
+          "description": "Creare un luogo nel quale il volontariato può prendere parte in diverse forme, ed è un'attività sempre stimolante e formativa."
+        },
+        {
+          "description": "Realizzare un centro di recupero per la fauna all'avanguardia, dove gli animali selvatici in difficoltà trovano cura e vengono reimmessi nel territorio di appartenenza, mantenendone le caratteristiche selvatiche."
+        },
+        {
+          "description": "Stabilire collaborazioni con università, enti di ricerca e istituzioni, per contribuire attivamente alla conoscenza e alla ricerca scientifica."
+        },
+        {
+          "description": "Creare una rete tra i professionisti del settore, per rendere le nostre azioni sul territorio trasparenti e omogenee , per arricchirci con stimoli provenienti da altre aree italiane e da oltre confine."
+        }
+      ]
     }
   },
   "insubria": {
