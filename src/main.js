@@ -27,8 +27,11 @@ const i18n = createI18n({
   postTranslation: (text) => parseTranslationText(text),
 });
 
-// Importing text translation parser component
-import TranslatedText from "./components/TranslatedText.vue";
+// Importing text translation parser component for paragraph
+import TranslatedTextParagraph from "./components/TranslatedTextParagraph.vue";
+
+// Importing text translation parser component for span
+import TranslatedTextSpan from "./components/TranslatedTextSpan.vue";
 
 createApp(App)
   .use(
@@ -40,5 +43,6 @@ createApp(App)
   .use(SanitizePlugin)
   .use(router)
   .use(i18n)
-  .component("TranslatedText", TranslatedText)
+  .component("TranslatedTextParagraph", TranslatedTextParagraph)
+  .component("TranslatedTextSpan", TranslatedTextSpan)
   .mount("#app");

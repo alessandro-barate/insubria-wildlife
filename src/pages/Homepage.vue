@@ -73,7 +73,7 @@ const changeLanguage = (lang) => {
         <section class="mission">
           <article class="overlay margin-l-60">
             <h2 class="uppercase">mission</h2>
-            <TranslatedText text-key="homepage.mission" />
+            <TranslatedTextParagraph text-key="homepage.mission" />
             <br />
             <br />
 

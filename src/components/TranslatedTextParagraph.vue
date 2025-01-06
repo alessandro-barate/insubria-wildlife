@@ -5,7 +5,7 @@ import { sanitizeHTML } from "../utils/sanitize";
 import { parseTranslationText } from "../utils/textParser";
 
 export default {
-  name: "TranslatedText",
+  name: "TranslatedTextParagraph",
   props: {
     textKey: {
       type: String,
@@ -15,7 +15,7 @@ export default {
   setup(props) {
     const { t } = useI18n();
 
-    const translatedText = computed(() => {
+    const translatedTextParagraph = computed(() => {
       const translated = t(props.textKey);
       const parsed = parseTranslationText(translated);
       const sanitized = sanitizeHTML(parsed);
@@ -24,12 +24,12 @@ export default {
     });
 
     return {
-      translatedText,
+      translatedTextParagraph,
     };
   },
 };
 </script>
 
 <template>
-  <p v-html="translatedText" class="paragraph"></p>
+  <p v-html="translatedTextParagraph"></p>
 </template>
