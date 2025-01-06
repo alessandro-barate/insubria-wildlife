@@ -48,16 +48,16 @@ const changeLanguage = (lang) => {
           <div class="payments-list">
             <ul>
               <li>
-                <span
-                  ><strong>{{
-                    t("supportUs.list.firstListElement")
-                  }}</strong></span
-                >
+                <TranslatedTextSpan
+                  text-key="supportUs.list.firstListElement"
+                />
                 <br />
                 <span id="iban">IT02S0623022808000047552608</span>
               </li>
               <li>
-                <span><strong>PayPal:</strong></span>
+                <TranslatedTextSpan
+                  text-key="supportUs.list.secondListElement.name"
+                />
                 <br />
                 <span
                   ><a>

@@ -34,12 +34,18 @@
     "secondTitle": "Ecco le fondatrici di Insubria WildLife",
     "paragraph": "\u000A\u000ASiamo Elena, Giulia, Maura, Alessia e Ilaria (da sinistra a destra) e ci siamo conosciute anni fa in un centro di cura e riabilitazione per animali selvatici, dove abbiamo lavorato, fatto tirocini e volontariato per molti anni.\u000A\u000ALa vita ci ha portate su strade diverse - cambiando lavori, città o nazioni - ma siamo rimaste sempre unite. Ogni volta che possiamo, ci ritroviamo per fare attività in natura: birdwatching, passeggiate nei boschi, ascoltare i bramiti dei cervi, viaggiare e scoprire nuovi luoghi.\u000A\u000AIl sogno di vedere valorizzato il nostro territorio dal punto di vista naturalistico, e quello di vedere la comunità più coinvolta ci ha portate a fare questo grande passo: aprire la nostra associazione.\u000A\u000ASperiamo di portarti con noi in quest'avventura e di poter avverare tanti piccoli sogni assieme!"
   },
+  "sosAnimals": {
+    "firstTitle": "soccorso fauna",
+    "firstParagraph": "Hai trovato un esemplare di animale selvatico ma non sai cosa fare?",
+    "secondParagraph": "*Niente paura, ti aiutiamo noi!*"
+  },
   "supportUs": {
     "firstTitle": "Vuoi aiutarci a realizzare il nostro sogno?",
     "list": {
       "listTitle": "Sostieni la nostra missione con una donazione",
-      "firstListElement": "Bonifico bancario - IBAN:",
+      "firstListElement": "*Bonifico bancario - IBAN:*",
       "secondListElement": {
+        "name": "*PayPal*",
         "link": "Clicca qui ",
         "description": "per sostenerci tramite PayPal"
       }

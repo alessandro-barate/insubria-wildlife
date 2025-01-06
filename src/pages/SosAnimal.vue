@@ -8,6 +8,8 @@ export default {
       store,
       currentIndex: 0,
       showZoom: false,
+      italianLanguage: false,
+      englishLanguage: false,
     };
   },
 
@@ -29,6 +31,23 @@ export default {
 
       this.showZoom = !this.showZoom;
       document.body.style.overflow = this.showZoom; // ? "hidden" : ""
+    },
+  },
+
+  watch: {
+    "$i18n.locale": {
+      handler(newLocale) {
+        if (newLocale === "it") {
+          this.italianLanguage = true;
+          this.englishLanguage = false;
+        }
+
+        if (newLocale === "en") {
+          this.italianLanguage = false;
+          this.englishLanguage = true;
+        }
+      },
+      immediate: true, // executed at the component mount
     },
   },
 
@@ -71,25 +90,39 @@ const changeLanguage = (lang) => {
 
               <!-- Upper paragraph -->
               <div class="sos">
-                <h2 class="uppercase">soccorso fauna</h2>
+                <h2 class="uppercase">{{ t("sosAnimals.firstTitle") }}</h2>
               </div>
               <p class="sos-description">
-                Hai trovato un esemplare di animale selvatico e non sai cosa
-                fare?<br />
+                {{ t("sosAnimals.firstParagraph") }}<br />
               </p>
-              <p><strong>Niente paura, ti aiutiamo noi!</strong></p>
+              <TranslatedTextParagraph text-key="sosAnimals.secondParagraph" />
               <!-- END Upper paragraph -->
 
               <!-- Flow chart container -->
-              <div class="flow-chart-img">
+
+              <!-- Italian picture -->
+              <div v-if="italianLanguage" class="flow-chart-img">
                 <figure>
                   <img
                     src="../assets/img/sos-animal/flow-chart.jpg"
-                    alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+                    alt="Flusso delle azioni da svolgere in caso di ritrovamento di un animale"
                     @click="toggleZoom"
                   />
                 </figure>
               </div>
+              <!-- END italian picture -->
+
+              <!-- English picture -->
+              <div v-if="englishLanguage" class="flow-chart-img">
+                <figure>
+                  <img
+                    src="../assets/img/sos-animal/flow-chart-eng.jpg"
+                    alt="Actions flow in case of animal finding"
+                    @click="toggleZoom"
+                  />
+                </figure>
+              </div>
+              <!-- END english picture -->
               <!-- END flow chart container -->
 
               <!-- Bottom paragraph -->
@@ -179,8 +212,8 @@ const changeLanguage = (lang) => {
     </div>
   </div>
 
-  <!-- Zoomed map container -->
-  <div v-if="showZoom" class="zoomed-container">
+  <!-- Zoomed italian map container -->
+  <div v-if="showZoom" v-show="italianLanguage" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
       :src="'src/assets/img/sos-animal/flow-chart.jpg'"
@@ -188,7 +221,18 @@ const changeLanguage = (lang) => {
       @click.stop
     />
   </div>
-  <!-- END zoomed map container -->
+  <!-- END zoomed italian map container -->
+
+  <!-- Zoomed english map container -->
+  <div v-if="showZoom" v-show="englishLanguage" class="zoomed-container">
+    <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
+    <img
+      :src="'src/assets/img/sos-animal/flow-chart-eng.jpg'"
+      alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+      @click.stop
+    />
+  </div>
+  <!-- END zoomed english map container -->
 </template>
 
 <style scoped lang="scss">
