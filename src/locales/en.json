@@ -29,6 +29,26 @@
       }
     }
   },
+  "insubria": {
+    "history": {
+      "firstTitle": "A little bit of History",
+      "firstParagraph": "The ancient Romans called *Insubri* the people who inhabited some northern areas of modern-day Italy.\u000A\u000A*Archaeological findings dating back to 9000 years ago* have been discovered, telling us about people who lived in the territories between the *Serio and Sesia rivers, north of the Toce valleys, the Swiss cantons of Ticino and Graubünden, and south of the Po river*. Subsequently, three different cultures emerged:",
+      "isolino": {
+        "name": "of Isolino, ",
+        "date": "around 5060 a.C.",
+        "explanation": "called this way because the inhabitants built a stilt village on Isolino Virginia in Lake of Varese, considered to be the oldest lake in the Alpine arc"
+      },
+      "canegrate": {
+        "name": "of Canegrate, ",
+        "date": "starting from XIII century a.C"
+      },
+      "golasecca": {
+        "name": "of Golasecca, ",
+        "date": "starting from IX century a.C."
+      },
+      "secondTitle": "Insubria today"
+    }
+  },
   "team": {
     "title": "our team",
     "secondTitle": "Here the Insubria WildLife founders!",

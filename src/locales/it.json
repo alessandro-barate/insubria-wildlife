@@ -29,6 +29,27 @@
       }
     }
   },
+  "insubria": {
+    "history": {
+      "firstTitle": "Un po' di Storia",
+      "firstParagraph": "Gli antichi romani chiamavano *Insubri* il popolo che abitava alcune aree settentrionali dell'odierna Italia.\u000A\u000ASono stati trovati *reperti archeologici risalenti a 9000 anni fa* che ci raccontano di uomini vissuti nei territori compresi tra il *Serio e il Sesia, a nord delle vallate del Toce, dei cantoni svizzeri Ticino e Grigioni, e a sud del fiume Po*. Successivamente si sono poi distinte tre diverse culture:",
+      "isolino": {
+        "name": "dell'Isolino, ",
+        "date": "attorno al 5060 a.C.",
+        "explanation": "chiamata così perché gli abitanti costruirono un villaggio di palafitte sull'Isolino Virginia del lago di Varese, lago ritenuto essere il più antico dell'arco alpino"
+      },
+      "canegrate": {
+        "name": "di Canegrate, ",
+        "date": "a partire dal XIII secolo a.C"
+      },
+      "golasecca": {
+        "name": "di Golasecca, ",
+        "date": "a partire dal IX secolo a.C."
+      },
+      "secondTitle": "L'Insubria oggi",
+      "secondParagraph": "La regione insubrica, pur non essendo ben definita, *ricalca le orme della presenza degli antichi Insubri*, e le popolazioni odierne ne condividono alcuni aspetti culturali e dialettali.\u000A\u000A*Rimane caratterizzata da una ricchissima biodiversità, tra le più alte della regione Lombardia*, ma anche una altissima urbanizzazione, grazie proprio alle numerose risorse che vi sono presenti.\u000A\u000AGrazie alla complessa storia geologica e alla varietà geomorfologica del territorio, possiamo distinguere, specialmente nelle Prealpi Varesine e Comasche, *differenti habitat forestali e molti altri legati alle aree umide*. Anche la regione biogeografica continentale racchiude diversi habitat peculiari ricchi di specie vegetali e animali."
+    }
+  },
   "team": {
     "title": "il nostro team",
     "secondTitle": "Ecco le fondatrici di Insubria WildLife",

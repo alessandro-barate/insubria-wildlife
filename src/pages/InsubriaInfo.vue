@@ -73,41 +73,40 @@ const changeLanguage = (lang) => {
           <!-- History old -->
           <div class="insubria-description d-flex">
             <div class="description">
-              <h2>Un po' di Storia</h2>
-              <p>
-                Gli antichi romani chiamavano <strong>Insubri</strong> il popolo
-                che abitava alcune aree settentrionali dell'odierna Italia.
-                <br />
-                <br />Sono stati trovati
-                <strong>reperti archeologici risalenti a 9000 anni fa</strong>
-                che ci raccontano di uomini vissuti nei territori compresi tra
-                il
-                <strong
-                  >Serio e il Sesia, a nord delle vallate del Toce, dei cantoni
-                  svizzeri Ticino e Grigioni, e a sud del Po</strong
-                >. Successivamente si sono poi distinte tre diverse culture:
-              </p>
+              <h2>{{ t("insubria.history.firstTitle") }}</h2>
+              <TranslatedTextParagraph
+                text-key="insubria.history.firstParagraph"
+              />
               <ul id="insubria-list">
                 <li>
-                  <h4>dell'Isolino<span>, attorno al 5060 a.C.</span></h4>
-                  <p>
-                    chiamata così perché gli abitanti costruirono un villaggio
-                    di palafitte sull'Isolino Virginia del lago di Varese, lago
-                    ritenuto essere il più antico dell'arco alpino
-                  </p>
+                  <h4>
+                    {{ t("insubria.history.isolino.name")
+                    }}<TranslatedTextSpan
+                      text-key="insubria.history.isolino.date"
+                    />
+                  </h4>
+                  <p>{{ t("insubria.history.isolino.explanation") }}</p>
                 </li>
                 <li>
                   <h4>
-                    di Canegrate<span>, a partire dal XIII secolo a.C</span>
+                    {{ t("insubria.history.canegrate.name")
+                    }}<TranslatedTextSpan
+                      text-key="insubria.history.canegrate.date"
+                    />
                   </h4>
                 </li>
                 <li>
                   <h4>
-                    di Golasecca<span>, a partire dal IX secolo a.C.</span>
+                    {{ t("insubria.history.golasecca.name")
+                    }}<TranslatedTextSpan
+                      text-key="insubria.history.golasecca.date"
+                    />
                   </h4>
                 </li>
               </ul>
             </div>
+
+            <!-- Insubria territory container -->
             <div class="img-container d-flex">
               <div class="img-container-2">
                 <figure>
@@ -119,37 +118,17 @@ const changeLanguage = (lang) => {
                 </figure>
               </div>
             </div>
+            <!-- END Insubria territory container -->
           </div>
           <!-- END history old -->
 
           <!-- History today -->
           <div class="history-nowaday">
             <div class="insubria-description">
-              <h2>L'Insubria oggi</h2>
-              <p>
-                La regione insubrica, pur non essendo ben definita,
-                <strong
-                  >ricalca le orme della presenza degli antichi Insubri</strong
-                >, e le popolazioni odierne ne condividono alcuni aspetti
-                culturali e dialettali.
-                <br />
-                <br />
-                <strong
-                  >Rimane caratterizzata da una ricchissima biodiversità, tra le
-                  più alte della regione Lombardia</strong
-                >, ma anche una altissima urbanizzazione, grazie proprio alle
-                numerose risorse che vi sono presenti.
-                <br />
-                <br />
-                Grazie alla complessa storia geologica e alla varietà
-                geomorfologica del territorio, possiamo distinguere,
-                specialmente nelle Prealpi Varesine e Comasche,
-                <strong
-                  >differenti habitat forestali e molti altri legati alle aree
-                  umide</strong
-                >. Anche la regione biogeografica continentale racchiude diversi
-                habitat peculiari ricchi di specie vegetali e animali.
-              </p>
+              <h2>{{ t("insubria.history.secondTitle") }}</h2>
+              <TranslatedTextParagraph
+                text-key="insubria.history.secondParagraph"
+              />
             </div>
           </div>
           <!-- END history today -->
