@@ -46,7 +46,16 @@
         "name": "of Golasecca, ",
         "date": "starting from IX century a.C."
       },
-      "secondTitle": "Insubria today"
+      "secondTitle": "Insubria today",
+      "secondParagraph": "The Insubric region, although not well defined, *follows the footsteps of the ancient Insubri*, and today's populations share some cultural and dialectal aspects.\u000A\u000A*It remains characterized by extremely rich biodiversity, among the highest in the Lombardy region*, but also very high urbanization, thanks to the numerous resources present there.\u000A\u000ADue to the complex geological history and geomorphological variety of the territory, we can distinguish, especially in the Varese and Como Prealps, *different forest habitats and many others linked to wetlands*. The continental biogeographic region also contains several peculiar habitats rich in plant and animal species."
+    },
+    "why": {
+      "thirdTitle": "Why Insubria?",
+      "thirdParagraph": "We have chosen to focus on this territory precisely because we recognize its natural value and also the critical issues of the meeting between the two worlds, namely the natural and the urbanized and industrialized one.\u000A\u000AWe deeply believe that proper enhancement and management of the territory can give life to a profitable coexistence between humans and nature, and consequently lead the community to appreciate the beauty of their territory."
+    },
+    "logo": {
+      "title": "Our Logo",
+      "explanation": "Our logo is a *Firecrest* - _Regulus ignicapilla_ - and here's why we chose it:"
     }
   },
   "team": {

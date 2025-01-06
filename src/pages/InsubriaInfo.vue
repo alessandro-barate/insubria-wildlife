@@ -139,20 +139,9 @@ const changeLanguage = (lang) => {
       <!-- Why Insubria description -->
       <section class="col middle-bg">
         <div class="why-insubria overlay">
-          <h2>Perchè l'Insubria?</h2>
+          <h2>{{ t("insubria.why.thirdTitle") }}</h2>
           <div class="why-description">
-            <p>
-              Abbiamo scelto di focalizzarci su questo territorio proprio perché
-              ne riconosciamo il valore naturale e anche le criticità
-              dell'incontro tra i due mondi, ovvero quello naturale e quello
-              urbanizzato e industrializzato.
-              <br />
-              <br />
-              Crediamo profondamente che una corretta valorizzazione e gestione
-              del territorio possa dare vita ad una proficua coesistenza tra
-              uomo e natura, e portare di conseguenza anche la comunità ad
-              apprezzare le bellezze del proprio territorio.
-            </p>
+            <TranslatedTextParagraph text-key="insubria.why.thirdParagraph" />
           </div>
         </div>
       </section>
@@ -161,7 +150,7 @@ const changeLanguage = (lang) => {
       <!-- Logo explanation -->
       <section class="col lower-bg">
         <div class="logo-container overlay">
-          <h2>Il nostro Logo</h2>
+          <h2>{{ t("insubria.logo.title") }}</h2>
 
           <!-- Logo-real image section -->
           <div class="images-container d-flex">
@@ -183,11 +172,11 @@ const changeLanguage = (lang) => {
           <!-- END logo-real image section -->
 
           <!-- Bird description -->
-          <p class="bird-description">
-            Il nostro logo è un <strong>Fiorrancino</strong> -
-            <span>Regulus ignicapilla</span> - e qui vi spieghiamo perchè
-            l'abbiamo scelto:
-          </p>
+          <TranslatedTextParagraph
+            text-key="insubria.logo.explanation"
+            class="bird-description"
+          />
+
           <!-- END bird description -->
 
           <!-- List container -->
@@ -376,10 +365,6 @@ h4 {
 .logo-container {
   width: 80%;
   text-align: center;
-
-  span {
-    font-style: italic;
-  }
 
   .images-container {
     padding-top: 20px;
