@@ -93,8 +93,8 @@ const changeLanguage = (lang) => {
                   <h2>{{ member.name }}</h2>
                   <h3>{{ member.title }}</h3>
                   <div class="info-btn">
-                    <button @click="this.showMemberDetails(index)">
-                      Scopri di più
+                    <button @click="showMemberDetails(index)">
+                      {{ t("team.findOut") }}
                     </button>
                   </div>
                 </div>

@@ -28,13 +28,13 @@
           "description": "Create a place where volunteering can take many forms, and is always a stimulating and educational activity."
         },
         {
-          "description": ""
+          "description": "Create a state-of-the-art wildlife recovery center, where wildlife in difficulty receives care and is released back into their territory of origin, maintaining their wild characteristics."
         },
         {
-          "description": ""
+          "description": "Establish collaborations with universities, research institutions and organizations to actively contribute to knowledge and scientific research."
         },
         {
-          "description": ""
+          "description": "Create a network among sector professionals to make our actions in the territory transparent and uniform, to enrich ourselves with insights from other Italian areas and from across borders."
         }
       ]
     }
@@ -72,7 +72,40 @@
   "team": {
     "title": "our team",
     "secondTitle": "Here the Insubria WildLife founders!",
-    "paragraph": "\u000A\u000AWe are Elena, Giulia, Maura, Alessia and Ilaria (from left to right) and we met years ago in a wildlife care and rehabilitation center, where we worked, did internships and volunteered for many years.\u000A\u000ALife has taken us on different paths - changing jobs, cities or countries - but we have always remained united. Whenever we can, we get together to do activities in nature: birdwatching, walking in the woods, listening to deer calls, traveling and discovering new places.\u000A\u000AThe dream of seeing our territory valued from a naturalistic point of view, and seeing the community more involved led us to take this big step: opening our association.\u000A\u000AWe hope to take you with us on this adventure and to make many small dreams come true together!"
+    "paragraph": "\u000A\u000AWe are Elena, Giulia, Maura, Alessia and Ilaria (from left to right) and we met years ago in a wildlife care and rehabilitation center, where we worked, did internships and volunteered for many years.\u000A\u000ALife has taken us on different paths - changing jobs, cities or countries - but we have always remained united. Whenever we can, we get together to do activities in nature: birdwatching, walking in the woods, listening to deer calls, traveling and discovering new places.\u000A\u000AThe dream of seeing our territory valued from a naturalistic point of view, and seeing the community more involved led us to take this big step: opening our association.\u000A\u000AWe hope to take you with us on this adventure and to make many small dreams come true together!",
+    "members": [
+      {
+        "name": "Ilaria",
+        "title": "President",
+        "description": "A naturalist since I can remember. I looked at pictures of plants, animals, minerals and stars and understood what my path was. The passion for animals, however, was born much earlier, when a wet nose woke me up in my crib, and never left me since; when I spent time in the garden with my grandmother learning names of flowers that I would later forget, because I was busy watching a lizard, a bee or chasing a passing bird. Today part of my job is trying to convey the wonder I feel at every little discovery...if I don't get lost in it!"
+      },
+      {
+        "name": "Alessia",
+        "title": "Vice President",
+        "description": "I couldn't imagine my life away from the natural world: that's why I chose this path even before I was aware of it. Deeply passionate and curious, as soon as I could, I traveled: for leisure and work, in Italy and abroad, taking part in volunteer projects. Every time I returned home, I found myself enriched with broader professional and personal experience. I've always loved learning and sharing with the people around me, and in my free time I travel, sleep in tents, read and draw (mostly feathered friends!)"
+      },
+      {
+        "name": "Elena",
+        "title": "Secretary",
+        "description": "Always passionate about animals and nature, I entered this world (almost 20 years ago) through an association working in environmental monitoring. Since then, I have collaborated with many associations as a science communicator, guide in protected oases and wildlife parks, and for education in schools. Volunteering gave me the opportunity to come into contact with wildlife, and I still work in this field today. I am excited about my journey and the countless opportunities it has given me, but I am even more excited thinking about the support I will be able to give to Insubria Wildlife and everything that this new adventure will be able to give me!"
+      },
+      {
+        "name": "Giulia",
+        "title": "Advisor",
+        "description": "I still vividly remember when my passion for animals first appeared in my thoughts. At 7 years old, though, you're not yet fully aware of it. A raptor accidentally hit my grandparents' front door: I picked it up very carefully, went down to the garden, and when I slightly loosened my grip, it took flight in an instant. Something clicked in me that day: a feeling, a love for wildlife, that wasn't yet ready to fully bloom. It did during my university years, along with the certainty that it would never leave me again. Today I've made my passion my job. I love spending time outdoors, in the woods, in the company of my dogs or even just in silence with my camera, waiting for a kingfisher to perch on the branch in front of me."
+      },
+      {
+        "name": "Maura",
+        "title": "Advisor",
+        "description": "If the first word you say when you're little is 'dog', it means that somewhere your path is already set. Becoming a veterinarian was a dream that came true, but encountering wildlife took a large part of my heart. During my Erasmus project at a university clinic, I had a small otter as a patient, followed by raptors and bats: these experiences only strengthened my love for wildlife, culminating in an internship at a Wildlife Recovery Center, where I discovered the world of local fauna and the value of volunteering."
+      },
+      {
+        "name": "Roberto",
+        "title": "Advisor",
+        "description": "Nature has always had an attractive side for me: a deep feeling, difficult to explain in words. It's my passion, my outlet, my safe harbor. Where I learn new things and spend time with the people I love: I've also made it my job, becoming a safari guide in Africa. With Insubria Wildlife, I want to lead people to explore the wonderful local nature, often little known."
+      }
+    ],
+    "findOut": "Find out more"
   },
   "sosAnimals": {
     "firstTitle": "wildlife rescue",
