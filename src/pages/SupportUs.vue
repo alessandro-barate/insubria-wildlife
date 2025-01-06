@@ -78,7 +78,7 @@ const changeLanguage = (lang) => {
           <div class="bottom-paragraphs">
             <h2>{{ t("supportUs.secondTitle") }}</h2>
             <p>
-              Hai idee, passione e voglia di metterti in gioco? Unisciti a noi
+              <TranslatedTextSpan text-key="supportUs.secondParagraph" />
               <!-- </p> -->
               <!-- <p class="link-paragraph">
               Compila il
@@ -87,10 +87,7 @@ const changeLanguage = (lang) => {
                   >modulo di contatto</router-link
                 ></a
               > -->
-              e diventa parte di <strong>Insubria WildLife</strong>: siamo
-              sempre alla ricerca di
-              <strong>voci libere, innovative ed entusiaste</strong> per
-              costruire insieme un futuro migliore per la natura.
+              <TranslatedTextSpan text-key="supportUs.thirdParagraph" />
             </p>
           </div>
           <!-- END bottom paragraphs -->

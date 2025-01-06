@@ -176,7 +176,7 @@ const changeLanguage = (lang) => {
                   <h2>{{ sosCard.title }}</h2>
                   <div class="info-btn">
                     <button @click="showMemberDetails(index)">
-                      Scopri di più
+                      {{ t("team.findOut") }}
                     </button>
                   </div>
                 </div>

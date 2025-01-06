@@ -399,11 +399,11 @@ header {
   }
 }
 
-// #events,
-// #news,
-// .container-bg {
-//   display: none;
-// }
+#events,
+#news,
+.container-bg {
+  display: none;
+}
 
 // Media queries
 @media (max-width: 1156px) {
