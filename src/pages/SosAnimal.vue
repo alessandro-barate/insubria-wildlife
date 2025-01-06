@@ -99,7 +99,6 @@ const changeLanguage = (lang) => {
               <!-- END Upper paragraph -->
 
               <!-- Flow chart container -->
-
               <!-- Italian picture -->
               <div v-if="italianLanguage" class="flow-chart-img">
                 <figure>
@@ -128,29 +127,30 @@ const changeLanguage = (lang) => {
               <!-- Bottom paragraph -->
               <div class="bottom-paragraphs">
                 <p>
-                  <strong><span class="uppercase">ricorda:</span></strong>
-                  nessuna cura umana può essere migliore di quelle dei genitori!
+                  <TranslatedTextSpan
+                    text-key="sosAnimals.thirdParagraph"
+                    class="uppercase"
+                  />
+                  {{ t("sosAnimals.fourthParagraph") }}
                 </p>
+                <TranslatedTextParagraph text-key="sosAnimals.fifthParagraph" />
                 <p>
-                  <strong
-                    >Prima di intervenire, assicurati che sia davvero
-                    necessario.</strong
-                  >
-                </p>
-                <p>
-                  <strong><span class="uppercase">dubbi?</span></strong>
-                  Approfondisci
-                  <a href="https://animaliferiti.lipu.it/" target="_blank"
-                    >qui</a
-                  >
-                  o chiama il
+                  <TranslatedTextSpan
+                    text-key="sosAnimals.sixthParagraph.capital"
+                    class="uppercase"
+                  />
+                  {{ t("sosAnimals.sixthParagraph.explore") }}
+                  <a href="https://animaliferiti.lipu.it/" target="_blank">{{
+                    t("sosAnimals.sixthParagraph.here")
+                  }}</a>
+                  {{ t("sosAnimals.sixthParagraph.call") }}
                   <a
                     href="https://elencocras.it/"
                     target="_blank"
                     class="uppercase"
-                    >cras</a
+                    >{{ t("sosAnimals.sixthParagraph.cras") }}</a
                   >
-                  di riferimento.
+                  {{ t("sosAnimals.sixthParagraph.reference") }}
                 </p>
               </div>
               <!-- END bottom paragraph -->

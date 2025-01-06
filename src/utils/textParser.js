@@ -9,10 +9,10 @@ export const parseTranslationText = (text) => {
     },
 
     // Span tag using [text]
-    // {
-    //   pattern: /\[(.*?)\]/g,
-    //   replacement: (match, content) => `<span>${content}</span>`,
-    // },
+    {
+      pattern: /\[(.*?)\]/g,
+      replacement: (match, content) => `<span>${content}</span>`,
+    },
     // Double line breaks
     {
       pattern: /\u000A\u000A/g,

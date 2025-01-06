@@ -37,7 +37,18 @@
   "sosAnimals": {
     "firstTitle": "wildlife rescue",
     "firstParagraph": "Have you found an animal but you don't know what to do?",
-    "secondParagraph": "*Don't worry, we'll help you!*"
+    "secondParagraph": "*Don't worry, we'll help you!*",
+    "thirdParagraph": "*remember: *",
+    "fourthParagraph": "no human cure can be better than the parents' care!",
+    "fifthParagraph": "*Before intervening, make sure it's really necessary.*",
+    "sixthParagraph": {
+      "capital": "*doubts?*",
+      "explore": "Explore ",
+      "here": "here ",
+      "call": "or call the ",
+      "cras": "cras ",
+      "reference": "of reference."
+    }
   },
   "supportUs": {
     "firstTitle": "Do you want to help us make our dream come true?",

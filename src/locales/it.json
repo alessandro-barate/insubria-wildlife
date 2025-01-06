@@ -37,7 +37,18 @@
   "sosAnimals": {
     "firstTitle": "soccorso fauna",
     "firstParagraph": "Hai trovato un esemplare di animale selvatico ma non sai cosa fare?",
-    "secondParagraph": "*Niente paura, ti aiutiamo noi!*"
+    "secondParagraph": "*Niente paura, ti aiutiamo noi!*",
+    "thirdParagraph": "*[ricorda: ]*",
+    "fourthParagraph": "nessuna cura umana può essere migliore di quelle dei genitori!",
+    "fifthParagraph": "*Prima di intervenire, assicurati che sia davvero necessario.*",
+    "sixthParagraph": {
+      "capital": "*dubbi?*",
+      "explore": "Approfondisci ",
+      "here": "qui ",
+      "call": "o chiama il ",
+      "cras": "cras ",
+      "reference": "di riferimento."
+    }
   },
   "supportUs": {
     "firstTitle": "Vuoi aiutarci a realizzare il nostro sogno?",
