@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store.js";
+import TranslatedTextParagraph from "../components/TranslatedTextParagraph.vue";
 export default {
   name: "Team",
 
@@ -54,7 +55,7 @@ const changeLanguage = (lang) => {
           <section class="team-container">
             <div class="overlay description-section">
               <h1 class="uppercase">{{ t("team.title") }}</h1>
-              <h2>Ecco le fondatrici di Insubria WildLife!</h2>
+              <h2>{{ t("team.secondTitle") }}</h2>
               <div class="team-group-img">
                 <figure>
                   <img
@@ -65,29 +66,10 @@ const changeLanguage = (lang) => {
               </div>
 
               <!-- Team description -->
-              <p class="team-description">
-                <br />
-                <br />
-                Siamo Elena, Giulia, Maura, Alessia e Ilaria (da sinistra a
-                destra) e ci siamo conosciute anni fa in un centro di cura e
-                riabilitazione per animali selvatici, dove abbiamo lavorato,
-                fatto tirocini e volontariato per molti anni.
-                <br />
-                <br />La vita ci ha portate su strade diverse - cambiando
-                lavori, città o nazioni - ma siamo rimaste sempre unite. Ogni
-                volta che possiamo, ci ritroviamo per fare attività in natura:
-                birdwatching, passeggiate nei boschi, ascoltare i bramiti dei
-                cervi, viaggiare e scoprire nuovi luoghi.
-                <br />
-                <br />Il sogno di vedere valorizzato il nostro territorio dal
-                punto di vista naturalistico, e quello di vedere la comunità più
-                coinvolta ci ha portate a fare questo grande passo: aprire la
-                nostra associazione.
-                <br />
-                <br />
-                Speriamo di portarti con noi in quest'avventura e di poter
-                avverare tanti piccoli sogni assieme!
-              </p>
+              <TranslatedTextParagraph
+                text-key="team.paragraph"
+                class="team-description"
+              />
               <!-- END team description -->
             </div>
           </section>

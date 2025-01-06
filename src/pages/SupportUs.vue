@@ -39,8 +39,8 @@ const changeLanguage = (lang) => {
 
           <!-- Top paragraphs -->
           <div class="top-paragraphs">
-            <h2>{{ t("supportUs.title") }}</h2>
-            <p>{{ t("supportUs.listTitle") }}</p>
+            <h2>{{ t("supportUs.firstTitle") }}</h2>
+            <p>{{ t("supportUs.list.listTitle") }}</p>
           </div>
           <!-- END top paragraphs -->
 
@@ -48,33 +48,35 @@ const changeLanguage = (lang) => {
           <div class="payments-list">
             <ul>
               <li>
-                <strong>Bonifico bancario - IBAN:</strong>
+                <span
+                  ><strong>{{
+                    t("supportUs.list.firstListElement")
+                  }}</strong></span
+                >
                 <br />
                 <span id="iban">IT02S0623022808000047552608</span>
               </li>
               <li>
-                <strong>PayPal:</strong>
+                <span><strong>PayPal:</strong></span>
                 <br />
                 <span
                   ><a>
                     <router-link :to="{ name: 'Paypal' }" class="link"
-                      >Clicca qui
+                      >{{ t("supportUs.list.secondListElement.link") }}
                     </router-link> </a
-                  >per sostenerci tramite Paypal</span
+                  >{{ t("supportUs.list.secondListElement.description") }}</span
                 >
               </li>
             </ul>
             <p>
-              Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna
-              selvatica e a preservare il nostro territorio per le future
-              generazioni.
+              {{ t("supportUs.paragraph") }}
             </p>
           </div>
           <!-- END payment methods section -->
 
           <!-- Bottom paragraphs -->
           <div class="bottom-paragraphs">
-            <h2>Condividi la nostra visione e i nostri valori?</h2>
+            <h2>{{ t("supportUs.secondTitle") }}</h2>
             <p>
               Hai idee, passione e voglia di metterti in gioco? Unisciti a noi
               <!-- </p> -->

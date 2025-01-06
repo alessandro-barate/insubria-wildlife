@@ -289,7 +289,7 @@ header {
 
 .container-bg {
   width: 10%;
-  padding-top: 26px;
+  padding-top: 23px;
   padding-bottom: 4px;
   position: relative;
 

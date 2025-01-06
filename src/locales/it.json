@@ -11,8 +11,8 @@
     "jumbo": "Il mondo selvatico è più vicino di quanto pensi: unisciti a noi nella sua scoperta!",
     "mission": {
       "paragraph": "*Insubria Wildlife APS* è la voce giovane, dinamica e internazionale della divulgazione scientifica sulla *fauna selvatica* e gli *ambienti insubrici*. Vogliamo portare il valore della biodiversità sotto i riflettori, rendendolo accessibile e interessante per tutti, ispirando curiosità e consapevolezza.\u000A*La tutela* delle risorse naturali può arricchire la vita di ciascuno e il nostro territorio ne è ricchissimo: sta a noi proteggerlo.\u000A\u000ATramite i social, gli eventi e collaborazioni con esperti, vogliamo creare un luogo di incontro per appassionati, addetti ai lavori e curiosi, stimolando dibattiti e scambi tra persone con diverso background.",
-      "joining": "Unendoti a noi",
-      "description": " potrai conoscere realtà diverse e far parte di una comunità con cui condividere gli stessi obiettivi."
+      "joining": "Unendoti a noi ",
+      "description": "potrai conoscere realtà diverse e far parte di una comunità con cui condividere gli stessi obiettivi."
     },
     "vision": {
       "help": {
@@ -30,11 +30,22 @@
     }
   },
   "team": {
-    "title": "il nostro team"
+    "title": "il nostro team",
+    "secondTitle": "Ecco le fondatrici di Insubria WildLife",
+    "paragraph": "\u000A\u000ASiamo Elena, Giulia, Maura, Alessia e Ilaria (da sinistra a destra) e ci siamo conosciute anni fa in un centro di cura e riabilitazione per animali selvatici, dove abbiamo lavorato, fatto tirocini e volontariato per molti anni.\u000A\u000ALa vita ci ha portate su strade diverse - cambiando lavori, città o nazioni - ma siamo rimaste sempre unite. Ogni volta che possiamo, ci ritroviamo per fare attività in natura: birdwatching, passeggiate nei boschi, ascoltare i bramiti dei cervi, viaggiare e scoprire nuovi luoghi.\u000A\u000AIl sogno di vedere valorizzato il nostro territorio dal punto di vista naturalistico, e quello di vedere la comunità più coinvolta ci ha portate a fare questo grande passo: aprire la nostra associazione.\u000A\u000ASperiamo di portarti con noi in quest'avventura e di poter avverare tanti piccoli sogni assieme!"
   },
   "supportUs": {
-    "title": "Vuoi aiutarci a realizzare il nostro sogno?",
-    "listTitle": "Sostieni la nostra missione con una donazione"
+    "firstTitle": "Vuoi aiutarci a realizzare il nostro sogno?",
+    "list": {
+      "listTitle": "Sostieni la nostra missione con una donazione",
+      "firstListElement": "Bonifico bancario - IBAN:",
+      "secondListElement": {
+        "link": "Clicca qui ",
+        "description": "per sostenerci tramite PayPal"
+      }
+    },
+    "paragraph": "Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna selvatica e a preservare il nostro territorio per le future generazioni.",
+    "secondTitle": "Condividi la nostra visione e i nostri valori?"
   },
   "footer": {
     "vat": "Partita IVA",
