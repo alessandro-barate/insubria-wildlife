@@ -13,10 +13,15 @@ export const parseTranslationText = (text) => {
       pattern: /\[(.*?)\]/g,
       replacement: (match, content) => `<span>${content}</span>`,
     },
-    // Line breaks
+    // Double line breaks
     {
-      pattern: /\\n\\n/g,
+      pattern: /\u000A\u000A/g,
       replacement: "<br><br>",
+    },
+    // Single line break
+    {
+      pattern: /\u000A/g,
+      replacement: "<br>",
     },
   ];
 

@@ -323,10 +323,6 @@ h1 {
   background-position: 100% 30%;
 }
 
-p.paragraph span {
-  font-weight: bold;
-}
-
 .vision {
   padding-bottom: 30px;
   background-image: url(../assets/img/homepage/background/eagle-desktop.jpg);

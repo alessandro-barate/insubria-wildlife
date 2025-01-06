@@ -18,7 +18,9 @@ export default {
     const translatedText = computed(() => {
       const translated = t(props.textKey);
       const parsed = parseTranslationText(translated);
-      return sanitizeHTML(parsed);
+      const sanitized = sanitizeHTML(parsed);
+
+      return sanitized;
     });
 
     return {
