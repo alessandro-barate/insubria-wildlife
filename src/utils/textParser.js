@@ -2,26 +2,34 @@ export const parseTranslationText = (text) => {
   if (!text) return "";
 
   const rules = [
-    // Tag strong usando *testo*
+    // Strong tag using *text*
     {
       pattern: /\*(.*?)\*/g,
       replacement: "<strong>$1</strong>",
     },
 
-    // Tag em (italico) usando _testo_
+    // Italic tag using _text_
     {
       pattern: /_(.*?)_/g,
       replacement: "<em>$1</em>",
     },
 
-    // Tag span usando [testo]
+    // Span tag using [text]
     {
       pattern: /\[(.*?)\]/g,
       replacement: "<span>$1</span>",
     },
+    // Line breaks
+    {
+      pattern: /\\n/g,
+      replacement: "<br>",
+    },
   ];
 
-  return rules.reduce((parsedText, rule) => {
-    return parsedText.replace(rule.pattern, rule.replacement);
-  }, text);
+  let parsedText = text;
+  rules.forEach((rule) => {
+    parsedText = parsedText.replace(rule.pattern, rule.replacement);
+  });
+
+  return parsedText;
 };

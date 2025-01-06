@@ -24,3 +24,7 @@ export default {
   },
 };
 </script>
+
+<template>
+  <span v-html="translatedText"></span>
+</template>

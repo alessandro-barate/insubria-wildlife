@@ -74,19 +74,7 @@ const changeLanguage = (lang) => {
           <article class="overlay margin-l-60">
             <h2 class="uppercase">mission</h2>
             <p>
-              <span>Insubria Wildlife APS</span> è la voce giovane, dinamica e
-              internazionale della divulgazione scientifica sulla
-              <span>fauna selvatica</span> e gli
-              <span>ambienti insubrici</span>. Vogliamo portare il valore della
-              biodiversità sotto i riflettori, rendendolo accessibile e
-              interessante per tutti, ispirando curiosità e consapevolezza.
-              <span>La tutela</span> delle risorse naturali può arricchire la
-              vita di ciascuno e il nostro territorio ne è ricchissimo: sta a
-              noi proteggerlo. <br /><br />
-              Tramite i social, gli eventi e collaborazioni con esperti,
-              vogliamo creare un luogo di incontro per appassionati, addetti ai
-              lavori e curiosi, stimolando dibattiti e scambi tra persone con
-              diverso background.
+              <TranslatedText text-key="homepage.mission" />
             </p>
             <br />
             <br />
