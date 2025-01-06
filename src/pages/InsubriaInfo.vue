@@ -697,7 +697,10 @@ h4 {
     }
 
     .close-button {
+      width: 10%;
       display: block;
+      margin-top: -15px;
+      margin-left: 5%;
       padding-top: 15px;
       padding-bottom: 20px;
     }
