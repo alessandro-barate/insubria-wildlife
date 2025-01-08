@@ -64,47 +64,16 @@ const changeLanguage = (lang) => {
                 risponderemo il prima possibile
               </h2>
             </div>
-            <FormKit
-              type="form"
-              @submit="sendMail"
-              submit-label="Invia"
-              :config="{
-                classes: {
-                  input: 'custom-input',
-                },
-              }"
-            >
+            <FormKit type="form" @submit="sendMail" submit-label="Invia">
               <FormKit
                 type="text"
                 name="name"
                 id="name"
                 label="Nome"
                 required
-                :attrs="{
-                  style:
-                    'color: white !important; background-color: transparent !important',
-                }"
               />
-              <FormKit
-                type="text"
-                name="surname"
-                label="Cognome"
-                required
-                :attrs="{
-                  style:
-                    'color: white !important; background-color: transparent !important',
-                }"
-              />
-              <FormKit
-                type="email"
-                name="mail"
-                label="Email"
-                required
-                :attrs="{
-                  style:
-                    'color: white !important; background-color: transparent !important',
-                }"
-              />
+              <FormKit type="text" name="surname" label="Cognome" required />
+              <FormKit type="email" name="mail" label="Email" required />
               <FormKit
                 type="textarea"
                 name="message"
@@ -113,10 +82,6 @@ const changeLanguage = (lang) => {
                 cols="50"
                 label="Scrivi qui il tuo messaggio"
                 required
-                :attrs="{
-                  style:
-                    'color: white !important; background-color: transparent !important',
-                }"
               />
             </FormKit>
           </div>
@@ -128,25 +93,9 @@ const changeLanguage = (lang) => {
 </template>
 
 <style scoped lang="scss">
-:deep(.formkit-input) {
-  color: white;
-  background-color: transparent;
-}
-
-:deep(.custom-input) {
-  color: white;
-  background-color: transparent;
-}
-
-:deep(.formkit-label) {
-  font-size: 18px;
-  padding-top: 20px;
-  margin-bottom: 5px;
-}
-
 .col {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -155,7 +104,6 @@ const changeLanguage = (lang) => {
 
 .contact {
   width: 60%;
-  color: white;
   text-align: center;
 
   h2 {
@@ -178,22 +126,6 @@ const changeLanguage = (lang) => {
   }
 }
 
-button {
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding: 10px 30px 10px 30px;
-  border-radius: 20px;
-  background-color: #ff6b3ad8;
-
-  &:hover {
-    background-color: #ff6b3a;
-    box-shadow: 0 -1px 10px #ff6b3ad8;
-    transform: scale(1.05);
-  }
-}
-
 // Media queries
 @media (max-width: 500px) {
   .contact {
@@ -211,16 +143,6 @@ button {
   .col {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-}
-
-@media (max-width: 730px) {
-  textarea {
-    width: 80%;
-  }
-
-  .form-container input {
-    width: 250px;
   }
 }
 </style>

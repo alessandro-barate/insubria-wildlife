@@ -1,0 +1,42 @@
+.formkit-input,
+.formkit-textarea {
+  color: inherit !important;
+  font-size: 17px !important;
+  padding: 10px 25px !important;
+}
+
+.formkit-inner {
+  border-radius: 15px !important;
+  margin-bottom: 25px;
+}
+
+// Labels styles
+.formkit-label {
+  font-size: 20px !important;
+}
+
+// Submit button styles
+button.formkit-input {
+  color: black !important;
+  border: none !important;
+  font-size: 19px !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+  padding: 3px 30px 7px 30px !important;
+  border-radius: 20px !important;
+  transition: all 0.5s ease-in-out !important;
+  background-color: #ff6b3ad8 !important;
+
+  &:hover {
+    transform: scale(1.05) !important;
+    background-color: #ff6b3a !important;
+    box-shadow: 0 -1px 10px #ff6b3ac0 !important;
+  }
+}
+
+// Media queries
+@media (max-width: 730px) {
+  .formkit-form {
+    width: 85%;
+  }
+}
