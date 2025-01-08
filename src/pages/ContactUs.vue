@@ -58,29 +58,42 @@ const changeLanguage = (lang) => {
         <section>
           <div class="form-container overlay">
             <div class="contact">
-              <h1 class="uppercase">contattaci</h1>
+              <h1 class="uppercase">{{ t("nav.contactUs") }}</h1>
               <h2>
-                Hai bisogno di contattarci? Compila il form sottostante, ti
-                risponderemo il prima possibile
+                {{ t("contactUs.firstTitle") }}
               </h2>
             </div>
-            <FormKit type="form" @submit="sendMail" submit-label="Invia">
+            <FormKit
+              type="form"
+              @submit="sendMail"
+              :submit-label="t('contactUs.submit')"
+            >
               <FormKit
                 type="text"
                 name="name"
                 id="name"
-                label="Nome"
+                :label="t('contactUs.name')"
                 required
               />
-              <FormKit type="text" name="surname" label="Cognome" required />
-              <FormKit type="email" name="mail" label="Email" required />
+              <FormKit
+                type="text"
+                name="surname"
+                :label="t('contactUs.surname')"
+                required
+              />
+              <FormKit
+                type="email"
+                name="mail"
+                :label="t('contactUs.email')"
+                required
+              />
               <FormKit
                 type="textarea"
                 name="message"
                 id=""
                 rows="8"
                 cols="50"
-                label="Scrivi qui il tuo messaggio"
+                :label="t('contactUs.message')"
                 required
               />
             </FormKit>

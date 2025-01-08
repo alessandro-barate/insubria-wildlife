@@ -184,6 +184,14 @@
       }
     ]
   },
+  "contactUs": {
+    "firstTitle": "Hai bisogno di contattarci? Compila il form sottostante, ti risponderemo il prima possibile",
+    "name": "Nome",
+    "surname": "Cognome",
+    "email": "Email",
+    "message": "Scrivi qui il tuo messaggio",
+    "submit": "Invia"
+  },
   "supportUs": {
     "firstTitle": "Vuoi aiutarci a realizzare il nostro sogno?",
     "list": {

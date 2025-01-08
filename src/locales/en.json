@@ -3,8 +3,8 @@
     "whatsNew": "news",
     "events": "events",
     "news": "posts",
-    "sosAnimal": "sos animals",
-    "contactUs": "contatct us",
+    "sosAnimal": "animals rescue",
+    "contactUs": "contact us",
     "supportUs": "support us"
   },
   "homepage": {
@@ -183,6 +183,14 @@
         "description": "<p>They should <strong>never be touched with bare hands!</strong> Use gardening gloves or a cloth.</p><br><p>We need to make distinctions to act appropriately. If:</p><ul class='sos-cards-list'><li><h4>The specimen is a baby or young (recognizable by absent or short fur)</h4><ul class='nested-list'><li><p><strong>If in good condition</strong>, <strong>reuniting</strong> with the colony might be possible: for more information contact the <strong>Bat Helpdesk</strong> at <span itemprop='telephone'><a href='tel:+393473941266'>+39 347 3941266</a></span></p></li><li><p><strong>If injured, unresponsive or visibly thin</strong> (showing hollowness at shoulder blades and pelvis), needs <strong>immediate rescue</strong> by taking it to one of the <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span></p></li></ul></li><li><h4>The specimen is adult (covered in fur and body length varying from 3 to 10 cm depending on species)</h4><p>If found on the ground, exposed to sun, clinging to a wall at low height, or brought by a cat, needs <strong>immediate rescue</strong>, also in this case by taking it to one of the <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span></p></li></ul><br><h4>For more information visit the <span><a href='https://www.valpredina.eu/cras_wwf/sportello-pipistrelli/' target='_blank'>Bat Helpdesk</a></span></h4>"
       }
     ]
+  },
+  "contactUs": {
+    "firstTitle": "Do you need to contact us? Compile the form below, we will reply as soon as possible",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "message": "Type here your message",
+    "submit": "Submit"
   },
   "supportUs": {
     "firstTitle": "Do you want to help us make our dream come true?",
