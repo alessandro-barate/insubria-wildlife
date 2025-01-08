@@ -268,7 +268,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    gap: 20px;
+    gap: 35px;
     text-align: center;
     align-items: center;
     margin-right: 0;

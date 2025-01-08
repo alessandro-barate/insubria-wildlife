@@ -59,13 +59,14 @@ const changeLanguage = (lang) => {
                   text-key="supportUs.list.secondListElement.name"
                 />
                 <br />
-                <span
+                <!-- <span
                   ><a>
                     <router-link :to="{ name: 'Paypal' }" class="link"
                       >{{ t("supportUs.list.secondListElement.link") }}
                     </router-link> </a
                   >{{ t("supportUs.list.secondListElement.description") }}</span
-                >
+                > -->
+                <span>{{ t("supportUs.list.secondListElement.link") }}</span>
               </li>
             </ul>
             <p>

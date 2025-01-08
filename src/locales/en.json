@@ -199,7 +199,7 @@
       "firstListElement": "*Bank transfer - IBAN:*",
       "secondListElement": {
         "name": "*PayPal*",
-        "link": "Click here ",
+        "link": "Available soon",
         "description": "to support us via PayPal"
       }
     },

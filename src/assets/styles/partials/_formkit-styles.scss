@@ -3,11 +3,29 @@
   color: inherit !important;
   font-size: 17px !important;
   padding: 10px 25px !important;
+
+  &:focus {
+    outline: none !important; // rimuove l'outline blu
+    border-color: #ff6b3a !important;
+    box-shadow: none !important; // rimuove eventuali ombre
+  }
+
+  &:focus-visible {
+    outline: none !important; // rimuove anche l'outline quando viene mostrato con tab
+    border-color: #ff6b3a !important;
+  }
 }
 
 .formkit-inner {
   border-radius: 15px !important;
   margin-bottom: 25px;
+  border: none !important;
+
+  &:focus-within {
+    border-color: #ff6b3a !important;
+    box-shadow: 0 0 0 1px #ff6b3a !important; // crea un bordo personalizzato
+    outline: none !important;
+  }
 }
 
 // Labels styles

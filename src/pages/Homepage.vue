@@ -196,6 +196,7 @@ const changeLanguage = (lang) => {
 }
 
 h1 {
+  color: black;
   padding-top: 100px;
   font-size: 95px;
 

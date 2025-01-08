@@ -228,7 +228,7 @@ const changeLanguage = (lang) => {
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
       :src="'src/assets/img/sos-animal/flow-chart-eng.jpg'"
-      alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+      alt="Actions flow to follow in case of animal finding"
       @click.stop
     />
   </div>
