@@ -522,14 +522,44 @@ header {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+  .right-container {
+    width: 35%;
+  }
+
   .lang-container {
-    width: 120%;
-    margin-right: 0;
+    width: 100%;
+    margin-left: -5px;
+    margin-right: 1.5em;
 
     #italian,
     #english {
       width: 100%;
+    }
+
+    #italian {
+      padding-right: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 999px) {
+  .right-container {
+    width: 23%;
+  }
+
+  .lang-container {
+    width: 100%;
+    margin-left: -5px;
+    margin-right: 1.5em;
+
+    #italian,
+    #english {
+      width: 100%;
+    }
+
+    #italian {
+      padding-right: 5px;
     }
   }
 }
