@@ -17,14 +17,22 @@ export default {
 <script setup>
 // Form logic
 const sendMail = async (fields) => {
+  // For debug
+  // console.log("Tutte le variabili ENV:", import.meta.env);
+  // console.log("URL utilizzato:", import.meta.env.VITE_ENDPOINT_URL);
+
   axios
     .post(import.meta.env.VITE_ENDPOINT_URL, fields)
     .then(function (response) {
+      // Visualizzare lo stato "mail inviata" in un modo più carino
       alert(JSON.stringify(response.data));
     })
     .catch(function (error) {
-      console.debug(error);
-      console.log("Si è verificato un errore");
+      // For debug
+      // console.debug(error);
+      // console.log("Si è verificato un errore");
+
+      // Visualizzare lo stato "Errore..." in un modo più carino
       alert("Si è verificato un errore, riprovare tra qualche minuto");
     });
 };

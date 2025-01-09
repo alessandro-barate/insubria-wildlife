@@ -9,6 +9,18 @@ export default defineConfig({
     api: "modern-compiler",
     importers: [],
   },
+  // In caso togliere questo
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8000",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
+  // In caso togliere questo
+
   plugins: [vue()],
   build: {
     outDir: "dist",
