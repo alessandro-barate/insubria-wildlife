@@ -2,6 +2,16 @@
 import { store } from "../store.js";
 export default {
   name: "InsubriaInfo",
+  metaInfo: {
+    meta: [
+      {
+        vmid: "description",
+        name: "description",
+        content:
+          "Insubria WildLife: scopri che cos'è l'Insubria e la sua storia, perchè abbiamo scelto questo territorio ed il significato del nostro logo",
+      },
+    ],
+  },
 
   data() {
     return {

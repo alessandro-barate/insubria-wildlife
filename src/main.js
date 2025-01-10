@@ -1,8 +1,5 @@
 import { createApp } from "vue";
 
-// Importing Vue Meta
-import { createMetaManager } from "vue-meta";
-
 // Importing Vue FormKit
 import { plugin, defaultConfig } from "@formkit/vue";
 // import config from "./formkit.config.js";
@@ -36,7 +33,9 @@ import TranslatedTextParagraph from "./components/TranslatedTextParagraph.vue";
 // Importing text translation parser component for span
 import TranslatedTextSpan from "./components/TranslatedTextSpan.vue";
 
-createApp(App)
+const app = createApp(App);
+
+app
   .use(
     plugin,
     defaultConfig({
@@ -46,7 +45,6 @@ createApp(App)
   .use(SanitizePlugin)
   .use(router)
   .use(i18n)
-  .use(createMetaManager())
   .component("TranslatedTextParagraph", TranslatedTextParagraph)
   .component("TranslatedTextSpan", TranslatedTextSpan)
   .mount("#app");

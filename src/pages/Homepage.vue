@@ -1,17 +1,28 @@
-<script>
+<script setup>
 import { store } from "../store.js";
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+};
+</script>
+
+<script>
 export default {
   name: "Homepage",
-  metaInfo: {
-    meta: [
-      {
-        vmid: "description",
-        name: "description",
-        content:
-          "Scopri Insubria WildLife: La nostra missione è proteggere e valorizzare la fauna selvatica del territorio insubrico attraverso progetti di conservazione, ricerca e educazione ambientale.",
-      },
-    ],
-  },
 
   data() {
     return {
@@ -42,27 +53,6 @@ export default {
     //   setInterval(this.nextCard, 5000);
     // },
   },
-};
-</script>
-
-<script setup>
-import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
-
-// Defaulf language to Italian if no other language is selected
-if (!localStorage.getItem("language")) {
-  localStorage.setItem("language", "it");
-}
-
-// Loading the saved language
-const savedLanguage = localStorage.getItem("language");
-if (savedLanguage) {
-  locale.value = savedLanguage;
-}
-
-const changeLanguage = (lang) => {
-  locale.value = lang;
-  localStorage.setItem("language", lang);
 };
 </script>
 
