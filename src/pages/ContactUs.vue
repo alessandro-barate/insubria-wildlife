@@ -147,7 +147,7 @@ const changeLanguage = (lang) => {
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../assets/img/contact/background/flying-bird.png);
+  background-image: url(../assets/img/contact/background/flying-bird.webp);
 }
 
 .contact {

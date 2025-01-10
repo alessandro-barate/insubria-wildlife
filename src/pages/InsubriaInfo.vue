@@ -121,9 +121,9 @@ const changeLanguage = (lang) => {
               <div class="img-container-2">
                 <figure>
                   <img
-                    src="../assets/img/insubria/maps/insubria-immagini.png"
+                    src="../assets/img/insubria/maps/insubria-immagini.webp"
                     loading="lazy"
-                    alt="Territorio dell'Insubria"
+                    :alt="t('insubria.history.alt')"
                   />
                 </figure>
               </div>
@@ -407,19 +407,19 @@ h4 {
 .upper-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(../assets/img/insubria/background/fox-2.jpg);
+  background-image: url(../assets/img/insubria/background/fox-2.webp);
 }
 
 .middle-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(../assets/img/insubria/background/orange-bird.jpg);
+  background-image: url(../assets/img/insubria/background/orange-bird.webp);
 }
 
 .lower-bg {
   background-size: cover;
   background-position: center;
-  background-image: url(../assets/img/insubria/background/deer.jpg);
+  background-image: url(../assets/img/insubria/background/deer.webp);
 }
 
 // Bottom list styles

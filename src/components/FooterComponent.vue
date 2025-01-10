@@ -35,7 +35,7 @@ const changeLanguage = (lang) => {
             <div class="logo-footer-container d-flex">
               <img
                 class="footer-logo"
-                src="../assets/img/logo/bird-only.png"
+                src="../assets/img/logo/bird-only.webp"
                 alt="Insubria logo"
               />
             </div>
@@ -50,7 +50,7 @@ const changeLanguage = (lang) => {
                   <!-- GPS image -->
                   <div class="location-container d-flex">
                     <img
-                      src="../assets/img/footer/location-icon.png"
+                      src="../assets/img/footer/location-icon.webp"
                       alt="Logo GPS"
                     />
                   </div>

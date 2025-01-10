@@ -93,7 +93,7 @@ const changeLanguage = (lang) => {
             <div class="logo">
               <a>
                 <router-link :to="{ name: 'Homepage' }">
-                  <img src="/./src/assets/img/logo/double-circle.png" alt="" />
+                  <img src="/./src/assets/img/logo/double-circle.webp" alt="" />
                 </router-link>
               </a>
             </div>
@@ -211,7 +211,7 @@ const changeLanguage = (lang) => {
                   :class="{ 'active-lang': locale === 'it' }"
                 >
                   <img
-                    src="../assets/img/header/flags/italy-flag-round.png"
+                    src="../assets/img/header/flags/italy-flag-round.webp"
                     alt="Bandiera italiana"
                   />
                 </button>
@@ -221,7 +221,7 @@ const changeLanguage = (lang) => {
                   :class="{ 'active-lang': locale === 'en' }"
                 >
                   <img
-                    src="../assets/img/header/flags/uk-flag-round.png"
+                    src="../assets/img/header/flags/uk-flag-round.webp"
                     alt="English flag"
                   />
                 </button>

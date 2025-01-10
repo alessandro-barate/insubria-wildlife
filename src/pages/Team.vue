@@ -59,8 +59,8 @@ const changeLanguage = (lang) => {
               <div class="team-group-img">
                 <figure>
                   <img
-                    src="../assets/img/team/background/team-group.jpg"
-                    alt="Foto di gruppo del team"
+                    src="../assets/img/team/background/team-group.webp"
+                    :alt="t('team.alt')"
                   />
                 </figure>
               </div>
@@ -87,7 +87,10 @@ const changeLanguage = (lang) => {
                 >
                   <div class="member-img">
                     <figure>
-                      <img :src="member.image" alt="" />
+                      <img
+                        :src="member.image"
+                        :alt="t('team.members.' + index + '.alt')"
+                      />
                     </figure>
                   </div>
                   <h2>{{ member.name }}</h2>
@@ -143,7 +146,7 @@ const changeLanguage = (lang) => {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 10px;
-  background-image: url(../assets/img/team/background/swan.jpg);
+  background-image: url(../assets/img/team/background/swan.webp);
   background-size: cover;
   background-position: center;
 }
@@ -180,7 +183,7 @@ const changeLanguage = (lang) => {
 }
 
 .grid-section {
-  background-image: url(../assets/img/team/background/reindeer.jpg);
+  background-image: url(../assets/img/team/background/reindeer.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -448,7 +451,7 @@ const changeLanguage = (lang) => {
 
 @media (max-width: 800px) {
   .grid-section {
-    background-image: url(../assets/img/team/background/red-deer.jpg);
+    background-image: url(../assets/img/team/background/red-deer.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

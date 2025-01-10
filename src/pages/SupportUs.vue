@@ -104,7 +104,7 @@ const changeLanguage = (lang) => {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../assets/img/support/background/squirrel.jpg);
+  background-image: url(../assets/img/support/background/squirrel.webp);
 }
 
 .row {

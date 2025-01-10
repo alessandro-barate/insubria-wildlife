@@ -484,7 +484,7 @@ h1 {
     margin-right: 0;
     padding-top: 50px;
     background-color: #0d0907;
-    background-image: url(../assets/img/homepage/background/fox.jpg);
+    background-image: url(../assets/img/homepage/background/fox.webp);
     background-size: cover;
     background-position: center;
 

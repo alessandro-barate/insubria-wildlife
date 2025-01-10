@@ -103,7 +103,7 @@ const changeLanguage = (lang) => {
               <div v-if="italianLanguage" class="flow-chart-img">
                 <figure>
                   <img
-                    src="../assets/img/sos-animal/flow-chart.jpg"
+                    src="../assets/img/sos-animal/flow-chart.webp"
                     alt="Flusso delle azioni da svolgere in caso di ritrovamento di un animale"
                     @click="toggleZoom"
                   />
@@ -115,7 +115,7 @@ const changeLanguage = (lang) => {
               <div v-if="englishLanguage" class="flow-chart-img">
                 <figure>
                   <img
-                    src="../assets/img/sos-animal/flow-chart-eng.jpg"
+                    src="../assets/img/sos-animal/flow-chart-eng.webp"
                     alt="Actions flow in case of animal finding"
                     @click="toggleZoom"
                   />
@@ -170,7 +170,7 @@ const changeLanguage = (lang) => {
                 >
                   <div class="card-img">
                     <figure>
-                      <img :src="sosCard.image" alt="" />
+                      <img :src="sosCard.image" :alt="sosCard.alt" />
                     </figure>
                   </div>
                   <h2>{{ sosCard.title }}</h2>
@@ -191,7 +191,10 @@ const changeLanguage = (lang) => {
                       <button @click="hideMemberDetails(index)">✕</button>
                     </div>
                     <div class="details-img">
-                      <img :src="store.sosCards[currentIndex].image" alt="" />
+                      <img
+                        :src="store.sosCards[currentIndex].image"
+                        :alt="store.sosCards[currentIndex].alt"
+                      />
                     </div>
                     <div class="details-description">
                       <div
@@ -216,7 +219,7 @@ const changeLanguage = (lang) => {
   <div v-if="showZoom" v-show="italianLanguage" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
-      :src="'src/assets/img/sos-animal/flow-chart.jpg'"
+      :src="'src/assets/img/sos-animal/flow-chart.webp'"
       alt="Flusso delle azioni da svolgere in caso di ritrovamento"
       @click.stop
     />
@@ -227,7 +230,7 @@ const changeLanguage = (lang) => {
   <div v-if="showZoom" v-show="englishLanguage" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
     <img
-      :src="'src/assets/img/sos-animal/flow-chart-eng.jpg'"
+      :src="'src/assets/img/sos-animal/flow-chart-eng.webp'"
       alt="Actions flow to follow in case of animal finding"
       @click.stop
     />
@@ -252,7 +255,7 @@ const changeLanguage = (lang) => {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 10px;
-  background-image: url(../assets/img/sos-animal/background/eagle-2.jpg);
+  background-image: url(../assets/img/sos-animal/background/eagle-2.webp);
   background-size: cover;
   background-position: center;
 }
@@ -324,7 +327,7 @@ const changeLanguage = (lang) => {
 }
 
 .grid-section {
-  background-image: url(../assets/img/sos-animal/background/blue-bird.jpg);
+  background-image: url(../assets/img/sos-animal/background/blue-bird.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

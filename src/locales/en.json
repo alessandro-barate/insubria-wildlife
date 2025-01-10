@@ -43,6 +43,7 @@
     "history": {
       "firstTitle": "A little bit of History",
       "firstParagraph": "The ancient Romans called *Insubri* the people who inhabited some northern areas of modern-day Italy.\u000A\u000A*Archaeological findings dating back to 9000 years ago* have been discovered, telling us about people who lived in the territories between the *Serio and Sesia rivers, north of the Toce valleys, the Swiss cantons of Ticino and Graubünden, and south of the Po river*. Subsequently, three different cultures emerged:",
+      "alt": "Map of the Insubrian territory",
       "isolino": {
         "name": "of Isolino, ",
         "date": "around 5060 a.C.",
@@ -99,39 +100,46 @@
   "team": {
     "title": "our team",
     "secondTitle": "Here the Insubria WildLife founders!",
+    "alt": "Picture of Insubria Wildlife's founders",
     "paragraph": "\u000A\u000AWe are Elena, Giulia, Maura, Alessia and Ilaria (from left to right) and we met years ago in a wildlife care and rehabilitation center, where we worked, did internships and volunteered for many years.\u000A\u000ALife has taken us on different paths - changing jobs, cities or countries - but we have always remained united. Whenever we can, we get together to do activities in nature: birdwatching, walking in the woods, listening to deer calls, traveling and discovering new places.\u000A\u000AThe dream of seeing our territory valued from a naturalistic point of view, and seeing the community more involved led us to take this big step: opening our association.\u000A\u000AWe hope to take you with us on this adventure and to make many small dreams come true together!",
-    "members": [
-      {
+    "members": {
+      "0": {
+        "alt": "Picture of Ilaria",
         "name": "Ilaria",
         "title": "President",
         "description": "A naturalist since I can remember. I looked at pictures of plants, animals, minerals and stars and understood what my path was. The passion for animals, however, was born much earlier, when a wet nose woke me up in my crib, and never left me since; when I spent time in the garden with my grandmother learning names of flowers that I would later forget, because I was busy watching a lizard, a bee or chasing a passing bird. Today part of my job is trying to convey the wonder I feel at every little discovery...if I don't get lost in it!"
       },
-      {
+      "1": {
+        "alt": "Picture of Alessia",
         "name": "Alessia",
         "title": "Vice President",
         "description": "I couldn't imagine my life away from the natural world: that's why I chose this path even before I was aware of it. Deeply passionate and curious, as soon as I could, I traveled: for leisure and work, in Italy and abroad, taking part in volunteer projects. Every time I returned home, I found myself enriched with broader professional and personal experience. I've always loved learning and sharing with the people around me, and in my free time I travel, sleep in tents, read and draw (mostly feathered friends!)"
       },
-      {
+      "2": {
+        "alt": "Picture of Elena",
         "name": "Elena",
         "title": "Secretary",
         "description": "Always passionate about animals and nature, I entered this world (almost 20 years ago) through an association working in environmental monitoring. Since then, I have collaborated with many associations as a science communicator, guide in protected oases and wildlife parks, and for education in schools. Volunteering gave me the opportunity to come into contact with wildlife, and I still work in this field today. I am excited about my journey and the countless opportunities it has given me, but I am even more excited thinking about the support I will be able to give to Insubria Wildlife and everything that this new adventure will be able to give me!"
       },
-      {
+      "3": {
+        "alt": "Picture of Giulia",
         "name": "Giulia",
         "title": "Advisor",
         "description": "I still vividly remember when my passion for animals first appeared in my thoughts. At 7 years old, though, you're not yet fully aware of it. A raptor accidentally hit my grandparents' front door: I picked it up very carefully, went down to the garden, and when I slightly loosened my grip, it took flight in an instant. Something clicked in me that day: a feeling, a love for wildlife, that wasn't yet ready to fully bloom. It did during my university years, along with the certainty that it would never leave me again. Today I've made my passion my job. I love spending time outdoors, in the woods, in the company of my dogs or even just in silence with my camera, waiting for a kingfisher to perch on the branch in front of me."
       },
-      {
+      "4": {
+        "alt": "Picture of Maura",
         "name": "Maura",
         "title": "Advisor",
         "description": "If the first word you say when you're little is 'dog', it means that somewhere your path is already set. Becoming a veterinarian was a dream that came true, but encountering wildlife took a large part of my heart. During my Erasmus project at a university clinic, I had a small otter as a patient, followed by raptors and bats: these experiences only strengthened my love for wildlife, culminating in an internship at a Wildlife Recovery Center, where I discovered the world of local fauna and the value of volunteering."
       },
-      {
+      "5": {
+        "alt": "Picture of Roberto",
         "name": "Roberto",
         "title": "Advisor",
         "description": "Nature has always had an attractive side for me: a deep feeling, difficult to explain in words. It's my passion, my outlet, my safe harbor. Where I learn new things and spend time with the people I love: I've also made it my job, becoming a safari guide in Africa. With Insubria Wildlife, I want to lead people to explore the wonderful local nature, often little known."
       }
-    ],
+    },
     "findOut": "Find out more"
   },
   "sosAnimals": {
@@ -151,34 +159,42 @@
     },
     "sosCards": [
       {
+        "alt": "Picture of a box with a cloth and a bottle filled with warm water inside",
         "title": "Transport",
         "description": "<p><strong>Proper transport is essential</strong> to avoid additional stress or injuries: choose a box of the right size to limit excessive movement, while allowing the animal to stay in an upright position.<br><br>Use absorbent paper or soft cloth on the bottom, <strong>making sure there are no threads</strong> that could tangle around legs and wings.<br><br>In case of shock, hairless/featherless animal, or obvious hypothermia, <strong>add a heat source</strong>, such as a hot water bottle: however, it's crucial that the animal is <strong>never in direct contact with it</strong>, so wrap cloth or absorbent paper around the heat source and, in case of a bottle, use tape to secure it to the box. In any case, <strong>always give the animal the possibility to move away</strong> from it if needed.<br><br>Finally, close the box with a <strong>perforated lid</strong> to ensure ventilation.</p>"
       },
       {
+        "alt": "Picture of a hedgehog drinking milk",
         "title": "Food and water",
         "description": "<p>Wildlife, especially when in difficulty, is <strong>particularly sensitive to unsuitable food</strong>, which can cause various problems, even leading to death: for this reason, you <strong>should always avoid</strong> feeding animals.</p><br><h4>Here's a brief list of foods to absolutely avoid:</h4><ul class='details-description-list'><li>Cow's milk and dairy products in general</li><li>Bread</li><li>Cookies</li><li>Sweets</li><li>Processed foods</li></ul><br><p>Regarding hydration, <strong>water should only be given to alert and responsive animals</strong>, taking care to choose containers suitable for the animal's size: if too bulky, they could be accidentally hit by some of the animal's movements and spill their contents, ending up wetting the box and the animal itself.<br>For small sizes, such as birds or very small cubs, a jar lid is usually sufficient.</p><br><h4>If you cannot directly bring the specimen to a  <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span>, contact them and ask for specific advice</h4>"
       },
       {
+        "alt": "Picture of a little bird over a human hand",
         "title": "Who to call",
         "description": "<p>Scattered across the territory there are <strong>Wildlife Recovery Centers</strong> or <strong>C.R.A.S.</strong></p><br><h4>What are they?</h4><br><p>These are centers set up for the care and recovery of wildlife, however unfortunately not all of them have the ability to rescue a specimen in difficulty: in this case the responsibility falls to the Provincial Police.</p><br><p>At the following link you can find the complete list of C.R.A.S., divided by region <a href='https://elencocras.it/' target='_blank'>https://elencocras.it/</a></p>"
       },
       {
+        "alt": "Picture of two little naked mammals over a human hand",
         "title": "Naked mammals",
         "description": "<p><strong>If naked with closed eyes or out of the nest, they always need intervention.</strong></p><br><p>Returning them to the nest is possible and advisable if they are not injured and show certain vitality (if they move, are warm, and react when stimulated) and if the nest is accessible and intact.</p><br><h4>Use gloves or cloth to avoid leaving your scent, otherwise the parent might abandon them!<br><br></h4><p>Once repositioned in the den, you must move away (never stay in sight), monitor the activity of cubs and parents for the next 4-6 hours and, meanwhile, contact the  <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span></p>"
       },
       {
+        "alt": "Picture of a little fawn laying on the grass",
         "title": "Young mammals with fur",
         "description": "<p><strong>Young animals are not always abandoned</strong>.</p><br><p>Cubs with developed fur and wide open eyes <strong>begin exploring the territory</strong>, so it's not uncommon to find young hares, rabbits, or squirrels alone: it's part of their life cycle.</p><br><h4>This is completely normal and essential for their growth, so they should not be rescued.</h4><br><p><strong>Roe and red deer fawns</strong> are emblematic: they are <strong>born odorless</strong> and when mothers leave to feed, they hide them in vegetation for extended periods. Being odorless protects them from predators but, <strong>if touched, they will acquire a scent foreign to the mother and will be abandoned!</strong></p><br><h4>If the discovery area presents dangers, it's good practice to contact the  <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span>. for advice.</h4>"
       },
       {
+        "alt": "Picture of a bird over a sprit",
         "title": "Birds out of the nest",
         "description": "<p>Like human beings learn to walk with time and practice, many <strong>young birds spend time learning the basics of flight, and they do this on the ground. This is normal.</strong></p><p>However, we need to make distinctions to act in the best way. We might encounter:</p><ul class='sos-cards-list'><li><h4>Birds born without feathers</h4><p>This category includes birds like blackbirds, sparrows, and crows: if found outside the nest without complete plumage, they need our intervention. <strong>If possible, they should be put back in the nest and monitored from afar (even for 4-5 hours)</strong>, to ensure parents approach.</p><ul class='nested-list'><li><h4>If completely covered with feathers and plumes</h4><p>They are in the exploration and learning phase: <strong>they are practicing flying, so they should not be removed from the territory</strong> and taken away from parental care, as parents still monitor and feed them occasionally.</p></li></ul></li><li><h4>Birds born covered in down</h4><p>This category includes birds like owls, kestrels, tawny owls, wood pigeons: <strong>if found at this stage, they should be returned to their nest or placed in an artificial one</strong>, protected (like a box) but accessible to parents, who will continue caring for the chick (always contact the  <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span> for more specific advice).</p><ul class='nested-list'><li><h4>If completely covered in plumage</h4><p>As mentioned above, <strong>they are learning to fly</strong>, so <strong>should not be removed</strong> from the ground.</p></li></ul></li></ul><h4>This is a fundamental phase for the animal's growth and, if deprived of it, they will have less chance of survival in the future.</h4>"
       },
       {
+        "alt": "Picture of a common swift",
         "title": "Common Swifts, Swallows and House Martins",
         "description": "<p>Usually, swallow and house martin nests are clearly visible, and if we find <strong>a chick in good condition, it should be returned to the nest.</strong></p><br><p>These animals have <strong>extremely short legs</strong> (especially swifts) because they are highly specialized for life in flight: for this reason <strong>they might struggle to take off from the ground</strong>, and this applies not only to chicks but also to adult specimens!</p><br><h4>A swift on the ground, therefore, always needs to be rescued.</h4><br><p>You can contact the  <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span> and request assistance by sending photos, to evaluate whether to attempt a release back into nature or if recovery care is needed.</p>"
       },
       {
+        "alt": "Picture of a bat",
         "title": "Bats",
         "description": "<p>They should <strong>never be touched with bare hands!</strong> Use gardening gloves or a cloth.</p><br><p>We need to make distinctions to act appropriately. If:</p><ul class='sos-cards-list'><li><h4>The specimen is a baby or young (recognizable by absent or short fur)</h4><ul class='nested-list'><li><p><strong>If in good condition</strong>, <strong>reuniting</strong> with the colony might be possible: for more information contact the <strong>Bat Helpdesk</strong> at <span itemprop='telephone'><a href='tel:+393473941266'>+39 347 3941266</a></span></p></li><li><p><strong>If injured, unresponsive or visibly thin</strong> (showing hollowness at shoulder blades and pelvis), needs <strong>immediate rescue</strong> by taking it to one of the <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span></p></li></ul></li><li><h4>The specimen is adult (covered in fur and body length varying from 3 to 10 cm depending on species)</h4><p>If found on the ground, exposed to sun, clinging to a wall at low height, or brought by a cat, needs <strong>immediate rescue</strong>, also in this case by taking it to one of the <span><a href='https://elencocras.it/' class='uppercase' target='_blank'>c.r.a.s.</a></span></p></li></ul><br><h4>For more information visit the <span><a href='https://www.valpredina.eu/cras_wwf/sportello-pipistrelli/' target='_blank'>Bat Helpdesk</a></span></h4>"
       }
