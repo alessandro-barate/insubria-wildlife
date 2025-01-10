@@ -2,6 +2,16 @@
 import { store } from "../store.js";
 export default {
   name: "Homepage",
+  metaInfo: {
+    meta: [
+      {
+        vmid: "description",
+        name: "description",
+        content:
+          "Scopri Insubria WildLife: La nostra missione è proteggere e valorizzare la fauna selvatica del territorio insubrico attraverso progetti di conservazione, ricerca e educazione ambientale.",
+      },
+    ],
+  },
 
   data() {
     return {
