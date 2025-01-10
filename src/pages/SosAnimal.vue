@@ -170,7 +170,11 @@ const changeLanguage = (lang) => {
                 >
                   <div class="card-img">
                     <figure>
-                      <img :src="sosCard.image" :alt="sosCard.alt" />
+                      <img
+                        :src="sosCard.image"
+                        :alt="sosCard.alt"
+                        loading="lazy"
+                      />
                     </figure>
                   </div>
                   <h2>{{ sosCard.title }}</h2>
@@ -194,6 +198,7 @@ const changeLanguage = (lang) => {
                       <img
                         :src="store.sosCards[currentIndex].image"
                         :alt="store.sosCards[currentIndex].alt"
+                        loading="lazy"
                       />
                     </div>
                     <div class="details-description">
@@ -221,6 +226,7 @@ const changeLanguage = (lang) => {
     <img
       :src="'src/assets/img/sos-animal/flow-chart.webp'"
       alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+      loading="lazy"
       @click.stop
     />
   </div>
@@ -232,6 +238,7 @@ const changeLanguage = (lang) => {
     <img
       :src="'src/assets/img/sos-animal/flow-chart-eng.webp'"
       alt="Actions flow to follow in case of animal finding"
+      loading="lazy"
       @click.stop
     />
   </div>

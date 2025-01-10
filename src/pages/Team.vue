@@ -61,6 +61,7 @@ const changeLanguage = (lang) => {
                   <img
                     src="../assets/img/team/background/team-group.webp"
                     :alt="t('team.alt')"
+                    loading="lazy"
                   />
                 </figure>
               </div>
@@ -90,6 +91,7 @@ const changeLanguage = (lang) => {
                       <img
                         :src="member.image"
                         :alt="t('team.members.' + index + '.alt')"
+                        loading="lazy"
                       />
                     </figure>
                   </div>
@@ -112,7 +114,11 @@ const changeLanguage = (lang) => {
                       <button @click="hideMemberDetails(index)">✕</button>
                     </div>
                     <div class="details-img">
-                      <img :src="store.members[currentIndex].image" alt="" />
+                      <img
+                        :src="store.members[currentIndex].image"
+                        :alt="store.members[currentIndex].alt"
+                        loading="lazy"
+                      />
                     </div>
                     <div class="details-description">
                       <p>{{ store.members[currentIndex].description }}</p>
