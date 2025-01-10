@@ -223,7 +223,7 @@ h1 {
 }
 
 .jumbo {
-  background-image: url(../assets/img/homepage/background/bird-jumbo-desktop.jpg);
+  background-image: url(../assets/img/homepage/background/bird-jumbo-desktop.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 20%;
@@ -315,7 +315,7 @@ h1 {
   margin-right: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-image: url(../assets/img/homepage/background/deer-night-desktop.jpg);
+  background-image: url(../assets/img/homepage/background/deer-night-desktop.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 30%;
@@ -323,7 +323,7 @@ h1 {
 
 .vision {
   padding-bottom: 30px;
-  background-image: url(../assets/img/homepage/background/eagle-desktop.jpg);
+  background-image: url(../assets/img/homepage/background/eagle-desktop.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -431,7 +431,7 @@ h1 {
   }
 
   .jumbo {
-    background-image: url(../assets/img/homepage/background/bird-jumbo-reverse-mobile.jpg);
+    background-image: url(../assets/img/homepage/background/bird-jumbo-reverse-mobile.webp);
     background-position: 20% 0px;
 
     p {
@@ -460,7 +460,7 @@ h1 {
     position: static;
     justify-content: center;
     background-color: #0d0907;
-    background-image: url(../assets/img/homepage/background/bird-coloured-mobile.jpg);
+    background-image: url(../assets/img/homepage/background/bird-coloured-mobile.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
