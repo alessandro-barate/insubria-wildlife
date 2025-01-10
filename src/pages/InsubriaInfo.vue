@@ -166,16 +166,16 @@ const changeLanguage = (lang) => {
           <div class="images-container d-flex">
             <div class="logo-img">
               <img
-                src="../assets/img/logo/double-circle.png"
+                src="../assets/img/logo/double-circle.webp"
                 loading="lazy"
                 alt="Insubria logo"
               />
             </div>
             <div class="real-image d-flex">
               <img
-                src="../assets/img/insubria/fiorrancino.png"
+                src="../assets/img/insubria/fiorrancino.webp"
                 loading="lazy"
-                alt="Fiorrancino in primo piano"
+                :alt="t('insubria.logo.firecrestAlt')"
               />
             </div>
           </div>
