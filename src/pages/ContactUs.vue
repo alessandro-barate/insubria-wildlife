@@ -12,6 +12,9 @@ export default {
     };
   },
 };
+
+console.log("Ambiente:", import.meta.env.MODE);
+console.log("URL API:", import.meta.env.VITE_ENDPOINT_URL);
 </script>
 
 <script setup>
@@ -20,21 +23,44 @@ const sendMail = async (fields) => {
   // For debug
   // console.log("Tutte le variabili ENV:", import.meta.env);
   // console.log("URL utilizzato:", import.meta.env.VITE_ENDPOINT_URL);
+  // console.log("Metodo richiesta: POST");
+  // console.log("URL:", import.meta.env.VITE_ENDPOINT_URL);
+  // console.log("Dati:", fields);
 
-  axios
-    .post(import.meta.env.VITE_ENDPOINT_URL, fields)
-    .then(function (response) {
-      // Visualizzare lo stato "mail inviata" in un modo più carino
-      alert(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-      // For debug
-      // console.debug(error);
-      // console.log("Si è verificato un errore");
+  // Configurazione esplicita della richiesta POST
 
-      // Visualizzare lo stato "Errore..." in un modo più carino
-      alert("Si è verificato un errore, riprovare tra qualche minuto");
-    });
+  try {
+    const config = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+      },
+    };
+
+    const response = await axios.post(
+      import.meta.env.VITE_ENDPOINT_URL,
+      fields,
+      config
+    );
+
+    // console.log("Risposta:", response);
+
+    if (response.data.status === "success") {
+      alert("Email inviata con successo!");
+    } else {
+      alert(response.data.message || "Si è verificato un errore");
+    }
+  } catch (error) {
+    console.error("Errore:", error);
+    console.error("Config:", error.config);
+    if (error.response) {
+      console.error("Response:", error.response.data);
+      console.error("Status:", error.response.status);
+    }
+    alert("Si è verificato un errore. Per favore riprova.");
+  }
 };
 
 // Page translation logic
@@ -74,6 +100,7 @@ const changeLanguage = (lang) => {
             <FormKit
               type="form"
               @submit="sendMail"
+              method="POST"
               :submit-label="t('contactUs.submit')"
             >
               <FormKit
