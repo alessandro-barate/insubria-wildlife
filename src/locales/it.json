@@ -1,4 +1,17 @@
 {
+  "index": {
+    "title": {
+      "homepage": "Homepage",
+      "insubria": "Informazioni",
+      "team": "Il nostro Team",
+      "events": "Eventi",
+      "news": "News",
+      "sosAnimal": "Sos Animali",
+      "contactUs": "Contacttaci",
+      "supportUs": "Supportaci",
+      "paypal": "Dona con PayPal"
+    }
+  },
   "nav": {
     "whatsNew": "novità",
     "events": "eventi",

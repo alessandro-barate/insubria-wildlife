@@ -1,4 +1,17 @@
 {
+  "index": {
+    "title": {
+      "homepage": "Homepage",
+      "insubria": "Information",
+      "team": "Our Team",
+      "events": "Events",
+      "news": "News",
+      "sosAnimal": "Wildlife Rescue",
+      "contactUs": "Contact Us",
+      "supportUs": "Support Us",
+      "paypal": "Donate with PayPal"
+    }
+  },
   "nav": {
     "whatsNew": "news",
     "events": "events",

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { i18n } from "./i18n";
+import { watch } from "vue";
 
-// Italian pages
+// Pages
 import Homepage from "./pages/Homepage.vue";
 import InsubriaInfo from "./pages/InsubriaInfo.vue";
 import Team from "./pages/Team.vue";
@@ -10,6 +12,20 @@ import SosAnimals from "./pages/SosAnimal.vue";
 import ContactUs from "./pages/ContactUs.vue";
 import SupportUs from "./pages/SupportUs.vue";
 import PaypalPage from "./pages/PaypalPage.vue";
+
+const updateTitle = (to) => {
+  try {
+    if (to.meta?.titleKey) {
+      const title = i18n.global.t(to.meta.titleKey);
+      document.title = `Insubria Wildlife - ${title}`;
+    } else {
+      document.title = "Insubria Wildlife";
+    }
+  } catch (error) {
+    console.error("Error updating title:", error);
+    document.title = "Insubria Wildlife";
+  }
+};
 
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
@@ -22,7 +38,7 @@ const router = createRouter({
       name: "Homepage",
       component: Homepage,
       meta: {
-        title: "Insubria homepage",
+        titleKey: "index.title.homepage",
       },
     },
     {
@@ -30,7 +46,7 @@ const router = createRouter({
       name: "InsubriaInfo",
       component: InsubriaInfo,
       meta: {
-        title: "Insubria informazioni",
+        titleKey: "index.title.insubria",
       },
     },
     {
@@ -38,7 +54,7 @@ const router = createRouter({
       name: "Team",
       component: Team,
       meta: {
-        title: "Insubria team",
+        titleKey: "index.title.team",
       },
     },
     {
@@ -46,7 +62,7 @@ const router = createRouter({
       name: "Eventi",
       component: Events,
       meta: {
-        title: "Insubria eventi",
+        titleKey: "index.title.events",
       },
     },
     {
@@ -54,7 +70,7 @@ const router = createRouter({
       name: "News",
       component: News,
       meta: {
-        title: "Insubria news",
+        titleKey: "index.title.news",
       },
     },
     {
@@ -62,7 +78,7 @@ const router = createRouter({
       name: "SosAnimali",
       component: SosAnimals,
       meta: {
-        title: "Insubria SOS animali",
+        titleKey: "index.title.sosAnimal",
       },
     },
     {
@@ -70,7 +86,7 @@ const router = createRouter({
       name: "Contattaci",
       component: ContactUs,
       meta: {
-        title: "Insubria contattaci",
+        titleKey: "index.title.contactUs",
       },
     },
     {
@@ -78,7 +94,7 @@ const router = createRouter({
       name: "Supportaci",
       component: SupportUs,
       meta: {
-        title: "Insubria supportaci",
+        titleKey: "index.title.supportUs",
       },
     },
     {
@@ -86,15 +102,28 @@ const router = createRouter({
       name: "Paypal",
       component: PaypalPage,
       meta: {
-        title: "Insubria dona con Paypal",
+        titleKey: "index.title.paypal",
       },
     },
   ],
 });
 
+watch(
+  () => i18n.global.locale.value,
+  () => {
+    try {
+      const currentRoute = router.currentRoute.value;
+      if (currentRoute) {
+        updateTitle(currentRoute);
+      }
+    } catch (error) {
+      console.error("Error in language change watcher:", error);
+    }
+  }
+);
+
 router.beforeEach((to, from, next) => {
-  console.log("Route change:", to.meta.title);
-  document.title = to.meta.title || "Insubria WildLife";
+  updateTitle(to);
   next();
 });
 
