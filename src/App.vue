@@ -38,7 +38,7 @@ export default {
   <HeaderComponent></HeaderComponent>
   <router-view></router-view>
   <div id="up-button">
-    <button>
+    <button aria-label="Torna in alto">
       <img
         v-show="visible"
         src="../src/assets/img/homepage/chevron/chevron-up.svg"
