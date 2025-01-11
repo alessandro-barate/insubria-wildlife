@@ -112,7 +112,7 @@ export default {
         <!-- Video section -->
         <section class="video-container">
           <div class="video-background">
-            <video loading="lazy" autoplay muted loop>
+            <video loading="lazy" autoplay muted loop kind="">
               <source
                 src="../assets/video/background-video.webm"
                 type="video/webm"
