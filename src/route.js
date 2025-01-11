@@ -13,6 +13,7 @@ import ContactUs from "./pages/ContactUs.vue";
 import SupportUs from "./pages/SupportUs.vue";
 import PaypalPage from "./pages/PaypalPage.vue";
 
+// Update the page title based on the route
 const updateTitle = (to) => {
   try {
     if (to.meta?.titleKey) {
@@ -108,6 +109,7 @@ const router = createRouter({
   ],
 });
 
+// Watcher to update the title when the language changes
 watch(
   () => i18n.global.locale.value,
   () => {
@@ -122,6 +124,7 @@ watch(
   }
 );
 
+// Update the title when the route changes
 router.beforeEach((to, from, next) => {
   updateTitle(to);
   next();

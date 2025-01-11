@@ -27,6 +27,10 @@
   </head>
   <body>
     <div id="app" v-cloak></div>
-    <script type="module" src="./src/main.js"></script>
+    <script
+      type="module"
+      src="./src/main.js"
+      nonce="<?php echo request()->get('csp-nonce'); ?>"
+    ></script>
   </body>
 </html>
