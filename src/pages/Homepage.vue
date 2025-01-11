@@ -112,13 +112,16 @@ export default {
         <!-- Video section -->
         <section class="video-container">
           <div class="video-background">
-            <video
-              src="../assets/video/background-video.mp4"
-              loading="lazy"
-              autoplay
-              muted
-              loop
-            ></video>
+            <video loading="lazy" autoplay muted loop>
+              <source
+                src="../assets/video/background-video.webm"
+                type="video/webm"
+              />
+              <source
+                src="../assets/video/background-video.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </section>
         <!-- END video section -->
