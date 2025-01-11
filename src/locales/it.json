@@ -25,14 +25,20 @@
     "mission": {
       "paragraph": "*Insubria Wildlife APS* è la voce giovane, dinamica e internazionale della divulgazione scientifica sulla *fauna selvatica* e gli *ambienti insubrici*. Vogliamo portare il valore della biodiversità sotto i riflettori, rendendolo accessibile e interessante per tutti, ispirando curiosità e consapevolezza.\u000A*La tutela* delle risorse naturali può arricchire la vita di ciascuno e il nostro territorio ne è ricchissimo: sta a noi proteggerlo.\u000A\u000ATramite i social, gli eventi e collaborazioni con esperti, vogliamo creare un luogo di incontro per appassionati, addetti ai lavori e curiosi, stimolando dibattiti e scambi tra persone con diverso background.",
       "joining": "Unendoti a noi ",
-      "description": "potrai conoscere realtà diverse e far parte di una comunità con cui condividere gli stessi obiettivi."
+      "description": "potrai conoscere realtà diverse e far parte di una comunità con cui condividere gli stessi obiettivi.",
+      "eventsLink": "Vuoi restare sempre aggiornato sui nostri eventi?",
+      "button": "Clicca qui!",
+      "buttonAriaLabel": "Bottone per la pagina Eventi"
     },
     "vision": {
       "help": {
         "title": "Hai trovato un esemplare di animale ma non sai cosa fare?",
-        "button": "Ti aiutiamo noi!"
+        "button": "Ti aiutiamo noi!",
+        "buttonAriaLabel": "Bottone per la pagina SOS Animali"
       },
       "paragraph": "Immaginiamo un'Insubria dove la fauna selvatica e gli ambienti coesistono in sinergia con la comunità locale, dove ognuno può avere un ruolo attivo. La nostra visione si estende oltre l'orizzonte, mirando a:",
+      "prevCardButton": "Vai alla card precedente",
+      "nextCardButton": "Vai alla card successiva",
       "visions": [
         {
           "alt": "Immagine di alcuni bambini seduti intorno ad un tavolo che giocano con delle carte fatte da noi a tema animali",

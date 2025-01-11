@@ -90,11 +90,16 @@ export default {
             <!-- <aside class="events-container">
               <div class="events">
                 <p class="events-update">
-                  Vuoi restare sempre aggiornato sui nostri eventi?
+                  {{ t("homepage.mission.eventsLink") }}
                 </p>
-                <a href="">
+                <a>
                   <router-link :to="{ name: 'Eventi' }" class="link">
-                    <button class="help-btn">Clicca qui!</button></router-link
+                    <button
+                      class="help-btn"
+                      :aria-label="t('homepage.mission.eventsLink')"
+                    >
+                      {{ t("homepage.mission.button") }}
+                    </button></router-link
                   >
                 </a>
               </div>
@@ -126,7 +131,9 @@ export default {
               <h2>{{ t("homepage.vision.help.title") }}</h2>
               <a href="">
                 <router-link :to="{ name: 'SosAnimali' }" class="link">
-                  <button aria-label="SOS Animali">
+                  <button
+                    :aria-label="t('homepage.vision.help.buttonAriaLabel')"
+                  >
                     <TranslatedTextSpan
                       text-key="homepage.vision.help.button"
                     /></button
@@ -156,9 +163,19 @@ export default {
                       <div class="carousel-img-container">
                         <!-- Carousel buttons -->
                         <div class="buttons-container d-flex">
+                          <!-- Carousel prev button -->
                           <div class="carousel-button-left d-flex">
-                            <button @click="prevCard" id="prev-btn"><</button>
+                            <button
+                              @click="prevCard"
+                              id="prev-btn"
+                              :aria-label="t('homepage.vision.prevCardButton')"
+                            >
+                              <
+                            </button>
                           </div>
+                          <!-- END carousel prev button -->
+
+                          <!-- Carousel image -->
                           <figure>
                             <img
                               :src="vision.image"
@@ -166,9 +183,19 @@ export default {
                               loading="lazy"
                             />
                           </figure>
+                          <!-- END carousel image -->
+
+                          <!-- Carousel next button -->
                           <div class="carousel-button-right d-flex">
-                            <button @click="nextCard" id="next-btn">></button>
+                            <button
+                              @click="nextCard"
+                              id="next-btn"
+                              :aria-label="t('homepage.vision.nextCardButton')"
+                            >
+                              >
+                            </button>
                           </div>
+                          <!-- END carousel next button -->
                         </div>
                         <!-- END carousel buttons -->
                       </div>
