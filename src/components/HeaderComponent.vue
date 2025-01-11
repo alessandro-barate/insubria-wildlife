@@ -207,6 +207,7 @@ const changeLanguage = (lang) => {
               <div class="lang-container">
                 <button
                   id="italian"
+                  aria-label="Italiano"
                   @click="changeLanguage('it')"
                   :class="{ 'active-lang': locale === 'it' }"
                 >
@@ -217,6 +218,7 @@ const changeLanguage = (lang) => {
                 </button>
                 <button
                   id="english"
+                  aria-label="English"
                   @click="changeLanguage('en')"
                   :class="{ 'active-lang': locale === 'en' }"
                 >

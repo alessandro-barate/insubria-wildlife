@@ -159,7 +159,8 @@
         "description": "La natura ha sempre avuto un lato attrattivo su di me: un sentimento profondo, difficilmente spiegabile a parole. È la mia passione, la mia valvola di sfogo, il mio porto sicuro. Dove imparare cose nuove e passare il tempo con le persone che amo: ne ho fatto anche un lavoro, diventando guida safari in Africa. Con Insubria Wildlife voglio portare le persone ad esplorare anche la meravigliosa natura locale, spesso poco conosciuta."
       }
     },
-    "findOut": "Scopri di più"
+    "findOut": "Scopri di più",
+    "findOutButton": "Bottone per aprire la card con la descrizione"
   },
   "sosAnimals": {
     "firstTitle": "soccorso fauna",

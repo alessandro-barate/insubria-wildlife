@@ -126,7 +126,7 @@ export default {
               <h2>{{ t("homepage.vision.help.title") }}</h2>
               <a href="">
                 <router-link :to="{ name: 'SosAnimali' }" class="link">
-                  <button>
+                  <button aria-label="SOS Animali">
                     <TranslatedTextSpan
                       text-key="homepage.vision.help.button"
                     /></button

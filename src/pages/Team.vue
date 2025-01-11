@@ -98,7 +98,10 @@ const changeLanguage = (lang) => {
                   <h2>{{ member.name }}</h2>
                   <h3>{{ member.title }}</h3>
                   <div class="info-btn">
-                    <button @click="showMemberDetails(index)">
+                    <button
+                      @click="showMemberDetails(index)"
+                      :aria-label="t('team.findOutButton')"
+                    >
                       {{ t("team.findOut") }}
                     </button>
                   </div>

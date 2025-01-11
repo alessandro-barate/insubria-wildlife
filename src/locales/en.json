@@ -159,7 +159,8 @@
         "description": "Nature has always had an attractive side for me: a deep feeling, difficult to explain in words. It's my passion, my outlet, my safe harbor. Where I learn new things and spend time with the people I love: I've also made it my job, becoming a safari guide in Africa. With Insubria Wildlife, I want to lead people to explore the wonderful local nature, often little known."
       }
     },
-    "findOut": "Find out more"
+    "findOut": "Find out more",
+    "findOutButton": "Button to open the card description"
   },
   "sosAnimals": {
     "firstTitle": "wildlife rescue",

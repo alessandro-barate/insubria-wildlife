@@ -179,7 +179,10 @@ const changeLanguage = (lang) => {
                   </div>
                   <h2>{{ sosCard.title }}</h2>
                   <div class="info-btn">
-                    <button @click="showMemberDetails(index)">
+                    <button
+                      @click="showMemberDetails(index)"
+                      :aria-label="t('team.findOutButton')"
+                    >
                       {{ t("team.findOut") }}
                     </button>
                   </div>
