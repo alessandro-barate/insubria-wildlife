@@ -17,53 +17,85 @@ const router = createRouter({
   },
   history: createWebHistory(),
   routes: [
-    // Italian pages routes
     {
       path: "/",
       name: "Homepage",
       component: Homepage,
+      meta: {
+        title: "Insubria homepage",
+      },
     },
     {
       path: "/insubria",
       name: "InsubriaInfo",
       component: InsubriaInfo,
+      meta: {
+        title: "Insubria informazioni",
+      },
     },
     {
       path: "/team",
       name: "Team",
       component: Team,
+      meta: {
+        title: "Insubria team",
+      },
     },
     {
       path: "/eventi",
       name: "Eventi",
       component: Events,
+      meta: {
+        title: "Insubria eventi",
+      },
     },
     {
       path: "/news",
       name: "News",
       component: News,
+      meta: {
+        title: "Insubria news",
+      },
     },
     {
       path: "/sos-animali",
       name: "SosAnimali",
       component: SosAnimals,
+      meta: {
+        title: "Insubria SOS animali",
+      },
     },
     {
       path: "/contattaci",
       name: "Contattaci",
       component: ContactUs,
+      meta: {
+        title: "Insubria contattaci",
+      },
     },
     {
       path: "/supportaci",
       name: "Supportaci",
       component: SupportUs,
+      meta: {
+        title: "Insubria supportaci",
+      },
     },
     {
       path: "/paypal",
       name: "Paypal",
       component: PaypalPage,
+      meta: {
+        title: "Insubria dona con Paypal",
+      },
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  console.log("Route change:", to.meta.title);
+  document.title = to.meta.title || "Insubria WildLife";
+  next();
 });
 
 export { router };
