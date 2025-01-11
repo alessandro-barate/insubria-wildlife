@@ -12,35 +12,55 @@ export const store = reactive({
         const { t } = useI18n();
         return t("homepage.vision.visions.0.description");
       }),
-      image: "/src/assets/img/homepage/carousel/1-social-promotion.jpg",
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.0.alt");
+      }),
+      image: "/src/assets/img/homepage/carousel/1-social-promotion.webp",
     },
     {
       description: computed(() => {
         const { t } = useI18n();
         return t("homepage.vision.visions.1.description");
       }),
-      image: "/src/assets/img/homepage/carousel/2-volunteering.jpg",
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.1.alt");
+      }),
+      image: "/src/assets/img/homepage/carousel/2-volunteering.webp",
     },
     {
       description: computed(() => {
         const { t } = useI18n();
         return t("homepage.vision.visions.2.description");
       }),
-      image: "/src/assets/img/homepage/carousel/3-wildlife-rehab.jpg",
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.2.alt");
+      }),
+      image: "/src/assets/img/homepage/carousel/3-wildlife-rehab.webp",
     },
     {
       description: computed(() => {
         const { t } = useI18n();
         return t("homepage.vision.visions.3.description");
       }),
-      image: "/src/assets/img/homepage/carousel/4-research.jpg",
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.3.alt");
+      }),
+      image: "/src/assets/img/homepage/carousel/4-research.webp",
     },
     {
       description: computed(() => {
         const { t } = useI18n();
         return t("homepage.vision.visions.4.description");
       }),
-      image: "/src/assets/img/homepage/carousel/5-network.jpg",
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("homepage.vision.visions.4.alt");
+      }),
+      image: "/src/assets/img/homepage/carousel/5-network.webp",
     },
   ],
 

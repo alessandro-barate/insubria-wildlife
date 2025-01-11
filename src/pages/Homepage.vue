@@ -160,7 +160,11 @@ export default {
                             <button @click="prevCard" id="prev-btn"><</button>
                           </div>
                           <figure>
-                            <img :src="vision.image" />
+                            <img
+                              :src="vision.image"
+                              :alt="vision.alt"
+                              loading="lazy"
+                            />
                           </figure>
                           <div class="carousel-button-right d-flex">
                             <button @click="nextCard" id="next-btn">></button>
@@ -349,18 +353,18 @@ h1 {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 20px;
-
-    img {
-      width: 24vh;
-      height: 24vh;
-      border-radius: 100px;
-      object-fit: cover;
-    }
   }
 
   figure {
     margin-left: 5%;
     margin-right: 5%;
+
+    img {
+      width: 24vh;
+      height: 24vh;
+      object-fit: cover;
+      border-radius: 100px;
+    }
   }
 
   .card-body p {
