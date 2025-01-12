@@ -91,7 +91,7 @@ const changeLanguage = (lang) => {
           <nav class="navbar d-flex uppercase">
             <!-- Logo -->
             <div class="logo">
-              <a>
+              <a aria-label="Homepage link">
                 <router-link :to="{ name: 'Homepage' }">
                   <img src="/./src/assets/img/logo/double-circle.webp" alt="" />
                 </router-link>
@@ -172,13 +172,13 @@ const changeLanguage = (lang) => {
               <!-- END SOS animals link -->
 
               <!-- Contact us link -->
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a @click="listDisappearance()" class="nav-link" id="contact">
                   <router-link :to="{ name: 'Contattaci' }" class="link">{{
                     t("nav.contactUs")
                   }}</router-link>
                 </a>
-              </li> -->
+              </li>
               <!-- END contact us link -->
 
               <!-- Support us link -->

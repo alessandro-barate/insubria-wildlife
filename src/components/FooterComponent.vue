@@ -59,7 +59,13 @@ const changeLanguage = (lang) => {
                   <!-- Address container -->
                   <address class="address-container">
                     <h3>Insubria</h3>
-                    <a id="address" href=""> Via Roma 20, 20004, Arluno </a>
+                    <a
+                      id="address"
+                      href=""
+                      aria-label="Indirizzo di Insubria WildLife"
+                    >
+                      Via Roma 20, 20004, Arluno
+                    </a>
                     <h3 id="pi">{{ t("footer.vat") }}</h3>
                     <span>93054540153</span>
                   </address>
@@ -77,6 +83,7 @@ const changeLanguage = (lang) => {
                         <a
                           href="https://www.facebook.com/people/Insubria-Wildlife-APS/61568161029341/"
                           target="_blank"
+                          aria-label="Facebook link"
                         >
                           <img
                             src="../assets/img/footer/facebook-icon.svg"
@@ -92,6 +99,7 @@ const changeLanguage = (lang) => {
                         <a
                           href="https://www.instagram.com/insubria_wildlife/"
                           target="_blank"
+                          aria-label="Instagram link"
                         >
                           <img
                             src="../assets/img/footer/instagram-icon.svg"
