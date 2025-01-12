@@ -186,6 +186,10 @@
     "fourthParagraph": "nessuna cura umana può essere migliore di quelle dei genitori!",
     "fifthParagraph": "*Prima di intervenire, assicurati che sia davvero necessario.*",
     "sixthParagraph": {
+      "aria-labels": {
+        "lipu": "Vai al sito della LIPU",
+        "cras": "Vai al sito con l'elenco dei CRAS"
+      },
       "capital": "*dubbi?*",
       "explore": "Approfondisci ",
       "here": "qui ",

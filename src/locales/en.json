@@ -186,6 +186,10 @@
     "fourthParagraph": "no human cure can be better than the parents' care!",
     "fifthParagraph": "*Before intervening, make sure it's really necessary.*",
     "sixthParagraph": {
+      "aria-labels": {
+        "lipu": "Go to the LIPU website",
+        "cras": "Go to the CRAS list website"
+      },
       "capital": "*doubts?*",
       "explore": "Explore ",
       "here": "here ",

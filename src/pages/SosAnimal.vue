@@ -140,16 +140,24 @@ const changeLanguage = (lang) => {
                     class="uppercase"
                   />
                   {{ t("sosAnimals.sixthParagraph.explore") }}
-                  <a href="https://animaliferiti.lipu.it/" target="_blank">{{
-                    t("sosAnimals.sixthParagraph.here")
-                  }}</a>
+                  <a
+                    href="https://animaliferiti.lipu.it/"
+                    target="_blank"
+                    :aria-label="
+                      t('sosAnimals.sixthParagraph.aria-labels.lipu')
+                    "
+                    >{{ t("sosAnimals.sixthParagraph.here") }}</a
+                  >
                   {{ t("sosAnimals.sixthParagraph.call") }}
                   <a
                     href="https://elencocras.it/"
                     target="_blank"
                     class="uppercase"
-                    >{{ t("sosAnimals.sixthParagraph.cras") }}</a
-                  >
+                    :aria-label="
+                      t('sosAnimals.sixthParagraph.aria-labels.cras')
+                    "
+                    >{{ t("sosAnimals.sixthParagraph.cras") }}
+                  </a>
                   {{ t("sosAnimals.sixthParagraph.reference") }}
                 </p>
               </div>
