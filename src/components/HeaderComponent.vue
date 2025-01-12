@@ -91,7 +91,7 @@ const changeLanguage = (lang) => {
           <nav class="navbar d-flex uppercase">
             <!-- Logo -->
             <div class="logo">
-              <a aria-label="Homepage link">
+              <a :aria-label="t('nav.aria-labels.homepage')">
                 <router-link :to="{ name: 'Homepage' }">
                   <img src="/./src/assets/img/logo/double-circle.webp" alt="" />
                 </router-link>
@@ -103,7 +103,11 @@ const changeLanguage = (lang) => {
             <ul class="nav-menu d-flex">
               <!-- Insubria link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a
+                  @click="listDisappearance()"
+                  class="nav-link"
+                  :aria-label="t('nav.aria-labels.insubria')"
+                >
                   <router-link :to="{ name: 'InsubriaInfo' }" class="link">
                     insubria
                   </router-link>
@@ -113,7 +117,11 @@ const changeLanguage = (lang) => {
 
               <!-- Team link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a
+                  @click="listDisappearance()"
+                  class="nav-link"
+                  :aria-label="t('nav.aria-labels.team')"
+                >
                   <router-link :to="{ name: 'Team' }" class="link"
                     >team</router-link
                   >
@@ -139,31 +147,46 @@ const changeLanguage = (lang) => {
                   id="news-events-container"
                   class="display-none"
                 >
+                  <!-- Events container -->
                   <div class="events-container">
                     <a
                       @click="listDisappearance()"
                       class="nav-link"
                       id="events"
+                      :aria-label="t('nav.aria-labels.events')"
                     >
                       <router-link :to="{ name: 'Eventi' }" class="link">{{
                         t("nav.events")
                       }}</router-link>
                     </a>
                   </div>
+                  <!-- END events container -->
+
+                  <!-- News container -->
                   <div class="news-container">
-                    <a @click="listDisappearance()" class="nav-link" id="news">
+                    <a
+                      @click="listDisappearance()"
+                      class="nav-link"
+                      id="news"
+                      :aria-label="t('nav.aria-labels.news')"
+                    >
                       <router-link :to="{ name: 'News' }" class="link">{{
                         t("nav.news")
                       }}</router-link>
                     </a>
                   </div>
+                  <!-- END news container -->
                 </div>
               </li>
               <!-- END news and events link -->
 
               <!-- SOS animals link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link">
+                <a
+                  @click="listDisappearance()"
+                  class="nav-link"
+                  :aria-label="t('nav.aria-labels.sosAnimal')"
+                >
                   <router-link :to="{ name: 'SosAnimali' }" class="link">{{
                     t("nav.sosAnimal")
                   }}</router-link>
@@ -173,7 +196,12 @@ const changeLanguage = (lang) => {
 
               <!-- Contact us link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link" id="contact">
+                <a
+                  @click="listDisappearance()"
+                  class="nav-link"
+                  id="contact"
+                  :aria-label="t('nav.aria-labels.contactUs')"
+                >
                   <router-link :to="{ name: 'Contattaci' }" class="link">{{
                     t("nav.contactUs")
                   }}</router-link>
@@ -183,7 +211,12 @@ const changeLanguage = (lang) => {
 
               <!-- Support us link -->
               <li class="nav-item">
-                <a @click="listDisappearance()" class="nav-link" id="support">
+                <a
+                  @click="listDisappearance()"
+                  class="nav-link"
+                  id="support"
+                  :aria-label="t('nav.aria-labels.supportUs')"
+                >
                   <router-link :to="{ name: 'Supportaci' }" class="link">{{
                     t("nav.supportUs")
                   }}</router-link></a

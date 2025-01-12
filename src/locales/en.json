@@ -13,6 +13,16 @@
     }
   },
   "nav": {
+    "aria-labels": {
+      "homepage": "Go to the Homepage",
+      "insubria": "Go to the Information page",
+      "team": "Go to the Our Team page",
+      "events": "Go to the Events page",
+      "news": "Go to the News page",
+      "sosAnimal": "Go to the Wildlife Rescue page",
+      "contactUs": "Go to the Contact Us page",
+      "supportUs": "Go to the Support Us page"
+    },
     "whatsNew": "news",
     "events": "events",
     "news": "posts",

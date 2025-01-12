@@ -13,6 +13,16 @@
     }
   },
   "nav": {
+    "aria-labels": {
+      "homepage": "Vai alla Homepage",
+      "insubria": "Vai alla pagina Informazioni",
+      "team": "Vai alla pagina Il nostro Team",
+      "events": "Vai alla pagina Eventi",
+      "news": "Vai alla pagina News",
+      "sosAnimal": "Vai alla pagina Sos Animali",
+      "contactUs": "Vai alla pagina Contattaci",
+      "supportUs": "Vai alla pagina Supportaci"
+    },
     "whatsNew": "novità",
     "events": "eventi",
     "news": "news",
