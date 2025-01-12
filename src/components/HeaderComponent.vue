@@ -88,6 +88,7 @@ const changeLanguage = (lang) => {
     <div class="container">
       <div class="row">
         <div class="col">
+          <!-- Navbar container -->
           <nav class="navbar d-flex uppercase">
             <!-- Logo -->
             <div class="logo">
@@ -265,6 +266,7 @@ const changeLanguage = (lang) => {
             </div>
             <!-- END right container -->
           </nav>
+          <!-- END navbar container -->
         </div>
       </div>
     </div>
