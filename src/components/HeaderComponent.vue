@@ -199,7 +199,7 @@ const changeLanguage = (lang) => {
               <!-- END SOS animals link -->
 
               <!-- Contact us link -->
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a
                   @click="listDisappearance()"
                   class="nav-link"
@@ -210,7 +210,7 @@ const changeLanguage = (lang) => {
                     t("nav.contactUs")
                   }}</router-link>
                 </a>
-              </li>
+              </li> -->
               <!-- END contact us link -->
 
               <!-- Support us link -->

@@ -6,18 +6,16 @@ export default {
   data() {
     return {
       store,
+      showZoom: false,
       currentIndex: null,
     };
   },
 
   methods: {
-    toggleZoom(event) {
-      if (event && event.target.tagName === "img" && this.showZoom) {
-        return;
-      }
-
+    toggleZoom(index) {
       this.showZoom = !this.showZoom;
-      document.body.style.overflow = this.showZoom; // ? "hidden" : ""
+      this.currentIndex = index;
+      document.body.style.overflow = this.showZoom ? "hidden" : "";
     },
   },
 };
@@ -53,16 +51,16 @@ const changeLanguage = (lang) => {
           <p>
             Vi siete persi qualche evento o volete vedere quelli in programma?
           </p>
-          <div class="d-flex">
+          <div class="big-events-container d-flex">
             <div
               v-for="(event, index) in store.events"
               :key="index"
-              class="events-container col-50"
+              class="events-container"
             >
               <div class="event-card">
                 <h2 class="capitalize">{{ event.title }}</h2>
                 <p>{{ event.date }}</p>
-                <figure>
+                <figure @click="toggleZoom(index)">
                   <img :src="event.poster" alt="" />
                 </figure>
               </div>
@@ -76,7 +74,12 @@ const changeLanguage = (lang) => {
   <!-- Zoomed poster container -->
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
-    <img src="" alt="" loading="lazy" @click.stop />
+    <img
+      :src="store.events[currentIndex].poster"
+      alt=""
+      loading="lazy"
+      @click.stop
+    />
   </div>
   <!-- END zoomed poster container -->
 </template>
@@ -113,6 +116,7 @@ section {
 }
 
 .events-container {
+  width: 50%;
   margin-top: 40px;
 }
 
@@ -130,6 +134,7 @@ section {
 
   figure img {
     width: 60%;
+    cursor: url(../assets/img/cursor/binoculars-icon.svg), zoom-in;
   }
 }
 
@@ -151,6 +156,25 @@ section {
 
   &:hover {
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 936px) {
+  .big-events-container {
+    display: block;
+
+    .events-container {
+      width: 90%;
+    }
+
+    figure img {
+      width: 100%;
+    }
+  }
+
+  .zoomed-container .zoom-close-btn {
+    top: 10px;
+    left: 10px;
   }
 }
 </style>
