@@ -94,7 +94,10 @@ const changeLanguage = (lang) => {
             <div class="logo">
               <a :aria-label="t('nav.aria-labels.homepage')">
                 <router-link :to="{ name: 'Homepage' }">
-                  <img src="/./src/assets/img/logo/double-circle.webp" alt="" />
+                  <img
+                    src="/./src/assets/img/logo/double-circle.webp"
+                    alt="Insubria logo"
+                  />
                 </router-link>
               </a>
             </div>
@@ -239,6 +242,7 @@ const changeLanguage = (lang) => {
 
               <!-- Language container -->
               <div class="lang-container">
+                <!-- Italian language -->
                 <button
                   id="italian"
                   aria-label="Italiano"
@@ -250,6 +254,9 @@ const changeLanguage = (lang) => {
                     alt="Bandiera italiana"
                   />
                 </button>
+                <!-- END italian language -->
+
+                <!-- English language -->
                 <button
                   id="english"
                   aria-label="English"
@@ -261,6 +268,7 @@ const changeLanguage = (lang) => {
                     alt="English flag"
                   />
                 </button>
+                <!-- END english language -->
               </div>
               <!-- END language container -->
             </div>
@@ -436,11 +444,11 @@ header {
   }
 }
 
-#events,
-#news,
-.container-bg {
-  display: none;
-}
+// #events,
+// #news,
+// .container-bg {
+// display: none;
+// }
 
 // Media queries
 @media (max-width: 1156px) {

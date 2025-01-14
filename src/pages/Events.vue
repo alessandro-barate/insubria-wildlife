@@ -36,15 +36,39 @@ const changeLanguage = (lang) => {
 <template>
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1 class="uppercase">{{ t("nav.events") }}</h1>
+      <div class="col overlay">
+        <section>
+          <h1 class="uppercase">{{ t("nav.events") }}</h1>
+        </section>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-h1 {
-  color: rgb(0, 136, 255);
+.container {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/img/events/background/little-birds.webp);
+}
+
+.row {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.overlay {
+  width: 80%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.01);
+  }
+}
+
+section {
+  width: 80%;
 }
 </style>

@@ -78,7 +78,7 @@ export default {
             <br />
 
             <p id="join">
-              <a id="join-2" :aria-labels="t('nav.aria-labels.supportUs')"
+              <a id="join-2" :aria-label="t('nav.aria-labels.supportUs')"
                 ><router-link :to="{ name: 'Supportaci' }" class="link"
                   ><TranslatedTextSpan text-key="homepage.mission.joining"
                 /></router-link>
@@ -87,7 +87,7 @@ export default {
             </p>
 
             <!-- Events link section -->
-            <!-- <aside class="events-container">
+            <aside class="events-container">
               <div class="events">
                 <p class="events-update">
                   {{ t("homepage.mission.eventsLink") }}
@@ -103,7 +103,7 @@ export default {
                   >
                 </a>
               </div>
-            </aside> -->
+            </aside>
             <!-- END events link section -->
           </article>
         </section>
@@ -132,7 +132,7 @@ export default {
           <aside class="animal-help-container">
             <div class="animal-help">
               <h2>{{ t("homepage.vision.help.title") }}</h2>
-              <a :aria-labels="t('nav.aria-labels.sosAnimal')">
+              <a :aria-label="t('nav.aria-labels.sosAnimal')">
                 <router-link :to="{ name: 'SosAnimali' }" class="link">
                   <button
                     :aria-label="t('homepage.vision.help.buttonAriaLabel')"

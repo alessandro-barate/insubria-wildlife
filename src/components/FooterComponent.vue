@@ -48,24 +48,23 @@ const changeLanguage = (lang) => {
                 <!-- Address section -->
                 <div class="col-50 address d-flex">
                   <!-- GPS image -->
-                  <div class="location-container d-flex">
+                  <!-- <div class="location-container d-flex">
                     <img
                       src="../assets/img/footer/location-icon.webp"
                       alt="Logo GPS"
                     />
-                  </div>
+                  </div> -->
                   <!-- END GPS image -->
 
                   <!-- Address container -->
                   <address class="address-container">
                     <h3>Insubria</h3>
-                    <a
+                    <!-- <a
                       id="address"
-                      href=""
                       aria-label="Indirizzo di Insubria WildLife"
                     >
                       Via Roma 20, 20004, Arluno
-                    </a>
+                    </a> -->
                     <h3 id="pi">{{ t("footer.vat") }}</h3>
                     <span>93054540153</span>
                   </address>
