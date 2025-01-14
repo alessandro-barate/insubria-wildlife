@@ -39,6 +39,24 @@ const changeLanguage = (lang) => {
       <div class="col overlay">
         <section>
           <h1 class="uppercase">{{ t("nav.events") }}</h1>
+          <p>
+            Vi siete persi qualche evento o volete vedere quelli in programma?
+          </p>
+          <div class="d-flex">
+            <div
+              v-for="(event, index) in store.events"
+              :key="index"
+              class="events-container col-50"
+            >
+              <div class="event-card">
+                <h2 class="capitalize">{{ event.title }}</h2>
+                <p>{{ event.date }}</p>
+                <figure>
+                  <img :src="event.poster" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -70,5 +88,18 @@ const changeLanguage = (lang) => {
 
 section {
   width: 80%;
+}
+
+.events-container {
+  margin-top: 40px;
+}
+
+.event-card {
+  width: 100%;
+  margin: 0;
+
+  figure img {
+    width: 60%;
+  }
 }
 </style>

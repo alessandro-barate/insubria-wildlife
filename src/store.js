@@ -256,14 +256,14 @@ export const store = reactive({
 
   events: [
     {
-      title: "notizie da geed deeble",
+      title: "notizie da Geed Deeble",
       date: "27/11/2024",
-      poster: "27-11-2024.png",
+      poster: "./src/assets/img/events/posters/2024/Novembre/27-11-24.webp",
     },
     {
-      title: "bird gardening",
-      date: "30/11/2024",
-      poster: "30-11-2024.png",
+      title: "primavera in palude",
+      date: "29/03/2025",
+      poster: "./src/assets/img/events/posters/2025/Marzo/29-03-25.webp",
     },
   ],
 
