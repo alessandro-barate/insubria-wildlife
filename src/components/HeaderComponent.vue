@@ -167,7 +167,7 @@ const changeLanguage = (lang) => {
                   <!-- END events container -->
 
                   <!-- News container -->
-                  <div class="news-container">
+                  <!-- <div class="news-container">
                     <a
                       @click="listDisappearance()"
                       class="nav-link"
@@ -178,7 +178,7 @@ const changeLanguage = (lang) => {
                         t("nav.news")
                       }}</router-link>
                     </a>
-                  </div>
+                  </div> -->
                   <!-- END news container -->
                 </div>
               </li>

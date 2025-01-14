@@ -9,6 +9,17 @@ export default {
       currentIndex: null,
     };
   },
+
+  methods: {
+    toggleZoom(event) {
+      if (event && event.target.tagName === "img" && this.showZoom) {
+        return;
+      }
+
+      this.showZoom = !this.showZoom;
+      document.body.style.overflow = this.showZoom; // ? "hidden" : ""
+    },
+  },
 };
 </script>
 
@@ -61,6 +72,13 @@ const changeLanguage = (lang) => {
       </div>
     </div>
   </div>
+
+  <!-- Zoomed poster container -->
+  <div v-if="showZoom" class="zoomed-container">
+    <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
+    <img src="" alt="" loading="lazy" @click.stop />
+  </div>
+  <!-- END zoomed poster container -->
 </template>
 
 <style scoped lang="scss">
@@ -74,6 +92,10 @@ const changeLanguage = (lang) => {
 .row {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.col {
+  padding-bottom: 60px;
 }
 
 .overlay {
@@ -98,8 +120,37 @@ section {
   width: 100%;
   margin: 0;
 
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
   figure img {
     width: 60%;
+  }
+}
+
+.zoomed-container img {
+  width: auto;
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.zoomed-container .zoom-close-btn {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+    transform: scale(1.2);
   }
 }
 </style>
