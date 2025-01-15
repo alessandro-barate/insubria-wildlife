@@ -178,6 +178,19 @@
     "findOut": "Find out more",
     "findOutButton": "Button to open the card description"
   },
+  "events": {
+    "firstParagraph": "Have you missed any events or would you like to see the upcoming ones?",
+    "0": {
+      "title": "news from geed deeble",
+      "date": "27 November 2024",
+      "alt": "Event poster image about cheetahs: News from Geed Deeble"
+    },
+    "1": {
+      "title": "spring in marsh",
+      "date": "29 March 2025",
+      "alt": "Event poster image for Spring in the Marsh: Spring in the Marsh"
+    }
+  },
   "sosAnimals": {
     "firstTitle": "wildlife rescue",
     "firstParagraph": "Have you found an animal but you don't know what to do?",

@@ -178,6 +178,19 @@
     "findOut": "Scopri di più",
     "findOutButton": "Bottone per aprire la card con la descrizione"
   },
+  "events": {
+    "firstParagraph": "Vi siete persi qualche evento o volete vedere quelli in programma?",
+    "0": {
+      "title": "notizie da geed deeble",
+      "date": "27 Novembre 2024",
+      "alt": "Immagine della locandina dell'evento sui ghepardi: Notizie da Geed Deeble"
+    },
+    "1": {
+      "title": "primavera in palude",
+      "date": "29 Marzo 2025",
+      "alt": "Immagine della locandina dell'evento sulla primavera in palude: Primavera in Palude"
+    }
+  },
   "sosAnimals": {
     "firstTitle": "soccorso fauna",
     "firstParagraph": "Hai trovato un esemplare di animale selvatico ma non sai cosa fare?",

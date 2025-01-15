@@ -49,7 +49,7 @@ const changeLanguage = (lang) => {
         <section>
           <h1 class="uppercase">{{ t("nav.events") }}</h1>
           <p>
-            Vi siete persi qualche evento o volete vedere quelli in programma?
+            {{ t("events.firstParagraph") }}
           </p>
           <div class="big-events-container d-flex">
             <div
@@ -61,7 +61,10 @@ const changeLanguage = (lang) => {
                 <h2 class="capitalize">{{ event.title }}</h2>
                 <p>{{ event.date }}</p>
                 <figure @click="toggleZoom(index)">
-                  <img :src="event.poster" alt="" />
+                  <img
+                    :src="event.poster"
+                    :alt="t('events.' + index + '.alt')"
+                  />
                 </figure>
               </div>
             </div>
@@ -74,12 +77,14 @@ const changeLanguage = (lang) => {
   <!-- Zoomed poster container -->
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
-    <img
-      :src="store.events[currentIndex].poster"
-      alt=""
-      loading="lazy"
-      @click.stop
-    />
+    <figure>
+      <img
+        :src="store.events[currentIndex].poster"
+        :alt="t('events.' + currentIndex + '.alt')"
+        loading="lazy"
+        @click.stop
+      />
+    </figure>
   </div>
   <!-- END zoomed poster container -->
 </template>

@@ -256,13 +256,33 @@ export const store = reactive({
 
   events: [
     {
-      title: "notizie da Geed Deeble",
-      date: "27 Novembre 2024",
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.alt");
+      }),
       poster: "./src/assets/img/events/posters/2024/Novembre/27-11-24.webp",
     },
     {
-      title: "primavera in palude",
-      date: "29 Marzo 2025",
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.alt");
+      }),
       poster: "./src/assets/img/events/posters/2025/Marzo/29-03-25.webp",
     },
   ],
