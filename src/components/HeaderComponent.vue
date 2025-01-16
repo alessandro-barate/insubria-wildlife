@@ -313,7 +313,7 @@ header {
   justify-content: space-between;
 
   .nav-menu {
-    gap: 35px;
+    // gap: 35px;
     text-align: center;
     align-items: center;
     margin-right: 0;
@@ -504,8 +504,8 @@ header {
     #news-events-container {
       display: block;
       position: relative;
-      top: 0;
-      left: 0;
+      top: 0.3em;
+      margin-bottom: -0.9575em;
       padding: 0;
       margin-top: 0;
       border-radius: 0;
