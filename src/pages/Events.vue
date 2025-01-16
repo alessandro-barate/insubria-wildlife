@@ -177,9 +177,13 @@ section {
     }
   }
 
-  .zoomed-container .zoom-close-btn {
-    top: 10px;
-    left: 10px;
+  .zoomed-container {
+    text-align: center;
+
+    .zoom-close-btn {
+      top: 10px;
+      left: 10px;
+    }
   }
 }
 </style>
