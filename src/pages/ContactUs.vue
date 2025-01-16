@@ -18,6 +18,17 @@ console.log("URL API:", import.meta.env.VITE_ENDPOINT_URL);
 </script>
 
 <script setup>
+import { sanitizeFormInput } from "../utils/sanitize.js";
+import { useI18n } from "vue-i18n";
+
+// Form validation rules
+const formRules = {
+  name: [["required"], ["length", 2, 50], ["matches", /^[A-Za-zÀ-ÿ\s']+$/]],
+  surname: [["required"], ["length", 2, 50], ["matches", /^[A-Za-zÀ-ÿ\s']+$/]],
+  mail: [["required"], ["email"], ["length", 5, 100]],
+  message: [["required"], ["length", 10, 1000]],
+};
+
 // Form logic
 const sendMail = async (fields) => {
   // For debug
@@ -44,9 +55,17 @@ const sendMail = async (fields) => {
       },
     };
 
+    // Sanitize input using specific form sanitization
+    const sanitizedFields = {
+      name: sanitizeFormInput(fields.name.trim()),
+      surname: sanitizeFormInput(fields.surname.trim()),
+      mail: sanitizeFormInput(fields.mail.trim().toLowerCase()),
+      message: sanitizeFormInput(fields.message.trim()),
+    };
+
     const response = await axios.post(
       import.meta.env.VITE_ENDPOINT_URL,
-      fields,
+      sanitizedFields,
       config
     );
 
@@ -69,7 +88,6 @@ const sendMail = async (fields) => {
 };
 
 // Page translation logic
-import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n();
 
 // Defaulf language to Italian if no other language is selected
@@ -113,28 +131,52 @@ const changeLanguage = (lang) => {
                 name="name"
                 id="name"
                 :label="t('contactUs.name')"
+                :validation="formRules.name"
+                :validation-messages="{
+                  matches: t('validation.onlyLetters'),
+                  length: t('validation.length', { min: 2, max: 50 }),
+                }"
                 required
+                autocomplete="off"
               />
               <FormKit
                 type="text"
                 name="surname"
-                :label="t('contactUs.surname')"
+                id="surname"
+                :validation="formRules.surname"
+                :validation-messages="{
+                  matches: t('validation.onlyLetters'),
+                  length: t('validation.length', { min: 2, max: 50 }),
+                }"
                 required
+                autocomplete="off"
               />
               <FormKit
                 type="email"
                 name="mail"
+                id="mail"
                 :label="t('contactUs.email')"
+                :validation="formRules.mail"
+                :validation-messages="{
+                  email: t('validation.email'),
+                  length: t('validation.length', { min: 5, max: 100 }),
+                }"
                 required
+                autocomplete="off"
               />
               <FormKit
                 type="textarea"
                 name="message"
-                id=""
+                id="message"
                 rows="8"
                 cols="50"
                 :label="t('contactUs.message')"
+                :validation="formRules.message"
+                :validation-messages="{
+                  length: t('validation.length', { min: 10, max: 1000 }),
+                }"
                 required
+                autocomplete="off"
               />
             </FormKit>
           </div>
