@@ -28,14 +28,19 @@ const sendMail = async (fields) => {
   // console.log("Dati:", fields);
 
   // Configurazione esplicita della richiesta POST
-
   try {
+    // Get CSRF token from meta tag
+    const token = document
+      .querySelector('meta[name="csrf-token"]')
+      .getAttribute("content");
+
     const config = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
         "X-Requested-With": "XMLHttpRequest",
+        "X-CSRF-TOKEN": token,
       },
     };
 
