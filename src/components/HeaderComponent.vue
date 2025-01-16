@@ -504,8 +504,9 @@ header {
     #news-events-container {
       display: block;
       position: relative;
-      top: 0.3em;
-      margin-bottom: -0.9575em;
+      top: 0.35em;
+      left: -0.1em;
+      margin-bottom: -0.8em;
       padding: 0;
       margin-top: 0;
       border-radius: 0;
