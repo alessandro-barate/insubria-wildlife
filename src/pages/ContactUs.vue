@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       store,
-      currentIndex: null,
+      currentIndex: null
     };
   },
 };
@@ -21,6 +21,10 @@ console.log("URL API:", import.meta.env.VITE_ENDPOINT_URL);
 import { sanitizeFormInput } from "../utils/sanitize.js";
 import { useI18n } from "vue-i18n";
 
+const props = defineProps({
+  success: Boolean
+})
+
 // Form validation rules
 const formRules = {
   name: [["required"], ["length", 2, 50], ["matches", /^[A-Za-zÀ-ÿ\s']+$/]],
@@ -30,7 +34,7 @@ const formRules = {
 };
 
 // Form logic
-const sendMail = async (fields) => {
+const sendMail = async (fields, node) => {
   // For debug
   // console.log("Tutte le variabili ENV:", import.meta.env);
   // console.log("URL utilizzato:", import.meta.env.VITE_ENDPOINT_URL);
@@ -71,12 +75,15 @@ const sendMail = async (fields) => {
       config
     );
 
-    // console.log("Risposta:", response);
+    console.log(response);
 
     if (response.data.status === "success") {
-      alert("Email inviata con successo!");
+      node.reset()
+      document.getElementById('successMessage').style.display = 'block';
     } else {
-      alert(response.data.message || "Si è verificato un errore");
+      node.setErrors(
+      ['There was an error in this form'],
+      JSON.parse(response.data.message))
     }
   } catch (error) {
     console.error("Errore:", error);
@@ -85,7 +92,6 @@ const sendMail = async (fields) => {
       console.error("Response:", error.response.data);
       console.error("Status:", error.response.status);
     }
-    alert("Si è verificato un errore. Per favore riprova.");
   }
 };
 
@@ -107,6 +113,7 @@ const changeLanguage = (lang) => {
   locale.value = lang;
   localStorage.setItem("language", lang);
 };
+console.log(props)
 </script>
 
 <template>
@@ -122,11 +129,16 @@ const changeLanguage = (lang) => {
                 {{ t("contactUs.firstTitle") }}
               </h2>
             </div>
+            <div id="successMessage" class="successMessage" style="display: none;">
+              <p>fwergvewvg</p>
+            </div>
             <FormKit
+              id="form"
               type="form"
               @submit="sendMail"
               method="POST"
               :submit-label="t('contactUs.submit')"
+              #default="{ state: { valid } }"
             >
               <FormKit
                 type="text"
@@ -138,7 +150,7 @@ const changeLanguage = (lang) => {
                   matches: t('validation.onlyLetters'),
                   length: t('validation.length', { min: 2, max: 50 }),
                 }"
-                required
+                validation="required"
                 autocomplete="off"
               />
               <FormKit
@@ -151,7 +163,7 @@ const changeLanguage = (lang) => {
                   matches: t('validation.onlyLetters'),
                   length: t('validation.length', { min: 2, max: 50 }),
                 }"
-                required
+                validation="required"
                 autocomplete="off"
               />
               <FormKit
@@ -164,7 +176,7 @@ const changeLanguage = (lang) => {
                   email: t('validation.email'),
                   length: t('validation.length', { min: 5, max: 100 }),
                 }"
-                required
+                validation="required"
                 autocomplete="off"
               />
               <FormKit
@@ -178,7 +190,7 @@ const changeLanguage = (lang) => {
                 :validation-messages="{
                   length: t('validation.length', { min: 10, max: 1000 }),
                 }"
-                required
+                validation="required"
                 autocomplete="off"
               />
             </FormKit>
