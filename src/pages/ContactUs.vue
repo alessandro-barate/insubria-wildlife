@@ -63,6 +63,8 @@ const sendMail = async (fields) => {
       message: sanitizeFormInput(fields.message.trim()),
     };
 
+    console.log(sanitizedFields);
+
     const response = await axios.post(
       import.meta.env.VITE_ENDPOINT_URL,
       sanitizedFields,
@@ -143,6 +145,7 @@ const changeLanguage = (lang) => {
                 type="text"
                 name="surname"
                 id="surname"
+                :label="t('contactUs.surname')"
                 :validation="formRules.surname"
                 :validation-messages="{
                   matches: t('validation.onlyLetters'),
