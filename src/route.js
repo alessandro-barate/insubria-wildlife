@@ -11,7 +11,6 @@ import News from "./pages/News.vue";
 import SosAnimals from "./pages/SosAnimal.vue";
 import ContactUs from "./pages/ContactUs.vue";
 import SupportUs from "./pages/SupportUs.vue";
-import PaypalPage from "./pages/PaypalPage.vue";
 
 // Update the page title based on the route
 const updateTitle = (to) => {
@@ -96,14 +95,6 @@ const router = createRouter({
       component: SupportUs,
       meta: {
         titleKey: "index.title.supportUs",
-      },
-    },
-    {
-      path: "/paypal",
-      name: "Paypal",
-      component: PaypalPage,
-      meta: {
-        titleKey: "index.title.paypal",
       },
     },
   ],

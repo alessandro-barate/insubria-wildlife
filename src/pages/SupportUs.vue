@@ -9,7 +9,7 @@ export default {
 
   mounted() {
     PayPal.Donation.Button({
-      env: import.meta.env.VITE_ENV_SANDBOX,
+      env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
       hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
       image: {
         src: "https://pics.paypal.com/00/s/MGVjNDM4ZGMtM2UwZC00YjA5LTljNzEtMjkwM2MwNjg4MWU2/file.PNG",
