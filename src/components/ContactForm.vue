@@ -2,6 +2,7 @@
 import { FormKit } from "@formkit/vue";
 import { store } from "../store.js";
 import axios from "axios";
+
 export default {
   name: "ContactForm",
 
@@ -21,25 +22,16 @@ console.log("URL API:", import.meta.env.VITE_ENDPOINT_URL);
 import { sanitizeFormInput } from "../utils/sanitize.js";
 import { useI18n } from "vue-i18n";
 
-try {
-  const responseToken = await axios.get(
-    import.meta.env.VITE_ENDPOINT_GETTOKEN_URL
-  );
+// try {
 
-  if (responseToken.data.status === "success") {
-    const formToken = responseToken.data.token;
-    console.log(formToken);
-  } else {
-    const formID = get;
-  }
-} catch (error) {
-  console.error("Errore:", error);
-  console.error("Config:", error.config);
-  if (error.response) {
-    console.error("Response:", error.response.data);
-    console.error("Status:", error.response.status);
-  }
-}
+// } catch (error) {
+//   console.error("Errore:", error);
+//   console.error("Config:", error.config);
+//   if (error.response) {
+//     console.error("Response:", error.response.data);
+//     console.error("Status:", error.response.status);
+//   }
+// }
 
 // Form validation rules
 const formRules = {
@@ -60,6 +52,17 @@ const sendMail = async (fields, node) => {
 
   // Configurazione esplicita della richiesta POST
   try {
+    // Token call
+    const responseToken = await axios.get(
+      import.meta.env.VITE_ENDPOINT_GETTOKEN_URL
+    );
+
+    if (responseToken.data.status === "success") {
+      const formToken = responseToken.data.token;
+      console.log(formToken);
+    } else {
+    }
+
     // Get CSRF token from meta tag
     const token = document
       .querySelector('meta[name="csrf-token"]')
@@ -86,7 +89,7 @@ const sendMail = async (fields, node) => {
     console.log(sanitizedFields);
 
     const response = await axios.post(
-      import.meta.env.VITE_ENDPOINT_URL,
+      import.meta.env.VITE_ENDPOINT_URL_WINDOWS,
       sanitizedFields,
       config
     );
