@@ -134,6 +134,7 @@ const changeLanguage = (lang) => {
   localStorage.setItem("language", lang);
 };
 </script>
+
 <template>
   <div class="container">
     <div class="row">
@@ -220,6 +221,10 @@ const changeLanguage = (lang) => {
         <!-- END form section -->
       </div>
     </div>
+  </div>
+
+  <div id="donate-button-container">
+    <div id="donate-button"></div>
   </div>
 </template>
 

@@ -6,6 +6,21 @@ export default {
   data() {
     return {};
   },
+
+  mounted() {
+    PayPal.Donation.Button({
+      env: import.meta.env.VITE_ENV_SANDBOX,
+      hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
+      image: {
+        src: "https://pics.paypal.com/00/s/MGVjNDM4ZGMtM2UwZC00YjA5LTljNzEtMjkwM2MwNjg4MWU2/file.PNG",
+        alt: "Donate with PayPal button",
+        title: "PayPal - The safer, easier way to pay online!",
+      },
+      onComplete: function (params) {
+        // Your onComplete handler
+      },
+    }).render("#donate-button");
+  },
 };
 </script>
 
@@ -59,14 +74,12 @@ const changeLanguage = (lang) => {
                   text-key="supportUs.list.secondListElement.name"
                 />
                 <br />
-                <!-- <span
-                  ><a>
-                    <router-link :to="{ name: 'Paypal' }" class="link"
-                      >{{ t("supportUs.list.secondListElement.link") }}
-                    </router-link> </a
-                  >{{ t("supportUs.list.secondListElement.description") }}</span
-                > -->
-                <span>{{ t("supportUs.list.secondListElement.link") }}</span>
+                <div id="donate-button-container">
+                  <span>{{
+                    t("supportUs.list.secondListElement.description")
+                  }}</span>
+                  <div id="donate-button"></div>
+                </div>
               </li>
             </ul>
             <p>
