@@ -38,7 +38,8 @@ const router = createRouter({
       name: "Homepage",
       component: Homepage,
       meta: {
-        titleKey: "index.title.homepage",
+        name: "Homepage",
+        description: "Homepage Description",
       },
     },
     {
@@ -119,6 +120,26 @@ watch(
 router.beforeEach((to, from, next) => {
   updateTitle(to);
   next();
+});
+
+// Applying description and content meta tags dinamically
+router.beforeEach((to) => {
+  const { content, description } = to.meta;
+  const defaultContent = "Default Content";
+  const defaultDescription = "Default Description";
+
+  document.name = content || defaultContent;
+
+  const descriptionElement = document.querySelector(
+    'head meta[name="description"]',
+    'head meta[name="content"]'
+  );
+
+  descriptionElement.setAttribute(
+    "description",
+    description || defaultDescription
+  );
+  descriptionElement.setAttribute("content", description || defaultDescription);
 });
 
 export { router };

@@ -12,7 +12,7 @@ export default {
       env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
       hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
       image: {
-        src: "https://pics.paypal.com/00/s/MGVjNDM4ZGMtM2UwZC00YjA5LTljNzEtMjkwM2MwNjg4MWU2/file.PNG",
+        src: "https://pics.paypal.com/00/s/MTc3MjJkODgtOGZlNS00ZjNiLTgwOTUtN2E0ODM3MmJlYmNm/file.PNG",
         alt: "Donate with PayPal button",
         title: "PayPal - The safer, easier way to pay online!",
       },
@@ -73,13 +73,13 @@ const changeLanguage = (lang) => {
                 <TranslatedTextSpan
                   text-key="supportUs.list.secondListElement.name"
                 />
-                <br />
                 <div id="donate-button-container">
                   <span>{{
                     t("supportUs.list.secondListElement.description")
                   }}</span>
                   <div id="donate-button"></div>
                 </div>
+                <br />
               </li>
             </ul>
             <p>
@@ -180,6 +180,10 @@ a {
   }
 }
 
+#donate-button img {
+  width: 1% !important;
+}
+
 // Media queries
 @media (max-width: 500px) {
   h1 {
@@ -198,6 +202,16 @@ a {
 
   ul {
     width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  #iban {
+    font-size: 12px;
   }
 }
 </style>
