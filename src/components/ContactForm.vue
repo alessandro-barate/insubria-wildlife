@@ -2,6 +2,7 @@
 import { FormKit } from "@formkit/vue";
 import { store } from "../store.js";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 export default {
   name: "ContactForm",
@@ -41,6 +42,9 @@ const formRules = {
   message: [["required"], ["length", 10, 1000]],
 };
 
+let myuuid = uuidv4();
+console.log("UUID is" + myuuid);
+
 // Form logic
 const sendMail = async (fields, node) => {
   // For debug
@@ -54,7 +58,10 @@ const sendMail = async (fields, node) => {
   try {
     // Token call
     const responseToken = await axios.get(
-      import.meta.env.VITE_ENDPOINT_GETTOKEN_URL
+      import.meta.env.VITE_ENDPOINT_GETTOKEN_URL,
+      {
+        myuuid: myuuid,
+      }
     );
 
     if (responseToken.data.status === "success") {
@@ -63,18 +70,13 @@ const sendMail = async (fields, node) => {
     } else {
     }
 
-    // Get CSRF token from meta tag
-    const token = document
-      .querySelector('meta[name="csrf-token"]')
-      .getAttribute("content");
-
     const config = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
         "X-Requested-With": "XMLHttpRequest",
-        "X-CSRF-TOKEN": token,
+        "X-CSRF-TOKEN": formToken,
       },
     };
 
@@ -84,6 +86,8 @@ const sendMail = async (fields, node) => {
       surname: sanitizeFormInput(fields.surname.trim()),
       mail: sanitizeFormInput(fields.mail.trim().toLowerCase()),
       message: sanitizeFormInput(fields.message.trim()),
+      timestamp: Date.now(),
+      myuuid: myuuid,
     };
 
     console.log(sanitizedFields);
