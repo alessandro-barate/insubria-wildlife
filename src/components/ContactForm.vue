@@ -42,9 +42,6 @@ const formRules = {
   message: [["required"], ["length", 10, 1000]],
 };
 
-let myuuid = uuidv4();
-console.log("UUID is" + myuuid);
-
 // Form logic
 const sendMail = async (fields, node) => {
   // For debug
@@ -55,20 +52,33 @@ const sendMail = async (fields, node) => {
   // console.log("Dati:", fields);
 
   // Configurazione esplicita della richiesta POST
+
+  let myuuid = uuidv4();
+
   try {
     // Token call
+
+    console.log({
+      myuuid: myuuid,
+    });
+
     const responseToken = await axios.get(
       import.meta.env.VITE_ENDPOINT_GETTOKEN_URL,
       {
-        myuuid: myuuid,
+        params: {
+          myuuid: myuuid,
+        },
       }
     );
 
+    let formToken = "";
+
     if (responseToken.data.status === "success") {
-      const formToken = responseToken.data.token;
-      console.log(formToken);
+      formToken = responseToken.data.token;
     } else {
     }
+
+    console.log(formToken);
 
     const config = {
       method: "POST",
@@ -99,6 +109,7 @@ const sendMail = async (fields, node) => {
     );
 
     console.log(response);
+    console.log(response.data.message);
 
     if (response.data.status === "success") {
       node.reset();
@@ -151,13 +162,6 @@ const changeLanguage = (lang) => {
               <h2>
                 {{ t("contactUs.firstTitle") }}
               </h2>
-            </div>
-            <div
-              id="successMessage"
-              class="successMessage"
-              style="display: none"
-            >
-              <p>fwergvewvg</p>
             </div>
             <FormKit
               id="form"
@@ -220,6 +224,13 @@ const changeLanguage = (lang) => {
                 autocomplete="off"
               />
             </FormKit>
+            <div
+              id="successMessage"
+              class="successMessage"
+              style="display: none"
+            >
+              <p>fwergvewvg</p>
+            </div>
           </div>
         </section>
         <!-- END form section -->
