@@ -77,14 +77,23 @@ const changeLanguage = (lang) => {
   <!-- Zoomed poster container -->
   <div v-if="showZoom" class="zoomed-container">
     <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
-    <figure>
-      <img
-        :src="store.events[currentIndex].poster"
-        :alt="t('events.' + currentIndex + '.alt')"
-        loading="lazy"
-        @click.stop
-      />
-    </figure>
+    <div class="zoomed-event-container">
+      <div class="image-column">
+        <figure>
+          <img
+            :src="store.events[currentIndex].poster"
+            :alt="t('events.' + currentIndex + '.alt')"
+            loading="lazy"
+            @click.stop
+          />
+        </figure>
+      </div>
+      <div class="event-description">
+        <p>
+          {{ t("events." + currentIndex + ".description") }}
+        </p>
+      </div>
+    </div>
   </div>
   <!-- END zoomed poster container -->
 </template>
@@ -125,6 +134,10 @@ section {
   margin-top: 40px;
 }
 
+.image-column {
+  width: 50%;
+}
+
 .event-card {
   width: 100%;
   margin: 0;
@@ -144,9 +157,8 @@ section {
 }
 
 .zoomed-container img {
-  width: auto;
-  max-width: 90%;
-  max-height: 90vh;
+  width: 80%;
+  max-height: 80vh;
   object-fit: contain;
 }
 
@@ -164,6 +176,18 @@ section {
   }
 }
 
+.zoomed-event-container {
+  width: 85%;
+  display: flex;
+}
+
+.event-description {
+  width: 50%;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 @media (max-width: 936px) {
   .big-events-container {
     display: block;
@@ -177,8 +201,30 @@ section {
     }
   }
 
+  .image-column {
+    width: 100%;
+  }
+
+  .zoomed-event-container {
+    width: 85%;
+    display: block;
+    padding-top: 150px;
+
+    .event-description {
+      width: 100%;
+      padding-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   .zoomed-container {
     text-align: center;
+    overflow: auto;
+
+    img {
+      width: 100%;
+    }
 
     .zoom-close-btn {
       top: 10px;
