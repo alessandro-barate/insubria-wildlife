@@ -14,25 +14,11 @@ export default {
     };
   },
 };
-
-console.log("Ambiente:", import.meta.env.MODE);
-console.log("URL API:", import.meta.env.VITE_ENDPOINT_URL);
 </script>
 
 <script async setup>
 import { sanitizeFormInput } from "../utils/sanitize.js";
 import { useI18n } from "vue-i18n";
-
-// try {
-
-// } catch (error) {
-//   console.error("Errore:", error);
-//   console.error("Config:", error.config);
-//   if (error.response) {
-//     console.error("Response:", error.response.data);
-//     console.error("Status:", error.response.status);
-//   }
-// }
 
 // Form validation rules
 const formRules = {
@@ -42,26 +28,13 @@ const formRules = {
   message: [["required"], ["length", 10, 1000]],
 };
 
-// Form logic
+// Function to send the email through the form
 const sendMail = async (fields, node) => {
-  // For debug
-  // console.log("Tutte le variabili ENV:", import.meta.env);
-  // console.log("URL utilizzato:", import.meta.env.VITE_ENDPOINT_URL);
-  // console.log("Metodo richiesta: POST");
-  // console.log("URL:", import.meta.env.VITE_ENDPOINT_URL);
-  // console.log("Dati:", fields);
-
-  // Configurazione esplicita della richiesta POST
-
+  // Calling uuid generation
   let myuuid = uuidv4();
 
   try {
-    // Token call
-
-    console.log({
-      myuuid: myuuid,
-    });
-
+    // GET request explicit configuration for the token call
     const responseToken = await axios.get(
       import.meta.env.VITE_ENDPOINT_GETTOKEN_URL,
       {
@@ -71,14 +44,13 @@ const sendMail = async (fields, node) => {
       }
     );
 
+    // Token variable
     let formToken = "";
 
     if (responseToken.data.status === "success") {
       formToken = responseToken.data.token;
     } else {
     }
-
-    console.log(formToken);
 
     const config = {
       method: "POST",
@@ -100,16 +72,12 @@ const sendMail = async (fields, node) => {
       myuuid: myuuid,
     };
 
-    console.log(sanitizedFields);
-
+    // POST request explicit configuration
     const response = await axios.post(
       import.meta.env.VITE_ENDPOINT_URL_WINDOWS,
       sanitizedFields,
       config
     );
-
-    console.log(response);
-    console.log(response.data.message);
 
     if (response.data.status === "success") {
       node.reset();
@@ -229,7 +197,7 @@ const changeLanguage = (lang) => {
               class="successMessage"
               style="display: none"
             >
-              <p>fwergvewvg</p>
+              <p>Email inviata con successo!</p>
             </div>
           </div>
         </section>
@@ -275,6 +243,10 @@ const changeLanguage = (lang) => {
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
     transform: scale(1.01);
   }
+}
+
+#successMessage {
+  width: 100%;
 }
 
 // Media queries
