@@ -8,6 +8,7 @@ export default {
       store,
       showZoom: false,
       currentIndex: null,
+      // showDescription: false,
     };
   },
 
@@ -18,6 +19,10 @@ export default {
       document.body.style.overflow = this.showZoom ? "hidden" : "";
     },
   },
+
+  // if (!this.store.events.description) {
+  //   this.showDescription = true;
+  // }
 };
 </script>
 

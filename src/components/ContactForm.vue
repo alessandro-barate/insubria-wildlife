@@ -268,4 +268,10 @@ const changeLanguage = (lang) => {
     padding-bottom: 20px;
   }
 }
+
+@media (max-width: 375px) {
+  .contact h1 {
+    font-size: 30px;
+  }
+}
 </style>
