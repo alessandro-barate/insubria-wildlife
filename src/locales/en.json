@@ -3,43 +3,43 @@
     "title": {
       "homepage": {
         "name": "Homepage",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "content": "Homepage description",
+        "description": "Insubria WildLife is a project born from the desire to promote and raise awareness of the naturalistic wonders of the Insubria territory, with well-defined mission and vision"
       },
-      "insubriaInfo": {
-        "name": "Informazioni",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      "insubria": {
+        "name": "Info",
+        "content": "Insubria info page description",
+        "description": "Brief historical notes on the ancient origins of Insubria, together with an explanation of our logo animal choice and some of its characteristics"
       },
       "team": {
-        "name": "Il nostro Team",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "name": "Our Team",
+        "content": "Team page description",
+        "description": "Insubria WildLife team is made up of young people who love Nature, and here's a brief description of each of them"
       },
       "events": {
-        "name": "Eventi",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "name": "Events",
+        "content": "Events page description",
+        "description": "Here you can find all the posters of events and activities organized by Insubria WildLife, both past and upcoming, with a brief description of each"
       },
       "news": {
         "name": "News",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "content": "News page description",
+        "description": "Page displaying all posts from Insubria WildLife's Instagram account"
       },
       "sosAnimal": {
-        "name": "Sos Animali",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "name": "Wildlife Rescue",
+        "content": "Wildlife rescue page description",
+        "description": "Actions flow to follow when finding an animal, with detailed descriptions by animal type and useful links"
       },
       "contactUs": {
-        "name": "Contattaci",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "name": "Contact Us",
+        "content": "Contact us page description",
+        "description": "Contact form to get in touch with Insubria WildLife Team"
       },
       "supportUs": {
-        "name": "Supportaci",
-        "content": "Descrizione della homepage",
-        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+        "name": "Support Us",
+        "content": "Support Us page description",
+        "description": "Available options to economically support Insubria WildLife"
       }
     }
   },

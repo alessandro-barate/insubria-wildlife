@@ -29,15 +29,45 @@ const updateTitle = (to) => {
 
 const updateMetaTags = (to) => {
   try {
-    const defaultContent = "Default Content";
-    const defaultDescription = "Default Description";
+    const defaultContent = "Page Content";
+    const defaultDescription = "Page Description";
+
+    // Get the route name and convert to lowercase for matching with json keys
+    let routeKey = "";
+    switch (to.name) {
+      case "Homepage":
+        routeKey = "homepage";
+        break;
+      case "InsubriaInfo":
+        routeKey = "insubria";
+        break;
+      case "Team":
+        routeKey = "team";
+        break;
+      case "Eventi":
+        routeKey = "events";
+        break;
+      case "News":
+        routeKey = "news";
+        break;
+      case "SosAnimali":
+        routeKey = "sosAnimal";
+        break;
+      case "Contattaci":
+        routeKey = "contactUs";
+        break;
+      case "Supportaci":
+        routeKey = "supportUs";
+        break;
+      default:
+        routeKey = "homepage";
+    }
 
     // Get the content and description from i18n based on the route
     const metaContent =
-      i18n.global.t(`index.title.${to.name.toLowerCase()}.content`) ||
-      defaultContent;
+      i18n.global.t(`index.title.${routeKey}.content`) || defaultContent;
     const metaDescription =
-      i18n.global.t(`index.title.${to.name.toLowerCase()}.description`) ||
+      i18n.global.t(`index.title.${routeKey}.description`) ||
       defaultDescription;
 
     // Get or create the meta description tag
@@ -56,6 +86,7 @@ const updateMetaTags = (to) => {
   }
 };
 
+// Declaring the router's routes
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     return { top: 0, behavior: "smooth" };
@@ -129,7 +160,7 @@ const router = createRouter({
   ],
 });
 
-// Watcher to update the title when the language changes
+// Watcher to update the title and the meta tags when the language changes
 watch(
   () => i18n.global.locale.value,
   () => {
@@ -137,6 +168,7 @@ watch(
       const currentRoute = router.currentRoute.value;
       if (currentRoute) {
         updateTitle(currentRoute);
+        updateMetaTags(currentRoute);
       }
     } catch (error) {
       console.error("Error in language change watcher:", error);
@@ -144,7 +176,7 @@ watch(
   }
 );
 
-// Update the title when the route changes
+// Update the title and the meta tags when the route changes
 router.beforeEach((to, from, next) => {
   updateTitle(to);
   updateMetaTags(to);
