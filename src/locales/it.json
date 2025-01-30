@@ -1,15 +1,46 @@
 {
   "index": {
     "title": {
-      "homepage": "Homepage",
-      "insubria": "Informazioni",
-      "team": "Il nostro Team",
-      "events": "Eventi",
-      "news": "News",
-      "sosAnimal": "Sos Animali",
-      "contactUs": "Contattaci",
-      "supportUs": "Supportaci",
-      "paypal": "Dona con PayPal"
+      "homepage": {
+        "name": "Homepage",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite"
+      },
+      "insubriaInfo": {
+        "name": "Informazioni",
+        "content": "Descrizione della pagina delle informazioni sull'Insubria",
+        "description": "Brevi accenni storici sulle origini antichissime dell'Insubria, insieme alla spiegazione della scelta dell'animale nostro logo e alcune sue caratteristiche"
+      },
+      "team": {
+        "name": "Il nostro Team",
+        "content": "Descrizione della pagina sul team di Insubria",
+        "description": "Il Team di Insubria è composto da persone giovani e che amano la Natura, e qui c'è una breve descrizione di ognuno di loro"
+      },
+      "events": {
+        "name": "Eventi",
+        "content": "Descrizione della pagina sugli eventi di Insubria",
+        "description": "Pagina che mostra le locandine di tutti gli eventi e le attività organizzati da Insubria WildLife, sia quelli passati che quelli futuri, con una breve descrizione di ciascuno"
+      },
+      "news": {
+        "name": "News",
+        "content": "Descrizione della pagina sulle news di Insubria",
+        "description": "Pagina che mostra tutti i post dell'account Instagram di Insubria WildLife"
+      },
+      "sosAnimal": {
+        "name": "Sos Animali",
+        "content": "Descrizione della pagina su come agire in caso di ritrovamento di animali",
+        "description": "Pagina che mostra il flusso di azioni da seguire in caso di ritrovamento di un animale, con descrizioni dettagliate per tipologia di animale e link utili"
+      },
+      "contactUs": {
+        "name": "Contattaci",
+        "content": "Descrizione della pagina su come contattare il team di Insubria",
+        "description": "Pagina con il form di contatto per entrare in contatto con il Team di Insubria WildLife"
+      },
+      "supportUs": {
+        "name": "Supportaci",
+        "content": "Descrizione della pagina su come supportare economicamente Insubria WildLife",
+        "description": "Pagina che mostra le opzioni disponibili per supportare economicamente Insubria WildLife"
+      }
     }
   },
   "nav": {
@@ -134,8 +165,7 @@
   },
   "team": {
     "title": "il nostro team",
-    "secondTitle": "Ecco i volti di Insubria WildLife",
-    "alt": "Foto delle fondatrici di Insubria Wildlife",
+    "alt": "Foto del team di Insubria Wildlife",
     "paragraph": "\u000A\u000ASiamo un gruppo di persone appassionate di natura e ci siamo conosciutə anni fa in un centro di cura e riabilitazione per animali selvatici, dove abbiamo avuto l'opportunità di lavorare, fare tirocini e e dedicare tempo al volontariato per molti anni.\u000A\u000ANel tempo le nostre strade si sono diversificate, tra cambi di lavoro, città o persino nazioni, ma il nostro legame è sempre rimasto forte. Ogni volta che se ne presenta l'occasione ci ritroviamo per attività all'aria aperta: birdwatching, passeggiate nei boschi, ascolto dei bramiti dei cervi, viaggi e scoperte di nuovi luoghi.\u000A\u000AIl desiderio di vedere il nostro territorio valorizzato dal punto di vista naturalistico e di vedere la comunità più coinvolta ci ha spintə a fare un grande passo: dare vita alla nostra associazione.\u000A\u000ASperiamo di condividere questa avventura con te e di realizzare insieme tanti piccoli sogni!",
     "members": {
       "0": {

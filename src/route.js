@@ -27,6 +27,35 @@ const updateTitle = (to) => {
   }
 };
 
+const updateMetaTags = (to) => {
+  try {
+    const defaultContent = "Default Content";
+    const defaultDescription = "Default Description";
+
+    // Get the content and description from i18n based on the route
+    const metaContent =
+      i18n.global.t(`index.title.${to.name.toLowerCase()}.content`) ||
+      defaultContent;
+    const metaDescription =
+      i18n.global.t(`index.title.${to.name.toLowerCase()}.description`) ||
+      defaultDescription;
+
+    // Get or create the meta description tag
+    let descriptionMeta = document.querySelector('meta[name="description"]');
+    if (!descriptionMeta) {
+      descriptionMeta = document.createElement("meta");
+      descriptionMeta.setAttribute("name", "description");
+      document.head.appendChild(descriptionMeta);
+    }
+
+    // Update both content and description attributes on the same meta tag
+    descriptionMeta.setAttribute("content", metaContent);
+    descriptionMeta.setAttribute("description", metaDescription);
+  } catch (error) {
+    console.error("Error updating meta tags:", error);
+  }
+};
+
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     return { top: 0, behavior: "smooth" };
@@ -38,8 +67,7 @@ const router = createRouter({
       name: "Homepage",
       component: Homepage,
       meta: {
-        name: "Homepage",
-        description: "Homepage Description",
+        titleKey: "index.title.homepage.name",
       },
     },
     {
@@ -47,7 +75,7 @@ const router = createRouter({
       name: "InsubriaInfo",
       component: InsubriaInfo,
       meta: {
-        titleKey: "index.title.insubria",
+        titleKey: "index.title.insubria.name",
       },
     },
     {
@@ -55,7 +83,7 @@ const router = createRouter({
       name: "Team",
       component: Team,
       meta: {
-        titleKey: "index.title.team",
+        titleKey: "index.title.team.name",
       },
     },
     {
@@ -63,7 +91,7 @@ const router = createRouter({
       name: "Eventi",
       component: Events,
       meta: {
-        titleKey: "index.title.events",
+        titleKey: "index.title.events.name",
       },
     },
     {
@@ -71,7 +99,7 @@ const router = createRouter({
       name: "News",
       component: News,
       meta: {
-        titleKey: "index.title.news",
+        titleKey: "index.title.news.name",
       },
     },
     {
@@ -79,7 +107,7 @@ const router = createRouter({
       name: "SosAnimali",
       component: SosAnimals,
       meta: {
-        titleKey: "index.title.sosAnimal",
+        titleKey: "index.title.sosAnimal.name",
       },
     },
     {
@@ -87,7 +115,7 @@ const router = createRouter({
       name: "Contattaci",
       component: ContactUs,
       meta: {
-        titleKey: "index.title.contactUs",
+        titleKey: "index.title.contactUs.name",
       },
     },
     {
@@ -95,7 +123,7 @@ const router = createRouter({
       name: "Supportaci",
       component: SupportUs,
       meta: {
-        titleKey: "index.title.supportUs",
+        titleKey: "index.title.supportUs.name",
       },
     },
   ],
@@ -119,27 +147,8 @@ watch(
 // Update the title when the route changes
 router.beforeEach((to, from, next) => {
   updateTitle(to);
+  updateMetaTags(to);
   next();
-});
-
-// Applying description and content meta tags dinamically
-router.beforeEach((to) => {
-  const { content, description } = to.meta;
-  const defaultContent = "Default Content";
-  const defaultDescription = "Default Description";
-
-  document.name = content || defaultContent;
-
-  const descriptionElement = document.querySelector(
-    'head meta[name="description"]',
-    'head meta[name="content"]'
-  );
-
-  descriptionElement.setAttribute(
-    "description",
-    description || defaultDescription
-  );
-  descriptionElement.setAttribute("content", description || defaultDescription);
 });
 
 export { router };

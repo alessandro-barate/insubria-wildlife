@@ -1,15 +1,46 @@
 {
   "index": {
     "title": {
-      "homepage": "Homepage",
-      "insubria": "Information",
-      "team": "Our Team",
-      "events": "Events",
-      "news": "News",
-      "sosAnimal": "Wildlife Rescue",
-      "contactUs": "Contact Us",
-      "supportUs": "Support Us",
-      "paypal": "Donate with PayPal"
+      "homepage": {
+        "name": "Homepage",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "insubriaInfo": {
+        "name": "Informazioni",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "team": {
+        "name": "Il nostro Team",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "events": {
+        "name": "Eventi",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "news": {
+        "name": "News",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "sosAnimal": {
+        "name": "Sos Animali",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "contactUs": {
+        "name": "Contattaci",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      },
+      "supportUs": {
+        "name": "Supportaci",
+        "content": "Descrizione della homepage",
+        "description": "Insubria WildLife è un progetto nato dalla voglia di valorizzare e far conoscere le meraviglie naturalistiche del territorio dell'Insubria, con una mission e una vision bene definite."
+      }
     }
   },
   "nav": {
@@ -134,8 +165,7 @@
   },
   "team": {
     "title": "our team",
-    "secondTitle": "Here the Insubria WildLife faces",
-    "alt": "Image of Insubria Wildlife's founders",
+    "alt": "Image of Insubria Wildlife's team",
     "paragraph": "\u000A\u000AWe are a group of nature enthusiasts who met years ago at a wildlife rehabilitation and care center, where we had the opportunity to work, intern, and volunteer for many years.\u000A\u000AOver time, our paths have diversified, with changes in jobs, cities, or even nations, but our bond has always remained strong. Whenever the opportunity arises, we get together for outdoor activities: birdwatching, walks in the woods, listening to deer calls, traveling, and discovering new places.\u000A\u000AThe desire to see our territory enhanced from a naturalistic point of view and to see the community more involved has pushed us to take a big step: starting our own association.\u000A\u000AWe hope to share this adventure with you and to realize many small dreams together!",
     "members": {
       "0": {
