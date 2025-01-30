@@ -465,8 +465,9 @@ h1 {
   }
 
   .jumbo {
+    padding-top: 100px;
+    background-position: 20%;
     background-image: url(../assets/img/homepage/background/bird-jumbo-reverse-mobile.webp);
-    background-position: 20% 0px;
 
     p {
       margin-top: 10px;
