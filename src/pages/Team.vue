@@ -55,7 +55,6 @@ const changeLanguage = (lang) => {
           <section class="team-container">
             <div class="overlay description-section">
               <h1 class="uppercase">{{ t("team.title") }}</h1>
-              <h2>{{ t("team.secondTitle") }}</h2>
               <div class="team-group-img">
                 <figure>
                   <img
@@ -170,11 +169,6 @@ const changeLanguage = (lang) => {
   transform: scale(1.01);
 }
 
-.description-section h2 {
-  width: 90%;
-  font-size: 24px;
-}
-
 .description-section p {
   width: 85%;
   line-height: 25px;
@@ -183,7 +177,6 @@ const changeLanguage = (lang) => {
 
 .team-group-img {
   width: 100%;
-  padding-top: 30px;
   margin-bottom: -20px;
 
   img {

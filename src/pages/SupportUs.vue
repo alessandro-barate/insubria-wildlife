@@ -74,9 +74,7 @@ const changeLanguage = (lang) => {
                   text-key="supportUs.list.secondListElement.name"
                 />
                 <div id="donate-button-container">
-                  <span>{{
-                    t("supportUs.list.secondListElement.description")
-                  }}</span>
+                  <span>{{ t("supportUs.list.secondListElement.link") }}</span>
                   <div id="donate-button"></div>
                 </div>
                 <br />
