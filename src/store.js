@@ -269,6 +269,10 @@ export const store = reactive({
         return t("events.0.alt");
       }),
       poster: "./src/assets/img/events/posters/2025/Marzo/29-03-25.webp",
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.description");
+      }),
     },
     {
       title: computed(() => {
@@ -284,10 +288,6 @@ export const store = reactive({
         return t("events.1.alt");
       }),
       poster: "./src/assets/img/events/posters/2024/Novembre/27-11-24.webp",
-      description: computed(() => {
-        const { t } = useI18n();
-        return t("events.1.description");
-      }),
     },
   ],
 

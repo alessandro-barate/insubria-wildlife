@@ -209,18 +209,18 @@
     "findOutButton": "Bottone per aprire la card con la descrizione"
   },
   "events": {
-    "firstParagraph": "Vi siete persi qualche evento o volete vedere quelli in programma?",
+    "firstParagraph": "Se sei curioso di vedere le attività di Insubria WildLife scorri le locandine, troverai quelle passate e quelle che abbiamo in programma",
     "0": {
       "title": "primavera in palude",
       "date": "29 Marzo 2025",
       "alt": "Immagine della locandina dell'evento sulla primavera in palude: Primavera in Palude",
-      "description": ""
+      "description": "Una giornata tra avvistamenti, fotografia naturalistica e racconti del nostro territorio e della fauna che lo abita. Adatto ad appassionati, curiosi e a chi muove i primi passi nella fotografia naturalistica, per scoprire assieme i tesori nascosti della Palude Brabbia."
     },
     "1": {
       "title": "notizie da geed deeble",
       "date": "27 Novembre 2024",
       "alt": "Immagine della locandina dell'evento sui ghepardi: Notizie da Geed Deeble",
-      "description": "Una giornata tra avvistamenti, fotografia naturalistica e racconti del nostro territorio e della fauna che lo abita. Adatto ad appassionati, curiosi e a chi muove i primi passi nella fotografia naturalistica, per scoprire assieme i tesori nascosti della Palude Brabbia."
+      "description": ""
     }
   },
   "sosAnimals": {

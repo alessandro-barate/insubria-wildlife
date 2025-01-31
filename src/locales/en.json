@@ -209,18 +209,18 @@
     "findOutButton": "Button to open the card description"
   },
   "events": {
-    "firstParagraph": "Have you missed any events or would you like to see the upcoming ones?",
+    "firstParagraph": "If you're curious to see Insubria WildLife's activities scroll through the posters, you'll find the past events and those we have scheduled",
     "0": {
       "title": "spring in marsh",
       "date": "29 March 2025",
       "alt": "Event poster image for Spring in the Marsh: Spring in the Marsh",
-      "description": ""
+      "description": "A day of wildlife spotting, nature photography, and stories about our territory and the fauna that inhabits it. Suitable for enthusiasts, curious people, and those taking their first steps in nature photography, to discover together the hidden treasures of the Brabbia Marsh."
     },
     "1": {
       "title": "news from geed deeble",
       "date": "27 November 2024",
       "alt": "Event poster image about cheetahs: News from Geed Deeble",
-      "description": "A day of wildlife spotting, nature photography, and stories about our territory and the fauna that inhabits it. Suitable for enthusiasts, curious people, and those taking their first steps in nature photography, to discover together the hidden treasures of the Brabbia Marsh"
+      "description": ""
     }
   },
   "sosAnimals": {

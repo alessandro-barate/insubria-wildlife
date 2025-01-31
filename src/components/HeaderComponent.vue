@@ -456,6 +456,7 @@ header {
     transform: translate(-2vh, -0.7vh);
   }
 }
+
 @media (max-width: 500px) {
   .logo {
     margin-left: 30px;
@@ -606,6 +607,21 @@ header {
 
     #italian {
       padding-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .lang-container {
+    #english {
+      margin-left: 5px;
+    }
+
+    #italian,
+    #english {
+      img {
+        width: 100%;
+      }
     }
   }
 }
