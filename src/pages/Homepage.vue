@@ -257,11 +257,11 @@ h1 {
 }
 
 .jumbo {
-  background-image: url(../assets/img/homepage/background/bird-jumbo-desktop.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 100% 20%;
   padding-bottom: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 20%;
+  background-image: url(../assets/img/homepage/background/bird-jumbo-desktop.webp);
 
   p {
     font-size: 19px;
@@ -519,7 +519,7 @@ h1 {
     margin-right: 0;
     padding-top: 50px;
     background-color: #0d0907;
-    background-image: url(../assets/img/homepage/background/fox.webp);
+    background-image: url(../assets/img/homepage/background/fox.jpg);
     background-size: cover;
     background-position: center;
 
