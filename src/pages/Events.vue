@@ -94,9 +94,7 @@ const changeLanguage = (lang) => {
         </figure>
       </div>
       <div class="event-description">
-        <p>
-          {{ t("events." + currentIndex + ".description") }}
-        </p>
+        <p v-html="$sanitize(store.events[currentIndex].description)"></p>
       </div>
     </div>
   </div>
