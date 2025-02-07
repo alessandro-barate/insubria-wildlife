@@ -206,6 +206,11 @@ a {
   ul {
     width: 80%;
   }
+
+  #donate-button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 375px) {
