@@ -12,7 +12,7 @@ export default {
       env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
       hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
       image: {
-        src: "https://pics.paypal.com/00/s/MTc3MjJkODgtOGZlNS00ZjNiLTgwOTUtN2E0ODM3MmJlYmNm/file.PNG",
+        src: "./src/assets/img/support/paypal/paypal-button.png",
         alt: "Donate with PayPal button",
         title: "PayPal - The safer, easier way to pay online!",
       },
@@ -178,8 +178,13 @@ a {
   }
 }
 
-#donate-button img {
-  width: 1% !important;
+#donate-button {
+  width: 100%;
+  text-align: start;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 // Media queries
