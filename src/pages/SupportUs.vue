@@ -179,8 +179,8 @@ a {
 }
 
 #donate-button {
-  width: 100%;
-  text-align: start;
+  width: 30%;
+  margin: 5px 0 0 0;
 
   &:hover {
     transform: scale(1.05);
