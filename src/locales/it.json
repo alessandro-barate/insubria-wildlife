@@ -300,8 +300,10 @@
       "firstListElement": "*Bonifico bancario - IBAN:*",
       "secondListElement": {
         "name": "*PayPal*",
-        "link": "Dona in modo sicuro con",
-        "description": "Per sostenerci tramite"
+        "link": "Dona in modo sicuro con"
+      },
+      "thirdListElement": {
+        "name": "*Satispay*"
       }
     },
     "paragraph": "Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna selvatica e a preservare il nostro territorio per le future generazioni.",

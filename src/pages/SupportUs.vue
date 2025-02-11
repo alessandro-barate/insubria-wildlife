@@ -62,14 +62,14 @@ const changeLanguage = (lang) => {
           <!-- Payment methods section -->
           <div class="payments-list">
             <ul>
-              <li>
+              <li id="iban-method">
                 <TranslatedTextSpan
                   text-key="supportUs.list.firstListElement"
                 />
                 <br />
                 <span id="iban">IT02S0623022808000047552608</span>
               </li>
-              <li>
+              <li id="paypal-method">
                 <TranslatedTextSpan
                   text-key="supportUs.list.secondListElement.name"
                 />
@@ -78,6 +78,16 @@ const changeLanguage = (lang) => {
                   <div id="donate-button"></div>
                 </div>
                 <br />
+              </li>
+              <li id="satispay-method">
+                <TranslatedTextSpan
+                  text-key="supportUs.list.thirdListElement.name"
+                />
+                <br />
+                <span>{{ t("supportUs.list.secondListElement.link") }}</span>
+                <span>
+                  <a> Satispay</a>
+                </span>
               </li>
             </ul>
             <p>
@@ -141,16 +151,26 @@ p {
   padding-top: 30px;
 }
 
-ul {
-  width: 50%;
-  padding-top: 12px;
-  text-align: start;
+.payments-list {
+  padding-top: 15px;
 
-  li {
-    font-size: 18px;
-    padding-top: 6px;
-    list-style-type: disc;
+  ul {
+    width: 50%;
+    padding-top: 12px;
+    text-align: start;
+
+    li {
+      font-size: 18px;
+      padding-top: 6px;
+      padding-bottom: 15px;
+      list-style-type: disc;
+    }
   }
+}
+
+#paypal-method {
+  margin-bottom: -15px;
+  padding-bottom: 0;
 }
 
 a {
