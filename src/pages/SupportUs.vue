@@ -128,7 +128,11 @@ const changeLanguage = (lang) => {
                   >
                     Satispay</a
                   >
-                  <button v-show="store.desktopViewport" @click="showQrCode()">
+                  <button
+                    id="satispay-button"
+                    v-show="store.desktopViewport"
+                    @click="showQrCode()"
+                  >
                     Satispay
                   </button>
                 </span>
@@ -236,6 +240,20 @@ p {
   padding-bottom: 0;
 }
 
+#satispay-button {
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  border-radius: 20px;
+  padding: 5px 30px 5px 30px;
+  background-color: #ff6b3a;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 a {
   color: #ff6a3a;
 
@@ -313,7 +331,7 @@ a {
     padding-bottom: 50px;
     text-align: center;
     border-radius: 20px;
-    background-color: red;
+    background-color: black;
 
     .details-btn {
       text-align: start;
