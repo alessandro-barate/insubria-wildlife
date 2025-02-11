@@ -4,10 +4,19 @@ export default {
   name: "Supportaci",
 
   data() {
-    return {};
+    return {
+      windowWidth: window.innerWidth,
+    };
   },
 
   mounted() {
+    // Inizializing the viewport state
+    this.checkViewport();
+
+    // Resize's event listener
+    window.addEventListener("resize", this.handleResize);
+
+    // Paypal button logic
     PayPal.Donation.Button({
       env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
       hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
@@ -23,6 +32,21 @@ export default {
   },
 
   methods: {
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+      this.checkViewport();
+    },
+
+    checkViewport() {
+      if (this.windowWidth >= 1000) {
+        store.desktopViewport = true;
+        store.mobileViewport = false;
+      } else {
+        store.desktopViewport = false;
+        store.mobileViewport = true;
+      }
+    },
+
     showQrCode() {
       if (store.showDetails) return;
       store.showDetails = true;
@@ -97,7 +121,16 @@ const changeLanguage = (lang) => {
                 <br />
                 <span>{{ t("supportUs.list.secondListElement.link") }}</span>
                 <span>
-                  <a @click="showQrCode()"> Satispay</a>
+                  <a
+                    v-if="store.mobileViewport"
+                    href="https://www.satispay.com/app/pay/shops/8afb0c79-75f6-46b8-afd4-e8f91834c268"
+                    target="_blank"
+                  >
+                    Satispay</a
+                  >
+                  <button v-show="store.desktopViewport" @click="showQrCode()">
+                    Satispay
+                  </button>
                 </span>
               </li>
             </ul>
@@ -237,55 +270,6 @@ a {
   }
 }
 
-.overlay-single-card {
-  width: 50%;
-  padding-top: 18px;
-  padding-bottom: 50px;
-  text-align: center;
-  border-radius: 20px;
-  background-color: black;
-
-  .details-btn {
-    text-align: start;
-    margin-left: 4%;
-
-    button {
-      border: none;
-      font-size: 25px;
-      font-weight: bold;
-      text-align: start;
-      padding-bottom: 20px;
-      color: rgba(255, 255, 255, 0.753);
-      background-color: transparent;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  .details-img {
-    width: 50%;
-    border-radius: 10px;
-    background-color: #f74005;
-
-    .top-paragraph {
-      font-size: 25px;
-      padding-top: 20px;
-      padding-bottom: 15px;
-    }
-
-    .bottom-paragraph {
-      font-size: 20px;
-      padding: 10px 20px 15px 20px;
-    }
-
-    img {
-      width: 50%;
-    }
-  }
-}
-
 // Media queries
 @media (max-width: 500px) {
   h1 {
@@ -319,6 +303,57 @@ a {
 
   #iban {
     font-size: 12px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .overlay-single-card {
+    width: 50%;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: red;
+
+    .details-btn {
+      text-align: start;
+      margin-left: 4%;
+
+      button {
+        border: none;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: start;
+        padding-bottom: 20px;
+        color: rgba(255, 255, 255, 0.753);
+        background-color: transparent;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .details-img {
+      width: 50%;
+      border-radius: 10px;
+      background-color: #f74005;
+
+      .top-paragraph {
+        font-size: 25px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+      }
+
+      .bottom-paragraph {
+        font-size: 20px;
+        padding: 10px 20px 15px 20px;
+      }
+
+      img {
+        width: 50%;
+      }
+    }
   }
 }
 </style>
