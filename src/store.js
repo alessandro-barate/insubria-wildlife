@@ -2,7 +2,7 @@ import { reactive, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
 export const store = reactive({
-  // Variable for Team's and Sos Animals' single card
+  // Variable for Team's single card, Sos Animals' single card and satispay's qr code
   showDetails: false,
 
   // Arrays

@@ -21,6 +21,17 @@ export default {
       },
     }).render("#donate-button");
   },
+
+  methods: {
+    showQrCode() {
+      if (store.showDetails) return;
+      store.showDetails = true;
+    },
+
+    hideQrCode() {
+      store.showDetails = false;
+    },
+  },
 };
 </script>
 
@@ -86,7 +97,7 @@ const changeLanguage = (lang) => {
                 <br />
                 <span>{{ t("supportUs.list.secondListElement.link") }}</span>
                 <span>
-                  <a> Satispay</a>
+                  <a @click="showQrCode()"> Satispay</a>
                 </span>
               </li>
             </ul>
@@ -117,6 +128,25 @@ const changeLanguage = (lang) => {
       </div>
     </div>
   </div>
+
+  <!-- Satispay QR code zoomed -->
+  <div v-show="store.showDetails" class="zoomed-container">
+    <div v-if="store.showDetails" class="overlay-single-card">
+      <div class="details-btn">
+        <button @click="hideQrCode()">✕</button>
+      </div>
+      <div class="details-img">
+        <p class="top-paragraph">Satispay</p>
+        <img
+          src="../assets/img/support/satispay/satispay-qr-code.webp"
+          alt="Satispay QR code"
+          loading="lazy"
+        />
+        <p class="bottom-paragraph">Inquadra il QR Code dall'app per donare!</p>
+      </div>
+    </div>
+  </div>
+  <!-- END Satispay QR code zoomed -->
 </template>
 
 <style scoped lang="scss">
@@ -204,6 +234,55 @@ a {
 
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+.overlay-single-card {
+  width: 50%;
+  padding-top: 18px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: black;
+
+  .details-btn {
+    text-align: start;
+    margin-left: 4%;
+
+    button {
+      border: none;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: start;
+      padding-bottom: 20px;
+      color: rgba(255, 255, 255, 0.753);
+      background-color: transparent;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .details-img {
+    width: 50%;
+    border-radius: 10px;
+    background-color: #f74005;
+
+    .top-paragraph {
+      font-size: 25px;
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
+
+    .bottom-paragraph {
+      font-size: 20px;
+      padding: 10px 20px 15px 20px;
+    }
+
+    img {
+      width: 50%;
+    }
   }
 }
 
