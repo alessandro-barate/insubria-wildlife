@@ -297,12 +297,13 @@
     "firstTitle": "Vuoi aiutarci a realizzare il nostro sogno?",
     "list": {
       "listTitle": "Sostieni la nostra missione con una donazione",
-      "firstListElement": "*Bonifico bancario - IBAN:*",
-      "secondListElement": {
+      "firstListElement": "*Bonifico bancario*",
+      "secondListElement": "IBAN",
+      "thirdListElement": {
         "name": "*PayPal*",
         "link": "Dona in modo sicuro con"
       },
-      "thirdListElement": {
+      "fourthListElement": {
         "name": "*Satispay*"
       }
     },

@@ -297,8 +297,8 @@
     "firstTitle": "Do you want to help us make our dream come true?",
     "list": {
       "listTitle": "Support our mission with a donation",
-      "firstListElement": "*Bank transfer - IBAN:*",
-      "secondListElement": {
+      "firstListElement": "*Bank transfer*",
+      "thirdListElement": {
         "name": "*PayPal*",
         "link": "Donate safely with",
         "description": "To support us via"

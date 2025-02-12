@@ -6,6 +6,8 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
+      ibanMobile: null,
+      ibanDesktop: null,
     };
   },
 
@@ -44,6 +46,14 @@ export default {
       } else {
         store.desktopViewport = false;
         store.mobileViewport = true;
+      }
+
+      if (this.windowWidth <= 768) {
+        this.ibanDesktop = false;
+        this.ibanMobile = true;
+      } else {
+        this.ibanDesktop = true;
+        this.ibanMobile = false;
       }
     },
 
@@ -102,24 +112,31 @@ const changeLanguage = (lang) => {
                   text-key="supportUs.list.firstListElement"
                 />
                 <br />
-                <span id="iban">IT02S0623022808000047552608</span>
+                <div v-show="ibanDesktop" id="iban">
+                  IT02S0623022808000047552608
+                </div>
+                <div class="id-button-container">
+                  <button v-show="ibanMobile" id="iban-button">
+                    {{ t("supportUs.list.secondListElement") }}
+                  </button>
+                </div>
               </li>
               <li id="paypal-method">
                 <TranslatedTextSpan
-                  text-key="supportUs.list.secondListElement.name"
+                  text-key="supportUs.list.thirdListElement.name"
                 />
                 <div id="donate-button-container">
-                  <span>{{ t("supportUs.list.secondListElement.link") }}</span>
+                  <span>{{ t("supportUs.list.thirdListElement.link") }}</span>
                   <div id="donate-button"></div>
                 </div>
                 <br />
               </li>
               <li id="satispay-method">
                 <TranslatedTextSpan
-                  text-key="supportUs.list.thirdListElement.name"
+                  text-key="supportUs.list.fourthListElement.name"
                 />
                 <br />
-                <span>{{ t("supportUs.list.secondListElement.link") }}</span>
+                <span>{{ t("supportUs.list.thirdListElement.link") }}</span>
                 <span>
                   <a
                     v-if="store.mobileViewport"
@@ -165,6 +182,19 @@ const changeLanguage = (lang) => {
       </div>
     </div>
   </div>
+
+  <!-- IBAN zoomed -->
+  <div v-show="store.showDetails" class="zoomed-container">
+    <div v-if="store.showDetails" class="overlay-single-card">
+      <div class="details-btn">
+        <button @click="hideQrCode()">✕</button>
+      </div>
+      <div class="details-img">
+        <p class="top-paragraph">Satispay</p>
+      </div>
+    </div>
+  </div>
+  <!-- IBAN zoomed -->
 
   <!-- Satispay QR code zoomed -->
   <div v-show="store.showDetails" class="zoomed-container">
@@ -240,7 +270,8 @@ p {
   padding-bottom: 0;
 }
 
-#satispay-button {
+#satispay-button,
+#iban-button {
   border: none;
   font-size: 18px;
   font-weight: bold;
@@ -251,6 +282,14 @@ p {
 
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+.id-button-container {
+  text-align: center;
+
+  #iban-button {
+    margin-top: 10px;
   }
 }
 
