@@ -8,6 +8,7 @@ export default {
       windowWidth: window.innerWidth,
       ibanMobile: null,
       ibanDesktop: null,
+      showIbanDetails: null,
     };
   },
 
@@ -62,8 +63,17 @@ export default {
       store.showDetails = true;
     },
 
+    showIban() {
+      if (this.showIbanDetails) return;
+      this.showIbanDetails = true;
+    },
+
     hideQrCode() {
       store.showDetails = false;
+    },
+
+    hideIban() {
+      this.showIbanDetails = false;
     },
   },
 };
@@ -116,7 +126,11 @@ const changeLanguage = (lang) => {
                   IT02S0623022808000047552608
                 </div>
                 <div class="id-button-container">
-                  <button v-show="ibanMobile" id="iban-button">
+                  <button
+                    v-show="ibanMobile"
+                    id="iban-button"
+                    @click="showIban()"
+                  >
                     {{ t("supportUs.list.secondListElement") }}
                   </button>
                 </div>
@@ -184,13 +198,13 @@ const changeLanguage = (lang) => {
   </div>
 
   <!-- IBAN zoomed -->
-  <div v-show="store.showDetails" class="zoomed-container">
-    <div v-if="store.showDetails" class="overlay-single-card">
+  <div v-show="showIbanDetails" class="zoomed-container">
+    <div v-if="showIbanDetails" class="overlay-single-card">
       <div class="details-btn">
-        <button @click="hideQrCode()">✕</button>
+        <button @click="hideIban()">✕</button>
       </div>
       <div class="details-img">
-        <p class="top-paragraph">Satispay</p>
+        <p class="top-paragraph">IBAN</p>
       </div>
     </div>
   </div>
