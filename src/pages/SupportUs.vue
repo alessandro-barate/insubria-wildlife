@@ -159,13 +159,15 @@ const changeLanguage = (lang) => {
                   >
                     Satispay</a
                   >
-                  <button
-                    id="satispay-button"
-                    v-show="store.desktopViewport"
-                    @click="showQrCode()"
-                  >
-                    Satispay
-                  </button>
+                  <div class="satispay-btn-container">
+                    <button
+                      id="satispay-button"
+                      v-show="store.desktopViewport"
+                      @click="showQrCode()"
+                    >
+                      Satispay
+                    </button>
+                  </div>
                 </span>
               </li>
             </ul>
@@ -309,6 +311,7 @@ p {
 
   #iban-button {
     margin-top: 10px;
+    margin-left: 0;
   }
 }
 
@@ -338,8 +341,9 @@ a {
 }
 
 #donate-button {
-  width: 30%;
-  margin: 5px 0 0 0;
+  width: 100%;
+  margin: 3px 0 0 0;
+  text-align: center;
 
   &:hover {
     transform: scale(1.05);
@@ -423,6 +427,11 @@ a {
     padding-top: 10px;
     text-align: center;
   }
+}
+
+.satispay-btn-container {
+  margin-top: 10px;
+  text-align: center;
 }
 
 // Media queries
