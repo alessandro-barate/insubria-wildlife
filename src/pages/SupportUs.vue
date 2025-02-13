@@ -199,12 +199,17 @@ const changeLanguage = (lang) => {
 
   <!-- IBAN zoomed -->
   <div v-show="showIbanDetails" class="zoomed-container">
-    <div v-if="showIbanDetails" class="overlay-single-card">
+    <div
+      v-if="showIbanDetails"
+      id="iban-overlay-single-card"
+      class="overlay-single-card"
+    >
       <div class="details-btn">
-        <button @click="hideIban()">✕</button>
-      </div>
-      <div class="details-img">
-        <p class="top-paragraph">IBAN</p>
+        <button @click="hideIban()" id="iban-close-btn">✕</button>
+        <p class="iban-top-paragraph">IBAN</p>
+        <div id="iban-details" class="details">
+          <p class="iban-bottom-paragraph">IT02S0623022808000047552608</p>
+        </div>
       </div>
     </div>
   </div>
@@ -216,7 +221,7 @@ const changeLanguage = (lang) => {
       <div class="details-btn">
         <button @click="hideQrCode()">✕</button>
       </div>
-      <div class="details-img">
+      <div class="details">
         <p class="top-paragraph">Satispay</p>
         <img
           src="../assets/img/support/satispay/satispay-qr-code.webp"
@@ -341,6 +346,85 @@ a {
   }
 }
 
+.overlay-single-card {
+  width: 50%;
+  padding-top: 18px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: black;
+
+  .details-btn {
+    text-align: start;
+    margin-left: 4%;
+
+    button {
+      border: none;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: start;
+      padding-bottom: 20px;
+      color: rgba(255, 255, 255, 0.753);
+      background-color: transparent;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .details {
+    width: 50%;
+    border-radius: 10px;
+    background-color: #f74005;
+
+    .top-paragraph {
+      font-size: 25px;
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
+
+    .bottom-paragraph {
+      font-size: 20px;
+      padding: 10px 20px 15px 20px;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
+#iban-overlay-single-card {
+  width: 90%;
+
+  #iban-close-btn {
+    text-align: start;
+    margin-left: 7%;
+  }
+
+  .details-btn {
+    margin-left: 0;
+  }
+
+  #iban-details {
+    width: 96%;
+    text-align: center;
+    margin-top: 20px;
+
+    .iban-bottom-paragraph {
+      font-size: 17px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .iban-top-paragraph {
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+
 // Media queries
 @media (max-width: 500px) {
   h1 {
@@ -350,6 +434,9 @@ a {
   #iban {
     font-size: 15px;
   }
+}
+
+@media (max-width: 768px) {
 }
 
 @media (max-width: 999px) {
@@ -372,59 +459,15 @@ a {
     font-size: 30px;
   }
 
+  #iban-overlay-single-card #iban-details .iban-bottom-paragraph {
+    font-size: 14px;
+  }
+
   #iban {
     font-size: 12px;
   }
 }
 
 @media (min-width: 1000px) {
-  .overlay-single-card {
-    width: 50%;
-    padding-top: 18px;
-    padding-bottom: 50px;
-    text-align: center;
-    border-radius: 20px;
-    background-color: black;
-
-    .details-btn {
-      text-align: start;
-      margin-left: 4%;
-
-      button {
-        border: none;
-        font-size: 25px;
-        font-weight: bold;
-        text-align: start;
-        padding-bottom: 20px;
-        color: rgba(255, 255, 255, 0.753);
-        background-color: transparent;
-
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-    }
-
-    .details-img {
-      width: 50%;
-      border-radius: 10px;
-      background-color: #f74005;
-
-      .top-paragraph {
-        font-size: 25px;
-        padding-top: 20px;
-        padding-bottom: 15px;
-      }
-
-      .bottom-paragraph {
-        font-size: 20px;
-        padding: 10px 20px 15px 20px;
-      }
-
-      img {
-        width: 50%;
-      }
-    }
-  }
 }
 </style>
