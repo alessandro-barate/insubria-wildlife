@@ -250,7 +250,7 @@ const changeLanguage = (lang) => {
                   :class="{ 'active-lang': locale === 'it' }"
                 >
                   <img
-                    src="../assets/img/header/flags/italy-flag-round.webp"
+                    src="../assets/img/header/flags/italy-flag-round.svg"
                     alt="Bandiera italiana"
                   />
                 </button>
@@ -264,7 +264,7 @@ const changeLanguage = (lang) => {
                   :class="{ 'active-lang': locale === 'en' }"
                 >
                   <img
-                    src="../assets/img/header/flags/uk-flag-round.webp"
+                    src="../assets/img/header/flags/uk-flag-round.svg"
                     alt="English flag"
                   />
                 </button>

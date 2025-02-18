@@ -92,7 +92,7 @@ export default {
                 <p class="events-update">
                   {{ t("homepage.mission.eventsLink") }}
                 </p>
-                <a :aria-labels="t('nav.aria-labels.events')">
+                <a :aria-label="t('nav.aria-labels.events')">
                   <router-link :to="{ name: 'Eventi' }" class="link">
                     <button
                       class="help-btn"
