@@ -35,7 +35,7 @@ const changeLanguage = (lang) => {
             <div class="logo-footer-container d-flex">
               <img
                 class="footer-logo"
-                src="../assets/img/logo/bird-only.png"
+                src="../assets/img/logo/bird-only.webp"
                 alt="Insubria logo"
               />
             </div>

@@ -95,7 +95,7 @@ const changeLanguage = (lang) => {
               <a :aria-label="t('nav.aria-labels.homepage')">
                 <router-link :to="{ name: 'Homepage' }">
                   <img
-                    src="/./src/assets/img/logo/double-circle.png"
+                    src="/./src/assets/img/logo/double-circle.webp"
                     alt="Insubria logo"
                   />
                 </router-link>
