@@ -35,7 +35,7 @@ const changeLanguage = (lang) => {
             <div class="logo-footer-container d-flex">
               <img
                 class="footer-logo"
-                src="../assets/img/logo/bird-only2.webp"
+                src="../assets/img/logo/bird-only.png"
                 alt="Insubria logo"
               />
             </div>
@@ -158,8 +158,9 @@ footer {
   align-items: center;
 
   img {
-    width: 35%;
-    vertical-align: middle;
+    width: 60%;
+    margin-top: -50px;
+    margin-bottom: -50px;
   }
 }
 

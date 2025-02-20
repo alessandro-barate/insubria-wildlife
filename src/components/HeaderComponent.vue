@@ -95,7 +95,7 @@ const changeLanguage = (lang) => {
               <a :aria-label="t('nav.aria-labels.homepage')">
                 <router-link :to="{ name: 'Homepage' }">
                   <img
-                    src="/./src/assets/img/logo/double-circle.webp"
+                    src="/./src/assets/img/logo/double-circle.png"
                     alt="Insubria logo"
                   />
                 </router-link>
@@ -366,14 +366,12 @@ header {
 }
 
 .logo {
-  width: 8%;
+  width: 10%;
   margin-left: 120px;
   margin-right: 30px;
 
   img {
     width: 80%;
-    padding-top: 10px;
-    padding-bottom: 10px;
 
     &:hover {
       transform: scale(1.03);
@@ -444,12 +442,6 @@ header {
   }
 }
 
-// #events,
-// #news,
-// .container-bg {
-// display: none;
-// }
-
 // Media queries
 @media (max-width: 1156px) {
   .container-bg #news-events-container {
@@ -465,7 +457,7 @@ header {
 
 @media (max-width: 936px) {
   .sticky-header .logo {
-    width: 10%;
+    width: 17%;
   }
 }
 
@@ -475,7 +467,7 @@ header {
   }
 
   .logo {
-    width: 10%;
+    width: 15%;
     margin-left: 2.4em;
   }
 
