@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store.js";
+import paypalButtonImg from "../assets/img/support/paypal/paypal-button.png";
 export default {
   name: "Supportaci",
 
@@ -12,6 +13,21 @@ export default {
     };
   },
 
+  watch: {
+    // Watcher for the language
+    "$i18n.locale": {
+      handler(newLang) {
+        // Render the PayPal button when the language changes
+        this.$nextTick(() => {
+          setTimeout(() => {
+            this.initPayPalButton();
+          }, 100);
+        });
+      },
+      immediate: true,
+    },
+  },
+
   mounted() {
     // Inizializing the viewport state
     this.checkViewport();
@@ -19,27 +35,18 @@ export default {
     // Resize's event listener
     window.addEventListener("resize", this.handleResize);
 
-    // Paypal button logic
-    PayPal.Donation.Button({
-      env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
-      hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
-      image: {
-        src: "./src/assets/img/support/paypal/paypal-button.png",
-        alt: "Donate with PayPal button",
-        title: "PayPal - The safer, easier way to pay online!",
-      },
-      onComplete: function (params) {
-        // Your onComplete handler
-      },
-    }).render("#donate-button");
+    // Initialize the PayPal button
+    this.initPayPalButton();
   },
 
   methods: {
+    //
     handleResize() {
       this.windowWidth = window.innerWidth;
       this.checkViewport();
     },
 
+    // Checks the viewport to establish if it's in desktop or mobile viewport
     checkViewport() {
       if (this.windowWidth >= 1000) {
         store.desktopViewport = true;
@@ -58,22 +65,51 @@ export default {
       }
     },
 
+    // Functions to set the variable to true
     showQrCode() {
       if (store.showDetails) return;
       store.showDetails = true;
     },
 
+    // Functions to set the variable to true
     showIban() {
       if (this.showIbanDetails) return;
       this.showIbanDetails = true;
     },
 
+    // Functions to set the variable to false
     hideQrCode() {
       store.showDetails = false;
     },
 
+    // Functions to set the variable to false
     hideIban() {
       this.showIbanDetails = false;
+    },
+
+    // Function to initialize the PayPal button
+    initPayPalButton() {
+      // Checks if the element exists before initialization
+      const donateButton = document.getElementById("donate-button");
+
+      if (!donateButton) return;
+
+      // Clean the existing content
+      donateButton.innerHTML = "";
+
+      // Render the new button
+      PayPal.Donation.Button({
+        env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
+        hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
+        image: {
+          src: paypalButtonImg,
+          alt: "Donate with PayPal button",
+          title: "PayPal - The safer, easier way to pay online!",
+        },
+        onComplete: function (params) {
+          console.log("Bottone PayPal completato", params);
+        },
+      }).render("#donate-button");
     },
   },
 };
