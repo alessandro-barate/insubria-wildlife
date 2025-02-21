@@ -32,10 +32,6 @@ export default {
     };
   },
 
-  // created() {
-  //   this.carouselAutoplay();
-  // },
-
   methods: {
     nextCard() {
       this.currentIndex = (this.currentIndex + 1) % this.store.visions.length;
@@ -46,12 +42,6 @@ export default {
         (this.currentIndex - 1 + this.store.visions.length) %
         this.store.visions.length;
     },
-
-    // carouselAutoplay() {
-    //   const card = document.getElementById("card-box");
-    //   card.classList.add("transition");
-    //   setInterval(this.nextCard, 5000);
-    // },
   },
 };
 </script>

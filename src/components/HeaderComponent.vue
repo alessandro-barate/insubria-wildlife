@@ -1,4 +1,37 @@
+<script setup>
+import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+
+const { t, locale } = useI18n();
+const router = useRouter();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+
+  // Getting the current path
+  const currentPath = window.location.pathname;
+  const newPath = getLocalizedPath(currentPath, lang);
+
+  // Navigate to the new path
+  window.location.href = newPath;
+};
+</script>
+
 <script>
+import { getLocalizedPath } from "../route";
+
 export default {
   name: "HeaderComponent",
 
@@ -59,27 +92,6 @@ export default {
       newsEvents.classList.add("display-none");
     },
   },
-};
-</script>
-
-<script setup>
-import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
-
-// Defaulf language to Italian if no other language is selected
-if (!localStorage.getItem("language")) {
-  localStorage.setItem("language", "it");
-}
-
-// Loading the saved language
-const savedLanguage = localStorage.getItem("language");
-if (savedLanguage) {
-  locale.value = savedLanguage;
-}
-
-const changeLanguage = (lang) => {
-  locale.value = lang;
-  localStorage.setItem("language", lang);
 };
 </script>
 

@@ -86,79 +86,153 @@ const updateMetaTags = (to) => {
   }
 };
 
+// Routes declaration
+const routeConfig = [
+  {
+    paths: {
+      it: "/",
+      en: "/",
+    },
+    name: "Homepage",
+    component: Homepage,
+    meta: {
+      titleKey: "index.title.homepage.name",
+    },
+  },
+  {
+    paths: {
+      it: "/insubria",
+      en: "/insubria",
+    },
+    name: "InsubriaInfo",
+    component: InsubriaInfo,
+    meta: {
+      titleKey: "index.title.insubria.name",
+    },
+  },
+  {
+    paths: {
+      it: "/team",
+      en: "/team",
+    },
+    name: "Team",
+    component: Team,
+    meta: {
+      titleKey: "index.title.team.name",
+    },
+  },
+  {
+    paths: {
+      it: "/eventi",
+      en: "/events",
+    },
+    name: "Eventi",
+    component: Events,
+    meta: {
+      titleKey: "index.title.events.name",
+    },
+  },
+  {
+    paths: {
+      it: "/news",
+      en: "/news",
+    },
+    name: "News",
+    component: News,
+    meta: {
+      titleKey: "index.title.news.name",
+    },
+  },
+  {
+    paths: {
+      it: "/sos-animali",
+      en: "/sos-animals",
+    },
+    name: "SosAnimali",
+    component: SosAnimals,
+    meta: {
+      titleKey: "index.title.sosAnimal.name",
+    },
+  },
+  {
+    paths: {
+      it: "/contattaci",
+      en: "/contact-us",
+    },
+    name: "Contattaci",
+    component: ContactUs,
+    meta: {
+      titleKey: "index.title.contactUs.name",
+    },
+  },
+  {
+    paths: {
+      it: "/supportaci",
+      en: "/support-us",
+    },
+    name: "Supportaci",
+    component: SupportUs,
+    meta: {
+      titleKey: "index.title.supportUs.name",
+    },
+  },
+];
+
+const generateLocalizedRoutes = () => {
+  const routes = [];
+
+  routeConfig.forEach((config) => {
+    // Italian routes
+    routes.push({
+      path: config.paths.it,
+      name: config.name,
+      component: config.component,
+      meta: {
+        ...config.meta,
+        locale: "it",
+      },
+    });
+
+    // English routes
+    routes.push({
+      path: `/en${config.paths.en}`,
+      name: `${config.name}En`,
+      component: config.component,
+      meta: {
+        ...config.meta,
+        locale: "en",
+      },
+    });
+  });
+
+  return routes;
+};
+
 // Declaring the router's routes
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     return { top: 0, behavior: "smooth" };
   },
   history: createWebHistory(),
-  routes: [
-    {
-      path: "/",
-      name: "Homepage",
-      component: Homepage,
-      meta: {
-        titleKey: "index.title.homepage.name",
-      },
-    },
-    {
-      path: "/insubria",
-      name: "InsubriaInfo",
-      component: InsubriaInfo,
-      meta: {
-        titleKey: "index.title.insubria.name",
-      },
-    },
-    {
-      path: "/team",
-      name: "Team",
-      component: Team,
-      meta: {
-        titleKey: "index.title.team.name",
-      },
-    },
-    {
-      path: "/eventi",
-      name: "Eventi",
-      component: Events,
-      meta: {
-        titleKey: "index.title.events.name",
-      },
-    },
-    {
-      path: "/news",
-      name: "News",
-      component: News,
-      meta: {
-        titleKey: "index.title.news.name",
-      },
-    },
-    {
-      path: "/sos-animali",
-      name: "SosAnimali",
-      component: SosAnimals,
-      meta: {
-        titleKey: "index.title.sosAnimal.name",
-      },
-    },
-    {
-      path: "/contattaci",
-      name: "Contattaci",
-      component: ContactUs,
-      meta: {
-        titleKey: "index.title.contactUs.name",
-      },
-    },
-    {
-      path: "/supportaci",
-      name: "Supportaci",
-      component: SupportUs,
-      meta: {
-        titleKey: "index.title.supportUs.name",
-      },
-    },
-  ],
+  routes: generateLocalizedRoutes(),
 });
+
+const getLocalizedPath = (currentPath, targetLocale) => {
+  // Removing the /en prefix if present
+  const pathWithoutLocale = currentPath.replace(/^\/en/, "");
+
+  // Find the corrisponding route's configuration
+  const route = routeConfig.find((config) =>
+    Object.values(config.paths).some(
+      (path) => path === pathWithoutLocale || path === `/${pathWithoutLocale}`
+    )
+  );
+
+  if (!route) return targetLocale === "en" ? `/en${currentPath}` : currentPath;
+
+  // Return the path in the target language
+  return targetLocale === "en" ? `/en${route.paths.en}` : route.paths.it;
+};
 
 // Watcher to update the title and the meta tags when the language changes
 watch(
@@ -178,9 +252,26 @@ watch(
 
 // Update the title and the meta tags when the route changes
 router.beforeEach((to, from, next) => {
+  const currentLang = i18n.global.locale.value;
+  const isEnglishRoute = to.path.startsWith("/en");
+
+  // Se la lingua è inglese ma l'URL non ha il prefisso /en
+  if (currentLang === "en" && !isEnglishRoute) {
+    const newPath = getLocalizedPath(to.path, "en");
+    next({ path: newPath, query: to.query });
+    return;
+  }
+
+  // Se la lingua è italiano ma l'URL ha il prefisso /en
+  if (currentLang === "it" && isEnglishRoute) {
+    const newPath = getLocalizedPath(to.path.replace(/^\/en/, ""), "it");
+    next({ path: newPath, query: to.query });
+    return;
+  }
+
   updateTitle(to);
   updateMetaTags(to);
   next();
 });
 
-export { router };
+export { router, getLocalizedPath };
