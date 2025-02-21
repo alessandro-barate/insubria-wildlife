@@ -1,6 +1,35 @@
 import { reactive, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+// Importing the carousel images
+import socialImg from "./assets/img/homepage/carousel/1-social-promotion.webp";
+import volunteerImg from "./assets/img/homepage/carousel/2-volunteering.webp";
+import rehabImg from "./assets/img/homepage/carousel/3-wildlife-rehab.webp";
+import researchImg from "./assets/img/homepage/carousel/4-research.webp";
+import networkImg from "./assets/img/homepage/carousel/5-network.webp";
+
+// Importing the team's members images
+import ilariaImg from "./assets/img/team/grid/ilaria.webp";
+import alessiaImg from "./assets/img/team/grid/alessia.webp";
+import elenaImg from "./assets/img/team/grid/elena.webp";
+import giuliaImg from "./assets/img/team/grid/giulia.webp";
+import mauraImg from "./assets/img/team/grid/maura.webp";
+import robertoImg from "./assets/img/team/grid/roberto.webp";
+
+// Importing the events's images
+import event2025Marzo29 from "./assets/img/events/posters/2025/Marzo/29-03-25.webp";
+import event2024Novembre27 from "./assets/img/events/posters/2024/Novembre/27-11-24.webp";
+
+// Importing the sos cards' images
+import sosBox from "./assets/img/sos-animal/cards/1-box.webp";
+import sosFoodWater from "./assets/img/sos-animal/cards/2-food-water.webp";
+import sosWhoToCall from "./assets/img/sos-animal/cards/3-who-to-call.webp";
+import sosNakedMammals from "./assets/img/sos-animal/cards/4-naked-mammals.webp";
+import sosFurryMammals from "./assets/img/sos-animal/cards/5-furry-mammals.webp";
+import sosNoNestBird from "./assets/img/sos-animal/cards/6-no-nest-bird.webp";
+import sosSwift from "./assets/img/sos-animal/cards/7-swift.webp";
+import sosBat from "./assets/img/sos-animal/cards/8-bat.webp";
+
 export const store = reactive({
   // Variable for Team's single card, Sos Animals' single card and satispay's qr code
   showDetails: false,
@@ -20,7 +49,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("homepage.vision.visions.0.alt");
       }),
-      image: "/src/assets/img/homepage/carousel/1-social-promotion.webp",
+      image: socialImg,
     },
     {
       description: computed(() => {
@@ -31,7 +60,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("homepage.vision.visions.1.alt");
       }),
-      image: "/src/assets/img/homepage/carousel/2-volunteering.webp",
+      image: volunteerImg,
     },
     {
       description: computed(() => {
@@ -42,7 +71,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("homepage.vision.visions.2.alt");
       }),
-      image: "/src/assets/img/homepage/carousel/3-wildlife-rehab.webp",
+      image: rehabImg,
     },
     {
       description: computed(() => {
@@ -53,7 +82,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("homepage.vision.visions.3.alt");
       }),
-      image: "/src/assets/img/homepage/carousel/4-research.webp",
+      image: researchImg,
     },
     {
       description: computed(() => {
@@ -64,7 +93,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("homepage.vision.visions.4.alt");
       }),
-      image: "/src/assets/img/homepage/carousel/5-network.webp",
+      image: networkImg,
     },
   ],
 
@@ -82,7 +111,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("team.members.0.alt");
       }),
-      image: "src/assets/img/team/grid/ilaria.webp",
+      image: ilariaImg,
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.0.description");
@@ -101,7 +130,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("team.members.1.alt");
       }),
-      image: "src/assets/img/team/grid/alessia.webp",
+      image: alessiaImg,
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.1.description");
@@ -120,7 +149,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("team.members.2.alt");
       }),
-      image: "src/assets/img/team/grid/elena.webp",
+      image: elenaImg,
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.2.description");
@@ -139,7 +168,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("team.members.3.alt");
       }),
-      image: "src/assets/img/team/grid/giulia.webp",
+      image: giuliaImg,
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.3.description");
@@ -158,7 +187,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("team.members.4.alt");
       }),
-      image: "src/assets/img/team/grid/maura.webp",
+      image: mauraImg,
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.4.description");
@@ -177,7 +206,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("team.members.5.alt");
       }),
-      image: "src/assets/img/team/grid/roberto.webp",
+      image: robertoImg,
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.5.description");
@@ -272,7 +301,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.0.alt");
       }),
-      poster: "./src/assets/img/events/posters/2025/Marzo/29-03-25.webp",
+      poster: event2025Marzo29,
       description: computed(() => {
         const { t } = useI18n();
         return t("events.0.description");
@@ -291,7 +320,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.1.alt");
       }),
-      poster: "./src/assets/img/events/posters/2024/Novembre/27-11-24.webp",
+      poster: event2024Novembre27,
       description: computed(() => {
         const { t } = useI18n();
         return t("events.1.description");
@@ -309,7 +338,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.0.alt");
       }),
-      image: "./src/assets/img/sos-animal/cards/1-box.webp",
+      image: sosBox,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.0.description");
@@ -324,7 +353,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.1.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/2-food-water.webp",
+      image: sosFoodWater,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.1.description");
@@ -339,7 +368,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.2.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/3-who-to-call.webp",
+      image: sosWhoToCall,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.2.description");
@@ -354,7 +383,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.3.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/4-naked-mammals.webp",
+      image: sosNakedMammals,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.3.description");
@@ -369,7 +398,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.4.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/5-furry-mammals.webp",
+      image: sosFurryMammals,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.4.description");
@@ -384,7 +413,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.5.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/6-no-nest-bird.webp",
+      image: sosNoNestBird,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.5.description");
@@ -399,7 +428,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.6.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/7-swift.webp",
+      image: sosSwift,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.6.description");
@@ -414,7 +443,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("sosAnimals.sosCards.7.alt");
       }),
-      image: "src/assets/img/sos-animal/cards/8-bat.webp",
+      image: sosBat,
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.7.description");
