@@ -29,18 +29,37 @@ export default {
       store,
       currentIndex: 0,
       intervalTimer: false,
+      isTransitioning: false,
     };
   },
 
   methods: {
     nextCard() {
-      this.currentIndex = (this.currentIndex + 1) % this.store.visions.length;
+      if (this.isTransitioning) return;
+      this.isTransitioning = true;
+
+      setTimeout(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.store.visions.length;
+
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 500);
+      }, 50);
     },
 
     prevCard() {
-      this.currentIndex =
-        (this.currentIndex - 1 + this.store.visions.length) %
-        this.store.visions.length;
+      if (this.isTransitioning) return;
+      this.isTransitioning = true;
+
+      setTimeout(() => {
+        this.currentIndex =
+          (this.currentIndex - 1 + this.store.visions.length) %
+          this.store.visions.length;
+
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 500);
+      }, 50);
     },
   },
 };
@@ -161,6 +180,7 @@ export default {
                             <button
                               @click="prevCard"
                               id="prev-btn"
+                              :disabled="isTransitioning"
                               :aria-label="t('homepage.vision.prevCardButton')"
                             >
                               <
@@ -169,12 +189,15 @@ export default {
                           <!-- END carousel prev button -->
 
                           <!-- Carousel image -->
-                          <figure>
-                            <img
-                              :src="vision.image"
-                              :alt="vision.alt"
-                              loading="lazy"
-                            />
+                          <figure class="image-container">
+                            <transition name="fade" mode="out-in">
+                              <img
+                                :key="currentIndex"
+                                :src="store.visions[currentIndex].image"
+                                :alt="store.visions[currentIndex].alt"
+                                loading="lazy"
+                              />
+                            </transition>
                           </figure>
                           <!-- END carousel image -->
 
@@ -183,6 +206,7 @@ export default {
                             <button
                               @click="nextCard"
                               id="next-btn"
+                              :disabled="isTransitioning"
                               :aria-label="t('homepage.vision.nextCardButton')"
                             >
                               >
@@ -196,7 +220,11 @@ export default {
 
                       <!-- Bottom paragraph -->
                       <div class="bottom-paragraph-container">
-                        <p>{{ vision.description }}</p>
+                        <transition name="fade" mode="out-in">
+                          <p :key="currentIndex">
+                            {{ store.visions[currentIndex].description }}
+                          </p>
+                        </transition>
                       </div>
                       <!-- END bottom paragraph -->
                     </div>
@@ -375,6 +403,34 @@ h1 {
     padding-bottom: 20px;
   }
 
+  .image-container {
+    position: relative;
+    width: 24vh; /* Stessa larghezza delle tue immagini attuali */
+    height: 24vh; /* Stessa altezza delle tue immagini attuali */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    object-fit: cover;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
   figure {
     margin-left: 5%;
     margin-right: 5%;
@@ -435,11 +491,41 @@ h1 {
       box-shadow: 2px 2px 2px rgba(100, 56, 56, 0.2);
       transform: scale(1.2);
     }
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
+}
+
+.bottom-paragraph-container {
+  position: relative;
+  min-height: 80px; /* Altezza minima per evitare salti di layout */
+  margin-top: 20px;
+}
+
+.bottom-paragraph-container p {
+  width: 90%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Usa le stesse transizioni che abbiamo definito per l'immagine */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 /* Media queries */
 /* Mobile layout */
+@media (max-width: 375px) {
+}
+
 @media (max-width: 936px) {
   h1 {
     padding-left: 20px;
@@ -543,11 +629,11 @@ h1 {
 
   .vision .carousel-img-container {
     padding-top: 30px;
+  }
 
-    img {
-      width: 10em;
-      height: 10em;
-    }
+  .vision .image-container {
+    width: 10em;
+    height: 10em;
   }
 
   .video-container {
@@ -571,11 +657,11 @@ h1 {
 @media (min-width: 937px) {
   .vision .carousel-img-container {
     width: 100%;
+  }
 
-    img {
-      width: 12em;
-      height: 12em;
-    }
+  .vision .image-container {
+    width: 12em;
+    height: 12em;
   }
 }
 /* END tablet layout */

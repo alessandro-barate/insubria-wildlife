@@ -211,7 +211,7 @@ export default {
               <!-- END SOS animals link -->
 
               <!-- Contact us link -->
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a
                   @click="listDisappearance()"
                   class="nav-link"
@@ -222,7 +222,7 @@ export default {
                     t("nav.contactUs")
                   }}</router-link>
                 </a>
-              </li> -->
+              </li>
               <!-- END contact us link -->
 
               <!-- Support us link -->
@@ -313,7 +313,7 @@ header {
   top: 0;
   z-index: 1000;
   position: sticky;
-  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   .logo {
     width: 6%;
