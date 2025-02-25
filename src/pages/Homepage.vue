@@ -500,7 +500,7 @@ h1 {
 
 .bottom-paragraph-container {
   position: relative;
-  min-height: 80px; /* Altezza minima per evitare salti di layout */
+  min-height: 80px;
   margin-top: 20px;
 }
 
@@ -508,17 +508,6 @@ h1 {
   width: 90%;
   text-align: center;
   padding-bottom: 10px;
-}
-
-/* Usa le stesse transizioni che abbiamo definito per l'immagine */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 
 /* Media queries */

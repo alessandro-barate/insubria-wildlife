@@ -73,3 +73,27 @@ STYLE TO CANCEL EVERY CLICK
 .no-interaction {
   pointer-events: none;
 }
+
+/******************************
+TRANSITION FROM PAGE TO PAGE
+******************************/
+// @keyframes fade-in {
+//   from {
+//     background-color: rgba(#000, 0.25);
+//     opacity: 0;
+//     transform: translateY(50vh);
+//   }
+
+//   to {
+//     background-color: rgba(#000, 0);
+//     opacity: 1;
+//     transform: translateY(0vh);
+//   }
+// }
+
+// body.is-transitionded {
+//   animation: fade-in 2s forwards;
+//   background-color: rgba(#000, 0.25);
+//   opacity: 0;
+//   transform: translateY(50vh);
+// }
