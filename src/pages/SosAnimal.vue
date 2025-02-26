@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store.js";
+
 export default {
   name: "SosAnimali",
 
@@ -234,27 +235,31 @@ const changeLanguage = (lang) => {
   </div>
 
   <!-- Zoomed italian map container -->
-  <div v-if="showZoom" v-show="italianLanguage" class="zoomed-container">
-    <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
-    <img
-      :src="'src/assets/img/sos-animal/flow-chart.webp'"
-      alt="Flusso delle azioni da svolgere in caso di ritrovamento"
-      loading="lazy"
-      @click.stop
-    />
-  </div>
+  <Transition name="fade-scale">
+    <div v-if="showZoom" v-show="italianLanguage" class="zoomed-container">
+      <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
+      <img
+        :src="'src/assets/img/sos-animal/flow-chart.webp'"
+        alt="Flusso delle azioni da svolgere in caso di ritrovamento"
+        loading="lazy"
+        @click.stop
+      />
+    </div>
+  </Transition>
   <!-- END zoomed italian map container -->
 
   <!-- Zoomed english map container -->
-  <div v-if="showZoom" v-show="englishLanguage" class="zoomed-container">
-    <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
-    <img
-      :src="'src/assets/img/sos-animal/flow-chart-eng.webp'"
-      alt="Actions flow to follow in case of animal finding"
-      loading="lazy"
-      @click.stop
-    />
-  </div>
+  <Transition name="fade-scale">
+    <div v-if="showZoom" v-show="englishLanguage" class="zoomed-container">
+      <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
+      <img
+        src="../assets/img/sos-animal/flow-chart-eng.webp"
+        alt="Actions flow to follow in case of animal finding"
+        loading="lazy"
+        @click.stop
+      />
+    </div>
+  </Transition>
   <!-- END zoomed english map container -->
 </template>
 

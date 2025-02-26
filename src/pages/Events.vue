@@ -8,7 +8,6 @@ export default {
       store,
       showZoom: false,
       currentIndex: null,
-      // showDescription: false,
     };
   },
 
@@ -19,10 +18,6 @@ export default {
       document.body.style.overflow = this.showZoom ? "hidden" : "";
     },
   },
-
-  // if (!this.store.events.description) {
-  //   this.showDescription = true;
-  // }
 };
 </script>
 
@@ -80,24 +75,26 @@ const changeLanguage = (lang) => {
   </div>
 
   <!-- Zoomed poster container -->
-  <div v-if="showZoom" class="zoomed-container">
-    <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
-    <div class="zoomed-event-container">
-      <div class="image-column">
-        <figure>
-          <img
-            :src="store.events[currentIndex].poster"
-            :alt="t('events.' + currentIndex + '.alt')"
-            loading="lazy"
-            @click.stop
-          />
-        </figure>
-      </div>
-      <div class="event-description">
-        <p v-html="$sanitize(store.events[currentIndex].description)"></p>
+  <Transition name="fade-scale">
+    <div v-if="showZoom" class="zoomed-container">
+      <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
+      <div class="zoomed-event-container">
+        <div class="image-column">
+          <figure>
+            <img
+              :src="store.events[currentIndex].poster"
+              :alt="t('events.' + currentIndex + '.alt')"
+              loading="lazy"
+              @click.stop
+            />
+          </figure>
+        </div>
+        <div class="event-description">
+          <p v-html="$sanitize(store.events[currentIndex].description)"></p>
+        </div>
       </div>
     </div>
-  </div>
+  </Transition>
   <!-- END zoomed poster container -->
 </template>
 
@@ -191,6 +188,10 @@ section {
   padding-right: 40px;
 }
 
+.zoomed-container {
+  background-color: rgba(0, 0, 0, 0.97);
+}
+
 @media (max-width: 936px) {
   .big-events-container {
     display: block;
@@ -206,12 +207,13 @@ section {
 
   .image-column {
     width: 100%;
+    margin-top: 40px;
   }
 
   .zoomed-event-container {
     width: 85%;
     display: block;
-    padding-top: 150px;
+    padding-top: 10px;
 
     .event-description {
       width: 100%;
@@ -224,6 +226,7 @@ section {
   .zoomed-container {
     text-align: center;
     overflow: auto;
+    display: block;
 
     img {
       width: 100%;
@@ -232,6 +235,11 @@ section {
     .zoom-close-btn {
       top: 10px;
       left: 10px;
+    }
+
+    figure {
+      padding: 0;
+      margin: 0;
     }
   }
 }

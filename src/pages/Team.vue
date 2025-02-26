@@ -109,7 +109,7 @@ const changeLanguage = (lang) => {
               </div>
 
               <!-- Single team member overview -->
-              <transition name="fade-scale">
+              <Transition name="fade-scale">
                 <div v-show="store.showDetails" class="zoomed-container">
                   <div v-if="store.showDetails" class="overlay-single-card">
                     <div class="scrollbar-container">
@@ -129,7 +129,7 @@ const changeLanguage = (lang) => {
                     </div>
                   </div>
                 </div>
-              </transition>
+              </Transition>
               <!-- END single team member overview -->
             </div>
           </section>

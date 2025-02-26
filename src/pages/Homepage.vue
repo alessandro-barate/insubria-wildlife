@@ -220,11 +220,11 @@ export default {
 
                       <!-- Bottom paragraph -->
                       <div class="bottom-paragraph-container">
-                        <transition name="fade" mode="out-in">
+                        <Transition name="fade" mode="out-in">
                           <p :key="currentIndex">
                             {{ store.visions[currentIndex].description }}
                           </p>
-                        </transition>
+                        </Transition>
                       </div>
                       <!-- END bottom paragraph -->
                     </div>
