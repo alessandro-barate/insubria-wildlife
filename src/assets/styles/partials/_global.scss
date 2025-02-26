@@ -74,26 +74,20 @@ STYLE TO CANCEL EVERY CLICK
   pointer-events: none;
 }
 
-/******************************
-TRANSITION FROM PAGE TO PAGE
-******************************/
-// @keyframes fade-in {
-//   from {
-//     background-color: rgba(#000, 0.25);
-//     opacity: 0;
-//     transform: translateY(50vh);
-//   }
+/*******************
+TRANSITIONS STYLES
+*******************/
+.fade-scale-enter-active,
+.fade-scale-leave-active {
+  transition: all 0.4s ease;
+}
 
-//   to {
-//     background-color: rgba(#000, 0);
-//     opacity: 1;
-//     transform: translateY(0vh);
-//   }
-// }
+.fade-scale-enter-from,
+.fade-scale-leave-to {
+  opacity: 0;
+}
 
-// body.is-transitionded {
-//   animation: fade-in 2s forwards;
-//   background-color: rgba(#000, 0.25);
-//   opacity: 0;
-//   transform: translateY(50vh);
-// }
+.fade-scale-enter-to,
+.fade-scale-leave-from {
+  opacity: 1;
+}

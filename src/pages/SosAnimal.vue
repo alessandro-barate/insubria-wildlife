@@ -199,29 +199,31 @@ const changeLanguage = (lang) => {
               </div>
 
               <!-- Single sos animal overview -->
-              <div v-show="store.showDetails" class="zoomed-container">
-                <div v-if="store.showDetails" class="overlay-single-card">
-                  <div class="scrollbar-container">
-                    <div class="details-btn">
-                      <button @click="hideMemberDetails(index)">✕</button>
-                    </div>
-                    <div class="details-img">
-                      <img
-                        :src="store.sosCards[currentIndex].image"
-                        :alt="store.sosCards[currentIndex].alt"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="details-description">
-                      <div
-                        v-html="
-                          $sanitize(store.sosCards[currentIndex].description)
-                        "
-                      ></div>
+              <Transition name="fade-scale">
+                <div v-show="store.showDetails" class="zoomed-container">
+                  <div v-if="store.showDetails" class="overlay-single-card">
+                    <div class="scrollbar-container">
+                      <div class="details-btn">
+                        <button @click="hideMemberDetails(index)">✕</button>
+                      </div>
+                      <div class="details-img">
+                        <img
+                          :src="store.sosCards[currentIndex].image"
+                          :alt="store.sosCards[currentIndex].alt"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="details-description">
+                        <div
+                          v-html="
+                            $sanitize(store.sosCards[currentIndex].description)
+                          "
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Transition>
               <!-- END single sos animal overview -->
             </div>
           </section>

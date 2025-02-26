@@ -109,25 +109,27 @@ const changeLanguage = (lang) => {
               </div>
 
               <!-- Single team member overview -->
-              <div v-show="store.showDetails" class="zoomed-container">
-                <div v-if="store.showDetails" class="overlay-single-card">
-                  <div class="scrollbar-container">
-                    <div class="details-btn">
-                      <button @click="hideMemberDetails(index)">✕</button>
-                    </div>
-                    <div class="details-img">
-                      <img
-                        :src="store.members[currentIndex].image"
-                        :alt="store.members[currentIndex].alt"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="details-description">
-                      <p>{{ store.members[currentIndex].description }}</p>
+              <transition name="fade-scale">
+                <div v-show="store.showDetails" class="zoomed-container">
+                  <div v-if="store.showDetails" class="overlay-single-card">
+                    <div class="scrollbar-container">
+                      <div class="details-btn">
+                        <button @click="hideMemberDetails(index)">✕</button>
+                      </div>
+                      <div class="details-img">
+                        <img
+                          :src="store.members[currentIndex].image"
+                          :alt="store.members[currentIndex].alt"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="details-description">
+                        <p>{{ store.members[currentIndex].description }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </transition>
               <!-- END single team member overview -->
             </div>
           </section>
