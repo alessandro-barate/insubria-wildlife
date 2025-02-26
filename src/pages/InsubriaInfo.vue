@@ -242,22 +242,24 @@ const changeLanguage = (lang) => {
                 :key="index"
                 class="paragraph-container"
               >
-                <div
-                  v-show="currentIndex === index"
-                  class="paragraph-card overlay"
-                >
-                  <div class="scrollbar-container">
-                    <div class="close-button">
-                      <button @click="toggleParagraph(index)">✕</button>
+                <Transition name="fade-scale">
+                  <div
+                    v-show="currentIndex === index"
+                    class="paragraph-card overlay"
+                  >
+                    <div class="scrollbar-container">
+                      <div class="close-button">
+                        <button @click="toggleParagraph(index)">✕</button>
+                      </div>
+                      <h2>
+                        {{ characteristic.intro }}
+                      </h2>
+                      <p class="paragraph-description">
+                        {{ characteristic.description }}
+                      </p>
                     </div>
-                    <h2>
-                      {{ characteristic.intro }}
-                    </h2>
-                    <p class="paragraph-description">
-                      {{ characteristic.description }}
-                    </p>
                   </div>
-                </div>
+                </Transition>
               </div>
             </div>
             <!-- END description section -->
