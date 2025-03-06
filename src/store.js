@@ -20,6 +20,10 @@ import robertoImg from "./assets/img/team/grid/roberto.webp";
 import event2025Marzo29 from "./assets/img/events/posters/2025/Marzo/29-03-25.webp";
 import event2024Novembre27 from "./assets/img/events/posters/2024/Novembre/27-11-24.webp";
 
+// Importing the flow chart images
+import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
+import englishFlowChart from "./assets/img/sos-animal/flow-chart-eng.webp";
+
 // Importing the sos cards' images
 import sosBox from "./assets/img/sos-animal/cards/1-box.webp";
 import sosFoodWater from "./assets/img/sos-animal/cards/2-food-water.webp";
@@ -325,6 +329,15 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.1.description");
       }),
+    },
+  ],
+
+  flowChart: [
+    {
+      nameIta: italianFlowChart,
+    },
+    {
+      nameEng: englishFlowChart,
     },
   ],
 

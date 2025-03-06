@@ -239,7 +239,7 @@ const changeLanguage = (lang) => {
     <div v-if="showZoom" v-show="italianLanguage" class="zoomed-container">
       <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
       <img
-        :src="'src/assets/img/sos-animal/flow-chart.webp'"
+        :src="store.flowChart[0].nameIta"
         alt="Flusso delle azioni da svolgere in caso di ritrovamento"
         loading="lazy"
         @click.stop
@@ -253,7 +253,7 @@ const changeLanguage = (lang) => {
     <div v-if="showZoom" v-show="englishLanguage" class="zoomed-container">
       <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
       <img
-        src="../assets/img/sos-animal/flow-chart-eng.webp"
+        :src="store.flowChart[1].nameEng"
         alt="Actions flow to follow in case of animal finding"
         loading="lazy"
         @click.stop

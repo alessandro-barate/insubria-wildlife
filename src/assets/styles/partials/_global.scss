@@ -50,6 +50,14 @@ BACKGROUND FOR ZOOMED CONTENTS
   padding: 20px;
 }
 
+.site-link {
+  color: #ff6a3a;
+
+  &:hover {
+    color: #ff0000;
+  }
+}
+
 /********
 OVERLAY
 ********/
