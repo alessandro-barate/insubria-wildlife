@@ -442,25 +442,6 @@ const changeLanguage = (lang) => {
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
     transform: scale(1.01);
   }
-
-  .info-btn {
-    width: 100%;
-    padding-top: 10px;
-
-    button {
-      border: none;
-      font-size: 15px;
-      font-weight: bold;
-      border-radius: 20px;
-      padding: 8px 25px 8px 25px;
-
-      &:hover {
-        color: white;
-        transform: scale(1.05);
-        background-color: rgb(94, 94, 94);
-      }
-    }
-  }
 }
 
 .cards-container {

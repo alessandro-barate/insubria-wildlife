@@ -310,6 +310,18 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.0.description");
       }),
+      firstSpeakerName: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.firstSpeaker.name");
+      }),
+      secondSpeakerName: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.secondSpeaker.name");
+      }),
+      thirdSpeakerName: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.thirdSpeaker.name");
+      }),
     },
     {
       title: computed(() => {

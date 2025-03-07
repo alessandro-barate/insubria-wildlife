@@ -91,11 +91,99 @@ const changeLanguage = (lang) => {
         </div>
         <div class="event-description">
           <p v-html="$sanitize(store.events[currentIndex].description)"></p>
+          <div class="speakers-container">
+            <!-- First speaker -->
+            <div class="first-speaker">
+              <figure>
+                <img src="../assets/img/team/grid/ilaria.webp" alt="" />
+              </figure>
+              <div class="speaker-name-container">
+                <p
+                  v-html="
+                    $sanitize(store.events[currentIndex].firstSpeakerName)
+                  "
+                ></p>
+                <div class="button-container">
+                  <button :aria-label="t('team.findOutButton')">
+                    {{ t("team.findOut") }}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- END first speaker -->
+
+            <!-- Second speaker -->
+            <div class="second-speaker">
+              <figure>
+                <img src="../assets/img/team/grid/giulia.webp" alt="" />
+              </figure>
+              <div class="speaker-name-container">
+                <p
+                  v-html="
+                    $sanitize(store.events[currentIndex].secondSpeakerName)
+                  "
+                ></p>
+                <div class="button-container">
+                  <button
+                    class="info-btn"
+                    :aria-label="t('team.findOutButton')"
+                  >
+                    {{ t("team.findOut") }}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- END second speaker -->
+
+            <!-- Third speaker -->
+            <div class="third-speaker">
+              <figure>
+                <img src="../assets/img/team/grid/alessia.webp" alt="" />
+              </figure>
+              <div class="speaker-name-container">
+                <p
+                  v-html="
+                    $sanitize(store.events[currentIndex].thirdSpeakerName)
+                  "
+                ></p>
+                <div class="button-container">
+                  <button :aria-label="t('team.findOutButton')">
+                    {{ t("team.findOut") }}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- END third speaker -->
+          </div>
         </div>
       </div>
     </div>
   </Transition>
   <!-- END zoomed poster container -->
+
+  <!-- Zoomed speaker container -->
+  <Transition name="fade-scale">
+    <div v-show="store.showDetails" class="zoomed-container">
+      <div v-if="store.showDetails" class="overlay-single-card">
+        <div class="scrollbar-container">
+          <div class="details-btn">
+            <button @click="hideMemberDetails(index)">✕</button>
+          </div>
+          <div class="details-img">
+            <img
+              :src="store.sosCards[currentIndex].image"
+              :alt="store.sosCards[currentIndex].alt"
+              loading="lazy"
+            />
+          </div>
+          <div class="details-description">
+            <p v-html="$sanitize(store.events[currentIndex].description)"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Transition>
+  <!-- END zoomed speaker container -->
 </template>
 
 <style scoped lang="scss">
@@ -189,7 +277,39 @@ section {
 }
 
 .zoomed-container {
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.97);
+}
+
+.first-speaker,
+.second-speaker,
+.third-speaker {
+  display: flex;
+  text-align: end;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.speakers-container figure {
+  width: 50%;
+  margin-left: 20px;
+
+  img {
+    width: 40%;
+  }
+}
+
+.speaker-name-container {
+  width: 50%;
+  padding-top: 25px;
+  text-align: start;
+  margin-left: 30px;
+}
+
+.button-container {
+  margin-left: 20px;
 }
 
 @media (max-width: 936px) {
