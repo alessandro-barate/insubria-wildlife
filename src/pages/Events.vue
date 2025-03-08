@@ -103,7 +103,7 @@ const changeLanguage = (lang) => {
                     $sanitize(store.events[currentIndex].firstSpeakerName)
                   "
                 ></p>
-                <div class="button-container">
+                <div class="button-container info-btn">
                   <button :aria-label="t('team.findOutButton')">
                     {{ t("team.findOut") }}
                   </button>
@@ -123,11 +123,8 @@ const changeLanguage = (lang) => {
                     $sanitize(store.events[currentIndex].secondSpeakerName)
                   "
                 ></p>
-                <div class="button-container">
-                  <button
-                    class="info-btn"
-                    :aria-label="t('team.findOutButton')"
-                  >
+                <div class="button-container info-btn">
+                  <button :aria-label="t('team.findOutButton')">
                     {{ t("team.findOut") }}
                   </button>
                 </div>
@@ -146,7 +143,7 @@ const changeLanguage = (lang) => {
                     $sanitize(store.events[currentIndex].thirdSpeakerName)
                   "
                 ></p>
-                <div class="button-container">
+                <div class="button-container info-btn">
                   <button :aria-label="t('team.findOutButton')">
                     {{ t("team.findOut") }}
                   </button>
@@ -310,6 +307,11 @@ section {
 
 .button-container {
   margin-left: 20px;
+}
+
+.info-btn button {
+  font-size: 13px;
+  padding: 5px 12px 5px 12px;
 }
 
 @media (max-width: 936px) {

@@ -38,6 +38,9 @@ export const store = reactive({
   // Variable for Team's single card, Sos Animals' single card and satispay's qr code
   showDetails: false,
 
+  // Variable for Speaker's single card
+  showSpeaker: false,
+
   // Variable for mobile and desktop viewport
   mobileViewport: false,
   desktopViewport: false,
