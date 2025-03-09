@@ -389,25 +389,6 @@ const changeLanguage = (lang) => {
     width: 100%;
     height: 500px;
   }
-
-  .details-btn {
-    width: 10%;
-    margin-top: 10px;
-    margin-left: -15px;
-
-    button {
-      border: none;
-      font-size: 25px;
-      font-weight: bold;
-      padding-bottom: 20px;
-      color: rgba(255, 255, 255, 0.753);
-      background-color: transparent;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
 }
 
 .details-img {

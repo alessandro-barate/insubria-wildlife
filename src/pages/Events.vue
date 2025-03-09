@@ -12,10 +12,22 @@ export default {
   },
 
   methods: {
+    // Function to zoom and show the event's description when a poster is clicked
     toggleZoom(index) {
       this.showZoom = !this.showZoom;
       this.currentIndex = index;
       document.body.style.overflow = this.showZoom ? "hidden" : "";
+    },
+    // Function to show the speaker's details
+    showSpeakerDetails(speakerIndex) {
+      this.store.showSpeaker = true;
+      this.speakerIndex = speakerIndex;
+      document.body.style.overflow = "hidden";
+    },
+    // Function to hide the speaker's details
+    hideSpeakerDetails() {
+      this.store.showSpeaker = false;
+      document.body.style.overflow = "";
     },
   },
 };
@@ -91,66 +103,35 @@ const changeLanguage = (lang) => {
         </div>
         <div class="event-description">
           <p v-html="$sanitize(store.events[currentIndex].description)"></p>
-          <div class="speakers-container">
-            <!-- First speaker -->
-            <div class="first-speaker">
+          <div
+            class="speakers-container"
+            v-if="
+              store.events[currentIndex].speakers &&
+              store.events[currentIndex].speakers.length > 0
+            "
+          >
+            <!-- Speaker -->
+            <div
+              v-for="(speaker, index) in store.events[currentIndex].speakers"
+              :key="index"
+              class="speaker"
+            >
               <figure>
-                <img src="../assets/img/team/grid/ilaria.webp" alt="" />
+                <img :src="speaker.image" :alt="speaker.alt" />
               </figure>
               <div class="speaker-name-container">
-                <p
-                  v-html="
-                    $sanitize(store.events[currentIndex].firstSpeakerName)
-                  "
-                ></p>
+                <p v-html="$sanitize(speaker.name)"></p>
                 <div class="button-container info-btn">
-                  <button :aria-label="t('team.findOutButton')">
+                  <button
+                    @click="showSpeakerDetails(index)"
+                    :aria-label="t('team.findOutButton')"
+                  >
                     {{ t("team.findOut") }}
                   </button>
                 </div>
               </div>
             </div>
-            <!-- END first speaker -->
-
-            <!-- Second speaker -->
-            <div class="second-speaker">
-              <figure>
-                <img src="../assets/img/team/grid/giulia.webp" alt="" />
-              </figure>
-              <div class="speaker-name-container">
-                <p
-                  v-html="
-                    $sanitize(store.events[currentIndex].secondSpeakerName)
-                  "
-                ></p>
-                <div class="button-container info-btn">
-                  <button :aria-label="t('team.findOutButton')">
-                    {{ t("team.findOut") }}
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!-- END second speaker -->
-
-            <!-- Third speaker -->
-            <div class="third-speaker">
-              <figure>
-                <img src="../assets/img/team/grid/alessia.webp" alt="" />
-              </figure>
-              <div class="speaker-name-container">
-                <p
-                  v-html="
-                    $sanitize(store.events[currentIndex].thirdSpeakerName)
-                  "
-                ></p>
-                <div class="button-container info-btn">
-                  <button :aria-label="t('team.findOutButton')">
-                    {{ t("team.findOut") }}
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!-- END third speaker -->
+            <!-- END speaker -->
           </div>
         </div>
       </div>
@@ -160,21 +141,27 @@ const changeLanguage = (lang) => {
 
   <!-- Zoomed speaker container -->
   <Transition name="fade-scale">
-    <div v-show="store.showDetails" class="zoomed-container">
-      <div v-if="store.showDetails" class="overlay-single-card">
+    <div v-show="store.showSpeaker" class="zoomed-container">
+      <div v-if="store.showSpeaker" class="overlay-single-card">
         <div class="scrollbar-container">
           <div class="details-btn">
-            <button @click="hideMemberDetails(index)">✕</button>
+            <button @click="hideSpeakerDetails(index)">✕</button>
           </div>
           <div class="details-img">
             <img
-              :src="store.sosCards[currentIndex].image"
-              :alt="store.sosCards[currentIndex].alt"
+              :src="store.events[currentIndex].speakers[speakerIndex].image"
+              :alt="store.events[currentIndex].speakers[speakerIndex].alt"
               loading="lazy"
             />
           </div>
           <div class="details-description">
-            <p v-html="$sanitize(store.events[currentIndex].description)"></p>
+            <p
+              v-html="
+                $sanitize(
+                  store.events[currentIndex].speakers[speakerIndex].description
+                )
+              "
+            ></p>
           </div>
         </div>
       </div>
@@ -278,15 +265,17 @@ section {
   background-color: rgba(0, 0, 0, 0.97);
 }
 
-.first-speaker,
-.second-speaker,
-.third-speaker {
+.speaker {
   display: flex;
   text-align: end;
 
   img {
     border-radius: 50%;
   }
+}
+
+.speaker {
+  padding-bottom: 10px;
 }
 
 .speakers-container figure {

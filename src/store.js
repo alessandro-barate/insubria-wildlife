@@ -313,17 +313,25 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.0.description");
       }),
-      firstSpeakerName: computed(() => {
+      speakers: computed(() => {
         const { t } = useI18n();
-        return t("events.0.firstSpeaker.name");
-      }),
-      secondSpeakerName: computed(() => {
-        const { t } = useI18n();
-        return t("events.0.secondSpeaker.name");
-      }),
-      thirdSpeakerName: computed(() => {
-        const { t } = useI18n();
-        return t("events.0.thirdSpeaker.name");
+        return [
+          {
+            name: t("events.0.speakers.0.name"),
+            image: ilariaImg,
+            role: t("events.0.speakers.0.role"),
+          },
+          {
+            name: t("events.0.speakers.1.name"),
+            image: giuliaImg,
+            role: t("events.0.speakers.1.role"),
+          },
+          {
+            name: t("events.0.speakers.2.name"),
+            image: alessiaImg,
+            role: t("events.0.speakers.2.role"),
+          },
+        ];
       }),
     },
     {
@@ -344,6 +352,9 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.1.description");
       }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
     },
   ],
 
