@@ -8,6 +8,7 @@ export default {
       store,
       showZoom: false,
       currentIndex: null,
+      speakerIndex: null,
     };
   },
 
@@ -145,7 +146,7 @@ const changeLanguage = (lang) => {
       <div v-if="store.showSpeaker" class="overlay-single-card">
         <div class="scrollbar-container">
           <div class="details-btn">
-            <button @click="hideSpeakerDetails(index)">✕</button>
+            <button @click="hideSpeakerDetails()">✕</button>
           </div>
           <div class="details-img">
             <img
@@ -301,6 +302,34 @@ section {
 .info-btn button {
   font-size: 13px;
   padding: 5px 12px 5px 12px;
+}
+
+.overlay-single-card {
+  top: 45%;
+  max-height: 620px;
+  background-color: rgb(197, 26, 26);
+
+  .scrollbar-container {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+.details-btn {
+  margin-left: 20px;
+}
+
+.details-img {
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 25vh;
+  }
+}
+
+.details-description {
+  width: 85%;
 }
 
 @media (max-width: 936px) {

@@ -206,36 +206,6 @@ const changeLanguage = (lang) => {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.overlay-single-card {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -42%);
-  width: 85%;
-  max-width: 1000px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 1);
-
-  .scrollbar-container {
-    width: 101%;
-    height: 640px;
-  }
-}
-
-.details-img {
-  width: 100%;
-
-  img {
-    width: 30%;
-    margin-bottom: 20px;
-    border-radius: 145px;
-    object-fit: cover;
-  }
-}
-
 .details-description p {
   width: 85%;
   font-size: 18px;

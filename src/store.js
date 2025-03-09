@@ -319,17 +319,17 @@ export const store = reactive({
           {
             name: t("events.0.speakers.0.name"),
             image: ilariaImg,
-            role: t("events.0.speakers.0.role"),
+            description: t("events.0.speakers.0.description"),
           },
           {
             name: t("events.0.speakers.1.name"),
             image: giuliaImg,
-            role: t("events.0.speakers.1.role"),
+            description: t("events.0.speakers.1.description"),
           },
           {
             name: t("events.0.speakers.2.name"),
             image: alessiaImg,
-            role: t("events.0.speakers.2.role"),
+            description: t("events.0.speakers.2.description"),
           },
         ];
       }),

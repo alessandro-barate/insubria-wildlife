@@ -372,18 +372,9 @@ const changeLanguage = (lang) => {
 }
 
 .overlay-single-card {
-  position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -42%);
   width: 80%;
-  max-width: 1000px;
   max-height: 600px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 1);
 
   .scrollbar-container {
     width: 100%;
@@ -397,9 +388,6 @@ const changeLanguage = (lang) => {
   img {
     width: 30vh;
     height: 30vh;
-    margin-bottom: 20px;
-    border-radius: 145px;
-    object-fit: cover;
   }
 }
 
