@@ -143,7 +143,11 @@ const changeLanguage = (lang) => {
   <!-- Zoomed speaker container -->
   <Transition name="fade-scale">
     <div v-show="store.showSpeaker" class="zoomed-container">
-      <div v-if="store.showSpeaker" class="overlay-single-card">
+      <div
+        v-if="store.showSpeaker"
+        id="single-speaker-container"
+        class="overlay-single-card"
+      >
         <div class="scrollbar-container">
           <div class="details-btn">
             <button @click="hideSpeakerDetails()">✕</button>
@@ -256,9 +260,13 @@ section {
 
 .event-description {
   width: 50%;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.scrollbar-container {
+  overflow: hidden;
 }
 
 .zoomed-container {
@@ -269,30 +277,36 @@ section {
 .speaker {
   display: flex;
   text-align: end;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  figure {
+    margin-left: -10px;
+  }
 
   img {
     border-radius: 50%;
   }
 }
 
-.speaker {
-  padding-bottom: 10px;
-}
+.speakers-container {
+  overflow: auto;
+  max-height: 230px;
 
-.speakers-container figure {
-  width: 50%;
-  margin-left: 20px;
+  figure {
+    width: 45%;
 
-  img {
-    width: 40%;
+    img {
+      width: 40%;
+    }
   }
 }
 
 .speaker-name-container {
-  width: 50%;
+  width: 45%;
+  margin-left: 0;
   padding-top: 25px;
   text-align: start;
-  margin-left: 30px;
 }
 
 .button-container {
@@ -311,6 +325,7 @@ section {
   .scrollbar-container {
     width: 100%;
     height: 600px;
+    overflow: auto;
   }
 }
 
@@ -329,6 +344,34 @@ section {
 
 .details-description {
   width: 85%;
+  overflow: auto;
+}
+
+@media (max-width: 500px) {
+  #single-speaker-container {
+    padding-top: 0px;
+  }
+
+  .overlay-single-card .scrollbar-container {
+    height: 80vh;
+  }
+
+  .speakers-container figure {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+.speaker-name-container {
+  padding-top: 5px;
+}
+
+.button-container {
+  margin-left: 0;
 }
 
 @media (max-width: 936px) {
@@ -368,7 +411,7 @@ section {
     display: block;
 
     img {
-      width: 100%;
+      width: 80%;
     }
 
     .zoom-close-btn {
@@ -380,6 +423,24 @@ section {
       padding: 0;
       margin: 0;
     }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 936px) {
+  .zoomed-container .details-img {
+    width: 50%;
+  }
+
+  .speaker {
+    text-align: center;
+
+    .speaker-name-container {
+      padding-top: 2.5rem;
+    }
+  }
+
+  .speakers-container figure {
+    width: 60%;
   }
 }
 </style>
