@@ -307,7 +307,6 @@ section {
 .overlay-single-card {
   top: 45%;
   max-height: 620px;
-  background-color: rgb(197, 26, 26);
 
   .scrollbar-container {
     width: 100%;
