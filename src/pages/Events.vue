@@ -89,7 +89,7 @@ const changeLanguage = (lang) => {
 
   <!-- Zoomed poster container -->
   <Transition name="fade-scale">
-    <div v-if="showZoom" class="zoomed-container">
+    <div v-if="showZoom" id="main-zoomed-container" class="zoomed-container">
       <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
       <div class="zoomed-event-container">
         <div class="image-column">
