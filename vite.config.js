@@ -12,8 +12,8 @@ export default defineConfig({
   // In caso togliere questo
   server: {
     proxy: {
-      "/api": {
-        target: "http://127.0.0.1:8000",
+      "/backEnd": {
+        target: 'https://www.insubriawildlife.com/backEnd/',
         changeOrigin: true,
         secure: false,
       },
