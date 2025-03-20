@@ -6,9 +6,8 @@ const { t, locale } = useI18n();
 const router = useRouter();
 
 // Defaulf language to Italian if no other language is selected
-if (!localStorage.getItem("language")) {
-  localStorage.setItem("language", "it");
-}
+if (!localStorage.getItem("language")) localStorage.setItem("language", 'it');
+if (window.location.pathname.startsWith('/en')) localStorage.setItem("language", 'en');
 
 // Loading the saved language
 const savedLanguage = localStorage.getItem("language");
@@ -20,12 +19,8 @@ const changeLanguage = (lang) => {
   locale.value = lang;
   localStorage.setItem("language", lang);
 
-  // Getting the current path
-  const currentPath = window.location.pathname;
-  const newPath = getLocalizedPath(currentPath, lang);
-
   // Navigate to the new path
-  window.location.href = newPath;
+  window.location.href = getLocalizedPath(window.location.pathname, lang);
 };
 </script>
 

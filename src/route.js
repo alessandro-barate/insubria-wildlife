@@ -90,8 +90,17 @@ const updateMetaTags = (to) => {
 const routeConfig = [
   {
     paths: {
-      it: "/",
-      en: "/",
+      it: '/',
+      en: '/',
+    },
+    redirect: to => {
+      return localStorage.getItem('language') ? `/${localStorage.getItem('language')}` : '/it';
+    }
+  },
+  {
+    paths: {
+      it: "/it",
+      en: "/en",
     },
     name: "Homepage",
     component: Homepage,
@@ -101,8 +110,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/insubria",
-      en: "/insubria",
+      it: "/it/insubria",
+      en: "/en/insubria",
     },
     name: "InsubriaInfo",
     component: InsubriaInfo,
@@ -112,8 +121,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/team",
-      en: "/team",
+      it: "/it/team",
+      en: "/en/team",
     },
     name: "Team",
     component: Team,
@@ -123,8 +132,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/eventi",
-      en: "/events",
+      it: "/it/eventi",
+      en: "/en/events",
     },
     name: "Eventi",
     component: Events,
@@ -134,8 +143,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/news",
-      en: "/news",
+      it: "/it/news",
+      en: "/en/news",
     },
     name: "News",
     component: News,
@@ -145,8 +154,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/sos-animali",
-      en: "/sos-animals",
+      it: "/it/sos-animali",
+      en: "/en/sos-animals",
     },
     name: "SosAnimali",
     component: SosAnimals,
@@ -156,8 +165,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/contattaci",
-      en: "/contact-us",
+      it: "/it/contattaci",
+      en: "/en/contact-us",
     },
     name: "Contattaci",
     component: ContactUs,
@@ -167,8 +176,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/supportaci",
-      en: "/support-us",
+      it: "/it/supportaci",
+      en: "/en/support-us",
     },
     name: "Supportaci",
     component: SupportUs,
@@ -182,6 +191,16 @@ const generateLocalizedRoutes = () => {
   const routes = [];
 
   routeConfig.forEach((config) => {
+
+    routes.push({
+      path : '/',
+      redirect: to => {
+        const a = localStorage.getItem("language") ? `/${localStorage.getItem("language")}` : '/it';
+        return a;
+      }
+    });
+
+
     // Italian routes
     routes.push({
       path: config.paths.it,
@@ -195,7 +214,7 @@ const generateLocalizedRoutes = () => {
 
     // English routes
     routes.push({
-      path: `/en${config.paths.en}`,
+      path: config.paths.en,
       name: `${config.name}En`,
       component: config.component,
       meta: {
@@ -218,20 +237,18 @@ const router = createRouter({
 });
 
 const getLocalizedPath = (currentPath, targetLocale) => {
-  // Removing the /en prefix if present
-  const pathWithoutLocale = currentPath.replace(/^\/en/, "");
 
   // Find the corrisponding route's configuration
   const route = routeConfig.find((config) =>
     Object.values(config.paths).some(
-      (path) => path === pathWithoutLocale || path === `/${pathWithoutLocale}`
+      (path) => path === currentPath
     )
   );
 
-  if (!route) return targetLocale === "en" ? `/en${currentPath}` : currentPath;
+  if (!route) return targetLocale === 'en' ? '/en' : currentPath;
 
   // Return the path in the target language
-  return targetLocale === "en" ? `/en${route.paths.en}` : route.paths.it;
+  return route.paths[targetLocale];
 };
 
 // Watcher to update the title and the meta tags when the language changes

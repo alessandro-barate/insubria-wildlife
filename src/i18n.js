@@ -5,8 +5,8 @@ import en from "./locales/en.json";
 
 export const i18n = createI18n({
   legacy: false,
-  locale: "it-IT",
-  fallbackLocale: "it-IT",
+  locale: "it",
+  fallbackLocale: "it",
   messages: { it, en },
   postTranslation: (text) => parseTranslationText(text),
 });
