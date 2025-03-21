@@ -211,6 +211,10 @@ section {
   margin-top: 40px;
 }
 
+.big-events-container {
+  flex-wrap: wrap;
+}
+
 .image-column {
   width: 50%;
 }
@@ -377,6 +381,7 @@ section {
 @media (max-width: 936px) {
   .big-events-container {
     display: block;
+    flex-wrap: nowrap;
 
     .events-container {
       width: 90%;

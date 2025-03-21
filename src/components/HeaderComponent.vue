@@ -6,8 +6,9 @@ const { t, locale } = useI18n();
 const router = useRouter();
 
 // Defaulf language to Italian if no other language is selected
-if (!localStorage.getItem("language")) localStorage.setItem("language", 'it');
-if (window.location.pathname.startsWith('/en')) localStorage.setItem("language", 'en');
+if (!localStorage.getItem("language")) localStorage.setItem("language", "it");
+if (window.location.pathname.startsWith("/en"))
+  localStorage.setItem("language", "en");
 
 // Loading the saved language
 const savedLanguage = localStorage.getItem("language");
@@ -206,7 +207,7 @@ export default {
               <!-- END SOS animals link -->
 
               <!-- Contact us link -->
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a
                   @click="listDisappearance()"
                   class="nav-link"
@@ -217,7 +218,7 @@ export default {
                     t("nav.contactUs")
                   }}</router-link>
                 </a>
-              </li>
+              </li> -->
               <!-- END contact us link -->
 
               <!-- Support us link -->
@@ -248,9 +249,9 @@ export default {
               <!-- END hamburger menu -->
 
               <!-- Language container -->
-              <div class="lang-container">
-                <!-- Italian language -->
-                <button
+              <!-- <div class="lang-container"> -->
+              <!-- Italian language -->
+              <!-- <button
                   id="italian"
                   aria-label="Italiano"
                   @click="changeLanguage('it')"
@@ -260,11 +261,11 @@ export default {
                     src="../assets/img/header/flags/italy-flag-round.svg"
                     alt="Bandiera italiana"
                   />
-                </button>
-                <!-- END italian language -->
+                </button> -->
+              <!-- END italian language -->
 
-                <!-- English language -->
-                <button
+              <!-- English language -->
+              <!-- <button
                   id="english"
                   aria-label="English"
                   @click="changeLanguage('en')"
@@ -274,9 +275,9 @@ export default {
                     src="../assets/img/header/flags/uk-flag-round.svg"
                     alt="English flag"
                   />
-                </button>
-                <!-- END english language -->
-              </div>
+                </button> -->
+              <!-- END english language -->
+              <!-- </div> -->
               <!-- END language container -->
             </div>
             <!-- END right container -->
@@ -525,7 +526,7 @@ header {
   .hamburger {
     display: block;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 30%;
   }
 
   .hamburger.active .bar:nth-child(2) {

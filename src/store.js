@@ -19,6 +19,8 @@ import robertoImg from "./assets/img/team/grid/roberto.webp";
 // Importing the events's images
 import event2025Marzo29 from "./assets/img/events/posters/2025/Marzo/29-03-25.webp";
 import event2024Novembre27 from "./assets/img/events/posters/2024/Novembre/27-11-24.webp";
+import speakerMarcoColombo from "./assets/img/events/speakers/marco-colombo.webp";
+import event2025Aprile12 from "./assets/img/events/posters/2025/Aprile/12-04-25.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -318,7 +320,7 @@ export const store = reactive({
         return [
           {
             name: t("events.0.speakers.0.name"),
-            image: ilariaImg,
+            image: speakerMarcoColombo,
             description: t("events.0.speakers.0.description"),
           },
           {
@@ -351,6 +353,28 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("events.1.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.alt");
+      }),
+      poster: event2025Aprile12,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.description");
       }),
 
       // Empty array for events with no speakers
