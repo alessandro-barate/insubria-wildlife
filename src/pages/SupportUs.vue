@@ -444,6 +444,7 @@ a {
   }
 
   .details-btn {
+    width: 100%;
     margin-left: 0;
   }
 

@@ -300,67 +300,6 @@ export const store = reactive({
     {
       title: computed(() => {
         const { t } = useI18n();
-        return t("events.0.title");
-      }),
-      date: computed(() => {
-        const { t } = useI18n();
-        return t("events.0.date");
-      }),
-      alt: computed(() => {
-        const { t } = useI18n();
-        return t("events.0.alt");
-      }),
-      poster: event2025Marzo29,
-      description: computed(() => {
-        const { t } = useI18n();
-        return t("events.0.description");
-      }),
-      speakers: computed(() => {
-        const { t } = useI18n();
-        return [
-          {
-            name: t("events.0.speakers.0.name"),
-            image: speakerMarcoColombo,
-            description: t("events.0.speakers.0.description"),
-          },
-          {
-            name: t("events.0.speakers.1.name"),
-            image: giuliaImg,
-            description: t("events.0.speakers.1.description"),
-          },
-          {
-            name: t("events.0.speakers.2.name"),
-            image: alessiaImg,
-            description: t("events.0.speakers.2.description"),
-          },
-        ];
-      }),
-    },
-    {
-      title: computed(() => {
-        const { t } = useI18n();
-        return t("events.1.title");
-      }),
-      date: computed(() => {
-        const { t } = useI18n();
-        return t("events.1.date");
-      }),
-      alt: computed(() => {
-        const { t } = useI18n();
-        return t("events.1.alt");
-      }),
-      poster: event2024Novembre27,
-      description: computed(() => {
-        const { t } = useI18n();
-        return t("events.1.description");
-      }),
-
-      // Empty array for events with no speakers
-      speakers: computed(() => []),
-    },
-    {
-      title: computed(() => {
-        const { t } = useI18n();
         return t("events.2.title");
       }),
       date: computed(() => {
@@ -375,6 +314,67 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("events.2.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.alt");
+      }),
+      poster: event2025Marzo29,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.description");
+      }),
+      speakers: computed(() => {
+        const { t } = useI18n();
+        return [
+          {
+            name: t("events.1.speakers.0.name"),
+            image: speakerMarcoColombo,
+            description: t("events.1.speakers.0.description"),
+          },
+          {
+            name: t("events.1.speakers.1.name"),
+            image: giuliaImg,
+            description: t("events.1.speakers.1.description"),
+          },
+          {
+            name: t("events.1.speakers.2.name"),
+            image: alessiaImg,
+            description: t("events.1.speakers.2.description"),
+          },
+        ];
+      }),
+    },
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.alt");
+      }),
+      poster: event2024Novembre27,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.description");
       }),
 
       // Empty array for events with no speakers

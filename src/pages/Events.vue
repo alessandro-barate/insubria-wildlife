@@ -267,6 +267,10 @@ section {
   padding-top: 20px;
   padding-left: 40px;
   padding-right: 40px;
+
+  p {
+    font-size: 18px;
+  }
 }
 
 .scrollbar-container {
@@ -295,7 +299,7 @@ section {
 
 .speakers-container {
   overflow: auto;
-  max-height: 230px;
+  max-height: 330px;
 
   figure {
     width: 45%;
