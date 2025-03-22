@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 export const sanitizeHTML = (html) => {
   const config = {
     ALLOWED_TAGS: ["a", "p", "br", "em", "h4", "li", "ul", "span", "strong"],
-    ALLOWED_ATTR: ["href", "class", "target"],
+    ALLOWED_ATTR: ["href", "class", "target", "aria-label"],
     ALLOW_DATA_ATTR: false,
     SAFE_FOR_TEMPLATES: true,
     RETURN_DOM: false,
@@ -11,6 +11,9 @@ export const sanitizeHTML = (html) => {
     RETURN_DOM_IMPORT: false,
     FORCE_BODY: false,
     SANITIZE_DOM: true,
+    ADD_ATTR: ["@click", "v-on:click", ":href"],
+    ALLOWED_URI_REGEXP:
+      /^(?:(?:(?:f|ht)tps?|mailto|tel|callto|cid|xmpp|file):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i,
   };
 
   return DOMPurify.sanitize(html, config);

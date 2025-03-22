@@ -12,6 +12,23 @@ export default {
     };
   },
 
+  mounted() {
+    document.addEventListener("click", (event) => {
+      if (
+        event.target.tagName === "A" &&
+        event.target.href &&
+        event.target.href.startsWith("mailto:")
+      ) {
+        console.log("Email link clicked");
+      }
+    });
+  },
+
+  beforeUnmount() {
+    // Rimuovi l'event listener quando il componente viene distrutto
+    document.removeEventListener("click", this.handleClick);
+  },
+
   methods: {
     // Function to zoom and show the event's description when a poster is clicked
     toggleZoom(index) {
