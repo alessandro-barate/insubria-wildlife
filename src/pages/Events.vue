@@ -9,6 +9,30 @@ export default {
       showZoom: false,
       currentIndex: null,
       speakerIndex: null,
+      emailParams: {
+        user: "insubria.wildlife",
+        domani: "gmail.com",
+        subjects: {
+          it: {
+            0: "Richiesta di iscrizione Equilibrinatura",
+            default: "Richiesta dal sito",
+          },
+          en: {
+            0: "Equilibrinatura registration request",
+            default: "Request from website",
+          },
+        },
+        labels: {
+          it: {
+            0: "scrivendoci alla nostra email",
+            default: "contattaci",
+          },
+          en: {
+            0: "writing to our email",
+            default: "contact us",
+          },
+        },
+      },
     };
   },
 
@@ -29,19 +53,49 @@ export default {
     document.removeEventListener("click", this.handleClick);
   },
 
+  computed: {
+    // Build the email link dynamically
+    emailLink() {
+      const lang = this.$i18n.locale;
+      const eventIndex = this.currentIndex;
+      const subject =
+        this.emailParams.subjects[lang][eventIndex] ||
+        this.emailParams.subjects[lang].default;
+
+      return `mailto:${this.emailParams.user}@${
+        this.emailParams.domain
+      }?subject=${encodeURIComponent(subject)}`;
+    },
+
+    // Ottieni l'etichetta del link in base alla lingua e all'evento
+    emailLinkText() {
+      const lang = this.$i18n.locale;
+      const eventIndex = this.currentIndex;
+
+      return (
+        this.emailParams.labels[lang][eventIndex] ||
+        this.emailParams.labels[lang].default
+      );
+    },
+  },
+
   methods: {
+    // Function to elaborate descriptions with special markers in them
+
     // Function to zoom and show the event's description when a poster is clicked
     toggleZoom(index) {
       this.showZoom = !this.showZoom;
       this.currentIndex = index;
       document.body.style.overflow = this.showZoom ? "hidden" : "";
     },
+
     // Function to show the speaker's details
     showSpeakerDetails(speakerIndex) {
       this.store.showSpeaker = true;
       this.speakerIndex = speakerIndex;
       document.body.style.overflow = "hidden";
     },
+
     // Function to hide the speaker's details
     hideSpeakerDetails() {
       this.store.showSpeaker = false;
@@ -69,6 +123,79 @@ if (savedLanguage) {
 const changeLanguage = (lang) => {
   locale.value = lang;
   localStorage.setItem("language", lang);
+};
+
+// Processa la descrizione sostituendo il marcatore EMAIL con un link
+const getDescription = (index) => {
+  let desc = t("events." + index + ".description");
+
+  // Se l'evento è quello di Equilibrinatura (indice 2), aggiungiamo il link email
+  if (index === 0) {
+    // Per eventi con email, aggiungi la frase standard e il link
+    const emailParams = {
+      user: "insubria.wildlife",
+      domain: "gmail.com",
+      subjects: {
+        it: {
+          2: "Richiesta di iscrizione Equilibrinatura",
+          default: "Richiesta dal sito",
+        },
+        en: {
+          2: "Equilibrinatura Registration Request",
+          default: "Request from website",
+        },
+      },
+      labels: {
+        it: {
+          2: "scrivere alla nostra email.",
+          default: "contattarci tramite uno dei nostri canali social.",
+        },
+        en: {
+          2: "write to our email.",
+          default: "contact us to one of our social account.",
+        },
+      },
+    };
+
+    const subject =
+      emailParams.subjects[locale.value][2] ||
+      emailParams.subjects[locale.value].default;
+    const linkText =
+      emailParams.labels[locale.value][2] ||
+      emailParams.labels[locale.value].default;
+    const emailLink = `mailto:${emailParams.user}&#64;${
+      emailParams.domain
+    }?subject=${encodeURIComponent(subject)}`;
+
+    if (!desc.includes("Per partecipare") && !desc.includes("To participate")) {
+      // Se la descrizione è vuota o non contiene già un riferimento alle iscrizioni
+      const preText =
+        locale.value === "it"
+          ? "Per partecipare serve prenotarsi "
+          : "To participate, you need to register ";
+
+      return (
+        desc +
+        (desc ? "<br><br>" : "") +
+        preText +
+        `<a href="${emailLink}" class="mail-link">${linkText}</a>`
+      );
+    } else {
+      // Se la frase esiste già, trova il punto in cui inserire il link
+      return desc.replace(
+        /Per partecipare serve prenotarsi(.*)$|To participate, you need to register(.*)$/,
+        (match) => {
+          const baseText = match.split(" ").slice(0, -1).join(" ") + " ";
+          return (
+            baseText +
+            `<a href="${emailLink}" class="mail-link">${linkText}</a>`
+          );
+        }
+      );
+    }
+  }
+
+  return desc;
 };
 </script>
 
@@ -120,7 +247,7 @@ const changeLanguage = (lang) => {
           </figure>
         </div>
         <div class="event-description">
-          <p v-html="$sanitize(store.events[currentIndex].description)"></p>
+          <p v-html="$sanitize(getDescription(currentIndex))"></p>
           <div
             class="speakers-container"
             v-if="

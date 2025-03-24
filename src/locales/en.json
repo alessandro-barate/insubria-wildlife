@@ -211,6 +211,13 @@
   "events": {
     "firstParagraph": "If you're curious to see Insubria WildLife's activities scroll through the posters, you'll find the past events and those we have scheduled",
     "0": {
+      "title": "equilibrinatura",
+      "date": "12 April 2025",
+      "alt": "Event poster image about the event equilibrinatura",
+      "description": "The event will focus on the relationship between humans and nature, with particular attention to the coexistence between human activities and wildlife, and will develop in two moments:<br><br><strong>Educational workshop for children and families</strong><br>During the morning, children aged 5 to 10, together with their families, will participate in an educational activity on pollinating insects: through a practical and participatory approach, their fundamental role in the ecosystem will be illustrated and components of a \"Community Bug Hotel\" will be built, which will then be installed in a public area of the Municipality. The goal is to raise awareness among the youngest about the importance of biodiversity and promote environmental protection practices related to sustainable agriculture.<br><br><strong>Screening of the film \"Dangerously Close\", with public discussion for adults and young people</strong><br>In the late afternoon, in collaboration with the association \"I Benandanti APS\", a space for discussion will open on the relationship between the community and wildlife and on strategies for coexistence with humans, with a focus on species present in the territory such as wild boars and deer. The meeting will draw inspiration from the dynamics narrated in the documentary \"Dangerously Close\" by Andreas Pichler, which explores the different perspectives on the topic of large carnivores and coexistence with wildlife. Afterwards, an aperitif will offer the opportunity for an informal exchange of opinions among participants.<br><br>To participate, you need to register",
+      "speakers": []
+    },
+    "1": {
       "title": "spring in marsh",
       "date": "29 March 2025",
       "alt": "Event poster image for Spring in the Marsh: Spring in the Marsh",
@@ -233,18 +240,11 @@
         }
       ]
     },
-    "1": {
+    "2": {
       "title": "news from geed deeble",
       "date": "27 November 2024",
       "alt": "Event poster image about cheetahs: News from Geed Deeble",
       "description": "In this meeting, we will present the work of the Cheetah Conservation Fund (CCF) in Somaliland on the rehabilitation of cheetah cubs rescued from illegal trade.<br><br>It is estimated that more than 300 cubs are taken from their mothers every year to be sold on the black market: there are many questions about this, such as where they go, why they are taken, and what associations and local authorities are actually doing about it. You can find out by joining this free online meeting.<br><br>Veterinary technician Alessia Uboldi will talk about her field experience, followed by CCF President Betty Von Hoenning, who will explain how the association's resources are used and show some videos; finally, we will return to our country and move to the Insubric territory with Giulia Gavioli, board member and co-founder of Insubria Wildlife APS, who will present the association.<br><br>We look forward to seeing many of you there!",
-      "speakers": []
-    },
-    "2": {
-      "title": "equilibrinatura",
-      "date": "12 April 2025",
-      "alt": "Event poster image about the event equilibrinatura",
-      "description": "",
       "speakers": []
     }
   },
