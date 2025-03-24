@@ -300,20 +300,20 @@ export const store = reactive({
     {
       title: computed(() => {
         const { t } = useI18n();
-        return t("events.2.title");
+        return t("events.0.title");
       }),
       date: computed(() => {
         const { t } = useI18n();
-        return t("events.2.date");
+        return t("events.0.date");
       }),
       alt: computed(() => {
         const { t } = useI18n();
-        return t("events.2.alt");
+        return t("events.0.alt");
       }),
       poster: event2025Aprile12,
       description: computed(() => {
         const { t } = useI18n();
-        return t("events.2.description");
+        return t("events.0.description");
       }),
 
       // Empty array for events with no speakers
@@ -361,20 +361,20 @@ export const store = reactive({
     {
       title: computed(() => {
         const { t } = useI18n();
-        return t("events.0.title");
+        return t("events.2.title");
       }),
       date: computed(() => {
         const { t } = useI18n();
-        return t("events.0.date");
+        return t("events.2.date");
       }),
       alt: computed(() => {
         const { t } = useI18n();
-        return t("events.0.alt");
+        return t("events.2.alt");
       }),
       poster: event2024Novembre27,
       description: computed(() => {
         const { t } = useI18n();
-        return t("events.0.description");
+        return t("events.2.description");
       }),
 
       // Empty array for events with no speakers

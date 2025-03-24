@@ -499,6 +499,15 @@ section {
   overflow: auto;
 }
 
+.speaker-name-container {
+  padding-top: 5px;
+}
+
+.button-container {
+  margin-left: 0;
+}
+
+// Media queries
 @media (max-width: 500px) {
   #single-speaker-container {
     padding-top: 0px;
@@ -516,14 +525,6 @@ section {
       width: 80%;
     }
   }
-}
-
-.speaker-name-container {
-  padding-top: 5px;
-}
-
-.button-container {
-  margin-left: 0;
 }
 
 @media (max-width: 936px) {
@@ -555,6 +556,7 @@ section {
       padding-top: 20px;
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 70px;
     }
   }
 
@@ -596,4 +598,5 @@ section {
     width: 60%;
   }
 }
+// END media queries
 </style>
