@@ -11,7 +11,7 @@ export default {
       speakerIndex: null,
       emailParams: {
         user: "insubria.wildlife",
-        domani: "gmail.com",
+        domain: "gmail.com",
         subjects: {
           it: {
             0: "Richiesta di iscrizione Equilibrinatura",
@@ -33,11 +33,13 @@ export default {
           },
         },
       },
+      emailClickHandler: null,
     };
   },
 
   mounted() {
-    document.addEventListener("click", (event) => {
+    // Create the function and store the reference
+    this.emailClickHandler = (event) => {
       if (
         event.target.tagName === "A" &&
         event.target.href &&
@@ -45,12 +47,17 @@ export default {
       ) {
         console.log("Email link clicked");
       }
-    });
+    };
+
+    // Add the event listener using the same function reference
+    document.addEventListener("click", this.emailClickHandler);
   },
 
   beforeUnmount() {
-    // Rimuovi l'event listener quando il componente viene distrutto
-    document.removeEventListener("click", this.handleClick);
+    // Remove the event listener when the component gets destroyed
+    if (this.emailClickHandler) {
+      document.removeEventListener("click", this.emailClickHandler);
+    }
   },
 
   computed: {
@@ -80,8 +87,6 @@ export default {
   },
 
   methods: {
-    // Function to elaborate descriptions with special markers in them
-
     // Function to zoom and show the event's description when a poster is clicked
     toggleZoom(index) {
       this.showZoom = !this.showZoom;
@@ -129,7 +134,7 @@ const changeLanguage = (lang) => {
 const getDescription = (index) => {
   let desc = t("events." + index + ".description");
 
-  // Se l'evento è quello di Equilibrinatura (indice 2), aggiungiamo il link email
+  // Se l'evento è quello di Equilibrinatura (indice 0), aggiungiamo il link email
   if (index === 0) {
     // Per eventi con email, aggiungi la frase standard e il link
     const emailParams = {
