@@ -337,5 +337,10 @@
   "footer": {
     "vat": "Tax Code",
     "followUs": "Follow us on our socials"
+  },
+  "cookieBanner": {
+    "title": "The best cookies are those that stay between us",
+    "description": "Just like the flora and fauna that remain in their habitat, the cookie we use stays between us: we neither collect nor transfer any of your data to third parties. We only use a cookie that is strictly necessary for the functioning of the site, specifically to allow navigation in the language you selected.<br><br>By continuing to browse, you accept their use.",
+    "button": "Got it"
   }
 }

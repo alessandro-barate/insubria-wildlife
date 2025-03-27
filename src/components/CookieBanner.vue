@@ -1,3 +1,24 @@
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
+// Defaulf language to Italian if no other language is selected
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", "it");
+}
+
+// Loading the saved language
+const savedLanguage = localStorage.getItem("language");
+if (savedLanguage) {
+  locale.value = savedLanguage;
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("language", lang);
+};
+</script>
+
 <script>
 export default {
   name: "CookieBanner",
@@ -37,26 +58,19 @@ export default {
       <div class="cookie-banner overlay">
         <!-- Cookie banner title -->
         <div class="cookie-banner-title">
-          <h3>I cookie migliori sono quelli che restano tra noi</h3>
+          <h3>{{ t("cookieBanner.title") }}</h3>
         </div>
         <!-- END cookie banner title -->
 
         <!-- Cookie banner description -->
         <div class="cookie-banner-description">
-          <p>
-            Come la flora e la fauna che resta nel loro habitat, i cookie che
-            usiamo restano tra di noi: non collezioniamo nè cediamo a terzi
-            alcun vostro dato. Usiamo solo un cookie strettamente necessario al
-            funzionamento del sito, nello specifico per permettere la
-            navigazione nella lingua da te selezionata.<br /><br />Continuando a
-            navigare ne accetti l'utilizzo.
-          </p>
+          <p v-html="t('cookieBanner.description')"></p>
         </div>
         <!-- END cookie banner description -->
 
         <!-- Cookie banner button -->
         <div class="cookie-banner-button">
-          <button @click="acceptCookies">Ho capito</button>
+          <button @click="acceptCookies">{{ t("cookieBanner.button") }}</button>
         </div>
         <!-- END cookie banner button -->
       </div>

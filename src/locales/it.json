@@ -340,5 +340,10 @@
   "footer": {
     "vat": "Codice Fiscale",
     "followUs": "Seguici sui nostri social"
+  },
+  "cookieBanner": {
+    "title": "I cookie migliori sono quelli che restano tra noi",
+    "description": "Come la flora e la fauna che resta nel loro habitat, i cookie che usiamo restano tra di noi: non collezioniamo nè cediamo a terzi alcun vostro dato. Usiamo solo un cookie strettamente necessario al funzionamento del sito, nello specifico per permettere la navigazione nella lingua da te selezionata.<br><br>Continuando a navigare ne accetti l'utilizzo.",
+    "button": "Ho capito"
   }
 }
