@@ -213,12 +213,17 @@ const changeLanguage = (lang) => {
 
 <style scoped lang="scss">
 .col {
-  padding-top: 50px;
+  position: relative;
   padding-bottom: 60px;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../assets/img/contact/background/flying-bird.webp);
+}
+
+section {
+  top: 50px;
+  position: relative;
 }
 
 .contact {
@@ -247,6 +252,58 @@ const changeLanguage = (lang) => {
 
 #successMessage {
   width: 100%;
+}
+
+:deep(.formkit-form) {
+  width: 80%;
+  margin: 0 auto;
+
+  .formkit-label {
+    color: rgba(255, 255, 255, 0.753);
+    margin-bottom: 8px;
+    text-align: center;
+    display: block;
+  }
+
+  .formkit-input {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 4px;
+
+    &:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+  }
+
+  .formkit-message {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-top: -12px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .formkit-submit {
+    background-color: #4a90e2;
+    color: rgba(255, 255, 255, 0.753);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #3a7bc8;
+    }
+  }
+
+  .formkit-actions {
+    width: 13%;
+  }
 }
 
 // Media queries
