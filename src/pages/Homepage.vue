@@ -30,16 +30,7 @@ export default {
       currentIndex: 0,
       intervalTimer: false,
       isTransitioning: false,
-      showCookieBanner: true,
     };
-  },
-
-  created() {
-    // Check if the user has already accepted the cookie
-    const cookieAccepted = sessionStorage.getItem("cookieAccepted");
-    if (cookieAccepted === "true") {
-      this.showCookieBanner = false;
-    }
   },
 
   methods: {
@@ -71,12 +62,6 @@ export default {
           this.isTransitioning = false;
         }, 500);
       }, 50);
-    },
-
-    // Function to accept the cookie
-    acceptCookies() {
-      sessionStorage.setItem("cookieAccepted", "true");
-      this.showCookieBanner = false;
     },
   },
 };
@@ -207,14 +192,14 @@ export default {
 
                           <!-- Carousel image -->
                           <figure class="image-container">
-                            <transition name="fade" mode="out-in">
+                            <Transition name="fade" mode="out-in">
                               <img
                                 :key="currentIndex"
                                 :src="store.visions[currentIndex].image"
                                 :alt="store.visions[currentIndex].alt"
                                 loading="lazy"
                               />
-                            </transition>
+                            </Transition>
                           </figure>
                           <!-- END carousel image -->
 
@@ -256,36 +241,6 @@ export default {
         <!-- END vision section -->
       </div>
     </div>
-    <!-- Cookie panel -->
-    <div class="zoomed-container" v-if="showCookieBanner">
-      <div class="cookie-banner overlay">
-        <!-- Cookie banner title -->
-        <div class="cookie-banner-title">
-          <h3>I cookie migliori sono quelli che restano tra noi</h3>
-        </div>
-        <!-- END cookie banner title -->
-
-        <!-- Cookie banner description -->
-        <div class="cookie-banner-description">
-          <p>
-            Come la flora e la fauna che resta nel loro habitat, i cookie che
-            usiamo restano tra di noi: non collezioniamo nè cediamo a terzi
-            alcun vostro dato. Usiamo solo un cookie strettamente necessario al
-            funzionamento del sito, nello specifico per permettere la
-            navigazione nella lingua da te selezionata.<br /><br />Continuando a
-            navigare ne accetti l'utilizzo.
-          </p>
-        </div>
-        <!-- END cookie banner description -->
-
-        <!-- Cookie banner button -->
-        <div class="cookie-banner-button">
-          <button @click="acceptCookies">Ho capito</button>
-        </div>
-        <!-- END cookie banner button -->
-      </div>
-    </div>
-    <!-- END cookie panel -->
   </div>
 </template>
 
@@ -557,48 +512,6 @@ h1 {
   padding-bottom: 10px;
 }
 
-.cookie-banner {
-  width: 35%;
-  padding: 20px;
-
-  &.overlay {
-    width: 35%;
-    padding: 40px;
-    transform: none;
-  }
-
-  .cookie-banner-title,
-  .cookie-banner-description {
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .cookie-banner-button {
-    text-align: center;
-    margin-top: 20px;
-
-    button {
-      border: none;
-      color: #ff6a3a;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: transparent;
-
-      &:hover {
-        color: #ff2701;
-        transform: scale(1.1);
-      }
-    }
-  }
-}
-
 /* Media queries */
 /* Mobile layout */
 @media (max-width: 375px) {
@@ -727,6 +640,23 @@ h1 {
   .carousel-button-right {
     display: block;
     line-height: 210px;
+  }
+
+  .cookie-zoomed-container {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+
+    .cookie-banner.overlay {
+      width: 100%;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .cookie-banner-title {
+      text-align: center;
+    }
   }
 }
 /* END mobile layout */

@@ -1,6 +1,7 @@
 <script>
 import HeaderComponent from "./components/HeaderComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import CookieBanner from "./components/CookieBanner.vue";
 
 export default {
   name: "App",
@@ -13,6 +14,7 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent,
+    CookieBanner,
   },
   methods: {
     windowScroll(event) {
@@ -47,6 +49,7 @@ export default {
       />
     </button>
   </div>
+  <CookieBanner />
   <FooterComponent></FooterComponent>
 </template>
 
