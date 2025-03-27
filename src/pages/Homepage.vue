@@ -30,10 +30,20 @@ export default {
       currentIndex: 0,
       intervalTimer: false,
       isTransitioning: false,
+      showCookieBanner: true,
     };
   },
 
+  created() {
+    // Check if the user has already accepted the cookie
+    const cookieAccepted = sessionStorage.getItem("cookieAccepted");
+    if (cookieAccepted === "true") {
+      this.showCookieBanner = false;
+    }
+  },
+
   methods: {
+    // Function for the carousel, change to the next image
     nextCard() {
       if (this.isTransitioning) return;
       this.isTransitioning = true;
@@ -47,6 +57,7 @@ export default {
       }, 50);
     },
 
+    // Function for the carousel, change to the previous image
     prevCard() {
       if (this.isTransitioning) return;
       this.isTransitioning = true;
@@ -60,6 +71,12 @@ export default {
           this.isTransitioning = false;
         }, 500);
       }, 50);
+    },
+
+    // Function to accept the cookie
+    acceptCookies() {
+      sessionStorage.setItem("cookieAccepted", "true");
+      this.showCookieBanner = false;
     },
   },
 };
@@ -239,8 +256,8 @@ export default {
         <!-- END vision section -->
       </div>
     </div>
-    <!-- Cookies panel -->
-    <div class="zoomed-container">
+    <!-- Cookie panel -->
+    <div class="zoomed-container" v-if="showCookieBanner">
       <div class="cookie-banner overlay">
         <!-- Cookie banner title -->
         <div class="cookie-banner-title">
@@ -255,20 +272,20 @@ export default {
             usiamo restano tra di noi: non collezioniamo nè cediamo a terzi
             alcun vostro dato. Usiamo solo un cookie strettamente necessario al
             funzionamento del sito, nello specifico per permettere la
-            navigazione nella lingua da te selezionata. Continuando a navigare
-            ne accetti l'utilizzo.
+            navigazione nella lingua da te selezionata.<br /><br />Continuando a
+            navigare ne accetti l'utilizzo.
           </p>
         </div>
         <!-- END cookie banner description -->
 
         <!-- Cookie banner button -->
         <div class="cookie-banner-button">
-          <button>Ho capito</button>
+          <button @click="acceptCookies">Ho capito</button>
         </div>
         <!-- END cookie banner button -->
       </div>
     </div>
-    <!-- END cookies panel -->
+    <!-- END cookie panel -->
   </div>
 </template>
 
@@ -435,8 +452,8 @@ h1 {
 
   .image-container {
     position: relative;
-    width: 24vh; /* Stessa larghezza delle tue immagini attuali */
-    height: 24vh; /* Stessa altezza delle tue immagini attuali */
+    width: 24vh;
+    height: 24vh;
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -547,6 +564,7 @@ h1 {
   &.overlay {
     width: 35%;
     padding: 40px;
+    transform: none;
   }
 
   .cookie-banner-title,
@@ -569,7 +587,7 @@ h1 {
     button {
       border: none;
       color: #ff6a3a;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: bold;
       background-color: transparent;
 
