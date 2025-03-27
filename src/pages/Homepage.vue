@@ -239,6 +239,36 @@ export default {
         <!-- END vision section -->
       </div>
     </div>
+    <!-- Cookies panel -->
+    <div class="zoomed-container">
+      <div class="cookie-banner overlay">
+        <!-- Cookie banner title -->
+        <div class="cookie-banner-title">
+          <h3>I cookie migliori sono quelli che restano tra noi</h3>
+        </div>
+        <!-- END cookie banner title -->
+
+        <!-- Cookie banner description -->
+        <div class="cookie-banner-description">
+          <p>
+            Come la flora e la fauna che resta nel loro habitat, i cookie che
+            usiamo restano tra di noi: non collezioniamo nè cediamo a terzi
+            alcun vostro dato. Usiamo solo un cookie strettamente necessario al
+            funzionamento del sito, nello specifico per permettere la
+            navigazione nella lingua da te selezionata. Continuando a navigare
+            ne accetti l'utilizzo.
+          </p>
+        </div>
+        <!-- END cookie banner description -->
+
+        <!-- Cookie banner button -->
+        <div class="cookie-banner-button">
+          <button>Ho capito</button>
+        </div>
+        <!-- END cookie banner button -->
+      </div>
+    </div>
+    <!-- END cookies panel -->
   </div>
 </template>
 
@@ -508,6 +538,47 @@ h1 {
   width: 90%;
   text-align: center;
   padding-bottom: 10px;
+}
+
+.cookie-banner {
+  width: 35%;
+  padding: 20px;
+
+  &.overlay {
+    width: 35%;
+    padding: 40px;
+  }
+
+  .cookie-banner-title,
+  .cookie-banner-description {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .cookie-banner-button {
+    text-align: center;
+    margin-top: 20px;
+
+    button {
+      border: none;
+      color: #ff6a3a;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: transparent;
+
+      &:hover {
+        color: #ff2701;
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 
 /* Media queries */
