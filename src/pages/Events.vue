@@ -396,7 +396,7 @@ section {
   position: absolute;
   top: 20px;
   left: 30px;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 24px;
   cursor: pointer;
   padding: 10px;

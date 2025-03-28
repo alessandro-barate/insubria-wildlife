@@ -96,7 +96,7 @@ export default {
   position: fixed;
   bottom: 4%;
   left: 30%;
-  z-index: 1000; /* Assicura che il banner sia sopra gli altri elementi */
+  z-index: 9999;
 
   .overlay {
     background-color: rgba(0, 0, 0, 1);
@@ -120,7 +120,7 @@ export default {
 
   h3 {
     font-size: 22px;
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   p {

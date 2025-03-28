@@ -214,7 +214,7 @@ const changeLanguage = (lang) => {
 <style scoped lang="scss">
 .col {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -255,43 +255,68 @@ section {
 }
 
 :deep(.formkit-form) {
-  width: 80%;
   margin: 0 auto;
+
+  .formkit-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .formkit-outer {
+    margin-bottom: 20px;
+  }
 
   .formkit-label {
     color: rgba(255, 255, 255, 0.753);
-    margin-bottom: 8px;
     text-align: center;
     display: block;
   }
 
   .formkit-input {
-    width: 100%;
+    color: rgba(255, 255, 255, 0.753);
     padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
     background-color: transparent;
-    border-radius: 4px;
 
     &:focus {
       outline: none;
-      border-color: #4a90e2;
-      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+      border-color: #ff6b3a;
+      box-shadow: 0 0 5px #ff6b3a;
     }
   }
 
   .formkit-message {
     color: #ff6b6b;
     font-size: 0.85rem;
-    margin-top: -12px;
-    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     text-align: center;
   }
 
+  .formkit-wrapper button {
+    color: black;
+    border: none;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 3px 30px 7px 30px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    background-color: #ff6b3ad8;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: #ff6b3a;
+      box-shadow: 0 -1px 10px #ff6b3ac0;
+    }
+  }
+
   .formkit-submit {
-    background-color: #4a90e2;
     color: rgba(255, 255, 255, 0.753);
     padding: 12px 24px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     margin-top: 10px;
@@ -302,19 +327,48 @@ section {
   }
 
   .formkit-actions {
-    width: 13%;
+    width: 20%;
   }
 }
 
 // Media queries
 @media (max-width: 500px) {
+  .overlay {
+    margin-bottom: 50px;
+  }
+
   .contact {
     width: 90%;
-    margin-left: 10px;
-    margin-right: 10px;
 
     h1 {
       font-size: 40px;
+    }
+  }
+
+  :deep(.formkit-form) {
+    .formkit-wrapper {
+      width: 90%;
+    }
+
+    #message,
+    textarea {
+      width: 90% !important;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    #message {
+      margin-top: 10px;
+    }
+
+    .formkit-actions {
+      width: 100% !important;
+      margin: 0 auto;
+      text-align: center;
+
+      button {
+        margin: 0 auto;
+      }
     }
   }
 }
