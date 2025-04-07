@@ -152,11 +152,11 @@ const getDescription = (index) => {
       },
       labels: {
         it: {
-          2: "scrivere alla nostra email.",
+          2: "scrivere alla nostra email",
           default: "contattarci tramite uno dei nostri canali social.",
         },
         en: {
-          2: "write to our email.",
+          2: "write to our email",
           default: "contact us to one of our social account.",
         },
       },
@@ -172,28 +172,35 @@ const getDescription = (index) => {
       emailParams.domain
     }?subject=${encodeURIComponent(subject)}`;
 
+    const postText =
+      locale.value === "it"
+        ? ", e si chiede un'offerta libera per contribuire alla copertura dei costi."
+        : ", and a voluntary donation is requested to contribute to covering the costs.";
+
     if (!desc.includes("Per partecipare") && !desc.includes("To participate")) {
       // Se la descrizione è vuota o non contiene già un riferimento alle iscrizioni
       const preText =
         locale.value === "it"
           ? "Per partecipare serve prenotarsi "
-          : "To participate, you need to register ";
+          : "To participate you need to register ";
 
       return (
         desc +
         (desc ? "<br><br>" : "") +
         preText +
-        `<a href="${emailLink}" class="mail-link">${linkText}</a>`
+        `<a href="${emailLink}" class="mail-link">${linkText}</a>` +
+        postText
       );
     } else {
       // Se la frase esiste già, trova il punto in cui inserire il link
       return desc.replace(
-        /Per partecipare serve prenotarsi(.*)$|To participate, you need to register(.*)$/,
+        /Per partecipare serve prenotarsi(.*)$|To participate you need to register(.*)$/,
         (match) => {
           const baseText = match.split(" ").slice(0, -1).join(" ") + " ";
           return (
             baseText +
-            `<a href="${emailLink}" class="mail-link">${linkText}</a>`
+            `<a href="${emailLink}" class="mail-link">${linkText}</a>` +
+            postText
           );
         }
       );
