@@ -79,6 +79,10 @@ export default {
   #up-button {
     right: 7px;
     bottom: 53px;
+
+    button:hover {
+      transform: none;
+    }
   }
 }
 </style>

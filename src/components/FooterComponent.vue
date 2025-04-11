@@ -65,7 +65,7 @@ const changeLanguage = (lang) => {
                     >
                       Via Roma 20, 20004, Arluno
                     </a> -->
-                    <h3 id="pi">{{ t("footer.vat") }}</h3>
+                    <h3 id="pi" class="capitalize">{{ t("footer.vat") }}</h3>
                     <span>93054540153</span>
                   </address>
                   <!-- END address container -->
@@ -121,10 +121,16 @@ const changeLanguage = (lang) => {
           <!-- Privacy policies container -->
           <div class="privacy-policies-container">
             <div class="policies-link">
-              <button>Informativa privacy</button>
+              <button class="capitalize">
+                {{ t("footer.privacy.title") }}
+              </button>
             </div>
           </div>
           <!-- END privacy policies container -->
+
+          <!-- Privacy policies description -->
+          <div class="privacy-policies-zoomed"></div>
+          <!-- END privacy policies description -->
 
           <!-- Copyright container -->
           <div class="copyright-container">
@@ -336,6 +342,15 @@ address a,
   #fb-logo,
   #ig-logo {
     width: 25%;
+  }
+}
+
+// Deleting all the animations under desktop layout
+@media (max-width: 999px) {
+  #fb-logo:hover,
+  #ig-logo:hover,
+  .privacy-policies-container button:hover {
+    transform: none;
   }
 }
 </style>

@@ -335,8 +335,12 @@
     "thirdParagraph": "and become part of *Insubria WildLife*: we are always looking for *free, innovative and enthusiastic voices* to build together a better future for nature."
   },
   "footer": {
-    "vat": "Tax Code",
-    "followUs": "Follow us on our socials"
+    "vat": "tax code",
+    "followUs": "Follow us on our socials",
+    "privacy": {
+      "title": "privacy policy",
+      "description": ""
+    }
   },
   "cookieBanner": {
     "title": "The best cookies are those that stay between us",

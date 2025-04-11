@@ -338,8 +338,12 @@
     "thirdParagraph": "e diventa parte di *Insubria WildLife*: siamo sempre alla ricerca di *voci libere, innovative ed entusiaste* per costruire insieme un futuro migliore per la natura."
   },
   "footer": {
-    "vat": "Codice Fiscale",
-    "followUs": "Seguici sui nostri social"
+    "vat": "codice fiscale",
+    "followUs": "Seguici sui nostri social",
+    "privacy": {
+      "title": "informativa privacy",
+      "description": ""
+    }
   },
   "cookieBanner": {
     "title": "I cookie migliori sono quelli che restano tra noi",
