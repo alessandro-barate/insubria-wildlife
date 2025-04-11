@@ -429,7 +429,6 @@ address a,
 }
 
 .overlay-single-card {
-  background-color: #ff0000;
   padding-bottom: 20px;
 }
 
