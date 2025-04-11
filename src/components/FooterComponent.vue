@@ -1,6 +1,22 @@
 <script>
 export default {
   name: "FooterComponent",
+
+  data() {
+    return {
+      showPrivacy: false,
+    };
+  },
+
+  methods: {
+    showPrivacyPolicies() {
+      this.showPrivacy = true;
+    },
+
+    hidePrivacyPolicies() {
+      this.showPrivacy = false;
+    },
+  },
 };
 </script>
 
@@ -121,15 +137,45 @@ const changeLanguage = (lang) => {
           <!-- Privacy policies container -->
           <div class="privacy-policies-container">
             <div class="policies-link">
-              <button class="capitalize">
-                {{ t("footer.privacy.title") }}
+              <button class="capitalize" @click="showPrivacyPolicies()">
+                {{ t("footer.privacy.buttonTitle") }}
               </button>
             </div>
           </div>
           <!-- END privacy policies container -->
 
           <!-- Privacy policies description -->
-          <div class="privacy-policies-zoomed"></div>
+          <section>
+            <div class="zoomed-container" v-if="showPrivacy">
+              <div class="overlay-single-card">
+                <div class="content-wrapper">
+                  <div class="details-btn">
+                    <button @click="hidePrivacyPolicies()">✕</button>
+                  </div>
+                  <div class="privacy-title uppercase">
+                    <h3>{{ t("footer.privacy.description.title") }}</h3>
+                  </div>
+                  <div class="privacy-policies-description">
+                    <p>{{ t("footer.privacy.description.topParagraph") }}</p>
+                    <p>{{ t("footer.privacy.description.firstPoint") }}</p>
+                    <p>{{ t("footer.privacy.description.secondPoint") }}</p>
+                    <p>{{ t("footer.privacy.description.thirdPoint") }}</p>
+                    <p>{{ t("footer.privacy.description.fourthPoint") }}</p>
+                    <p>{{ t("footer.privacy.description.fifthPoint") }}</p>
+                    <p>{{ t("footer.privacy.description.sixthPoint") }}</p>
+                    <p>
+                      {{ t("footer.privacy.description.seventhPoint") }}
+                    </p>
+                    <p>{{ t("footer.privacy.description.eigthPoint") }}</p>
+                    <p>{{ t("footer.privacy.description.ninthPoint") }}</p>
+                    <p>
+                      {{ t("footer.privacy.description.bottomParagraph") }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           <!-- END privacy policies description -->
 
           <!-- Copyright container -->
@@ -274,6 +320,33 @@ address a,
     &:hover {
       color: #ff0000;
       transform: scale(1.1);
+    }
+  }
+}
+
+.overlay-single-card {
+  background-color: #ff0000;
+}
+
+.details-btn {
+  margin-top: 0;
+  margin-left: -1em;
+}
+
+.content-wrapper {
+  width: 95%;
+
+  .privacy-title {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .privacy-policies-description {
+    width: 94%;
+
+    p {
+      font-size: 16px;
     }
   }
 }

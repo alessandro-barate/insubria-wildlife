@@ -341,8 +341,21 @@
     "vat": "codice fiscale",
     "followUs": "Seguici sui nostri social",
     "privacy": {
-      "title": "informativa privacy",
-      "description": ""
+      "buttonTitle": "informativa privacy",
+      "description": {
+        "title": "informativa ai sensi del regolamento ue 2016/679 sulla protezione dei dati",
+        "topParagraph": "In relazione a quanto previsto dal Reg. UE 2016/679 (Regolamento Europeo per la protezione dei dati personali) con la presente comunichiamo le dovute informazioni in ordine al trattamento dei dati personali forniti dall'interessato.La presente informativa che è resa ai sensi dell' art. 13 della Reg. UE 2016/679 (RegolamentoEuropeo per la protezione dei dati personali) e ai sensi dell'art. 13 D.Lgs. 30.6.2003 n. 196(Codice Privacy).",
+        "firstPoint": "1",
+        "secondPoint": "2",
+        "thirdPoint": "3",
+        "fourthPoint": "4",
+        "fifthPoint": "5",
+        "sixthPoint": "6",
+        "seventhPoint": "7",
+        "eigthPoint": "8",
+        "ninthPoint": "9",
+        "bottomParagraph": "Ove applicabili, l'interessato ha altresì i diritti di cui agli artt. 16-21 GDPR (Diritto di rettifica,diritto all'oblio, diritto di limitazione di trattamento, diritto alla portabilità dei dati, diritto diopposizione),Fatto salvo ogni altro ricorso amministrativo e giurisdizionale, se l'interessato ritiene che iltrattamento dei dati che lo riguardano violi quanto previsto dal Reg. UE 2016/679, ai sensidell'art. 15 lettera f) del succitato Reg. UE 2016/679, ha il diritto di proporre reclamo al Garanteper la protezione dei dati personali e, con riferimento all'art. 6 paragrafo 1, lettera a) e art. 9,paragrafo 2, lettera a), ha il diritto di revocare in qualsiasi momento il consenso prestato.Nel caso di richiesta di portabilità del dato da parte dell'interessato, il Titolare del trattamentofornirà in un formato di uso comune e leggibile i dati personali che lo riguardano, fatto salvo icommi 3 e 4 dell'art. 20 del Reg. UE 2016/679."
+      }
     }
   },
   "cookieBanner": {
