@@ -156,21 +156,93 @@ const changeLanguage = (lang) => {
                     <h3>{{ t("footer.privacy.description.title") }}</h3>
                   </div>
                   <div class="privacy-policies-description">
-                    <p>{{ t("footer.privacy.description.topParagraph") }}</p>
-                    <p>{{ t("footer.privacy.description.firstPoint") }}</p>
-                    <p>{{ t("footer.privacy.description.secondPoint") }}</p>
-                    <p>{{ t("footer.privacy.description.thirdPoint") }}</p>
-                    <p>{{ t("footer.privacy.description.fourthPoint") }}</p>
-                    <p>{{ t("footer.privacy.description.fifthPoint") }}</p>
-                    <p>{{ t("footer.privacy.description.sixthPoint") }}</p>
-                    <p>
-                      {{ t("footer.privacy.description.seventhPoint") }}
+                    <p class="top-paragraph">
+                      {{ t("footer.privacy.description.topParagraph") }}
                     </p>
-                    <p>{{ t("footer.privacy.description.eigthPoint") }}</p>
-                    <p>{{ t("footer.privacy.description.ninthPoint") }}</p>
-                    <p>
-                      {{ t("footer.privacy.description.bottomParagraph") }}
-                    </p>
+                    <div class="first-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.firstPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.firstPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="second-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.secondPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.secondPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="third-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.thirdPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.thirdPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="fourth-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.fourthPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.fourthPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="fifth-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.fifthPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.fifthPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="sixth-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.sixthPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.sixthPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="seventh-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.seventhPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.seventhPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="eigth-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.eigthPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.eigthPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="ninth-point">
+                      <span class="uppercase">{{
+                        t("footer.privacy.description.ninthPoint.title")
+                      }}</span>
+                      <p>
+                        {{ t("footer.privacy.description.ninthPoint.text") }}
+                      </p>
+                    </div>
+                    <div class="bottom-paragraph">
+                      <p>
+                        {{
+                          t("footer.privacy.description.bottomFirstParagraph")
+                        }}
+                      </p>
+                      <p>
+                        {{
+                          t("footer.privacy.description.bottomSecondParagraph")
+                        }}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -326,15 +398,18 @@ address a,
 
 .overlay-single-card {
   background-color: #ff0000;
+  padding-bottom: 20px;
 }
 
 .details-btn {
-  margin-top: 0;
-  margin-left: -1em;
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
 .content-wrapper {
   width: 95%;
+  overflow: auto;
+  max-height: 600px;
 
   .privacy-title {
     font-size: 17px;
@@ -345,8 +420,21 @@ address a,
   .privacy-policies-description {
     width: 94%;
 
+    span {
+      width: 97%;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
     p {
+      width: 95%;
       font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .top-paragraph {
+      width: 100%;
     }
   }
 }
