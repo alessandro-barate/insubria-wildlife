@@ -60,6 +60,7 @@ export const store = reactive({
       }),
       image: socialImg,
     },
+
     {
       description: computed(() => {
         const { t } = useI18n();
@@ -71,6 +72,7 @@ export const store = reactive({
       }),
       image: volunteerImg,
     },
+
     {
       description: computed(() => {
         const { t } = useI18n();
@@ -82,6 +84,7 @@ export const store = reactive({
       }),
       image: rehabImg,
     },
+
     {
       description: computed(() => {
         const { t } = useI18n();
@@ -93,6 +96,7 @@ export const store = reactive({
       }),
       image: researchImg,
     },
+
     {
       description: computed(() => {
         const { t } = useI18n();
@@ -126,6 +130,7 @@ export const store = reactive({
         return t("team.members.0.description");
       }),
     },
+
     {
       name: computed(() => {
         const { t } = useI18n();
@@ -145,6 +150,7 @@ export const store = reactive({
         return t("team.members.1.description");
       }),
     },
+
     {
       name: computed(() => {
         const { t } = useI18n();
@@ -164,6 +170,7 @@ export const store = reactive({
         return t("team.members.2.description");
       }),
     },
+
     {
       name: computed(() => {
         const { t } = useI18n();
@@ -183,6 +190,7 @@ export const store = reactive({
         return t("team.members.3.description");
       }),
     },
+
     {
       name: computed(() => {
         const { t } = useI18n();
@@ -202,6 +210,7 @@ export const store = reactive({
         return t("team.members.4.description");
       }),
     },
+
     {
       name: computed(() => {
         const { t } = useI18n();
@@ -238,6 +247,7 @@ export const store = reactive({
         return t("insubria.characteristics.0.description");
       }),
     },
+
     {
       intro: computed(() => {
         const { t } = useI18n();
@@ -252,6 +262,7 @@ export const store = reactive({
         return t("insubria.characteristics.1.description");
       }),
     },
+
     {
       intro: computed(() => {
         const { t } = useI18n();
@@ -266,6 +277,7 @@ export const store = reactive({
         return t("insubria.characteristics.2.description");
       }),
     },
+
     {
       intro: computed(() => {
         const { t } = useI18n();
@@ -280,6 +292,7 @@ export const store = reactive({
         return t("insubria.characteristics.3.description");
       }),
     },
+
     {
       intro: computed(() => {
         const { t } = useI18n();
@@ -319,6 +332,7 @@ export const store = reactive({
       // Empty array for events with no speakers
       speakers: computed(() => []),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -345,11 +359,13 @@ export const store = reactive({
             image: speakerMarcoColombo,
             description: t("events.1.speakers.0.description"),
           },
+
           {
             name: t("events.1.speakers.1.name"),
             image: giuliaImg,
             description: t("events.1.speakers.1.description"),
           },
+
           {
             name: t("events.1.speakers.2.name"),
             image: alessiaImg,
@@ -358,6 +374,7 @@ export const store = reactive({
         ];
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -386,6 +403,7 @@ export const store = reactive({
     {
       nameIta: italianFlowChart,
     },
+
     {
       nameEng: englishFlowChart,
     },
@@ -407,6 +425,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.0.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -422,6 +441,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.1.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -437,6 +457,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.2.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -452,6 +473,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.3.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -467,6 +489,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.4.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -482,6 +505,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.5.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -497,6 +521,7 @@ export const store = reactive({
         return t("sosAnimals.sosCards.6.description");
       }),
     },
+
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -510,6 +535,107 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("sosAnimals.sosCards.7.description");
+      }),
+    },
+  ],
+
+  footer: [
+    {
+      firstTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.firstPoint.title");
+      }),
+      firstText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.firstPoint.text");
+      }),
+    },
+
+    {
+      secondTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.secondPoint.title");
+      }),
+      secondText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.secondPoint.text");
+      }),
+    },
+
+    {
+      thirdTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.thirdPoint.title");
+      }),
+      thirdText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.thirdPoint.text");
+      }),
+    },
+
+    {
+      fourthTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.fourthPoint.title");
+      }),
+      fourthText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.fourthPoint.text");
+      }),
+    },
+
+    {
+      fifthTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.fifthPoint.title");
+      }),
+      fifthText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.fifthPoint.text");
+      }),
+    },
+
+    {
+      sixthTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.sixthPoint.title");
+      }),
+      sixthText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.sixthPoint.text");
+      }),
+    },
+
+    {
+      seventhTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.seventhPoint.title");
+      }),
+      seventhText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.seventhPoint.text");
+      }),
+    },
+
+    {
+      eigthTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.eigthPoint.title");
+      }),
+      eigthText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.eigthPoint.text");
+      }),
+    },
+
+    {
+      ninethTitle: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.ninethPoint.title");
+      }),
+      ninethText: computed(() => {
+        const { t } = useI18n();
+        return t("footer.privacy.description.ninethPoint.text");
       }),
     },
   ],

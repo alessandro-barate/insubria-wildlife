@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "FooterComponent",
 
@@ -149,88 +150,117 @@ const changeLanguage = (lang) => {
             <div class="zoomed-container" v-if="showPrivacy">
               <div class="overlay-single-card">
                 <div class="content-wrapper">
+                  <!-- Close button -->
                   <div class="details-btn">
                     <button @click="hidePrivacyPolicies()">✕</button>
                   </div>
+                  <!-- END close button -->
+
+                  <!-- Privacy title -->
                   <div class="privacy-title uppercase">
                     <h3>{{ t("footer.privacy.description.title") }}</h3>
                   </div>
+                  <!-- END privacy title -->
+
+                  <!-- Policy description -->
                   <div class="privacy-policies-description">
+                    <!-- Top paragraph -->
                     <p class="top-paragraph">
                       {{ t("footer.privacy.description.topParagraph") }}
                     </p>
+                    <!-- END top paragraph -->
+
+                    <!-- First point -->
                     <div class="first-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.firstPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.firstPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[0].firstTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[0].firstText)"></p>
                     </div>
+                    <!-- END first point -->
+
+                    <!-- Second point -->
                     <div class="second-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.secondPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.secondPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[1].secondTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[1].secondText)"></p>
                     </div>
+                    <!-- END second point -->
+
+                    <!-- Third point -->
                     <div class="third-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.thirdPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.thirdPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[2].thirdTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[2].thirdText)"></p>
                     </div>
+                    <!-- END third point -->
+
+                    <!-- Fourth point -->
                     <div class="fourth-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.fourthPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.fourthPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[3].fourthTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[3].fourthText)"></p>
                     </div>
+                    <!-- END fourth point -->
+
+                    <!-- Fifth point -->
                     <div class="fifth-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.fifthPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.fifthPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[4].fifthTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[4].fifthText)"></p>
                     </div>
+                    <!-- END fifth point -->
+
+                    <!-- Sixth point -->
                     <div class="sixth-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.sixthPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.sixthPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[5].sixthTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[5].sixthText)"></p>
                     </div>
+                    <!-- END sixth point -->
+
+                    <!-- Seventh point -->
                     <div class="seventh-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.seventhPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.seventhPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[6].seventhTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[6].seventhText)"></p>
                     </div>
+                    <!-- END seventh point -->
+
+                    <!-- Eigth point -->
                     <div class="eigth-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.eigthPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.eigthPoint.text") }}
-                      </p>
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[7].eigthTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[7].eigthText)"></p>
                     </div>
-                    <div class="ninth-point">
-                      <span class="uppercase">{{
-                        t("footer.privacy.description.ninthPoint.title")
-                      }}</span>
-                      <p>
-                        {{ t("footer.privacy.description.ninthPoint.text") }}
-                      </p>
+                    <!-- END eigth point -->
+
+                    <!-- Nineth point -->
+                    <div class="nineth-point">
+                      <span
+                        class="uppercase"
+                        v-html="$sanitize(store.footer[8].ninethTitle)"
+                      ></span>
+                      <p v-html="$sanitize(store.footer[8].ninethText)"></p>
                     </div>
+                    <!-- END nineth point -->
+
+                    <!-- Bottom paragraph -->
                     <div class="bottom-paragraph">
                       <p>
                         {{
@@ -243,7 +273,9 @@ const changeLanguage = (lang) => {
                         }}
                       </p>
                     </div>
+                    <!-- END bottom paragraph -->
                   </div>
+                  <!-- END policy description -->
                 </div>
               </div>
             </div>
@@ -385,9 +417,9 @@ address a,
 
   button {
     border: none;
+    color: white;
     font-size: 16px;
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.753);
 
     &:hover {
       color: #ff0000;
@@ -433,7 +465,8 @@ address a,
       margin-bottom: 10px;
     }
 
-    .top-paragraph {
+    .top-paragraph,
+    .bottom-paragraph p {
       width: 100%;
     }
   }
