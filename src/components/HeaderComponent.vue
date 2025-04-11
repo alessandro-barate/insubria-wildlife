@@ -249,9 +249,9 @@ export default {
               <!-- END hamburger menu -->
 
               <!-- Language container -->
-              <div class="lang-container">
-                <!-- Italian language -->
-                <button
+              <!-- <div class="lang-container"> -->
+              <!-- Italian language -->
+              <!-- <button
                   id="italian"
                   aria-label="Italiano"
                   @click="changeLanguage('it')"
@@ -261,11 +261,11 @@ export default {
                     src="../assets/img/header/flags/italy-flag-round.svg"
                     alt="Bandiera italiana"
                   />
-                </button>
-                <!-- END italian language -->
+                </button> -->
+              <!-- END italian language -->
 
-                <!-- English language -->
-                <button
+              <!-- English language -->
+              <!-- <button
                   id="english"
                   aria-label="English"
                   @click="changeLanguage('en')"
@@ -275,9 +275,9 @@ export default {
                     src="../assets/img/header/flags/uk-flag-round.svg"
                     alt="English flag"
                   />
-                </button>
-                <!-- END english language -->
-              </div>
+                </button> -->
+              <!-- END english language -->
+              <!-- </div> -->
               <!-- END language container -->
             </div>
             <!-- END right container -->

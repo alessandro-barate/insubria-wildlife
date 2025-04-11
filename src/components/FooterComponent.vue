@@ -118,6 +118,14 @@ const changeLanguage = (lang) => {
             <!-- END upper right section -->
           </div>
 
+          <!-- Privacy policies container -->
+          <div class="privacy-policies-container">
+            <div class="policies-link">
+              <button>Informativa privacy</button>
+            </div>
+          </div>
+          <!-- END privacy policies container -->
+
           <!-- Copyright container -->
           <div class="copyright-container">
             <p>&copy; 2024 Insubria WildLife APS</p>
@@ -143,7 +151,6 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.753);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.753);
 
   .right-details {
     width: 70%;
@@ -243,6 +250,25 @@ address a,
   .phone-container {
     justify-content: center;
     align-items: center;
+  }
+}
+
+.privacy-policies-container {
+  width: 87%;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.753);
+
+  button {
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.753);
+
+    &:hover {
+      color: #ff0000;
+      transform: scale(1.1);
+    }
   }
 }
 
