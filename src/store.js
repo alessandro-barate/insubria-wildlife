@@ -311,7 +311,7 @@ export const store = reactive({
   ],
 
   events: [
-    // ghepardi
+    // Cheetas
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -335,7 +335,7 @@ export const store = reactive({
       speakers: computed(() => []),
     },
 
-    // Palude
+    // Marsh
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -402,7 +402,7 @@ export const store = reactive({
       speakers: computed(() => []),
     },
 
-    // Lucciole
+    // Fireflies
     {
       title: computed(() => {
         const { t } = useI18n();

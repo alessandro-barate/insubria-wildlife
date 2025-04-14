@@ -140,79 +140,108 @@ const getDescription = (index) => {
   let desc = t("events." + index + ".description");
 
   // If event is Equilibrinatura (with index), add the email link
-  if (index === 1) {
-    // For events with email, add the standard sentence and link
-    const emailParams = {
-      user: "insubria.wildlife",
-      domain: "gmail.com",
-      subjects: {
-        it: {
-          2: "Richiesta di iscrizione Equilibrinatura",
-          default: "Richiesta dal sito",
-        },
-        en: {
-          2: "Equilibrinatura Registration Request",
-          default: "Request from website",
-        },
+  // For events with email, add the standard sentence and link
+  const emailParams = {
+    user: "insubria.wildlife",
+    domain: "gmail.com",
+    subjects: {
+      it: {
+        default: "Richiesta dal sito",
       },
-      labels: {
-        it: {
-          2: "scrivere alla nostra email",
-          default: "contattarci tramite uno dei nostri canali social.",
-        },
-        en: {
-          2: "write to our email",
-          default: "contact us to one of our social account.",
-        },
+      en: {
+        default: "Request from website",
       },
-    };
+    },
+    labels: {
+      it: {
+        default: "scrivendo alla nostra email",
+      },
+      en: {
+        default: "writing to our email",
+      },
+    },
+  };
 
-    const subject =
-      emailParams.subjects[locale.value][2] ||
-      emailParams.subjects[locale.value].default;
-    const linkText =
-      emailParams.labels[locale.value][2] ||
-      emailParams.labels[locale.value].default;
-    const emailLink = `mailto:${emailParams.user}&#64;${
-      emailParams.domain
-    }?subject=${encodeURIComponent(subject)}`;
+  // Adding the default index keys for every event
+  emailParams.subjects.it[index] = `Richiesta informazioni evento ${t(
+    "events." + index + ".title"
+  )}`;
+  emailParams.subjects.en[index] = `Request information for ${t(
+    "events." + index + ".title"
+  )} event`;
 
-    const postText =
-      locale.value === "it"
-        ? ", e si chiede un'offerta libera per contribuire alla copertura dei costi."
-        : ", and a voluntary donation is requested to contribute to covering the costs.";
+  // Preparing the email link
+  const subject =
+    emailParams.subjects[locale.value][index] ||
+    emailParams.subjects[locale.value].default;
+  const linkText =
+    emailParams.labels[locale.value][index] ||
+    emailParams.labels[locale.value].default;
+  const emailLink = `mailto:${emailParams.user}&#64;${
+    emailParams.domain
+  }?subject=${encodeURIComponent(subject)}`;
 
-    if (!desc.includes("Per partecipare") && !desc.includes("To participate")) {
-      // If the description is empty or it doesn't contain a reference to the subscriptions
-      const preText =
-        locale.value === "it"
-          ? "Per partecipare serve prenotarsi "
-          : "To participate you need to register ";
+  // Verifying if the original description has the sentence about the voluntary offer
+  const hasOfferText =
+    desc.includes(
+      ", e si chiede un'offerta libera per contribuire alla copertura dei costi."
+    ) ||
+    desc.includes(
+      ", and a voluntary donation is requested to contribute to covering the costs."
+    );
 
-      return (
-        desc +
-        (desc ? "<br><br>" : "") +
-        preText +
-        `<a href="${emailLink}" class="mail-link">${linkText}</a>` +
-        postText
-      );
-    } else {
-      // If the sentence already exists, search for the point where insert the link in
-      return desc.replace(
-        /Per partecipare serve prenotarsi(.*)$|To participate you need to register(.*)$/,
-        (match) => {
-          const baseText = match.split(" ").slice(0, -1).join(" ") + " ";
-          return (
-            baseText +
-            `<a href="${emailLink}" class="mail-link">${linkText}</a>` +
-            postText
-          );
-        }
-      );
+  // Preparing the offer text only if present in the original one
+  const postText = hasOfferText
+    ? locale.value === "it"
+      ? ", e si chiede un'offerta libera per contribuire alla copertura dei costi."
+      : ", and a voluntary donation is requested to contribute to covering the costs."
+    : "";
+
+  // Participation sentences in italian and english
+  const itParticipationPhrase = "Per partecipare serve prenotarsi";
+  const enParticipationPhrase = "To participate you need to register";
+
+  // Verifichiamo se la descrizione contiene già la frase di partecipazione
+  const hasItalianParticipationText = desc.includes(itParticipationPhrase);
+  const hasEnglishParticipationText = desc.includes(enParticipationPhrase);
+  const hasParticipationText =
+    hasItalianParticipationText || hasEnglishParticipationText;
+
+  // Verifying if the original description has the sentence about the participation
+  if (hasParticipationText) {
+    // Determining the correct sentence to search for based on the language
+    const searchPhrase =
+      locale.value === "it" ? itParticipationPhrase : enParticipationPhrase;
+
+    // Finding the sentence's position in the description
+    const phrasePosition = desc.indexOf(searchPhrase);
+
+    if (phrasePosition !== -1) {
+      // Splitting the description in 2 parts: before and after including the participation sentence
+      const beforePhrase = desc.substring(0, phrasePosition);
+
+      // Building the new participation sentence with the email link
+      const newParticipationPhrase =
+        searchPhrase +
+        ` <a href="${emailLink}" class="mail-link">${linkText}</a>` +
+        postText;
+
+      // Getting the description with the substituted sentence
+      return beforePhrase + newParticipationPhrase;
     }
   }
 
-  return desc;
+  // If it doesn't contain the participation phrase or we couldn't substitute it, add it to the description's end
+  const participationPhrase =
+    locale.value === "it"
+      ? `${itParticipationPhrase} <a href="${emailLink}" class="mail-link">${linkText}</a>${postText}`
+      : `${enParticipationPhrase} <a href="${emailLink}" class="mail-link">${linkText}</a>${postText}`;
+
+  if (desc) {
+    return desc + "<br><br>" + participationPhrase;
+  } else {
+    return participationPhrase;
+  }
 };
 </script>
 
@@ -462,6 +491,7 @@ section {
 
 .speakers-container {
   overflow: auto;
+  margin-top: 20px;
   max-height: 330px;
 
   figure {
