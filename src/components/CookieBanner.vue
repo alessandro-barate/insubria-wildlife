@@ -26,24 +26,61 @@ export default {
   data() {
     return {
       showCookieBanner: false,
+      consentValidityDays: 180,
     };
   },
 
   created() {
-    // Check if the user has already accepted the cookie
-    const cookieAccepted = sessionStorage.getItem("cookieAccepted");
-    if (cookieAccepted !== "true") {
-      setTimeout(() => {
-        this.showCookieBanner = true;
-      }, 1000);
-    }
+    this.checkCookieConsent();
   },
 
   methods: {
+    checkCookieConsent() {
+      // Check if the cookie privacy is valid
+      const cookieAccepted = localStorage.getItem("cookieAccepted");
+      const expiryDateStr = localStorage.getItem("cookieExpiryDate");
+
+      // Check if the user has already accepted the cookie
+      if (cookieAccepted !== "true") {
+        setTimeout(() => {
+          this.showCookieBanner = true;
+        }, 1000);
+      }
+
+      // Check if the expiry date exists
+      if (!expiryDateStr) {
+        this.setConsentExpiry();
+        return;
+      }
+
+      // Check if the expiry date passed by
+      const expiryDate = new Date(expiryDateStr);
+      const currentDate = new Date();
+
+      if (currentDate > expiryDate) {
+        // If the consent expired, show the banner again
+        console.log("Cookie consent expired. Showing the banner again");
+        this.showCookieBanner = true;
+      } else {
+        this.showCookieBanner = false;
+      }
+    },
+
+    // Function to set the consent's expiry date
+    setConsentExpiry() {
+      const expiryDate = new Date();
+      // Add the days setted above to the actual date
+      expiryDate.setDate(expiryDate.getDate() + this.consentValidityDays);
+      // Save the expiry date into local storage
+      localStorage.setItem("cookieExpiryDate", expiryDate.toISOString());
+    },
+
     // Function to accept the cookie
     acceptCookies() {
-      // Save the acceptance in sessionStorage
-      sessionStorage.setItem("cookieAccepted", "true");
+      // Save the acceptance in localStorage
+      localStorage.setItem("cookieAccepted", "true");
+      // Set the expiry date
+      this.setConsentExpiry();
       // Hide the banner
       this.showCookieBanner = false;
     },
