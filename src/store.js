@@ -21,6 +21,7 @@ import event2025Marzo29 from "./assets/img/events/posters/2025/Marzo/29-03-25.we
 import event2024Novembre27 from "./assets/img/events/posters/2024/Novembre/27-11-24.webp";
 import speakerMarcoColombo from "./assets/img/events/speakers/marco-colombo.webp";
 import event2025Aprile12 from "./assets/img/events/posters/2025/Aprile/12-04-25.webp";
+import event2025Maggio5 from "./assets/img/events/posters/2025/Maggio/30-05-25.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -310,6 +311,7 @@ export const store = reactive({
   ],
 
   events: [
+    // ghepardi
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -323,7 +325,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.0.alt");
       }),
-      poster: event2025Aprile12,
+      poster: event2024Novembre27,
       description: computed(() => {
         const { t } = useI18n();
         return t("events.0.description");
@@ -333,6 +335,7 @@ export const store = reactive({
       speakers: computed(() => []),
     },
 
+    // Palude
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -375,6 +378,7 @@ export const store = reactive({
       }),
     },
 
+    // Equilibrinatura
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -388,10 +392,34 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.2.alt");
       }),
-      poster: event2024Novembre27,
+      poster: event2025Aprile12,
       description: computed(() => {
         const { t } = useI18n();
         return t("events.2.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+
+    // Lucciole
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.alt");
+      }),
+      poster: event2025Maggio5,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.description");
       }),
 
       // Empty array for events with no speakers

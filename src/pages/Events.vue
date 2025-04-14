@@ -61,6 +61,11 @@ export default {
   },
 
   computed: {
+    // Events array in reverse order
+    reversedEvents() {
+      return [...this.store.events].reverse();
+    },
+
     // Build the email link dynamically
     emailLink() {
       const lang = this.$i18n.locale;
@@ -74,7 +79,7 @@ export default {
       }?subject=${encodeURIComponent(subject)}`;
     },
 
-    // Ottieni l'etichetta del link in base alla lingua e all'evento
+    // Get the link label based on the chosen language and event
     emailLinkText() {
       const lang = this.$i18n.locale;
       const eventIndex = this.currentIndex;
@@ -130,13 +135,13 @@ const changeLanguage = (lang) => {
   localStorage.setItem("language", lang);
 };
 
-// Processa la descrizione sostituendo il marcatore EMAIL con un link
+// Process the description changing the EMAIL marker with a link
 const getDescription = (index) => {
   let desc = t("events." + index + ".description");
 
-  // Se l'evento è quello di Equilibrinatura (indice 0), aggiungiamo il link email
-  if (index === 0) {
-    // Per eventi con email, aggiungi la frase standard e il link
+  // If event is Equilibrinatura (with index), add the email link
+  if (index === 1) {
+    // For events with email, add the standard sentence and link
     const emailParams = {
       user: "insubria.wildlife",
       domain: "gmail.com",
@@ -178,7 +183,7 @@ const getDescription = (index) => {
         : ", and a voluntary donation is requested to contribute to covering the costs.";
 
     if (!desc.includes("Per partecipare") && !desc.includes("To participate")) {
-      // Se la descrizione è vuota o non contiene già un riferimento alle iscrizioni
+      // If the description is empty or it doesn't contain a reference to the subscriptions
       const preText =
         locale.value === "it"
           ? "Per partecipare serve prenotarsi "
@@ -192,7 +197,7 @@ const getDescription = (index) => {
         postText
       );
     } else {
-      // Se la frase esiste già, trova il punto in cui inserire il link
+      // If the sentence already exists, search for the point where insert the link in
       return desc.replace(
         /Per partecipare serve prenotarsi(.*)$|To participate you need to register(.*)$/,
         (match) => {
@@ -222,17 +227,19 @@ const getDescription = (index) => {
           </p>
           <div class="big-events-container d-flex">
             <div
-              v-for="(event, index) in store.events"
+              v-for="(event, index) in reversedEvents"
               :key="index"
               class="events-container"
             >
               <div class="event-card">
                 <h2 class="capitalize">{{ event.title }}</h2>
                 <p>{{ event.date }}</p>
-                <figure @click="toggleZoom(index)">
+                <figure @click="toggleZoom(store.events.length - 1 - index)">
                   <img
                     :src="event.poster"
-                    :alt="t('events.' + index + '.alt')"
+                    :alt="
+                      t('events.' + (store.events.length - 1 - index) + '.alt')
+                    "
                   />
                 </figure>
               </div>
