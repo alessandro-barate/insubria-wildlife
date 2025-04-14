@@ -33,32 +33,16 @@ export default {
           },
         },
       },
-      emailClickHandler: null,
+      // Removed from here as it's now handled in the setup script
+      // emailClickHandler: null,
     };
   },
 
-  mounted() {
-    // Create the function and store the reference
-    this.emailClickHandler = (event) => {
-      if (
-        event.target.tagName === "A" &&
-        event.target.href &&
-        event.target.href.startsWith("mailto:")
-      ) {
-        console.log("Email link clicked");
-      }
-    };
+  // Removed mounted hook as it's now handled in the setup script
+  // mounted() {...},
 
-    // Add the event listener using the same function reference
-    document.addEventListener("click", this.emailClickHandler);
-  },
-
-  beforeUnmount() {
-    // Remove the event listener when the component gets destroyed
-    if (this.emailClickHandler) {
-      document.removeEventListener("click", this.emailClickHandler);
-    }
-  },
+  // Removed beforeUnmount hook as it's now handled in the setup script
+  // beforeUnmount() {...},
 
   computed: {
     // Events array in reverse order
@@ -117,9 +101,10 @@ export default {
 
 <script setup>
 import { useI18n } from "vue-i18n";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 const { t, locale } = useI18n();
 
-// Defaulf language to Italian if no other language is selected
+// Default language to Italian if no other language is selected
 if (!localStorage.getItem("language")) {
   localStorage.setItem("language", "it");
 }
@@ -135,32 +120,34 @@ const changeLanguage = (lang) => {
   localStorage.setItem("language", lang);
 };
 
+// Email configuration for descriptions
+const emailParams = {
+  user: "insubria.wildlife",
+  domain: "gmail.com",
+  subjects: {
+    it: {},
+    en: {},
+  },
+  labels: {
+    it: {
+      default: "scrivendo alla nostra email",
+    },
+    en: {
+      default: "writing to our email",
+    },
+  },
+};
+
 // Process the description changing the EMAIL marker with a link
+// Versione corretta che verifica accuratamente la presenza delle frasi
 const getDescription = (index) => {
+  // Getting the event's original description
   let desc = t("events." + index + ".description");
 
-  // If event is Equilibrinatura (with index), add the email link
-  // For events with email, add the standard sentence and link
-  const emailParams = {
-    user: "insubria.wildlife",
-    domain: "gmail.com",
-    subjects: {
-      it: {
-        default: "Richiesta dal sito",
-      },
-      en: {
-        default: "Request from website",
-      },
-    },
-    labels: {
-      it: {
-        default: "scrivendo alla nostra email",
-      },
-      en: {
-        default: "writing to our email",
-      },
-    },
-  };
+  // If the description is empty, return empty string
+  if (!desc) {
+    return "";
+  }
 
   // Adding the default index keys for every event
   emailParams.subjects.it[index] = `Richiesta informazioni evento ${t(
@@ -181,68 +168,92 @@ const getDescription = (index) => {
     emailParams.domain
   }?subject=${encodeURIComponent(subject)}`;
 
-  // Verifying if the original description has the sentence about the voluntary offer
-  const hasOfferText =
-    desc.includes(
-      ", e si chiede un'offerta libera per contribuire alla copertura dei costi."
-    ) ||
-    desc.includes(
-      ", and a voluntary donation is requested to contribute to covering the costs."
-    );
-
-  // Preparing the offer text only if present in the original one
-  const postText = hasOfferText
-    ? locale.value === "it"
-      ? ", e si chiede un'offerta libera per contribuire alla copertura dei costi."
-      : ", and a voluntary donation is requested to contribute to covering the costs."
-    : "";
-
   // Participation sentences in italian and english
   const itParticipationPhrase = "Per partecipare serve prenotarsi";
   const enParticipationPhrase = "To participate you need to register";
 
-  // Verifichiamo se la descrizione contiene già la frase di partecipazione
-  const hasItalianParticipationText = desc.includes(itParticipationPhrase);
-  const hasEnglishParticipationText = desc.includes(enParticipationPhrase);
-  const hasParticipationText =
-    hasItalianParticipationText || hasEnglishParticipationText;
+  // Free donation sentences
+  const itDonationPhrase =
+    "e si chiede un'offerta libera per contribuire alla copertura dei costi";
+  const enDonationPhrase =
+    "and a voluntary donation is requested to contribute to covering the costs";
 
-  // Verifying if the original description has the sentence about the participation
-  if (hasParticipationText) {
-    // Determining the correct sentence to search for based on the language
-    const searchPhrase =
-      locale.value === "it" ? itParticipationPhrase : enParticipationPhrase;
-
-    // Finding the sentence's position in the description
-    const phrasePosition = desc.indexOf(searchPhrase);
-
-    if (phrasePosition !== -1) {
-      // Splitting the description in 2 parts: before and after including the participation sentence
-      const beforePhrase = desc.substring(0, phrasePosition);
-
-      // Building the new participation sentence with the email link
-      const newParticipationPhrase =
-        searchPhrase +
-        ` <a href="${emailLink}" class="mail-link">${linkText}</a>` +
-        postText;
-
-      // Getting the description with the substituted sentence
-      return beforePhrase + newParticipationPhrase;
-    }
-  }
-
-  // If it doesn't contain the participation phrase or we couldn't substitute it, add it to the description's end
+  // Determining the participation sentence based on the language
   const participationPhrase =
-    locale.value === "it"
-      ? `${itParticipationPhrase} <a href="${emailLink}" class="mail-link">${linkText}</a>${postText}`
-      : `${enParticipationPhrase} <a href="${emailLink}" class="mail-link">${linkText}</a>${postText}`;
+    locale.value === "it" ? itParticipationPhrase : enParticipationPhrase;
 
-  if (desc) {
-    return desc + "<br><br>" + participationPhrase;
+  // Getting the sentence position in the description
+  const phrasePosition = desc.indexOf(participationPhrase);
+
+  if (phrasePosition !== -1) {
+    // Splitting the description in 2 parts: before and after including the participation sentence
+    const beforePhrase = desc.substring(0, phrasePosition);
+
+    // Extracting the part after the participation sentence (might contain the donation phrase)
+    const afterPhrase = desc.substring(
+      phrasePosition + participationPhrase.length
+    );
+
+    // Checking if the part after contains the donation phrase
+    const donationPhrase =
+      locale.value === "it" ? itDonationPhrase : enDonationPhrase;
+    const hasDonationPhrase = afterPhrase.includes(donationPhrase);
+
+    // Building the new participation phrase with the email link
+    const newParticipationPhrase =
+      participationPhrase +
+      ` <a href="${emailLink}" class="mail-link">${linkText}</a>`;
+
+    // Adding the donation phrase only if it was present in the original
+    const finalText =
+      beforePhrase +
+      newParticipationPhrase +
+      (hasDonationPhrase ? ", " + donationPhrase + "." : "");
+
+    return finalText;
   } else {
-    return participationPhrase;
+    // If the participation phrase is not present, add it at the end
+    const newParticipationPhrase =
+      participationPhrase +
+      ` <a href="${emailLink}" class="mail-link">${linkText}</a>`;
+
+    return desc + "<br><br>" + newParticipationPhrase;
   }
 };
+
+// Set up the email click handler
+const emailClickHandler = ref(null);
+
+// Function to set up the email click handler
+const setupEmailClickHandler = () => {
+  emailClickHandler.value = (event) => {
+    if (
+      event.target.tagName === "A" &&
+      event.target.href &&
+      event.target.href.startsWith("mailto:")
+    ) {
+      console.log("Email link clicked");
+    }
+  };
+
+  document.addEventListener("click", emailClickHandler.value);
+};
+
+// Function to clean up the email click handler
+const cleanupEmailClickHandler = () => {
+  if (emailClickHandler.value) {
+    document.removeEventListener("click", emailClickHandler.value);
+  }
+};
+
+// Lifecycle hooks for managing the event listener
+onMounted(() => {
+  setupEmailClickHandler();
+});
+
+onBeforeUnmount(() => {
+  cleanupEmailClickHandler();
+});
 </script>
 
 <template>
