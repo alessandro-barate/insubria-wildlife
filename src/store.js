@@ -423,7 +423,16 @@ export const store = reactive({
       }),
 
       // Empty array for events with no speakers
-      speakers: computed(() => []),
+      speakers: computed(() => {
+        const { t } = useI18n();
+        return [
+          {
+            name: t("events.3.speakers.0.name"),
+            image: robertoImg,
+            description: t("events.3.speakers.0.description"),
+          },
+        ];
+      }),
     },
   ],
 

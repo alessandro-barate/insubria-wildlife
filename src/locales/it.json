@@ -221,7 +221,7 @@
       "title": "primavera in palude",
       "date": "29 Marzo 2025",
       "alt": "Immagine della locandina dell'evento sulla primavera in palude: Primavera in Palude",
-      "description": "Non è indispensabile raggiungere mete estere e lontane per osservare specie animali e vegetali spettacolari ed interessanti: a volte queste si nascondono ai nostri occhi, anche se vivono a pochi passi da noi.<br><br>La primavera è il simbolo del risveglio per eccellenza, dove le piante e gli animali tornano a godere del calore del Sole.<br>La provincia di Varese offre spunti paesaggistici molto interessanti, specialmente nell' Oasi LIPU Palude Brabbia: dalla copiosa fioritura delle piante nemorali al birdwatching, essendo questo un importantissimo crocevia per l'avifauna.<br><br>Il workshop sarà condotto da 3 professionisti del settore.<br><br>Per partecipare serve prenotarsi",
+      "description": "Non è indispensabile raggiungere mete estere e lontane per osservare specie animali e vegetali spettacolari ed interessanti: a volte queste vivono a pochi passi da noi, anche se si nascondono ai nostri occhi.<br><br>La primavera è il simbolo del risveglio per eccellenza, dove le piante e gli animali tornano a godere del calore del Sole.<br>La provincia di Varese offre spunti paesaggistici molto interessanti, specialmente nell' Oasi LIPU Palude Brabbia: dalla copiosa fioritura delle piante nemorali al birdwatching, essendo questo un importantissimo crocevia per l'avifauna.<br><br>Il workshop sarà condotto da 3 professionisti del settore.<br><br>Per partecipare serve prenotarsi",
       "speakers": [
         {
           "name": "<strong>Marco Colombo</strong>",
@@ -251,8 +251,14 @@
       "title": "Lucciolata nel Bosco",
       "date": "30 Maggio 2025",
       "alt": "Immagine della locandina dell'evento Lucciolata nel Bosco",
-      "description": "",
-      "speakers": []
+      "description": "Arriva Maggio e con esso l'opportunità di passare molto più tempo all'aria aperta, con giornate più calde e luminose. E per noi di Insubria Wildlife ogni occasione è quella giusta per portarvi alla scoperta di piccole perle del nostro amato territorio!<br><br>Vi proponiamo una serata al <strong>Roccolo di Vegonno</strong> dove, immersi nella tranquillità del bosco con i soli suoni della notte come colonna sonora, cammineremo tra i richiami di <strong>allocchi e civette</strong> alla ricerca delle sempre più rare <strong>lucciole</strong>.<br>Serata dall'atmosfera magica che avrà come momento finale l'occasione di chiacchierare intorno ad un <strong>falò, con musica e marshmallow!</strong><br><br>La nostra guida sarà <strong>Roberto</strong>, membro di Insubria Wildlife, e ricordiamo che la quota d'iscrizione è di <strong>10€</strong>.",
+      "speakers": [
+        {
+          "name": "<strong>Roberto Paone</strong>",
+          "alt": "Foto di Roberto Paone",
+          "description": "<strong>Guida Safari</strong> certificata dal 2022 e <strong>Tour Leader</strong> di Sto Gran Tour da fine 2022.<br><br>Ha accompagnato numerosi gruppi di viaggi organizzati in giro per il mondo, come per esempio in <strong>Islanda, Giordania, Sudafrica e Namibia</strong>: punta a vedere tutto il mondo, e si sta attrezzando per farlo.<br><br>E' un grande amante e conoscitore della nostra fauna locale, oltre che un instancabile camminatore."
+        }
+      ]
     }
   },
   "sosAnimals": {
