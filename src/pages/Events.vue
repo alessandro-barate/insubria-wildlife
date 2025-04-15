@@ -33,16 +33,8 @@ export default {
           },
         },
       },
-      // Removed from here as it's now handled in the setup script
-      // emailClickHandler: null,
     };
   },
-
-  // Removed mounted hook as it's now handled in the setup script
-  // mounted() {...},
-
-  // Removed beforeUnmount hook as it's now handled in the setup script
-  // beforeUnmount() {...},
 
   computed: {
     // Events array in reverse order
