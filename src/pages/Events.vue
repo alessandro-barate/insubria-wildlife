@@ -295,6 +295,26 @@ onBeforeUnmount(() => {
               loading="lazy"
               @click.stop
             />
+            <div class="details-info">
+              <div class="location-pin-container">
+                <img
+                  src="../assets/img/events/icons/pin-location-icon.svg"
+                  alt=""
+                />
+              </div>
+              <div class="location-pin-container">
+                <img src="../assets/img/events/icons/euro-icon.svg" alt="" />
+              </div>
+              <div class="location-pin-container">
+                <img
+                  src="../assets/img/events/icons/calendar-icon.svg"
+                  alt=""
+                />
+              </div>
+              <div class="location-pin-container">
+                <img src="../assets/img/events/icons/ticket-icon.svg" alt="" />
+              </div>
+            </div>
           </figure>
         </div>
         <div class="description-column">
@@ -448,8 +468,13 @@ section {
 
 .zoomed-container img {
   width: 100%;
-  max-height: 85vh;
+  max-height: 70vh;
   object-fit: contain;
+}
+
+.location-pin-container {
+  width: 4%;
+  padding-top: 10px;
 }
 
 .zoomed-container .zoom-close-btn {
@@ -472,11 +497,11 @@ section {
   display: flex;
   height: 85vh;
   margin: 0 auto;
-  padding-top: 60px;
 }
 
 .event-description {
   width: 100%;
+  padding-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
   overflow-y: auto;
@@ -514,6 +539,7 @@ section {
 
   img {
     border-radius: 50%;
+    border: 2px solid #ff6b3a;
   }
 }
 
