@@ -298,7 +298,7 @@ onBeforeUnmount(() => {
           </figure>
         </div>
         <div class="description-column">
-          <div id="event-description" class="event-description">
+          <div class="event-description">
             <p v-html="$sanitize(getDescription(currentIndex))"></p>
             <div
               class="speakers-container"
@@ -628,11 +628,16 @@ section {
     display: block;
     padding-top: 10px;
 
+    .description-column {
+      width: 100%;
+    }
+
     .event-description {
       width: 100%;
-      padding-top: 20px;
+      margin-top: 20px;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 20px;
       padding-bottom: 70px;
     }
   }
