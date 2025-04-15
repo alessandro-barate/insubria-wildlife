@@ -284,7 +284,7 @@ onBeforeUnmount(() => {
 
   <!-- Zoomed poster container -->
   <Transition name="fade-scale">
-    <div v-if="showZoom" id="main-zoomed-container" class="zoomed-container">
+    <div v-if="showZoom" class="zoomed-container">
       <div class="zoom-close-btn" @click.stop="toggleZoom">✕</div>
       <div class="zoomed-event-container">
         <div class="image-column">
@@ -297,37 +297,39 @@ onBeforeUnmount(() => {
             />
           </figure>
         </div>
-        <div class="event-description">
-          <p v-html="$sanitize(getDescription(currentIndex))"></p>
-          <div
-            class="speakers-container"
-            v-if="
-              store.events[currentIndex].speakers &&
-              store.events[currentIndex].speakers.length > 0
-            "
-          >
-            <!-- Speaker -->
+        <div class="description-column">
+          <div id="event-description" class="event-description">
+            <p v-html="$sanitize(getDescription(currentIndex))"></p>
             <div
-              v-for="(speaker, index) in store.events[currentIndex].speakers"
-              :key="index"
-              class="speaker"
+              class="speakers-container"
+              v-if="
+                store.events[currentIndex].speakers &&
+                store.events[currentIndex].speakers.length > 0
+              "
             >
-              <figure>
-                <img :src="speaker.image" :alt="speaker.alt" />
-              </figure>
-              <div class="speaker-name-container">
-                <p v-html="$sanitize(speaker.name)"></p>
-                <div class="button-container info-btn">
-                  <button
-                    @click="showSpeakerDetails(index)"
-                    :aria-label="t('team.findOutButton')"
-                  >
-                    {{ t("team.findOut") }}
-                  </button>
+              <!-- Speaker -->
+              <div
+                v-for="(speaker, index) in store.events[currentIndex].speakers"
+                :key="index"
+                class="speaker"
+              >
+                <figure>
+                  <img :src="speaker.image" :alt="speaker.alt" />
+                </figure>
+                <div class="speaker-name-container">
+                  <p v-html="$sanitize(speaker.name)"></p>
+                  <div class="button-container info-btn">
+                    <button
+                      @click="showSpeakerDetails(index)"
+                      :aria-label="t('team.findOutButton')"
+                    >
+                      {{ t("team.findOut") }}
+                    </button>
+                  </div>
                 </div>
               </div>
+              <!-- END speaker -->
             </div>
-            <!-- END speaker -->
           </div>
         </div>
       </div>
@@ -412,6 +414,18 @@ section {
 
 .image-column {
   width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .event-card {
@@ -433,8 +447,8 @@ section {
 }
 
 .zoomed-container img {
-  width: 80%;
-  max-height: 80vh;
+  width: 100%;
+  max-height: 85vh;
   object-fit: contain;
 }
 
@@ -446,6 +460,7 @@ section {
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
+  z-index: 10;
 
   &:hover {
     transform: scale(1.2);
@@ -455,25 +470,36 @@ section {
 .zoomed-event-container {
   width: 85%;
   display: flex;
+  height: 85vh;
+  margin: 0 auto;
+  padding-top: 60px;
 }
 
 .event-description {
-  width: 50%;
+  width: 100%;
   padding-top: 20px;
   padding-left: 40px;
   padding-right: 40px;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 100%;
 
   p {
     font-size: 18px;
   }
 }
 
-.scrollbar-container {
-  overflow: hidden;
-}
-
 .zoomed-container {
-  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.97);
 }
 
@@ -493,7 +519,6 @@ section {
 }
 
 .speakers-container {
-  overflow: auto;
   margin-top: 20px;
   max-height: 330px;
 
