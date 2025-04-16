@@ -325,6 +325,22 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.0.alt");
       }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.0.ticket");
+      }),
       poster: event2024Novembre27,
       description: computed(() => {
         const { t } = useI18n();
@@ -348,6 +364,22 @@ export const store = reactive({
       alt: computed(() => {
         const { t } = useI18n();
         return t("events.1.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.1.ticket");
       }),
       poster: event2025Marzo29,
       description: computed(() => {
@@ -392,6 +424,22 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.2.alt");
       }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.2.ticket");
+      }),
       poster: event2025Aprile12,
       description: computed(() => {
         const { t } = useI18n();
@@ -415,6 +463,22 @@ export const store = reactive({
       alt: computed(() => {
         const { t } = useI18n();
         return t("events.3.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.3.ticket");
       }),
       poster: event2025Maggio5,
       description: computed(() => {

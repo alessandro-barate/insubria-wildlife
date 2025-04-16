@@ -296,23 +296,27 @@ onBeforeUnmount(() => {
               @click.stop
             />
             <div class="details-info">
-              <div class="location-pin-container">
+              <div class="pin-container">
                 <img
                   src="../assets/img/events/icons/pin-location-icon.svg"
                   alt=""
                 />
+                <p v-html="$sanitize(store.events[currentIndex].location)"></p>
               </div>
-              <div class="location-pin-container">
+              <div class="pin-container">
                 <img src="../assets/img/events/icons/euro-icon.svg" alt="" />
+                <p v-html="$sanitize(store.events[currentIndex].price)"></p>
               </div>
-              <div class="location-pin-container">
+              <div class="pin-container">
                 <img
                   src="../assets/img/events/icons/calendar-icon.svg"
                   alt=""
                 />
+                <p v-html="$sanitize(store.events[currentIndex].calendar)"></p>
               </div>
-              <div class="location-pin-container">
+              <div class="pin-container">
                 <img src="../assets/img/events/icons/ticket-icon.svg" alt="" />
+                <p v-html="$sanitize(store.events[currentIndex].ticket)"></p>
               </div>
             </div>
           </figure>
@@ -434,8 +438,10 @@ section {
 
 .image-column {
   width: 50%;
-  height: auto;
+  height: 100%;
   display: flex;
+  max-height: 100%;
+  overflow-y: auto;
   align-items: center;
   justify-content: center;
 }
@@ -468,13 +474,27 @@ section {
 
 .zoomed-container img {
   width: 100%;
-  max-height: 70vh;
+  max-height: 60vh;
   object-fit: contain;
 }
 
-.location-pin-container {
-  width: 4%;
+.pin-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
   padding-top: 10px;
+
+  img {
+    width: 5%;
+    margin-right: 10px;
+  }
+
+  p {
+    width: 65%;
+    margin-left: 0;
+    font-size: 17px;
+    padding-top: 1%;
+  }
 }
 
 .zoomed-container .zoom-close-btn {
