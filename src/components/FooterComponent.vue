@@ -136,132 +136,132 @@ const changeLanguage = (lang) => {
           </div>
 
           <!-- Privacy policies container -->
-          <div class="privacy-policies-container">
-            <div class="policies-link">
+          <!-- <div class="privacy-policies-container">
+          <div class="policies-link">
               <button class="capitalize" @click="showPrivacyPolicies()">
                 {{ t("footer.privacy.buttonTitle") }}
               </button>
             </div>
-          </div>
+          </div>-->
           <!-- END privacy policies container -->
 
           <!-- Privacy policies description -->
-          <section>
-            <div class="zoomed-container" v-if="showPrivacy">
-              <div class="overlay-single-card">
-                <div class="content-wrapper">
-                  <!-- Close button -->
-                  <div class="details-btn">
+          <!-- <section> -->
+          <!--<div class="zoomed-container" v-if="showPrivacy">-->
+          <!--<div class="overlay-single-card">
+                <div class="content-wrapper"> -->
+          <!-- Close button -->
+          <!--<div class="details-btn">
                     <button @click="hidePrivacyPolicies()">✕</button>
                   </div>
                   <!-- END close button -->
 
-                  <!-- Privacy title -->
-                  <div class="privacy-title uppercase">
+          <!-- Privacy title -->
+          <!--<div class="privacy-title uppercase">
                     <h3>{{ t("footer.privacy.description.title") }}</h3>
                   </div>
                   <!-- END privacy title -->
 
-                  <!-- Policy description -->
-                  <div class="privacy-policies-description">
+          <!-- Policy description -->
+          <!--<div class="privacy-policies-description">
                     <!-- Top paragraph -->
-                    <p class="top-paragraph">
+          <!--<p class="top-paragraph">
                       {{ t("footer.privacy.description.topParagraph") }}
-                    </p>
-                    <!-- END top paragraph -->
+                    </p>-->
+          <!-- END top paragraph -->
 
-                    <!-- First point -->
-                    <div class="first-point">
+          <!-- First point -->
+          <!-- <div class="first-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[0].firstTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[0].firstText)"></p>
-                    </div>
-                    <!-- END first point -->
+                    </div> -->
+          <!-- END first point -->
 
-                    <!-- Second point -->
-                    <div class="second-point">
+          <!-- Second point -->
+          <!-- <div class="second-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[1].secondTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[1].secondText)"></p>
-                    </div>
-                    <!-- END second point -->
+                    </div> -->
+          <!-- END second point -->
 
-                    <!-- Third point -->
-                    <div class="third-point">
+          <!-- Third point -->
+          <!-- <div class="third-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[2].thirdTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[2].thirdText)"></p>
-                    </div>
-                    <!-- END third point -->
+                    </div> -->
+          <!-- END third point -->
 
-                    <!-- Fourth point -->
-                    <div class="fourth-point">
+          <!-- Fourth point -->
+          <!-- <div class="fourth-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[3].fourthTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[3].fourthText)"></p>
-                    </div>
-                    <!-- END fourth point -->
+                    </div> -->
+          <!-- END fourth point -->
 
-                    <!-- Fifth point -->
-                    <div class="fifth-point">
+          <!-- Fifth point -->
+          <!-- <div class="fifth-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[4].fifthTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[4].fifthText)"></p>
-                    </div>
-                    <!-- END fifth point -->
+                    </div> -->
+          <!-- END fifth point -->
 
-                    <!-- Sixth point -->
-                    <div class="sixth-point">
+          <!-- Sixth point -->
+          <!-- <div class="sixth-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[5].sixthTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[5].sixthText)"></p>
-                    </div>
-                    <!-- END sixth point -->
+                    </div> -->
+          <!-- END sixth point -->
 
-                    <!-- Seventh point -->
-                    <div class="seventh-point">
+          <!-- Seventh point -->
+          <!-- <div class="seventh-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[6].seventhTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[6].seventhText)"></p>
-                    </div>
-                    <!-- END seventh point -->
+                    </div> -->
+          <!-- END seventh point -->
 
-                    <!-- Eigth point -->
-                    <div class="eigth-point">
+          <!-- Eigth point -->
+          <!-- <div class="eigth-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[7].eigthTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[7].eigthText)"></p>
-                    </div>
-                    <!-- END eigth point -->
+                    </div> -->
+          <!-- END eigth point -->
 
-                    <!-- Nineth point -->
-                    <div class="nineth-point">
+          <!-- Nineth point -->
+          <!-- <div class="nineth-point">
                       <span
                         class="uppercase"
                         v-html="$sanitize(store.footer[8].ninethTitle)"
                       ></span>
                       <p v-html="$sanitize(store.footer[8].ninethText)"></p>
-                    </div>
-                    <!-- END nineth point -->
+                    </div> -->
+          <!-- END nineth point -->
 
-                    <!-- Bottom paragraph -->
-                    <div class="bottom-paragraph">
+          <!-- Bottom paragraph -->
+          <!--<div class="bottom-paragraph">
                       <p>
                         {{
                           t("footer.privacy.description.bottomFirstParagraph")
@@ -272,14 +272,14 @@ const changeLanguage = (lang) => {
                           t("footer.privacy.description.bottomSecondParagraph")
                         }}
                       </p>
-                    </div>
-                    <!-- END bottom paragraph -->
-                  </div>
-                  <!-- END policy description -->
-                </div>
-              </div>
-            </div>
-          </section>
+                    </div>-->
+          <!-- END bottom paragraph -->
+          <!--</div> -->
+          <!-- END policy description -->
+          <!--</div> -->
+          <!--</div> -->
+          <!--</div> -->
+          <!--</section> -->
           <!-- END privacy policies description -->
 
           <!-- Copyright container -->
