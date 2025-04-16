@@ -444,6 +444,10 @@ section {
   overflow-y: auto;
   align-items: center;
   justify-content: center;
+
+  figure {
+    margin-top: 9%;
+  }
 }
 
 .description-column {
@@ -474,7 +478,7 @@ section {
 
 .zoomed-container img {
   width: 100%;
-  max-height: 60vh;
+  max-height: 70vh;
   object-fit: contain;
 }
 
@@ -666,6 +670,7 @@ section {
   .image-column {
     width: 100%;
     margin-top: 40px;
+    overflow-y: unset;
   }
 
   .zoomed-event-container {
@@ -705,6 +710,14 @@ section {
       padding: 0;
       margin: 0;
     }
+  }
+
+  .pin-container img {
+    width: 5%;
+  }
+
+  .pin-container p {
+    text-align: left;
   }
 }
 
