@@ -166,7 +166,7 @@ const getDescription = (index) => {
 
   // Free donation sentences
   const itDonationPhrase =
-    "e si chiede un'offerta libera per contribuire alla copertura dei costi";
+    "e si chiede un'offerta ad importo libero per contribuire alla copertura dei costi";
   const enDonationPhrase =
     "and a voluntary donation is requested to contribute to covering the costs";
 
