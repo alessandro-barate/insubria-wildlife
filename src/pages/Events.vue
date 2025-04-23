@@ -204,12 +204,7 @@ const getDescription = (index) => {
 
     return finalText;
   } else {
-    // If the participation phrase is not present, add it at the end
-    const newParticipationPhrase =
-      participationPhrase +
-      ` <a href="${emailLink}" class="mail-link">${linkText}</a>`;
-
-    return desc + "<br><br>" + newParticipationPhrase;
+    return desc;
   }
 };
 

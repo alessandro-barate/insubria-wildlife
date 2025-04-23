@@ -15,6 +15,7 @@ import elenaImg from "./assets/img/team/grid/elena.webp";
 import giuliaImg from "./assets/img/team/grid/giulia.webp";
 import mauraImg from "./assets/img/team/grid/maura.webp";
 import robertoImg from "./assets/img/team/grid/roberto.webp";
+import noImageSpeaker from "./assets/img/events/speakers/no-face-speaker.webp";
 
 // Importing the events's images
 import event2025Marzo29 from "./assets/img/events/posters/2025/Marzo/29-03-25.webp";
@@ -22,6 +23,7 @@ import event2024Novembre27 from "./assets/img/events/posters/2024/Novembre/27-11
 import speakerMarcoColombo from "./assets/img/events/speakers/marco-colombo.webp";
 import event2025Aprile12 from "./assets/img/events/posters/2025/Aprile/12-04-25.webp";
 import event2025Maggio5 from "./assets/img/events/posters/2025/Maggio/30-05-25.webp";
+import event2025Aprile29 from "./assets/img/events/posters/2025/Aprile/29-04-25.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -494,6 +496,64 @@ export const store = reactive({
             name: t("events.3.speakers.0.name"),
             image: robertoImg,
             description: t("events.3.speakers.0.description"),
+          },
+        ];
+      }),
+    },
+
+    // Likes in the jungle
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.ticket");
+      }),
+      poster: event2025Aprile29,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.4.description");
+      }),
+
+      speakers: computed(() => {
+        const { t } = useI18n();
+        return [
+          {
+            name: t("events.4.speakers.0.name"),
+            image: alessiaImg,
+            description: t("events.1.speakers.2.description"),
+          },
+          {
+            name: t("events.4.speakers.1.name"),
+            image: giuliaImg,
+            description: t("events.1.speakers.1.description"),
+          },
+          {
+            name: t("events.4.speakers.2.name"),
+            image: noImageSpeaker,
+            description: t("events.4.speakers.2.description"),
           },
         ];
       }),

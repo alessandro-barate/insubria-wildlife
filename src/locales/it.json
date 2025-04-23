@@ -253,7 +253,7 @@
       "date": "12 Aprile 2025",
       "alt": "Immagine della locandina dell'evento equilibrinatura",
       "location": "via Stoppani 6, 22070 Castelnuovo Bozzente (CO)",
-      "price": "Contributo ",
+      "price": "Contributo ad importo libero",
       "calendar": "12 Aprile 2025",
       "ticket": "Prenotazione obbligatoria via mail tramite link in descrizione",
       "description": "L'evento avrà come tema centrale il rapporto tra uomo e natura, con particolare attenzione alla coesistenza tra attività umane e fauna selvatica, e si svilupperà in due momenti:<br><br><strong>Laboratorio didattico per bambini e famiglie</strong><br>Durante la mattinata i bambini dai 5 ai 10 anni, insieme alle loro famiglie, parteciperanno ad un'attività educativa sugli insetti impollinatori: attraverso un approccio pratico e partecipativo, verrà illustrato il loro ruolo fondamentale per l'ecosistema e verranno costruite le componenti di un “Bug Hotel Comunitario”, che sarà poi installato in un'area pubblica del Comune. L'obiettivo è sensibilizzare i più giovani all'importanza della biodiversità e promuovere pratiche di tutela ambientale legate all'agricoltura sostenibile.<br><br><strong>Proiezione del film “Pericolosamente Vicini”, con confronto pubblico per adulti e ragazzi</strong><br>Nel tardo pomeriggio, in collaborazione con l'associazione “I Benandanti APS”, si aprirà uno spazio di confronto sul rapporto della comunità con la fauna selvatica e sulle strategie di coesistenza con l'uomo, con un focus su specie presenti nel territorio come cinghiali e cervi. L'incontro prenderà spunto dalle dinamiche raccontate nel docufilm “Pericolosamente Vicini” di Andreas Pichler, che esplora le diverse prospettive sul tema dei grandi carnivori e della convivenza con la fauna selvatica. A seguire, un aperitivo offrirà l'occasione per uno scambio informale di opinioni tra i partecipanti.<br><br>Per partecipare serve prenotarsi, e si chiede un'offerta libera per contribuire alla copertura dei costi.",
@@ -267,12 +267,37 @@
       "price": "10€",
       "calendar": "30 Maggio 2025",
       "ticket": "Prenotazione obbligatoria via mail tramite link in descrizione",
-      "description": "Arriva Maggio e con esso l'opportunità di passare molto più tempo all'aria aperta, con giornate più calde e luminose. E per noi di Insubria Wildlife ogni occasione è quella giusta per portarvi alla scoperta di piccole perle del nostro amato territorio!<br><br>Vi proponiamo una serata al <strong>Roccolo di Vegonno</strong> dove, immersi nella tranquillità del bosco con i soli suoni della notte come colonna sonora, cammineremo tra i richiami di <strong>allocchi e civette</strong> alla ricerca delle sempre più rare <strong>lucciole</strong>.<br>Serata dall'atmosfera magica che avrà come momento finale l'occasione di chiacchierare intorno ad un <strong>falò, con musica e marshmallow!</strong><br><br>La nostra guida sarà <strong>Roberto</strong>, membro di Insubria Wildlife, e la quota d'iscrizione è di <strong>10€</strong>.",
+      "description": "Arriva Maggio e con esso l'opportunità di passare molto più tempo all'aria aperta, con giornate più calde e luminose. E per noi di Insubria Wildlife ogni occasione è quella giusta per portarvi alla scoperta di piccole perle del nostro amato territorio!<br><br>Vi proponiamo una serata al <strong>Roccolo di Vegonno</strong> dove, immersi nella tranquillità del bosco con i soli suoni della notte come colonna sonora, cammineremo tra i richiami di <strong>allocchi e civette</strong> alla ricerca delle sempre più rare <strong>lucciole</strong>.<br>Serata dall'atmosfera magica che avrà come momento finale l'occasione di chiacchierare intorno ad un <strong>falò, con musica e marshmallow!</strong><br><br>La nostra guida sarà <strong>Roberto</strong>, membro di Insubria Wildlife, e la quota d'iscrizione è di <strong>10€</strong>.<br><br>Per partecipare serve prenotarsi",
       "speakers": [
         {
           "name": "<strong>Roberto Paone</strong>",
           "alt": "Foto di Roberto Paone",
           "description": "<strong>Guida Safari</strong> certificata dal 2022 e <strong>Tour Leader</strong> di Sto Gran Tour da fine 2022.<br><br>Ha accompagnato numerosi gruppi di viaggi organizzati in giro per il mondo, come per esempio in <strong>Islanda, Giordania, Sudafrica e Namibia</strong>: punta a vedere tutto il mondo, e si sta attrezzando per farlo.<br><br>E' un grande amante e conoscitore della nostra fauna locale, oltre che un instancabile camminatore."
+        }
+      ]
+    },
+    "4": {
+      "title": "Zampe in città e like nella savana",
+      "date": "29 Aprile 2025",
+      "alt": "Immagine della locandina dell'evento Zampe in città e like nella savana",
+      "location": "Via Jean Henry Dunant 3, 21100 Varese",
+      "price": "Gratis",
+      "calendar": "29 Aprile 2025, ore 17.30",
+      "ticket": "Nessuna prenotazione, ingresso libero",
+      "description": "Hai mai pensato come un like o un commento possano effettivamente contribuire al commercio illegale di animali selvatici?<br>Sai riconoscere una fake news?<br>Come riconoscere un titolo sensazionalistico che non ha alcuna base scientifica?<br><br><strong>A queste ed altre domande</strong> sull'utilizzo consapevole dei social media <strong>cercheranno di dare risposta</strong> i relatori che interverranno in questo incontro:<br><br><ul><li class='list-speaker'>Alessia Uboldi</li><li class='list-speaker'>Giulia Gavioli</li></ul><br> membri dell'associazione Insubria WildLife presentano <strong>'Dalla savana al <em>feed</em>: quando un <em>like</em> minaccia la biodiversità'</strong><br><br>mentre<br><br><ul><li class='list-speaker'>Adriano Martinoli</li></ul><br>docente all'Università degli Studi dell'Insubria presenterà <strong>'La fauna in città: i nuovi cittadini e gli aneddoti di questa coesistenza'</strong>.<br><br>Seguirà uno spazio di dibattito al termine delle relazioni.<br><br><strong>L'ingresso è libero e aperto a tutti senza prenotazione.</strong>",
+      "speakers": [
+        {
+          "name": "<strong>Alessia Uboldi</strong>",
+          "alt": "Foto di Alessia Uboldi"
+        },
+        {
+          "name": "<strong>Giulia Gavioli</strong>",
+          "alt": "Foto di Giulia Gavioli"
+        },
+        {
+          "name": "<strong>Adriano Martinoli</strong>",
+          "alt": "Foto di Adriano Martinoli",
+          "description": "<strong>Docente di Zoologia</strong> all'Università degli Studi dell'Insubria"
         }
       ]
     }

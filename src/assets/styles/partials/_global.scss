@@ -177,3 +177,12 @@ OVERLAY SINGLE CARD
     object-fit: cover;
   }
 }
+
+/********************
+SPECIFIC LIST STYLE
+********************/
+.list-speaker {
+  width: 75%;
+  list-style-type: disc;
+  list-style-position: inside;
+}
