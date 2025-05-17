@@ -74,7 +74,7 @@ const sendMail = async (fields, node) => {
 
     // POST request explicit configuration
     const response = await axios.post(
-      import.meta.env.VITE_ENDPOINT_URL_WINDOWS,
+      import.meta.env.VITE_ENDPOINT_URL,
       sanitizedFields,
       config
     );
@@ -83,10 +83,28 @@ const sendMail = async (fields, node) => {
       node.reset();
       document.getElementById("successMessage").style.display = "block";
     } else {
-      node.setErrors(
-        ["There was an error in this form"],
-        JSON.parse(response.data.message)
-      );
+      // Aggiungiamo log per vedere cosa stiamo ricevendo dal server
+      console.log("Risposta completa dal server:", response.data);
+      console.log("Messaggio di errore:", response.data.message);
+
+      let errorMessages;
+
+      try {
+        // Try to analyze the message as a JSON
+        errorMessages = JSON.parse(response.data.message);
+        console.log("Errore analizzato:", errorMessages);
+      } catch (parseError) {
+        console.log("Impossibile analizzare come JSON:", parseError);
+        // If not a valid JSON, creates a simply error object
+        errorMessages = {
+          form:
+            response.data.message ||
+            "Si è verificato un errore durante l'invio del modulo",
+        };
+        console.log("Errore formattato:", errorMessages);
+      }
+
+      node.setErrors(["There was an error in this form"], errorMessages);
     }
   } catch (error) {
     console.error("Errore:", error);
@@ -94,6 +112,11 @@ const sendMail = async (fields, node) => {
     if (error.response) {
       console.error("Response:", error.response.data);
       console.error("Status:", error.response.status);
+      console.error("Headers:", error.response.headers);
+    } else if (error.request) {
+      console.error("Request made but no response received:", error.request);
+    } else {
+      console.error("Error message:", error.message);
     }
   }
 };
