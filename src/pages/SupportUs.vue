@@ -153,6 +153,7 @@ const changeLanguage = (lang) => {
           <!-- Payment methods section -->
           <div class="payments-list">
             <ul>
+              <!-- IBAN method -->
               <li id="iban-method">
                 <TranslatedTextSpan
                   text-key="supportUs.list.firstListElement"
@@ -171,6 +172,9 @@ const changeLanguage = (lang) => {
                   </button>
                 </div>
               </li>
+              <!-- END IBAN method -->
+
+              <!-- Paypal method -->
               <li id="paypal-method">
                 <TranslatedTextSpan
                   text-key="supportUs.list.thirdListElement.name"
@@ -181,6 +185,9 @@ const changeLanguage = (lang) => {
                 </div>
                 <br />
               </li>
+              <!-- END Paypal method -->
+
+              <!-- Satispay method -->
               <li id="satispay-method">
                 <TranslatedTextSpan
                   text-key="supportUs.list.fourthListElement.name"
@@ -206,6 +213,7 @@ const changeLanguage = (lang) => {
                   </div>
                 </span>
               </li>
+              <!-- END Satispay method -->
             </ul>
             <p>
               {{ t("supportUs.paragraph") }}
@@ -218,14 +226,14 @@ const changeLanguage = (lang) => {
             <h2>{{ t("supportUs.secondTitle") }}</h2>
             <p>
               <TranslatedTextSpan text-key="supportUs.secondParagraph" />
-              <!-- </p> -->
-              <!-- <p class="link-paragraph">
+            </p>
+            <p class="link-paragraph">
               Compila il
               <a
                 ><router-link :to="{ name: 'Contattaci' }" class="link"
                   >modulo di contatto</router-link
                 ></a
-              > -->
+              >
               <TranslatedTextSpan text-key="supportUs.thirdParagraph" />
             </p>
           </div>
