@@ -8,10 +8,6 @@ A fully-working website realized for a wildlife valorization association, built 
   <img src="./screenshots/homepage.webp" alt="Screenshot dell'applicazione">
 </details>
 
-<a href="./screenshots//homepage.webp">
-  <img src="./screenshots//homepage.webp" width="300" alt="Clicca per ingrandire">
-</a>
-
 ## Demo
 
 ## Technologies Used
