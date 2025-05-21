@@ -1,7 +1,7 @@
 # Insubria WildLife
 
 ## Overview
-A fully-working website realized for a wildlife valorization association, built using **HTML**, **SASS**, **Vite** and **Vue.js** for the Front-End, and **Laravel** for the Back-End. 
+A fully-working website realized for a wildlife valorization association. 
 
 <details>
   <summary>👀 Homepage</summary>
@@ -22,6 +22,14 @@ A fully-working website realized for a wildlife valorization association, built 
 </p>
 
 ## Technologies Used
+
+### Front-End 🖥️
+- **HTML**
+- **SASS**
+- **Vue.js** with **Vue Router**, **Axios**, **Vuei18n**, **FormKit**, **Vue UUID**
+- **Vite**
+### Back-End 📀
+- **Laravel**
 
 ## Functionalities
 
