@@ -77,6 +77,7 @@ export default {
           <p class="padding-l-60">
             {{ t("homepage.jumbo") }}
           </p>
+          <a href="" target="_blank">Statuto</a>
         </section>
         <!-- END jumbo section -->
 
