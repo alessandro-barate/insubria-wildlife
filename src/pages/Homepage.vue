@@ -1,6 +1,8 @@
 <script setup>
 import { store } from "../store.js";
 import { useI18n } from "vue-i18n";
+import VuePdfEmbed from "vue-pdf-embed";
+
 const { t, locale } = useI18n();
 
 // Defaulf language to Italian if no other language is selected
@@ -63,6 +65,11 @@ export default {
         }, 500);
       }, 50);
     },
+
+    // Function to open the pdf document in another window
+    openPdf() {
+      window.open("/statute/statute-2024-07-08.pdf", "_blank");
+    },
   },
 };
 </script>
@@ -77,7 +84,11 @@ export default {
           <p class="padding-l-60">
             {{ t("homepage.jumbo") }}
           </p>
-          <a href="" target="_blank">Statuto</a>
+          <div class="pdf-button-container">
+            <button @click="openPdf" class="statute-button">
+              {{ t("homepage.jumbo.viewStatute") }}
+            </button>
+          </div>
         </section>
         <!-- END jumbo section -->
 
