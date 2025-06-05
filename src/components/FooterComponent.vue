@@ -17,6 +17,11 @@ export default {
     hidePrivacyPolicies() {
       this.showPrivacy = false;
     },
+
+    // Function to open the pdf document in another window
+    openPdf() {
+      window.open("/statute/statuto-2024-07-08.pdf", "_blank");
+    },
   },
 };
 </script>
@@ -135,15 +140,25 @@ const changeLanguage = (lang) => {
             <!-- END upper right section -->
           </div>
 
-          <!-- Privacy policies container -->
-          <div class="privacy-policies-container">
+          <!-- Privacy policies and statute container -->
+          <div class="privacy-statute-container">
+            <!-- Privacy link -->
             <div class="policies-link">
               <button class="capitalize" @click="showPrivacyPolicies()">
                 {{ t("footer.privacy.buttonTitle") }}
               </button>
             </div>
+            <!-- END privacy link -->
+
+            <!-- Statute link -->
+            <div class="statute-link">
+              <button class="capitalize" @click="openPdf">
+                {{ t("footer.statute") }}
+              </button>
+            </div>
+            <!-- END statute link -->
           </div>
-          <!-- END privacy policies container -->
+          <!-- END privacy policies and statute container -->
 
           <!-- Privacy policies description -->
           <section>
@@ -409,11 +424,27 @@ address a,
   }
 }
 
-.privacy-policies-container {
+.privacy-statute-container {
   width: 87%;
+  display: flex;
   text-align: center;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.753);
+
+  .policies-link,
+  .statute-link {
+    width: 50%;
+  }
+
+  .policies-link {
+    text-align: end;
+    padding-right: 1rem;
+  }
+
+  .statute-link {
+    text-align: start;
+    padding-left: 1rem;
+  }
 
   button {
     border: none;
@@ -542,7 +573,7 @@ address a,
 @media (max-width: 999px) {
   #fb-logo:hover,
   #ig-logo:hover,
-  .privacy-policies-container button:hover {
+  .privacy-statute-container button:hover {
     transform: none;
   }
 }

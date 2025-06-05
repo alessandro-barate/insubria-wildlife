@@ -19,7 +19,6 @@
     "uuid": "^11.1.0",
     "vue": "^3.5.12",
     "vue-i18n": "^11.0.1",
-    "vue-pdf-embed": "^2.1.2",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
