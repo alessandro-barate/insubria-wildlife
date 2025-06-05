@@ -29,7 +29,10 @@ a {
 }
 
 a:active,
-a:visited {
+a:visited,
+.events button,
+.link button,
+#iban-button {
   color: black;
 }
 
