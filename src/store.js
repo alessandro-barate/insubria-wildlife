@@ -24,6 +24,7 @@ import speakerMarcoColombo from "./assets/img/events/speakers/marco-colombo.webp
 import event2025Aprile12 from "./assets/img/events/posters/2025/Aprile/12-04-25.webp";
 import event2025Maggio5 from "./assets/img/events/posters/2025/Maggio/30-05-25.webp";
 import event2025Aprile29 from "./assets/img/events/posters/2025/Aprile/29-04-25.webp";
+import event2025Giugno28 from "./assets/img/events/posters/2025/Giugno/28-06-25.jpg";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -501,7 +502,7 @@ export const store = reactive({
       }),
     },
 
-    // Likes in the jungle
+    // Likes in the savannah
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -557,6 +558,45 @@ export const store = reactive({
           },
         ];
       }),
+    },
+
+    // CurioCity
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.ticket");
+      }),
+      poster: event2025Giugno28,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.5.description");
+      }),
+
+      speakers: computed(() => []),
     },
   ],
 
