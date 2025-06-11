@@ -114,24 +114,35 @@ const changeLanguage = (lang) => {
 
 // Email configuration for descriptions
 const emailParams = {
-  user: "insubria.wildlife",
-  domain: "gmail.com",
+  // Email for event with index 5
+  emails: {
+    5: {
+      user: "christian.aletti",
+      domain: "legambientelombardia.it",
+    },
+  },
+
+  // Default email to Insubria
+  defaultEmail: {
+    user: "insubria.wildlife",
+    domain: "gmail.com",
+  },
+
   subjects: {
     it: {},
     en: {},
   },
   labels: {
     it: {
-      default: "scrivendo alla nostra email",
+      default: "scrivendo alla email",
     },
     en: {
-      default: "writing to our email",
+      default: "writing to the email",
     },
   },
 };
 
 // Process the description changing the EMAIL marker with a link
-// Versione corretta che verifica accuratamente la presenza delle frasi
 const getDescription = (index) => {
   // Getting the event's original description
   let desc = t("events." + index + ".description");
@@ -141,11 +152,14 @@ const getDescription = (index) => {
     return "";
   }
 
+  // Determining which email configuration to use
+  const emailConfig = emailParams.emails[index] || emailParams.defaultEmail;
+
   // Adding the default index keys for every event
-  emailParams.subjects.it[index] = `Richiesta informazioni evento ${t(
+  emailParams.subjects.it[index] = `Richiesta iscrizione evento ${t(
     "events." + index + ".title"
   )}`;
-  emailParams.subjects.en[index] = `Request information for ${t(
+  emailParams.subjects.en[index] = `Registration request for ${t(
     "events." + index + ".title"
   )} event`;
 
@@ -153,11 +167,13 @@ const getDescription = (index) => {
   const subject =
     emailParams.subjects[locale.value][index] ||
     emailParams.subjects[locale.value].default;
+
   const linkText =
     emailParams.labels[locale.value][index] ||
     emailParams.labels[locale.value].default;
-  const emailLink = `mailto:${emailParams.user}&#64;${
-    emailParams.domain
+
+  const emailLink = `mailto:${emailConfig.user}&#64;${
+    emailConfig.domain
   }?subject=${encodeURIComponent(subject)}`;
 
   // Participation sentences in italian and english
