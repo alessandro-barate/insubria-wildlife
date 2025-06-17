@@ -260,23 +260,6 @@
       "speakers": []
     },
     "3": {
-      "title": "Lucciolata nel Bosco",
-      "date": "30 Maggio 2025",
-      "alt": "Immagine della locandina dell'evento Lucciolata nel Bosco",
-      "location": "Roccolo di Vegonno, 21022 Azzate (VA)",
-      "price": "10€",
-      "calendar": "30 Maggio 2025",
-      "ticket": "Prenotazione obbligatoria via mail tramite link in descrizione",
-      "description": "Arriva Maggio e con esso l'opportunità di passare molto più tempo all'aria aperta, con giornate più calde e luminose. E per noi di Insubria Wildlife ogni occasione è quella giusta per portarvi alla scoperta di piccole perle del nostro amato territorio!<br><br>Vi proponiamo una serata al <strong>Roccolo di Vegonno</strong> dove, immersi nella tranquillità del bosco con i soli suoni della notte come colonna sonora, cammineremo tra i richiami di <strong>allocchi e civette</strong> alla ricerca delle sempre più rare <strong>lucciole</strong>.<br>Serata dall'atmosfera magica che avrà come momento finale l'occasione di chiacchierare intorno ad un <strong>falò, con musica e marshmallow!</strong><br><br>La nostra guida sarà <strong>Roberto</strong>, membro di Insubria Wildlife, e la quota d'iscrizione è di <strong>10€</strong>.<br><br>Per partecipare serve prenotarsi",
-      "speakers": [
-        {
-          "name": "<strong>Roberto Paone</strong>",
-          "alt": "Foto di Roberto Paone",
-          "description": "<strong>Guida Safari</strong> certificata dal 2022 e <strong>Tour Leader</strong> di Sto Gran Tour da fine 2022.<br><br>Ha accompagnato numerosi gruppi di viaggi organizzati in giro per il mondo, come per esempio in <strong>Islanda, Giordania, Sudafrica e Namibia</strong>: punta a vedere tutto il mondo, e si sta attrezzando per farlo.<br><br>E' un grande amante e conoscitore della nostra fauna locale, oltre che un instancabile camminatore."
-        }
-      ]
-    },
-    "4": {
       "title": "Zampe in città e like nella savana",
       "date": "29 Aprile 2025",
       "alt": "Immagine della locandina dell'evento Zampe in città e like nella savana",
@@ -297,7 +280,24 @@
         {
           "name": "<strong>Adriano Martinoli</strong>",
           "alt": "Foto di Adriano Martinoli",
-          "description": "<strong>Docente di Zoologia</strong> all'Università degli Studi dell'Insubria"
+          "description": "<strong>Docente di Zoologia</strong> all'Università degli Studi dell'Insubria."
+        }
+      ]
+    },
+    "4": {
+      "title": "Lucciolata nel Bosco",
+      "date": "30 Maggio 2025",
+      "alt": "Immagine della locandina dell'evento Lucciolata nel Bosco",
+      "location": "Roccolo di Vegonno, 21022 Azzate (VA)",
+      "price": "10€",
+      "calendar": "30 Maggio 2025",
+      "ticket": "Prenotazione obbligatoria via mail tramite link in descrizione",
+      "description": "Arriva Maggio e con esso l'opportunità di passare molto più tempo all'aria aperta, con giornate più calde e luminose. E per noi di Insubria Wildlife ogni occasione è quella giusta per portarvi alla scoperta di piccole perle del nostro amato territorio!<br><br>Vi proponiamo una serata al <strong>Roccolo di Vegonno</strong> dove, immersi nella tranquillità del bosco con i soli suoni della notte come colonna sonora, cammineremo tra i richiami di <strong>allocchi e civette</strong> alla ricerca delle sempre più rare <strong>lucciole</strong>.<br>Serata dall'atmosfera magica che avrà come momento finale l'occasione di chiacchierare intorno ad un <strong>falò, con musica e marshmallow!</strong><br><br>La nostra guida sarà <strong>Roberto</strong>, membro di Insubria Wildlife, e la quota d'iscrizione è di <strong>10€</strong>.<br><br>Per partecipare serve prenotarsi",
+      "speakers": [
+        {
+          "name": "<strong>Roberto Paone</strong>",
+          "alt": "Foto di Roberto Paone",
+          "description": "<strong>Guida Safari</strong> certificata dal 2022 e <strong>Tour Leader</strong> di Sto Gran Tour da fine 2022.<br><br>Ha accompagnato numerosi gruppi di viaggi organizzati in giro per il mondo, come per esempio in <strong>Islanda, Giordania, Sudafrica e Namibia</strong>: punta a vedere tutto il mondo, e si sta attrezzando per farlo.<br><br>E' un grande amante e conoscitore della nostra fauna locale, oltre che un instancabile camminatore."
         }
       ]
     },

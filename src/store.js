@@ -454,7 +454,7 @@ export const store = reactive({
       speakers: computed(() => []),
     },
 
-    // Fireflies
+    // Likes in the savannah
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -484,26 +484,35 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.3.ticket");
       }),
-      poster: event2025Maggio5,
+      poster: event2025Aprile29,
       description: computed(() => {
         const { t } = useI18n();
         return t("events.3.description");
       }),
 
-      // Empty array for events with no speakers
       speakers: computed(() => {
         const { t } = useI18n();
         return [
           {
             name: t("events.3.speakers.0.name"),
-            image: robertoImg,
-            description: t("events.3.speakers.0.description"),
+            image: alessiaImg,
+            description: t("events.1.speakers.2.description"),
+          },
+          {
+            name: t("events.3.speakers.1.name"),
+            image: giuliaImg,
+            description: t("events.1.speakers.1.description"),
+          },
+          {
+            name: t("events.3.speakers.2.name"),
+            image: noImageSpeaker,
+            description: t("events.3.speakers.2.description"),
           },
         ];
       }),
     },
 
-    // Likes in the savannah
+    // Fireflies
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -533,29 +542,20 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.4.ticket");
       }),
-      poster: event2025Aprile29,
+      poster: event2025Maggio5,
       description: computed(() => {
         const { t } = useI18n();
         return t("events.4.description");
       }),
 
+      // Empty array for events with no speakers
       speakers: computed(() => {
         const { t } = useI18n();
         return [
           {
             name: t("events.4.speakers.0.name"),
-            image: alessiaImg,
-            description: t("events.1.speakers.2.description"),
-          },
-          {
-            name: t("events.4.speakers.1.name"),
-            image: giuliaImg,
-            description: t("events.1.speakers.1.description"),
-          },
-          {
-            name: t("events.4.speakers.2.name"),
-            image: noImageSpeaker,
-            description: t("events.4.speakers.2.description"),
+            image: robertoImg,
+            description: t("events.4.speakers.0.description"),
           },
         ];
       }),
