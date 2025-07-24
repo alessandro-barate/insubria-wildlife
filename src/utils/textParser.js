@@ -25,6 +25,7 @@ export const parseTranslationText = (text) => {
       pattern: /\u000A\u000A/g,
       replacement: "<br><br>",
     },
+
     // Single line break
     {
       pattern: /\u000A/g,
