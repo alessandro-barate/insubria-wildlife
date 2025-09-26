@@ -177,8 +177,8 @@ const getDescription = (index) => {
   }?subject=${encodeURIComponent(subject)}`;
 
   // Participation sentences in italian and english
-  const itParticipationPhrase = "Per partecipare serve prenotarsi";
-  const enParticipationPhrase = "To participate you need to register";
+  const itParticipationPhrase = "partecipare serve prenotarsi";
+  const enParticipationPhrase = "participate you need to register";
 
   // Free donation sentences
   const itDonationPhrase =

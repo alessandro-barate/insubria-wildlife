@@ -26,6 +26,7 @@ import event2025Maggio5 from "./assets/img/events/posters/2025/Maggio/30-05-25.w
 import event2025Aprile29 from "./assets/img/events/posters/2025/Aprile/29-04-25.webp";
 import event2025Giugno22 from "./assets/img/events/posters/2025/Giugno/22-06-25.webp";
 import event2025Giugno28 from "./assets/img/events/posters/2025/Giugno/28-06-25.webp";
+import event2025SetOtt from "./assets/img/events/posters/2025/Settembre-Ottobre/settembre-ottobre.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -634,6 +635,45 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("events.6.description");
+      }),
+
+      speakers: computed(() => []),
+    },
+
+    // BioTalks
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.ticket");
+      }),
+      poster: event2025SetOtt,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.7.description");
       }),
 
       speakers: computed(() => []),
