@@ -422,7 +422,8 @@
     "thirdParagraph": " e diventa parte di *Insubria WildLife*: siamo sempre alla ricerca di *voci libere, innovative ed entusiaste* per costruire insieme un futuro migliore per la natura."
   },
   "footer": {
-    "vat": "codice fiscale",
+    "taxCode": "codice fiscale",
+    "vat": "partita IVA",
     "followUs": "Seguici sui nostri social",
     "privacy": {
       "buttonTitle": "privacy",

@@ -87,8 +87,12 @@ const changeLanguage = (lang) => {
                     >
                       Via Roma 20, 20004, Arluno
                     </a> -->
-                    <h3 id="pi" class="capitalize">{{ t("footer.vat") }}</h3>
+                    <h3 class="capitalize">
+                      {{ t("footer.taxCode") }}
+                    </h3>
                     <span>93054540153</span>
+                    <h3 class="capitalize tax-code">{{ t("footer.vat") }}</h3>
+                    <span>14346090963</span>
                   </address>
                   <!-- END address container -->
                 </div>
@@ -346,6 +350,10 @@ address h3:first-child,
 address a,
 #address {
   display: none;
+}
+
+.tax-code {
+  margin-top: 7px;
 }
 
 .address,
