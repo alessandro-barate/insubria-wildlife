@@ -11,9 +11,12 @@ export default defineConfig({
   },
   // In caso togliere questo
   server: {
+    // Host e port per risolvere problema che non si apriva il progetto nel browser in locale
+    host: "127.0.0.1",
+    port: 5173,
     proxy: {
       "/backEnd": {
-        target: 'https://www.insubriawildlife.com/backEnd/',
+        target: "https://www.insubriawildlife.com/backEnd/",
         changeOrigin: true,
         secure: false,
       },

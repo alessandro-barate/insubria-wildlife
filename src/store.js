@@ -26,7 +26,9 @@ import event2025Maggio5 from "./assets/img/events/posters/2025/Maggio/30-05-25.w
 import event2025Aprile29 from "./assets/img/events/posters/2025/Aprile/29-04-25.webp";
 import event2025Giugno22 from "./assets/img/events/posters/2025/Giugno/22-06-25.webp";
 import event2025Giugno28 from "./assets/img/events/posters/2025/Giugno/28-06-25.webp";
-import event2025SetOtt from "./assets/img/events/posters/2025/Settembre-Ottobre/settembre-ottobre.webp";
+import event2025SetOtt from "./assets/img/events/posters/2025/Settembre-Ottobre/september-october.webp";
+import event2025December from "./assets/img/events/posters/2025/Dicembre/december.webp";
+import event2025Christmas from "./assets/img/events/posters/2025/Dicembre/christmas.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -676,6 +678,86 @@ export const store = reactive({
         return t("events.7.description");
       }),
 
+      speakers: computed(() => []),
+    },
+
+    // December events
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.ticket");
+      }),
+      poster: event2025December,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.8.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+
+    // Christmas 2025
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.ticket");
+      }),
+      poster: event2025Christmas,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.9.description");
+      }),
+
+      // Empty array for events with no speakers
       speakers: computed(() => []),
     },
   ],
