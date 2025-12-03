@@ -554,7 +554,7 @@ section {
 
 .event-description {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 1px;
   padding-left: 40px;
   padding-right: 40px;
   overflow-y: auto;
@@ -564,6 +564,10 @@ section {
   p {
     font-size: 18px;
   }
+}
+
+.image-column figure:has(img[alt*="eventi di Dicembre"]) {
+  margin-top: 36%;
 }
 
 .zoomed-container {
