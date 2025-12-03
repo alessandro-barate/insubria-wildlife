@@ -723,6 +723,16 @@ section {
       padding-top: 20px;
       padding-bottom: 70px;
     }
+
+    &:has(img[alt*="eventi di Dicembre"]) {
+      .event-description {
+        margin-top: 320px;
+      }
+    }
+
+    .image-column figure:has(img[alt*="eventi di Dicembre"]) {
+      margin-top: 95%;
+    }
   }
 
   .zoomed-container {
