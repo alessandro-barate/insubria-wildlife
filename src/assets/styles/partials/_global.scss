@@ -189,3 +189,16 @@ SPECIFIC LIST STYLE
   list-style-type: disc;
   list-style-position: inside;
 }
+
+.event-days-list {
+  margin-bottom: 0.8rem;
+
+  h4 {
+    font-size: 1.28rem;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+}

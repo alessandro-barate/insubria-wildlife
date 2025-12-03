@@ -212,13 +212,31 @@ const getDescription = (index) => {
       participationPhrase +
       ` <a href="${emailLink}" class="mail-link">${linkText}</a>`;
 
-    // Adding the donation phrase only if it was present in the original
-    const finalText =
-      beforePhrase +
-      newParticipationPhrase +
-      (hasDonationPhrase ? ", " + donationPhrase + "." : "");
+    // Determine what content remains after processing
+    let remainingContent = "";
 
-    return finalText;
+    if (hasDonationPhrase) {
+      // If donation phrase exists, find where it ends and get everything after
+      const donationStart = afterPhrase.indexOf(donationPhrase);
+      const donationEnd = donationStart + donationPhrase.length;
+      remainingContent = afterPhrase.substring(donationEnd);
+
+      // Build final text with donation phrase
+      const finalText =
+        beforePhrase +
+        newParticipationPhrase +
+        ", " +
+        donationPhrase +
+        "." +
+        remainingContent;
+
+      return finalText;
+    } else {
+      // If no donation phrase, keep all remainig content after participation phrase
+      const finalText = beforePhrase + newParticipationPhrase + afterPhrase;
+
+      return finalText;
+    }
   } else {
     return desc;
   }
