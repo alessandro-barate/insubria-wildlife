@@ -17,11 +17,7 @@ const updateTitle = (to) => {
   try {
     if (to.meta?.titleKey) {
       const title = i18n.global.t(to.meta.titleKey);
-      // If year parameter, add it to the title
-      const year = to.params.year;
-      document.title = year
-        ? `Insubria Wildlife - ${title} ${year}`
-        : `Insubria Wildlife - ${title}`;
+      document.title = `Insubria Wildlife - ${title}`;
     } else {
       document.title = "Insubria Wildlife";
     }
@@ -70,14 +66,9 @@ const updateMetaTags = (to) => {
     // Get the content and description from i18n based on the route
     const metaContent =
       i18n.global.t(`index.title.${routeKey}.content`) || defaultContent;
-    let metaDescription =
+    const metaDescription =
       i18n.global.t(`index.title.${routeKey}.description`) ||
       defaultDescription;
-
-    // If year parameter, add it to the description
-    if (to.params.year) {
-      metaDescription = `${metaDescription} - ${to.params.year}`;
-    }
 
     // Get or create the meta description tag
     let descriptionMeta = document.querySelector('meta[name="description"]');
@@ -143,8 +134,8 @@ const routeConfig = [
   },
   {
     paths: {
-      it: "/it/eventi/:year?",
-      en: "/en/events/:year?",
+      it: "/it/eventi",
+      en: "/en/events",
     },
     name: "Eventi",
     component: Events,
@@ -248,26 +239,15 @@ const router = createRouter({
 });
 
 const getLocalizedPath = (currentPath, targetLocale) => {
-  // Extract the year if present in the URL
-  const yearMatch = currentPath.match(/\/(\d{4})$/);
-  const year = yearMatch ? yearMatch[1] : "";
-
-  // Remove the year from the path to compare
-  const pathWithoutYear = currentPath.replace(/\/d{4}$/, "");
-
   // Find the corrisponding route's configuration
   const route = routeConfig.find((config) =>
-    Object.values(config.paths).some((path) => {
-      const configPathWithoutYear = path.replace("/:year?", "");
-      return configPathWithoutYear === pathWithoutYear;
-    })
+    Object.values(config.paths).some((path) => path === currentPath)
   );
 
-  if (!route) return targetLocale === "en" ? "/en" : "/it";
+  if (!route) return targetLocale === "en" ? "/en" : currentPath;
 
   // Return the path in the target language
-  const basePath = route.paths[targetLocale].replace("/:year?", "");
-  return year ? `${basePath}/${year}` : basePath;
+  return route.paths[targetLocale];
 };
 
 // Watcher to update the title and the meta tags when the language changes

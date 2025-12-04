@@ -37,35 +37,9 @@ export default {
   },
 
   computed: {
-    // Year read from the URL
-    selectedYear() {
-      return this.$route.params.year || null;
-    },
-
-    // Events filtered by year
-    filteredEvents() {
-      if (!this.selectedYear) return [];
-
-      return [...this.store.events].reverse().filter((event) => {
-        const posterPath = event.poster;
-        const yearMatch = posterPath.match(/\/(\d{4})\//);
-        const eventYear = yearMatch ? yearMatch[1] : null;
-
-        return eventYear === this.selectedYear;
-      });
-    },
-
-    // Available years
-    availableYears() {
-      const years = new Set();
-      this.store.events.forEach((event) => {
-        const posterPath = event.poster;
-        const yearMatch = posterPath.match(/\/(\d{4})\//);
-        if (yearMatch) {
-          years.add(yearMatch[1]);
-        }
-      });
-      return Array.from(years).sort().reverse();
+    // Events array in reverse order
+    reversedEvents() {
+      return [...this.store.events].reverse();
     },
 
     // Build the email link dynamically
@@ -94,20 +68,6 @@ export default {
   },
 
   methods: {
-    // Navigate to the selected year
-    selectYear(year) {
-      const lang = this.$i18n.locale;
-      const path = lang === "it" ? `/it/eventi/${year}` : `/en/events/${year}`;
-      this.$router.push(path);
-    },
-
-    // Go back to the year selection
-    backToYearSelection() {
-      const lang = this.$i18n.locale;
-      const path = lang === "it" ? "/it/eventi" : "/en/events";
-      this.$router.push(path);
-    },
-
     // Function to zoom and show the event's description when a poster is clicked
     toggleZoom(index) {
       this.showZoom = !this.showZoom;
@@ -126,18 +86,6 @@ export default {
     hideSpeakerDetails() {
       this.store.showSpeaker = false;
       document.body.style.overflow = "";
-    },
-  },
-
-  // Validation: if the year in the URL doesn't exist, go back to the selection
-  watch: {
-    selectedYear: {
-      immediate: true,
-      handler(year) {
-        if (year && !this.availableYears.includes(year)) {
-          this.backToYearSelection();
-        }
-      },
     },
   },
 };
@@ -335,70 +283,26 @@ onBeforeUnmount(() => {
       <div class="col overlay">
         <section>
           <h1 class="uppercase">{{ t("nav.events") }}</h1>
-
-          <!-- Selezione Anno -->
-          <div v-if="!selectedYear" class="year-selection">
-            <p>{{ t("events.selectYearParagraph") }}</p>
-            <div class="years-grid">
-              <div
-                v-for="year in availableYears"
-                :key="year"
-                class="year-card"
-                @click="selectYear(year)"
-              >
-                <h2>{{ year }}</h2>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lista Eventi -->
-          <div v-else class="events-section">
-            <h2 class="year-title">
-              {{ t("events.eventsOf") }} {{ selectedYear }}
-            </h2>
-
-            <!-- Back button container -->
-            <button @click="backToYearSelection" class="back-button d-flex">
-              <img
-                src="../assets/img/events/icons/back-button-white.svg"
-                alt="Back arrow"
-                class="back-icon"
-              />
-              <img
-                src="../assets/img/events/icons/back-button-black.svg"
-                alt="Back arrow"
-                class="back-icon-hover"
-              />
-              {{ t("events.backToYears.text") }}
-            </button>
-            <!-- Back button container -->
-
-            <div class="big-events-container d-flex">
-              <div
-                v-for="(event, index) in filteredEvents"
-                :key="index"
-                class="events-container"
-              >
-                <div class="event-card">
-                  <h2 class="capitalize">{{ event.title }}</h2>
-                  <p>{{ event.date }}</p>
-                  <figure
-                    @click="
-                      toggleZoom(store.events.findIndex((e) => e === event))
+          <p>
+            {{ t("events.firstParagraph") }}
+          </p>
+          <div class="big-events-container d-flex">
+            <div
+              v-for="(event, index) in reversedEvents"
+              :key="index"
+              class="events-container"
+            >
+              <div class="event-card">
+                <h2 class="capitalize">{{ event.title }}</h2>
+                <p>{{ event.date }}</p>
+                <figure @click="toggleZoom(store.events.length - 1 - index)">
+                  <img
+                    :src="event.poster"
+                    :alt="
+                      t('events.' + (store.events.length - 1 - index) + '.alt')
                     "
-                  >
-                    <img
-                      :src="event.poster"
-                      :alt="
-                        t(
-                          'events.' +
-                            store.events.findIndex((e) => e === event) +
-                            '.alt'
-                        )
-                      "
-                    />
-                  </figure>
-                </div>
+                  />
+                </figure>
               </div>
             </div>
           </div>
@@ -456,6 +360,7 @@ onBeforeUnmount(() => {
                 store.events[currentIndex].speakers.length > 0
               "
             >
+              <!-- Speaker -->
               <div
                 v-for="(speaker, index) in store.events[currentIndex].speakers"
                 :key="index"
@@ -476,6 +381,7 @@ onBeforeUnmount(() => {
                   </div>
                 </div>
               </div>
+              <!-- END speaker -->
             </div>
           </div>
         </div>
@@ -520,7 +426,6 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped lang="scss">
-// Stili esistenti
 .container {
   text-align: center;
   background-size: cover;
@@ -551,115 +456,6 @@ section {
   width: 80%;
 }
 
-// Nuovi stili per selezione anni
-.year-selection {
-  text-align: center;
-  padding: 0 40px 40px 40px;
-
-  p {
-    margin-bottom: 50px;
-    font-size: 20px;
-  }
-}
-
-.years-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.year-card {
-  background: rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 107, 58, 0.5);
-  // border: 2px solid rgba(255, 255, 255, 0.753);
-  border-radius: 15px;
-  padding: 60px 30px;
-  cursor: pointer;
-  transition: all 0.5s ease;
-
-  &:hover {
-    background: rgba(255, 107, 58, 0.1);
-    border-color: #ff6b3a;
-    transform: scale(1.05);
-  }
-
-  h2 {
-    font-size: 48px;
-    color: rgba(255, 255, 255, 0.753);
-  }
-}
-
-.back-button {
-  background: rgba(0, 0, 0, 0.2);
-  border: 2px solid #ff6b3a;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-bottom: 30px;
-  transition: all 0.5s ease;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-
-  // Icona normale (visibile di default)
-  .back-icon {
-    width: 20px;
-    height: 20px;
-    transition: opacity 0.5s ease;
-    opacity: 1;
-  }
-
-  // Icona hover (nascosta di default)
-  .back-icon-hover {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    transition: opacity 0.5s ease;
-    opacity: 0;
-  }
-
-  &:hover {
-    color: black;
-    background: #ff6b3a;
-    transform: scale(1.03);
-
-    // Al hover: nascondi icona normale
-    .back-icon {
-      opacity: 0;
-    }
-
-    // Al hover: mostra icona nera
-    .back-icon-hover {
-      opacity: 1;
-    }
-  }
-}
-
-.year-title {
-  font-size: 31px;
-  margin-bottom: 30px;
-  color: #ff6b3a;
-}
-
-.events-section {
-  animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Stili esistenti per eventi
 .events-container {
   width: 50%;
   margin-top: 40px;
@@ -707,6 +503,10 @@ section {
     width: 60%;
     border-radius: 10px;
     cursor: url(../assets/img/cursor/binoculars-icon.svg), zoom-in;
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 
@@ -755,10 +555,6 @@ section {
   display: flex;
   height: 85vh;
   margin: 0 auto;
-
-  .image-column img {
-    border-radius: 10px;
-  }
 }
 
 .event-description {
@@ -775,7 +571,8 @@ section {
   }
 }
 
-.image-column figure:has(img[alt*="eventi di Dicembre"]) {
+.image-column figure:has(img[alt*="eventi di Dicembre"]),
+.image-column figure:has(img[alt*="the December events"]) {
   margin-top: 36%;
 }
 
@@ -829,6 +626,10 @@ section {
   text-align: start;
 }
 
+.button-container {
+  margin-left: 20px;
+}
+
 .info-btn button {
   font-size: 13px;
   padding: 5px 12px 5px 12px;
@@ -867,22 +668,11 @@ section {
   padding-top: 5px;
 }
 
-// Media queries
-@media (max-width: 768px) {
-  .years-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .year-card {
-    padding: 40px 20px;
-
-    h2 {
-      font-size: 36px;
-    }
-  }
+.button-container {
+  margin-left: 0;
 }
 
+// Media queries
 @media (max-width: 500px) {
   #single-speaker-container {
     padding-top: 0px;
@@ -940,13 +730,15 @@ section {
       padding-bottom: 70px;
     }
 
-    &:has(img[alt*="eventi di Dicembre"]) {
+    &:has(img[alt*="eventi di Dicembre"]),
+    &:has(img[alt*="the December events"]) {
       .event-description {
         margin-top: 320px;
       }
     }
 
-    .image-column figure:has(img[alt*="eventi di Dicembre"]) {
+    .image-column figure:has(img[alt*="eventi di Dicembre"]),
+    .image-column figure:has(img[alt*="the December events"]) {
       margin-top: 95%;
     }
   }
@@ -997,4 +789,5 @@ section {
     width: 60%;
   }
 }
+// END media queries
 </style>

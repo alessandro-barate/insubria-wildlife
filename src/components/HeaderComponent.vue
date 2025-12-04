@@ -1,10 +1,9 @@
 <script setup>
 import { useI18n } from "vue-i18n";
-import { useRouter, useRoute } from "vue-router";
+import { useRouter } from "vue-router";
 
 const { t, locale } = useI18n();
 const router = useRouter();
-const route = useRoute();
 
 // Defaulf language to Italian if no other language is selected
 if (!localStorage.getItem("language")) localStorage.setItem("language", "it");
@@ -21,27 +20,8 @@ const changeLanguage = (lang) => {
   locale.value = lang;
   localStorage.setItem("language", lang);
 
-  // Get the new path
-  const currentPath = route.path;
-
-  // Manage the year parameter if present
-  const yearMatch = currentPath.match(/\/(\d{4})$/);
-  const year = yearMatch ? yearMatch[1] : "";
-
-  // Create the new path in the target language
-  let newPath;
-  if (currentPath.includes("/eventi") || currentPath.includes("/events")) {
-    newPath =
-      lang === "it"
-        ? `/it/eventi${year ? "/" + year : ""}`
-        : `/en/events${year ? "/" + year : ""}`;
-  } else {
-    // Use the existing function for other pages
-    newPath = getLocalizedPath(currentPath, lang);
-  }
-
   // Navigate to the new path
-  router.push(newPath);
+  window.location.href = getLocalizedPath(window.location.pathname, lang);
 };
 </script>
 
@@ -546,7 +526,6 @@ header {
   .hamburger {
     display: block;
     margin-left: 0;
-    margin-right: 30%;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -617,12 +596,10 @@ header {
 
   .lang-container {
     width: 100%;
-    margin-left: -5px;
-    margin-right: 1.5em;
 
     #italian,
     #english {
-      width: 100%;
+      width: 90%;
     }
 
     #italian {
@@ -633,6 +610,9 @@ header {
 
 @media (max-width: 375px) {
   .lang-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 5px;
     #english {
       margin-left: 5px;
     }
@@ -640,7 +620,7 @@ header {
     #italian,
     #english {
       img {
-        width: 100%;
+        width: 90%;
       }
     }
   }
