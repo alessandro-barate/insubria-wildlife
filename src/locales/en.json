@@ -209,6 +209,10 @@
     "findOutButton": "Button to open the card description"
   },
   "events": {
+    "selectYearParagraph": "Select a year to view events",
+    "viewEvents": "View events",
+    "backToYears": "Back to years",
+    "eventsOf": "Events of",
     "firstParagraph": "If you're curious to see Insubria WildLife's activities scroll through the posters, you'll find the past events and those we have scheduled",
     "0": {
       "title": "news from geed deeble",

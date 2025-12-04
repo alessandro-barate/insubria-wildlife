@@ -209,6 +209,10 @@
     "findOutButton": "Bottone per aprire la card con la descrizione"
   },
   "events": {
+    "selectYearParagraph": "Seleziona un anno per visualizzare gli eventi",
+    "viewEvents": "Visualizza eventi",
+    "backToYears": "Torna agli anni",
+    "eventsOf": "Eventi del",
     "firstParagraph": "Se sei curioso di vedere le attività di Insubria WildLife scorri le locandine, troverai quelle passate e quelle che abbiamo in programma",
     "0": {
       "title": "Notizie da Geed Deeble",

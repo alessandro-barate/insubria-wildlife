@@ -1,9 +1,10 @@
 <script setup>
 import { useI18n } from "vue-i18n";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const { t, locale } = useI18n();
 const router = useRouter();
+const route = useRoute();
 
 // Defaulf language to Italian if no other language is selected
 if (!localStorage.getItem("language")) localStorage.setItem("language", "it");
@@ -20,8 +21,27 @@ const changeLanguage = (lang) => {
   locale.value = lang;
   localStorage.setItem("language", lang);
 
+  // Get the new path
+  const currentPath = route.path;
+
+  // Manage the year parameter if present
+  const yearMatch = currentPath.match(/\/(\d{4})$/);
+  const year = yearMatch ? yearMatch[1] : "";
+
+  // Create the new path in the target language
+  let newPath;
+  if (currentPath.includes("/eventi") || currentPath.includes("/events")) {
+    newPath =
+      lang === "it"
+        ? `/it/eventi${year ? "/" + year : ""}`
+        : `/en/events${year ? "/" + year : ""}`;
+  } else {
+    // Use the existing function for other pages
+    newPath = getLocalizedPath(currentPath, lang);
+  }
+
   // Navigate to the new path
-  window.location.href = getLocalizedPath(window.location.pathname, lang);
+  router.push(newPath);
 };
 </script>
 
