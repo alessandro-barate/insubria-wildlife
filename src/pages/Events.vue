@@ -557,7 +557,7 @@ section {
   padding: 0 40px 40px 40px;
 
   p {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-size: 20px;
   }
 }
@@ -571,8 +571,9 @@ section {
 }
 
 .year-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(255, 107, 58, 0.5);
+  // border: 2px solid rgba(255, 255, 255, 0.753);
   border-radius: 15px;
   padding: 60px 30px;
   cursor: pointer;
@@ -581,13 +582,12 @@ section {
   &:hover {
     background: rgba(255, 107, 58, 0.1);
     border-color: #ff6b3a;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 107, 58, 0.3);
+    transform: scale(1.05);
   }
 
   h2 {
     font-size: 48px;
-    color: #ff6b3a;
+    color: rgba(255, 255, 255, 0.753);
   }
 }
 
