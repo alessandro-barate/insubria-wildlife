@@ -210,8 +210,10 @@
   },
   "events": {
     "selectYearParagraph": "Seleziona un anno per visualizzare gli eventi",
-    "viewEvents": "Visualizza eventi",
-    "backToYears": "Torna agli anni",
+    "backToYears": {
+      "text": "Torna agli anni",
+      "alt": "Bottone per tornare alla scelta dell'anno"
+    },
     "eventsOf": "Eventi del",
     "firstParagraph": "Se sei curioso di vedere le attività di Insubria WildLife scorri le locandine, troverai quelle passate e quelle che abbiamo in programma",
     "0": {

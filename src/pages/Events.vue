@@ -347,20 +347,31 @@ onBeforeUnmount(() => {
                 @click="selectYear(year)"
               >
                 <h2>{{ year }}</h2>
-                <p>{{ t("events.viewEvents") }}</p>
               </div>
             </div>
           </div>
 
           <!-- Lista Eventi -->
           <div v-else class="events-section">
-            <button @click="backToYearSelection" class="back-button">
-              ← {{ t("events.backToYears") }}
-            </button>
-
             <h2 class="year-title">
               {{ t("events.eventsOf") }} {{ selectedYear }}
             </h2>
+
+            <!-- Back button container -->
+            <button @click="backToYearSelection" class="back-button d-flex">
+              <img
+                src="../assets/img/events/icons/back-button-white.svg"
+                alt="Back arrow"
+                class="back-icon"
+              />
+              <img
+                src="../assets/img/events/icons/back-button-black.svg"
+                alt="Back arrow"
+                class="back-icon-hover"
+              />
+              {{ t("events.backToYears.text") }}
+            </button>
+            <!-- Back button container -->
 
             <div class="big-events-container d-flex">
               <div
@@ -543,11 +554,11 @@ section {
 // Nuovi stili per selezione anni
 .year-selection {
   text-align: center;
-  padding: 40px 0;
+  padding: 0 40px 40px 40px;
 
   p {
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -565,7 +576,7 @@ section {
   border-radius: 15px;
   padding: 60px 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 
   &:hover {
     background: rgba(255, 107, 58, 0.1);
@@ -577,33 +588,58 @@ section {
   h2 {
     font-size: 48px;
     color: #ff6b3a;
-    margin-bottom: 15px;
-  }
-
-  p {
-    font-size: 16px;
-    opacity: 0.8;
   }
 }
 
 .back-button {
-  background: rgba(255, 107, 58, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   border: 2px solid #ff6b3a;
   color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 16px;
   margin-bottom: 30px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+  // Icona normale (visibile di default)
+  .back-icon {
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+
+  // Icona hover (nascosta di default)
+  .back-icon-hover {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
 
   &:hover {
+    color: black;
     background: #ff6b3a;
-    transform: translateX(-5px);
+    transform: scale(1.03);
+
+    // Al hover: nascondi icona normale
+    .back-icon {
+      opacity: 0;
+    }
+
+    // Al hover: mostra icona nera
+    .back-icon-hover {
+      opacity: 1;
+    }
   }
 }
 
 .year-title {
+  font-size: 31px;
   margin-bottom: 30px;
   color: #ff6b3a;
 }
@@ -669,6 +705,7 @@ section {
 
   figure img {
     width: 60%;
+    border-radius: 10px;
     cursor: url(../assets/img/cursor/binoculars-icon.svg), zoom-in;
   }
 }
@@ -718,6 +755,10 @@ section {
   display: flex;
   height: 85vh;
   margin: 0 auto;
+
+  .image-column img {
+    border-radius: 10px;
+  }
 }
 
 .event-description {
@@ -788,10 +829,6 @@ section {
   text-align: start;
 }
 
-.button-container {
-  margin-left: 20px;
-}
-
 .info-btn button {
   font-size: 13px;
   padding: 5px 12px 5px 12px;
@@ -828,10 +865,6 @@ section {
 
 .speaker-name-container {
   padding-top: 5px;
-}
-
-.button-container {
-  margin-left: 0;
 }
 
 // Media queries
