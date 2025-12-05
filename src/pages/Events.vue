@@ -57,15 +57,26 @@ export default {
 
     // Available years
     availableYears() {
+      console.log("=== DEBUG availableYears ===");
+      console.log("Total events:", this.store.events.length);
       const years = new Set();
-      this.store.events.forEach((event) => {
-        const posterPath = event.poster;
+      this.store.events.forEach((event, index) => {
+        console.log(`Event ${index}:`, event.poster);
+        const posterPath = String(event.poster);
+        console.log("Poster path type:", typeof posterPath);
+        console.log("Poster path value:", posterPath);
         const yearMatch = posterPath.match(/\/(\d{4})\//);
+        console.log("Year match:", yearMatch);
+
         if (yearMatch) {
+          console.log("Adding year:", yearMatch[1]);
           years.add(yearMatch[1]);
         }
       });
-      return Array.from(years).sort().reverse();
+
+      const result = Array.from(years).sort().reverse();
+      console.log("Final years:", result);
+      return result;
     },
 
     // Build the email link dynamically
