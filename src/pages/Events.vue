@@ -42,41 +42,30 @@ export default {
       return this.$route.params.year || null;
     },
 
+    // Available years
+    availableYears() {
+      const years = new Set();
+      this.store.events.forEach((event) => {
+        const dateStr = event.date.value || event.date;
+        const yearMatch = dateStr.match(/\/(\d{4})\//);
+
+        if (yearMatch) {
+          years.add(yearMatch[0]);
+        }
+      });
+
+      return Array.from(years).sort().reverse();
+    },
+
     // Events filtered by year
     filteredEvents() {
       if (!this.selectedYear) return [];
 
       return [...this.store.events].reverse().filter((event) => {
-        const posterPath = event.poster;
-        const yearMatch = posterPath.match(/\/(\d{4})\//);
-        const eventYear = yearMatch ? yearMatch[1] : null;
+        const dateStr = event.date.value || event.date;
 
-        return eventYear === this.selectedYear;
+        return dateStr.includes(this.selectedYear);
       });
-    },
-
-    // Available years
-    availableYears() {
-      console.log("=== DEBUG availableYears ===");
-      console.log("Total events:", this.store.events.length);
-      const years = new Set();
-      this.store.events.forEach((event, index) => {
-        console.log(`Event ${index}:`, event.poster);
-        const posterPath = String(event.poster);
-        console.log("Poster path type:", typeof posterPath);
-        console.log("Poster path value:", posterPath);
-        const yearMatch = posterPath.match(/\/(\d{4})\//);
-        console.log("Year match:", yearMatch);
-
-        if (yearMatch) {
-          console.log("Adding year:", yearMatch[1]);
-          years.add(yearMatch[1]);
-        }
-      });
-
-      const result = Array.from(years).sort().reverse();
-      console.log("Final years:", result);
-      return result;
     },
 
     // Build the email link dynamically
