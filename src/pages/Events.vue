@@ -46,7 +46,7 @@ export default {
     availableYears() {
       const years = new Set();
       this.store.events.forEach((event) => {
-        const dateStr = event.date.value || event.date;
+        const dateStr = event.calendar.value || event.calendar;
         const yearMatch = dateStr.match(/\/(\d{4})\//);
 
         if (yearMatch) {
@@ -62,7 +62,7 @@ export default {
       if (!this.selectedYear) return [];
 
       return [...this.store.events].reverse().filter((event) => {
-        const dateStr = event.date.value || event.date;
+        const dateStr = event.calendar.value || event.calendar;
 
         return dateStr.includes(this.selectedYear);
       });
