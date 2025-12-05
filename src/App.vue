@@ -1,5 +1,6 @@
 <script setup>
 import { SpeedInsights } from "@vercel/speed-insights/vue";
+import { Analytics } from "@vercel/analytics/vue";
 </script>
 
 <script>
@@ -42,6 +43,7 @@ export default {
 
 <template>
   <SpeedInsights />
+  <Analytics />
   <HeaderComponent></HeaderComponent>
   <router-view></router-view>
   <div id="up-button">
