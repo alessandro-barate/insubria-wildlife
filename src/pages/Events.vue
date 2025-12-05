@@ -44,28 +44,28 @@ export default {
 
     // Available years
     availableYears() {
+      console.log("🔍 Using 'year' property from store");
       const years = new Set();
-      this.store.events.forEach((event) => {
-        const dateStr = event.calendar.value || event.calendar;
-        const yearMatch = dateStr.match(/\/(\d{4})\//);
 
-        if (yearMatch) {
-          years.add(yearMatch[0]);
+      this.store.events.forEach((event) => {
+        if (event.year) {
+          console.log("Found year:", event.year);
+          years.add(event.year);
         }
       });
 
-      return Array.from(years).sort().reverse();
+      const result = Array.from(years).sort().reverse();
+      console.log("Final years:", result);
+      return result;
     },
 
     // Events filtered by year
     filteredEvents() {
       if (!this.selectedYear) return [];
 
-      return [...this.store.events].reverse().filter((event) => {
-        const dateStr = event.calendar.value || event.calendar;
-
-        return dateStr.includes(this.selectedYear);
-      });
+      return [...this.store.events]
+        .reverse()
+        .filter((event) => event.year === this.selectedYear);
     },
 
     // Build the email link dynamically

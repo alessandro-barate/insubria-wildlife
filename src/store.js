@@ -348,6 +348,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.0.ticket");
       }),
+      year: "2024",
       poster: event2024Novembre27,
       description: computed(() => {
         const { t } = useI18n();
@@ -388,6 +389,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.1.ticket");
       }),
+      year: "2025",
       poster: event2025Marzo29,
       description: computed(() => {
         const { t } = useI18n();
@@ -447,6 +449,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.2.ticket");
       }),
+      year: "2025",
       poster: event2025Aprile12,
       description: computed(() => {
         const { t } = useI18n();
@@ -487,6 +490,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.3.ticket");
       }),
+      year: "2025",
       poster: event2025Aprile29,
       description: computed(() => {
         const { t } = useI18n();
@@ -545,6 +549,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.4.ticket");
       }),
+      year: "2025",
       poster: event2025Maggio5,
       description: computed(() => {
         const { t } = useI18n();
@@ -594,6 +599,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.5.ticket");
       }),
+      year: "2025",
       poster: event2025Giugno22,
       description: computed(() => {
         const { t } = useI18n();
@@ -633,6 +639,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.6.ticket");
       }),
+      year: "2025",
       poster: event2025Giugno28,
       description: computed(() => {
         const { t } = useI18n();
@@ -672,6 +679,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.7.ticket");
       }),
+      year: "2025",
       poster: event2025SetOtt,
       description: computed(() => {
         const { t } = useI18n();
@@ -711,6 +719,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.8.ticket");
       }),
+      year: "2025",
       poster: event2025December,
       description: computed(() => {
         const { t } = useI18n();
@@ -751,6 +760,7 @@ export const store = reactive({
         const { t } = useI18n();
         return t("events.9.ticket");
       }),
+      year: "2025",
       poster: event2025Christmas,
       description: computed(() => {
         const { t } = useI18n();
