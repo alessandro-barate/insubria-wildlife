@@ -1,3 +1,7 @@
+<script setup>
+import { SpeedInsights } from "@vercel/speed-insights/vue";
+</script>
+
 <script>
 import HeaderComponent from "./components/HeaderComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
@@ -37,6 +41,7 @@ export default {
 </script>
 
 <template>
+  <SpeedInsights />
   <HeaderComponent></HeaderComponent>
   <router-view></router-view>
   <div id="up-button">
