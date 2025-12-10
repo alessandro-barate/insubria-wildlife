@@ -310,9 +310,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.active-lang {
-  opacity: 0.6;
-  transform: scale(0.95);
+#italian.active-lang,
+#english.active-lang {
+  opacity: 1 !important;
+  transform: scale(1.05);
 }
 
 header {
@@ -452,8 +453,10 @@ header {
   #english {
     width: 40%;
     border: none;
+    opacity: 0.6;
     border-radius: 50%;
     background-color: transparent;
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   #italian img,
