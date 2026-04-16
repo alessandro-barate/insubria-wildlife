@@ -20,7 +20,7 @@ export default {
 
     // Function to open the pdf document in another window
     openPdf() {
-      window.open("/statute/statuto-2024-07-08.pdf", "_blank");
+      window.open("/statute/statuto-2026-02-05.pdf", "_blank");
     },
   },
 };

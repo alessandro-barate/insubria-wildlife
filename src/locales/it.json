@@ -168,16 +168,10 @@
     "alt": "Foto del team di Insubria Wildlife",
     "paragraph": "\u000A\u000A*Siamo un gruppo di professionisti e professioniste*, con diversi background: scienze naturali, biologia, veterinaria, giornalismo, scienze sociali, comunicazione. *Ci unisce la passione per la natura e per il nostro territorio*, infatti ci siamo conosciuti in un centro di cura e riabilitazione per animali selvatici, dove abbiamo avuto l'opportunità di lavorare, fare tirocini e dedicare tempo al volontariato per molti anni.\u000A\u000ANegli anni le nostre strade si sono diversificate, tra cambi di lavoro, città e persino nazioni, per poi sempre ritrovarci insieme: birdwatching, passeggiate nei boschi, ascolto dei bramiti dei cervi, viaggi e scoperte, sono solo alcune delle nostre attività preferite.\u000A\u000A*Il desiderio di vedere il nostro territorio valorizzato dal punto di vista naturalistico e di vedere la comunità più coinvolta ci ha spinto a fare un grande passo: dare vita alla nostra associazione*.\u000A\u000ASperiamo di condividere questa avventura con te e di realizzare insieme tanti piccoli sogni!",
     "members": {
-      "0": {
-        "alt": "Immagine di Ilaria",
-        "name": "Ilaria",
-        "title": "Presidentessa",
-        "description": "Naturalista da quando ho memoria. Ho guardato le foto delle piante, degli animali, dei minerali e delle stelle e ho capito qual era la mia strada. La passione per gli animali, però, è nata molto prima, quando un tartufo umido mi ha svegliato nella culla, e non mi ha mai più abbandonata; quando con la nonna passavo il tempo in giardino a imparare nomi di fiori che avrei poi dimenticato, perché impegnata a guardare una lucertola, un'ape o rincorrere un uccellino di passaggio. Oggi parte del mio lavoro è cercare di trasmettere la meraviglia che provo ad ogni piccola scoperta...se non mi ci perdo dentro!"
-      },
       "1": {
         "alt": "Immagine di Alessia",
         "name": "Alessia",
-        "title": "Vice Presidentessa",
+        "title": "Presidente",
         "description": "Non potrei immaginare la mia vita lontana dal mondo naturale: per questo ho scelto questo percorso ancora prima di esserne consapevole. Profondamente appassionata e curiosa, appena ho potuto ho viaggiato: per svago e per lavoro, in Italia e all'estero, facendo parte di progetti di volontariato. Ad ogni  ritorno a casa mi trovavo arricchita di un bagaglio professionale e personale più ampio. Amo da sempre imparare e condividere con le persone che mi stanno intorno e nel tempo libero viaggio, dormo in tenda, leggo e disegno (per lo più pennuti!)"
       },
       "2": {
@@ -189,7 +183,7 @@
       "3": {
         "alt": "Immagine di Giulia",
         "name": "Giulia",
-        "title": "Consigliera",
+        "title": "Vice Presidente",
         "description": "Ricordo ancora nitidamente quando iniziò ad affacciarsi tra i miei pensieri la passione per gli animali. A 7 anni, però, non ne sei ancora pienamente consapevole. Un rapace urtò accidentalmente contro la porta di casa dei miei nonni: lo raccolsi con molta attenzione, scesi in giardino, e quando allentai leggermente la presa, si librò in volo in un attimo. Qualcosa scattò in me quel giorno: un sentimento, un amore verso gli animali selvatici, che però non era ancora pronto a sbocciare completamente. Lo fece durante il mio percorso universitario, insieme alla sicurezza che non mi avrebbe mai più lasciato. Oggi ho fatto della mia passione il mio lavoro. Amo passare il tempo all'aria aperta, in mezzo ai boschi, in compagnia dei miei cani o anche solo in silenzio con la mia macchina fotografica, aspettando che un martin pescatore si posi sul ramo di fronte a me."
       },
       "4": {
@@ -356,6 +350,16 @@
       "calendar": "13 Dicembre 2025, ore 15:00",
       "ticket": "Prenotazione obbligatoria via mail tramite link in descrizione",
       "description": "<strong>Laboratorio di acquerelli a tema Natale e animali selvatici!</strong><br><br>Vuoi realizzare anche tu la tua cartolina di Natale a tema natura?<br>Grazie a Laura Corigliano e Alessia Uboldi <strong>impareremo le basi di questa magnifica tecnica</strong>, realizzando assieme delle card natalizie...selvagge!<br><br>L'ingresso è gratuito con offerta libera ma per partecipare serve prenotarsi."
+    },
+    "10": {
+      "title": "Acquerello Selvatico",
+      "date": "Domenica 12 Aprile",
+      "alt": "Immagine della locandina dell'evento Acquerello Selvatico",
+      "location": "<a href='https://maps.app.goo.gl/5YLSgkFdbQJsh1A77' class='site-link' target='_blank'>Via A. Manzoni, 21, 21050 Clivio (VA)</a>",
+      "price": "12€ a persona, 10€ per più persone dello stesso nucleo famigliare",
+      "calendar": "12 Aprile 2026, dalle 14:00 alle 16:00",
+      "ticket": "Prenotazione obbligatoria via mail tramite link in descrizione",
+      "description": "<strong>Laboratorio di acquerelli a tema animali selvatici!</strong><br><br>Creiamo insieme dei dipinti ispirati al mondo selvatico con la tecnica ad acquerello <strong>con Insubria WildLife.</strong><br><br>L'ingresso è gratuito con offerta libera ma per partecipare serve prenotarsi."
     }
   },
   "sosAnimals": {
@@ -445,7 +449,9 @@
     "paragraph": "Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna selvatica e a preservare il nostro territorio per le generazioni future.",
     "secondTitle": "Condividi la nostra visione e i nostri valori?",
     "secondParagraph": "Hai idee, passione e voglia di metterti in gioco? Unisciti a noi!",
-    "thirdParagraph": " e diventa parte di *Insubria WildLife*: siamo sempre alla ricerca di *voci libere, innovative ed entusiaste* per costruire insieme un futuro migliore per la natura."
+    "thirdParagraph": "Compila il ",
+    "fourthParagraph": "modulo di contatto",
+    "fifthParagraph": " e diventa parte di *Insubria WildLife*: siamo sempre alla ricerca di *voci libere, innovative ed entusiaste* per costruire insieme un futuro migliore per la natura."
   },
   "footer": {
     "taxCode": "codice fiscale",

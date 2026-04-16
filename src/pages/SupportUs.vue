@@ -228,13 +228,13 @@ const changeLanguage = (lang) => {
               <TranslatedTextSpan text-key="supportUs.secondParagraph" />
             </p>
             <p class="link-paragraph">
-              Compila il
+              <TranslatedTextSpan text-key="supportUs.thirdParagraph" />
               <a
                 ><router-link :to="{ name: 'Contattaci' }" class="link"
-                  >modulo di contatto</router-link
-                ></a
-              >
-              <TranslatedTextSpan text-key="supportUs.thirdParagraph" />
+                  ><TranslatedTextSpan
+                    text-key="supportUs.fourthParagraph" /></router-link
+              ></a>
+              <TranslatedTextSpan text-key="supportUs.fifthParagraph" />
             </p>
           </div>
           <!-- END bottom paragraphs -->

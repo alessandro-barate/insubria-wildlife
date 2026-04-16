@@ -90,9 +90,75 @@ const updateMetaTags = (to) => {
     // Update both content and description attributes on the same meta tag
     descriptionMeta.setAttribute("content", metaContent);
     descriptionMeta.setAttribute("description", metaDescription);
+
+    const canonicalUrl = window.location.origin + to.fullPath;
+
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute("href", canonicalUrl);
+
+    // Connect the hreflang tags in different languages
+    const currentLocale = to.meta.locale || "it";
+    const baseUrl = window.location.origin;
+
+    // Remove existing hreflang
+    document
+      .querySelectorAll('link[rel="alternate"][hreflang]')
+      .forEach((link) => link.remove());
+
+    // Find the corrisponding route in config
+    const routeConfig = findRouteConfig(to);
+
+    if (routeConfig) {
+      // Create hreflang for italian
+      const itPath = routeConfig.paths.it;
+      const itUrl = to.params.year
+        ? `${baseUrl}${itPath.replace(":year?", to.params.year)}`
+        : `${baseUrl}${itPath.replace("/:year?", "")}`;
+
+      const hreflangIt = document.createElement("link");
+      hreflangIt.setAttribute("rel", "alternate");
+      hreflangIt.setAttribute("hreflang", "it");
+      hreflangIt.setAttribute("href", itUrl);
+      document.head.appendChild(hreflangIt);
+
+      // Create hreflang for english
+      const enPath = routeConfig.paths.en;
+      const enUrl = to.params.year
+        ? `${baseUrl}${enPath.replace(":year?", to.params.year)}`
+        : `${baseUrl}${enPath.replace("/:year?", "")}`;
+
+      const hreflangEn = document.createElement("link");
+      hreflangEn.setAttribute("rel", "alternate");
+      hreflangEn.setAttribute("hreflang", "en");
+      hreflangEn.setAttribute("href", enUrl);
+      document.head.appendChild(hreflangEn);
+
+      // x-default to the italian version
+      const hreflangDefault = document.createElement("link");
+      hreflangDefault.setAttribute("rel", "alternate");
+      hreflangDefault.setAttribute("hreflang", "x-default");
+      hreflangDefault.setAttribute("href", itUrl);
+      document.head.appendChild(hreflangDefault);
+    }
   } catch (error) {
     console.error("Error updating meta tags:", error);
   }
+};
+
+// Helper function to find the route configuration
+const findRouteConfig = (to) => {
+  return routeConfig.find((config) => {
+    const pathWithoutYear = to.path.replace(/\/\d{4}$/, "");
+    return Object.values(config.paths).some((path) => {
+      const configPathWithoutYear = path.replace("/:year?", "");
+      return configPathWithoutYear === pathWithoutYear;
+    });
+  });
 };
 
 // Routes declaration
@@ -310,4 +376,4 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-export { router, getLocalizedPath };
+export { router, getLocalizedPath, routeConfig };

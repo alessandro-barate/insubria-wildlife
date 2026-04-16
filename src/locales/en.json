@@ -168,16 +168,10 @@
     "alt": "Image of Insubria WildLife's team",
     "paragraph": "\u000A\u000A*We are a group of professionals* with diverse backgrounds: natural sciences, biology, veterinary medicine, journalism, social sciences, and communication. *We are united by our passion for nature and our territory*, having met at a wildlife care and rehabilitation center where we had the opportunity to work, do internships, and dedicate time to volunteering for many years.\u000A\u000A Over the years our paths have diverged, with job changes, moves to different cities and even nations, only to always find ourselves back together: birdwatching, forest walks, listening to deer calls, travels and discoveries are just some of our favorite activities.\u000A\u000A*The desire to see our territory valued from a naturalistic perspective and to see the community more involved prompted us to take a big step: bringing our association to life*.\u000A\u000A We hope to share this adventure with you and to realize many small dreams together!",
     "members": {
-      "0": {
-        "alt": "Image of Ilaria",
-        "name": "Ilaria",
-        "title": "President",
-        "description": "A naturalist since I can remember. I looked at pictures of plants, animals, minerals and stars and understood what my path was. The passion for animals, however, was born much earlier, when a wet nose woke me up in my crib, and never left me since; when I spent time in the garden with my grandmother learning names of flowers that I would later forget, because I was busy watching a lizard, a bee or chasing a passing bird. Today part of my job is trying to convey the wonder I feel at every little discovery...if I don't get lost in it!"
-      },
       "1": {
         "alt": "Image of Alessia",
         "name": "Alessia",
-        "title": "Vice President",
+        "title": "President",
         "description": "I couldn't imagine my life away from the natural world: that's why I chose this path even before I was aware of it. Deeply passionate and curious, as soon as I could, I traveled: for leisure and work, in Italy and abroad, taking part in volunteer projects. Every time I returned home, I found myself enriched with broader professional and personal experience. I've always loved learning and sharing with the people around me, and in my free time I travel, sleep in tents, read and draw (mostly feathered friends!)"
       },
       "2": {
@@ -189,7 +183,7 @@
       "3": {
         "alt": "Image of Giulia",
         "name": "Giulia",
-        "title": "Advisor",
+        "title": "Vice President",
         "description": "I still vividly remember when my passion for animals first appeared in my thoughts. At 7 years old, though, you're not yet fully aware of it. A raptor accidentally hit my grandparents' front door: I picked it up very carefully, went down to the garden, and when I slightly loosened my grip, it took flight in an instant. Something clicked in me that day: a feeling, a love for wildlife, that wasn't yet ready to fully bloom. It did during my university years, along with the certainty that it would never leave me again. Today I've made my passion my job. I love spending time outdoors, in the woods, in the company of my dogs or even just in silence with my camera, waiting for a kingfisher to perch on the branch in front of me."
       },
       "4": {
@@ -298,7 +292,7 @@
       "price": "10€",
       "calendar": "May 30th 2025",
       "ticket": "Booking is mandatory via email by using the link in the description",
-      "description": "May arrives, bringing with it the opportunity to spend much more time outdoors, with warmer and brighter days. And for us at Insubria WildLife, every occasion is the perfect one to take you to discover the hidden gems of our beloved territory!<br><br> We invite you to an evening at the <strong>Roccolo di Vegonno</strong> where, immersed in the tranquility of the forest with only the sounds of the night as your soundtrack, we will walk among the calls of <strong>tawny owls and little owls</strong> in search of the increasingly rare <strong>fireflies</strong>.<br>An evening with a magical atmosphere that will end with the chance to chat around a <strong>bonfire, with music and marshmallows!</strong><br><br>Our guide will be <strong>Roberto</strong>, a member of Insubria WildLife, and the participation fee is <strong>€10</strong>. <br><br>To participate you need to register,",
+      "description": "May arrives, bringing with it the opportunity to spend much more time outdoors, with warmer and brighter days. And for us at Insubria WildLife, every occasion is the perfect one to take you to discover the hidden gems of our beloved territory!<br><br> We invite you to an evening at the <strong>Roccolo di Vegonno</strong> where, immersed in the tranquility of the forest with only the sounds of the night as your soundtrack, we will walk among the calls of <strong>tawny owls and little owls</strong> in search of the increasingly rare <strong>fireflies</strong>.<br>An evening with a magical atmosphere that will end with the chance to chat around a <strong>bonfire, with music and marshmallows!</strong><br><br>Our guide will be <strong>Roberto</strong>, a member of Insubria WildLife, and the participation fee is <strong>€10</strong>.<br><br>To participate you need to register,",
       "speakers": [
         {
           "name": "<strong>Roberto Paone</strong>",
@@ -356,6 +350,16 @@
       "calendar": "December 13th 2025, h 3:00 PM",
       "ticket": "Booking is mandatory via email by using the link in the description",
       "description": "<strong>The Christmas-themed watercolor workshop featuring wildlife!</strong><br><br>Would you like to create your own nature-themed Christmas card?<br>Thanks to Laura Corigliano and Alessia Uboldi, <strong>we will learn the basics of this wonderful technique</strong>, creating Christmas cards together… wild ones!<br><br>Admission is free with a voluntary donation but to participate you need to register,."
+    },
+    "10": {
+      "title": "Wild Watercolor",
+      "date": "April 12th",
+      "alt": "Event poster image about the event Wild Watercolor",
+      "location": "<a href='https://maps.app.goo.gl/5YLSgkFdbQJsh1A77' class='site-link' target='_blank'>Via A. Manzoni, 21, 21050 Clivio (VA)</a>",
+      "price": "12€ per person, 10€ for more people of the same family",
+      "calendar": "April 12th 2026, from 2:00 PM to 4:00 PM",
+      "ticket": "Booking is mandatory via email by using the link in the description",
+      "description": "<strong>Watercolor workshop with a wildlife theme!</strong><br><br>Let's create paintings inspired by the wild world using the watercolor technique <strong>with Insubria WildLife.</strong><br><br>To participate you need to register,."
     }
   },
   "sosAnimals": {
@@ -441,8 +445,10 @@
     },
     "paragraph": "Every contribution, big or small, helps us protect wildlife and preserve our territory for future generations.",
     "secondTitle": "Do you share our vision and values?",
-    "secondParagraph": "Are you full of ideas, passion and keen to get involved? Join us ",
-    "thirdParagraph": "and become part of *Insubria WildLife*: we are always looking for *free, innovative and enthusiastic voices* to build together a better future for nature."
+    "secondParagraph": "Are you full of ideas, passion and keen to get involved? Join us!",
+    "thirdParagraph": "Compile the",
+    "fourthParagraph": " contact module",
+    "fifthParagraph": " and become part of *Insubria WildLife*: we are always looking for *free, innovative and enthusiastic voices* to build together a better future for nature."
   },
   "footer": {
     "taxCode": "tax code",

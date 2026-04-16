@@ -9,7 +9,6 @@ import researchImg from "./assets/img/homepage/carousel/4-research.webp";
 import networkImg from "./assets/img/homepage/carousel/5-network.webp";
 
 // Importing the team's members images
-import ilariaImg from "./assets/img/team/grid/ilaria.webp";
 import alessiaImg from "./assets/img/team/grid/alessia.webp";
 import elenaImg from "./assets/img/team/grid/elena.webp";
 import giuliaImg from "./assets/img/team/grid/giulia.webp";
@@ -29,6 +28,7 @@ import event2025Giugno28 from "./assets/img/events/posters/2025/Giugno/28-06-25.
 import event2025SetOtt from "./assets/img/events/posters/2025/Settembre-Ottobre/september-october.webp";
 import event2025December from "./assets/img/events/posters/2025/Dicembre/december.webp";
 import event2025Christmas from "./assets/img/events/posters/2025/Dicembre/christmas.webp";
+import event2026Aprile12 from "./assets/img/events/posters/2026/Aprile/12-04-26.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -122,26 +122,6 @@ export const store = reactive({
     {
       name: computed(() => {
         const { t } = useI18n();
-        return t("team.members.0.name");
-      }),
-      title: computed(() => {
-        const { t } = useI18n();
-        return t("team.members.0.title");
-      }),
-      alt: computed(() => {
-        const { t } = useI18n();
-        return t("team.members.0.alt");
-      }),
-      image: ilariaImg,
-      description: computed(() => {
-        const { t } = useI18n();
-        return t("team.members.0.description");
-      }),
-    },
-
-    {
-      name: computed(() => {
-        const { t } = useI18n();
         return t("team.members.1.name");
       }),
       title: computed(() => {
@@ -162,26 +142,6 @@ export const store = reactive({
     {
       name: computed(() => {
         const { t } = useI18n();
-        return t("team.members.2.name");
-      }),
-      title: computed(() => {
-        const { t } = useI18n();
-        return t("team.members.2.title");
-      }),
-      alt: computed(() => {
-        const { t } = useI18n();
-        return t("team.members.2.alt");
-      }),
-      image: elenaImg,
-      description: computed(() => {
-        const { t } = useI18n();
-        return t("team.members.2.description");
-      }),
-    },
-
-    {
-      name: computed(() => {
-        const { t } = useI18n();
         return t("team.members.3.name");
       }),
       title: computed(() => {
@@ -196,6 +156,26 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("team.members.3.description");
+      }),
+    },
+
+    {
+      name: computed(() => {
+        const { t } = useI18n();
+        return t("team.members.2.name");
+      }),
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("team.members.2.title");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("team.members.2.alt");
+      }),
+      image: elenaImg,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("team.members.2.description");
       }),
     },
 
@@ -765,6 +745,47 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("events.9.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+
+    // Wild Watercolor
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.ticket");
+      }),
+      year: "2026",
+      poster: event2026Aprile12,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.10.description");
       }),
 
       // Empty array for events with no speakers
