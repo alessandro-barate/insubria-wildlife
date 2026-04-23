@@ -87,29 +87,63 @@ export default {
       this.showIbanDetails = false;
     },
 
+    // Function to load PayPal script dynamically
+    loadPayPalScript() {
+      return new Promise((resolve, reject) => {
+        // Check if script is already loaded
+        if (window.PayPal) {
+          resolve();
+          return;
+        }
+
+        // Check if script is already being loaded
+        const existingScript = document.querySelector('script[src*="paypal"]');
+        if (existingScript) {
+          existingScript.addEventListener("load", resolve);
+          existingScript.addEventListener("error", reject);
+          return;
+        }
+
+        // Create and load the script
+        const script = document.createElement("script");
+        script.src = "https://www.paypalobjects.com/donate/sdk/donate-sdk.js";
+        script.charset = "UTF-8";
+        script.addEventListener("load", resolve);
+        script.addEventListener("error", reject);
+        document.head.appendChild(script);
+      });
+    },
+
     // Function to initialize the PayPal button
-    initPayPalButton() {
+    async initPayPalButton() {
       // Checks if the element exists before initialization
       const donateButton = document.getElementById("donate-button");
 
       if (!donateButton) return;
 
-      // Clean the existing content
-      donateButton.innerHTML = "";
+      try {
+        // Load PayPal script first
+        await this.loadPayPalScript();
 
-      // Render the new button
-      PayPal.Donation.Button({
-        env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
-        hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
-        image: {
-          src: paypalButtonImg,
-          alt: "Donate with PayPal button",
-          title: "PayPal - The safer, easier way to pay online!",
-        },
-        onComplete: function (params) {
-          console.log("Bottone PayPal completato", params);
-        },
-      }).render("#donate-button");
+        // Clean the existing content
+        donateButton.innerHTML = "";
+
+        // Render the new button
+        window.PayPal.Donation.Button({
+          env: "production", // env: import.meta.env.VITE_ENV_SANDBOX,
+          hosted_button_id: import.meta.env.VITE_HOSTED_BUTTON_ID,
+          image: {
+            src: paypalButtonImg,
+            alt: "Donate with PayPal button",
+            title: "PayPal - The safer, easier way to pay online!",
+          },
+          onComplete: function (params) {
+            console.log("Bottone PayPal completato", params);
+          },
+        }).render("#donate-button");
+      } catch (error) {
+        console.error("Errore nel caricamento di PayPal:", error);
+      }
     },
   },
 };
@@ -214,6 +248,30 @@ const changeLanguage = (lang) => {
                 </span>
               </li>
               <!-- END Satispay method -->
+
+              <!-- 5x1000 donation -->
+              <li>
+                <TranslatedTextSpan
+                  text-key="supportUs.list.fifthListElement.name"
+                />
+                <br />
+                <span>{{ t("supportUs.list.fifthListElement.link") }}</span>
+                <span>
+                  <a v-if="store.mobileViewport" href="" target="_blank">
+                    Satispay</a
+                  >
+                  <div class="satispay-btn-container">
+                    <button
+                      id="satispay-button"
+                      v-show="store.desktopViewport"
+                      @click="showQrCode()"
+                    >
+                      Satispay
+                    </button>
+                  </div>
+                </span>
+              </li>
+              <!-- END 5x1000 donation -->
             </ul>
             <p>
               {{ t("supportUs.paragraph") }}

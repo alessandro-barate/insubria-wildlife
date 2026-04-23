@@ -209,10 +209,10 @@ const getDescription = (index) => {
 
   // Adding the default index keys for every event
   emailParams.subjects.it[index] = `Richiesta iscrizione evento ${t(
-    "events." + index + ".title"
+    "events." + index + ".title",
   )}`;
   emailParams.subjects.en[index] = `Registration request for ${t(
-    "events." + index + ".title"
+    "events." + index + ".title",
   )} event`;
 
   // Preparing the email link
@@ -251,7 +251,7 @@ const getDescription = (index) => {
 
     // Extracting the part after the participation sentence (might contain the donation phrase)
     const afterPhrase = desc.substring(
-      phrasePosition + participationPhrase.length
+      phrasePosition + participationPhrase.length,
     );
 
     // Checking if the part after contains the donation phrase
@@ -393,7 +393,7 @@ onBeforeUnmount(() => {
                         t(
                           'events.' +
                             store.events.findIndex((e) => e === event) +
-                            '.alt'
+                            '.alt',
                         )
                       "
                     />
@@ -507,7 +507,7 @@ onBeforeUnmount(() => {
             <p
               v-html="
                 $sanitize(
-                  store.events[currentIndex].speakers[speakerIndex].description
+                  store.events[currentIndex].speakers[speakerIndex].description,
                 )
               "
             ></p>
@@ -564,8 +564,8 @@ section {
 
 .years-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
   max-width: 900px;
   margin: 0 auto;
 }

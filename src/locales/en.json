@@ -437,10 +437,17 @@
     "list": {
       "listTitle": "Support our mission with a donation",
       "firstListElement": "*Bank transfer*",
+      "secondListElement": "IBAN",
       "thirdListElement": {
         "name": "*PayPal*",
-        "link": "Donate safely with",
-        "description": "To support us via"
+        "link": "Donate safely with"
+      },
+      "fourthListElement": {
+        "name": "*Satispay*"
+      },
+      "fifthListElement": {
+        "name": "*5x1000*",
+        "link": "Donate your 5x1000"
       }
     },
     "paragraph": "Every contribution, big or small, helps us protect wildlife and preserve our territory for future generations.",
