@@ -10,6 +10,7 @@ export default {
       ibanMobile: null,
       ibanDesktop: null,
       showIbanDetails: null,
+      show5x1000Details: null,
     };
   },
 
@@ -65,26 +66,37 @@ export default {
       }
     },
 
-    // Functions to set the variable to true
+    // Functions to show the QR code
     showQrCode() {
       if (store.showDetails) return;
       store.showDetails = true;
     },
 
-    // Functions to set the variable to true
+    // Functions to show the IBAN
     showIban() {
       if (this.showIbanDetails) return;
       this.showIbanDetails = true;
     },
 
-    // Functions to set the variable to false
+    // Functions to show the 5x1000 details
+    show5x1000() {
+      if (this.show5x1000Details) return;
+      this.show5x1000Details = true;
+    },
+
+    // Functions to hide the QR code
     hideQrCode() {
       store.showDetails = false;
     },
 
-    // Functions to set the variable to false
+    // Functions to hide the IBAN
     hideIban() {
       this.showIbanDetails = false;
+    },
+
+    // Functions to hide the 5x1000 details
+    hide5x1000() {
+      this.show5x1000Details = false;
     },
 
     // Function to load PayPal script dynamically
@@ -222,7 +234,7 @@ const changeLanguage = (lang) => {
               <!-- END Paypal method -->
 
               <!-- Satispay method -->
-              <li id="satispay-method">
+              <li id="satispay">
                 <TranslatedTextSpan
                   text-key="supportUs.list.fourthListElement.name"
                 />
@@ -257,16 +269,20 @@ const changeLanguage = (lang) => {
                 <br />
                 <span>{{ t("supportUs.list.fifthListElement.link") }}</span>
                 <span>
-                  <a v-if="store.mobileViewport" href="" target="_blank">
-                    Satispay</a
-                  >
-                  <div class="satispay-btn-container">
+                  <span v-if="store.mobileViewport">
+                    {{ t("supportUs.list.fifthListElement.text") }}
+                    <a @click="show5x1000()" id="normal-text">
+                      {{ t("supportUs.list.fifthListElement.button") }}
+                    </a>
+                  </span>
+                  <div class="fivexthousand-btn-container">
                     <button
-                      id="satispay-button"
+                      id="donation-5x1000-button"
+                      class="capitalize"
                       v-show="store.desktopViewport"
-                      @click="showQrCode()"
+                      @click="show5x1000()"
                     >
-                      Satispay
+                      {{ t("supportUs.list.fifthListElement.button") }}
                     </button>
                   </div>
                 </span>
@@ -337,6 +353,27 @@ const changeLanguage = (lang) => {
     </div>
   </div>
   <!-- END Satispay QR code zoomed -->
+
+  <!-- 5x1000 details zoomed -->
+  <div v-show="show5x1000Details" id="donation-5x1000" class="zoomed-container">
+    <div v-if="show5x1000Details" class="overlay-single-card">
+      <div class="details-btn">
+        <button @click="hide5x1000()">✕</button>
+      </div>
+      <div class="details">
+        <p class="top-paragraph">5x1000</p>
+        <img
+          src="../assets/img/support/5x1000/poster-5x1000.webp"
+          alt="Dettagli del 5x1000"
+          loading="lazy"
+        />
+        <p class="bottom-paragraph">
+          {{ t("supportUs.list.fifthListElement.description") }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- END 5x1000 details zoomed -->
 </template>
 
 <style scoped lang="scss">
@@ -394,7 +431,8 @@ p {
 }
 
 #satispay-button,
-#iban-button {
+#iban-button,
+#donation-5x1000-button {
   border: none;
   font-size: 18px;
   font-weight: bold;
@@ -532,9 +570,34 @@ a {
   }
 }
 
+#satispay a:visited {
+  color: #ff6a3a;
+
+  &:hover {
+    color: #ff0000;
+  }
+}
+
 .satispay-btn-container {
   margin-top: 10px;
   text-align: center;
+}
+
+.fivexthousand-btn-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#donation-5x1000 .overlay-single-card {
+  width: 50%;
+
+  .details {
+    width: 75%;
+
+    img {
+      width: 70%;
+    }
+  }
 }
 
 // Media queries
@@ -580,6 +643,17 @@ a {
   }
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 600px) {
+  #donation-5x1000 .overlay-single-card {
+    width: 80%;
+
+    .details {
+      width: 100%;
+
+      img {
+        width: 95%;
+      }
+    }
+  }
 }
 </style>

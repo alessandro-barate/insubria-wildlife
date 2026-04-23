@@ -447,7 +447,10 @@
       },
       "fifthListElement": {
         "name": "*5x1000*",
-        "link": "Dona il tuo 5x1000"
+        "link": "Dona il tuo 5x1000",
+        "text": ", qui i",
+        "button": "dettagli",
+        "description": "Fai la differenza con noi"
       }
     },
     "paragraph": "Ogni contributo, piccolo o grande, ci aiuta a proteggere la fauna selvatica e a preservare il nostro territorio per le generazioni future.",

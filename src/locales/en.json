@@ -447,7 +447,10 @@
       },
       "fifthListElement": {
         "name": "*5x1000*",
-        "link": "Donate your 5x1000"
+        "link": "Donate your 5x1000",
+        "text": ", here the",
+        "button": "details",
+        "description": "Make the difference with us"
       }
     },
     "paragraph": "Every contribution, big or small, helps us protect wildlife and preserve our territory for future generations.",
