@@ -341,7 +341,7 @@ const changeLanguage = (lang) => {
       <div class="details-btn">
         <button @click="hideQrCode()">✕</button>
       </div>
-      <div class="details">
+      <div id="satispay-code" class="details">
         <p class="top-paragraph">Satispay</p>
         <img
           src="../assets/img/support/satispay/satispay-qr-code.webp"
@@ -568,6 +568,13 @@ a {
     padding-top: 10px;
     text-align: center;
   }
+}
+
+#iban-details,
+#satispay-code,
+#donation-5x1000 {
+  color: black;
+  font-weight: 500;
 }
 
 #satispay a:visited {
