@@ -216,7 +216,7 @@
       "alt": "Event poster image about cheetahs: News from Geed Deeble",
       "location": "Online event on Google Meets",
       "price": "Free",
-      "calendar": "November 27th 2024",
+      "calendar": "November 27th 2024, h 8:45 PM",
       "ticket": "No reservation",
       "description": "In this meeting, we will present the work of the Cheetah Conservation Fund (CCF) in Somaliland on the rehabilitation of cheetah cubs rescued from illegal trade.<br><br>It is estimated that more than 300 cubs are taken from their mothers every year to be sold on the black market: there are many questions about this, such as where they go, why they are taken, and what associations and local authorities are actually doing about it. You can find out by joining this free online meeting.<br><br>Veterinary technician Alessia Uboldi will talk about her field experience, followed by CCF President Betty Von Hoenning, who will explain how the association's resources are used and show some videos; finally, we will return to our country and move to the Insubric territory with Giulia Gavioli, board member and co-founder of Insubria WildLife APS, who will present the association.<br><br>We look forward to seeing many of you there!",
       "speakers": []
@@ -254,7 +254,7 @@
       "alt": "Event poster image about the event equilibrinatura",
       "location": "<a href='https://maps.app.goo.gl/hM55fe5Ktqvq7YY29' class='site-link' target='_blank'>Via Stoppani 6, 22070 Castelnuovo Bozzente (CO)</a>",
       "price": "Contribution with a discretionary amount",
-      "calendar": "April 12th 2025",
+      "calendar": "April 12th 2025 h 3:30 PM and 6:00 PM",
       "ticket": "Booking is mandatory via email by using the link in the description",
       "description": "The event will focus on the relationship between humans and nature, with particular attention to the coexistence between human activities and wildlife, and will develop in two moments:<br><br><strong>Educational workshop for children and families</strong><br>During the morning, children aged 5 to 10, together with their families, will participate in an educational activity on pollinating insects: through a practical and participatory approach, their fundamental role in the ecosystem will be illustrated and components of a \"Community Bug Hotel\" will be built, which will then be installed in a public area of the Municipality. The goal is to raise awareness among the youngest about the importance of biodiversity and promote environmental protection practices related to sustainable agriculture.<br><br><strong>Screening of the film \"Dangerously Close\", with public discussion for adults and young people</strong><br>In the late afternoon, in collaboration with the association \"I Benandanti APS\", a space for discussion will open on the relationship between the community and wildlife and on strategies for coexistence with humans, with a focus on species present in the territory such as wild boars and deer. The meeting will draw inspiration from the dynamics narrated in the documentary \"Dangerously Close\" by Andreas Pichler, which explores the different perspectives on the topic of large carnivores and coexistence with wildlife. Afterwards, an aperitif will offer the opportunity for an informal exchange of opinions among participants.<br><br>To participate you need to register",
       "speakers": []
@@ -290,7 +290,7 @@
       "alt": "Event poster image about the event Fireflies into the woods",
       "location": "<a href='https://maps.app.goo.gl/gie2jDGyNGvk5B5M9' class='site-link' target='_blank'>Roccolo di Vegonno, 21022 Azzate (VA)</a>",
       "price": "10€",
-      "calendar": "May 30th 2025",
+      "calendar": "May 30th 2025, h 8:45 PM",
       "ticket": "Booking is mandatory via email by using the link in the description",
       "description": "May arrives, bringing with it the opportunity to spend much more time outdoors, with warmer and brighter days. And for us at Insubria WildLife, every occasion is the perfect one to take you to discover the hidden gems of our beloved territory!<br><br> We invite you to an evening at the <strong>Roccolo di Vegonno</strong> where, immersed in the tranquility of the forest with only the sounds of the night as your soundtrack, we will walk among the calls of <strong>tawny owls and little owls</strong> in search of the increasingly rare <strong>fireflies</strong>.<br>An evening with a magical atmosphere that will end with the chance to chat around a <strong>bonfire, with music and marshmallows!</strong><br><br>Our guide will be <strong>Roberto</strong>, a member of Insubria WildLife, and the participation fee is <strong>€10</strong>.<br><br>To participate you need to register,",
       "speakers": [
@@ -327,7 +327,7 @@
       "alt": "Event poster image about the event BioTalks",
       "location": "<a href='https://maps.app.goo.gl/5sBaqbdqMQMxjCYs8' class='site-link' target='_blank'>Via della Polveriera 2, 20033 Solaro (MI)</a>",
       "price": "Free",
-      "calendar": "September 19th 2025, September 26th 2025 , October 3rd 2025 and October 11th 2025",
+      "calendar": "September 19th 2025, September 26th 2025 and October 3rd 2025 h 8:30 PM, October 11th 2025 h 5:00 PM",
       "ticket": "No booking, free entry",
       "description": "BioTalks are <strong>four educational events</strong>, hosted by the Groane Park and taking place between September and October.<br><br><strong>Together with young researchers, technicians, and science communication experts, we will talk about biodiversity, habitats, coexistence, restoration actions, and much more</strong>.<br><br>An open and stimulating dialogue, with opportunities for the audience to join the discussion as well.<br><br>Admission is free (until all seats are taken), but to ensure your participation, registration is required using the <a href='/en/contact-us' target='_blank' class='mail-link'>contact form</a>."
     },
@@ -360,6 +360,36 @@
       "calendar": "April 12th 2026, from 2:00 PM to 4:00 PM",
       "ticket": "Booking is mandatory via email by using the link in the description",
       "description": "<strong>Watercolor workshop with a wildlife theme!</strong><br><br>Let's create paintings inspired by the wild world using the watercolor technique <strong>with Insubria WildLife.</strong><br><br>To participate you need to register,."
+    },
+    "11": {
+      "title": "Fireflies and photography",
+      "date": "Friday May 29th and Friday June 5th",
+      "alt": "Event poster image about the event Fireflies and photography",
+      "location": "<a href='https://maps.app.goo.gl/iCbTX6rEc3Hnwtxx8' class='site-link' target='_blank'>Santuario della Madonnetta, Via Montello, 19, 21040 Gornate Olona (VA)</a>",
+      "price": "10€",
+      "calendar": "Friday May 29th and Friday June 5th, h 8:30 PM",
+      "ticket": "Booking is mandatory via email by using the link in the description",
+      "description": "<strong>Night walk</strong> looking for fireflies to photograph in <strong>Parco Rile-Tenore-Olona</strong>.<br><br>The participation fee is <strong>10€</strong> and to participate you need to register,."
+    },
+    "12": {
+      "title": "Walking among the fireflies",
+      "date": "Saturday May 30th and Saturday June 6th",
+      "alt": "Event poster image about the event Walking among the fireflies",
+      "location": "<a href='https://maps.app.goo.gl/Jco1NYDpCG5rb83D9' class='site-link' target='_blank'>Strada del Signù, 20004 Arluno (MI)</a>",
+      "price": "10€",
+      "calendar": "Saturday May 30th and Saturday June 6th, h 8:30 PM",
+      "ticket": "Booking is mandatory via email by using the link in the description",
+      "description": "<strong>Night walk</strong> looking for fireflies in <strong>Parco del Roccolo</strong>.<br><br>The participation fee is <strong>10€</strong> and to participate you need to register,."
+    },
+    "13": {
+      "title": "BioTalks",
+      "date": "From June 18th to July 9th",
+      "alt": "Event poster image about the event BioTalks 2026",
+      "location": "<a href='https://maps.app.goo.gl/wWRarnCr4CNmoyEy7' class='site-link' target='_blank'>Cascina Nascosta, Viale Emilio Alemagna 14, 20121 Milano (MI)</a>",
+      "price": "Free",
+      "calendar": "June 18th, June 25th, July 2nd and July 9th at 7:00 PM",
+      "ticket": "No booking, free entry",
+      "description": "<strong>The BioTalks are back</strong>, in collaboration with Legambiente Lombardia: a series of <strong>4 meetings dedicated to biodiversity, coexistence between species, and the relationship between the environment and living beings.</strong>.<br><br>This year we will be hosted by <strong>Cascina Nascosta</strong>, in Parco Sempione in Milan.<br><br><strong>Now in their second edition</strong>, the BioTalks will guide us in discovering the wild animals that share our territory with us, exploring topics related to sustainability, ecosystem protection, and environmental awareness.<br><br>Four evening appointments, always at 7 PM, with <strong>oeight speakers from different backgrounds and fields</strong>, to share experiences, deepen knowledge, and create opportunities for dialogue with the audience.<br>Here the full programme:<br><br><strong>18/06</strong> - <em>&ldquo;Climate change and human presence: the challenges for wildlife&rdquo;</em> with<br><br><ul><li class='list-speaker'><strong>Giulia Masoero</strong> from the Swiss Ornithological Institute</li><li class='list-speaker'><strong>Marcello Franchini</strong> from the University of Udine</li></ul><br><strong>25/06</strong> - <em>&ldquo;New media: science communication and mindful use&rdquo;</em> with<br><br><ul><li class='list-speaker'><strong>Catia Baldassarri</strong> from Talking Nat</li><li class='list-speaker'><strong>Alessia Uboldi</strong> from Insubria WildLife</li></ul><br><strong>02/07</strong> - <em>&ldquo;The aquatic world: between conservation and research&rdquo;</em> with<br><br><ul><li class='list-speaker'><strong>Cristiana De Leonardis</strong> from Jonian Dolphin Conservation</li><li class='list-speaker'><strong>Lorenzo Baio</strong> from Legambiente Lombardia</li></ul><br><strong>09/07</strong> - <em>&ldquo;Coexistence and great returns: stories of wolves, beavers, and humans&rdquo;</em> with<br><br><ul><li class='list-speaker'><strong>Annafrancesca Corradini</strong> from Università degli Studi of Milano</li><li class='list-speaker'><strong>Andrea Mosini</strong> from Cooperativa Valgrande</li></ul><br><br>Admission is free — we look forward to seeing you there!"
     }
   },
   "sosAnimals": {

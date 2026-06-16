@@ -29,6 +29,9 @@ import event2025SetOtt from "./assets/img/events/posters/2025/Settembre-Ottobre/
 import event2025December from "./assets/img/events/posters/2025/Dicembre/december.webp";
 import event2025Christmas from "./assets/img/events/posters/2025/Dicembre/christmas.webp";
 import event2026Aprile12 from "./assets/img/events/posters/2026/Aprile/12-04-26.webp";
+import event2026Maggio29 from "./assets/img/events/posters/2026/Maggio/29-05-26.webp";
+import event2026Maggio30 from "./assets/img/events/posters/2026/Maggio/30-05-26.webp";
+import event2026GiuLug from "./assets/img/events/posters/2026/Giugno-Luglio/june-july.webp";
 
 // Importing the flow chart images
 import italianFlowChart from "./assets/img/sos-animal/flow-chart.webp";
@@ -629,7 +632,7 @@ export const store = reactive({
       speakers: computed(() => []),
     },
 
-    // BioTalks
+    // BioTalks 2025
     {
       title: computed(() => {
         const { t } = useI18n();
@@ -786,6 +789,129 @@ export const store = reactive({
       description: computed(() => {
         const { t } = useI18n();
         return t("events.10.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+
+    // Fireflies and photography
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.ticket");
+      }),
+      year: "2026",
+      poster: event2026Maggio29,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.11.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+
+    // Walking among the fireflies
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.ticket");
+      }),
+      year: "2026",
+      poster: event2026Maggio30,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.12.description");
+      }),
+
+      // Empty array for events with no speakers
+      speakers: computed(() => []),
+    },
+
+    // Biotalks 2026
+    {
+      title: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.title");
+      }),
+      date: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.date");
+      }),
+      alt: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.alt");
+      }),
+      location: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.location");
+      }),
+      price: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.price");
+      }),
+      calendar: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.calendar");
+      }),
+      ticket: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.ticket");
+      }),
+      year: "2026",
+      poster: event2026GiuLug,
+      description: computed(() => {
+        const { t } = useI18n();
+        return t("events.13.description");
       }),
 
       // Empty array for events with no speakers
